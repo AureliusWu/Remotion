@@ -1,0 +1,11 @@
+# Local-only data and rendered artifacts.
+**/node_modules/
+**/out/
+**/dist/
+**/build/
+.env
+.env.*
+!.env.example
+*.log
+Thumbs.db
+.DS_Store

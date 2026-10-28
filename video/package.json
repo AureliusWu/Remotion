@@ -1,0 +1,43 @@
+{
+  "name": "remotion-video-lab",
+  "version": "1.0.0",
+  "description": "Remotion video generation, preview and rendering test project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AureliusWu/Remotion.git",
+    "directory": "video"
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.539",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "10.12.0",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc --noEmit",
+    "render:test": "remotion render SmokeTest out/smoke-test.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --concurrency=2",
+    "still:test": "remotion still SmokeTest out/smoke-test.png --frame=90"
+  },
+  "overrides": {
+    "zod": "4.6.6"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}
