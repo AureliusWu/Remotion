@@ -1,0 +1,24 @@
+{
+  "file": "poisson-process-1080p60.mp4",
+  "checkedAt": "2026-10-29T01:02:11.678Z",
+  "status": "passed",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": 60,
+    "frames": 10800,
+    "durationSeconds": 180,
+    "pixelFormat": "yuvj420p",
+    "colorRange": "pc"
+  },
+  "audio": {
+    "codec": "aac",
+    "durationSeconds": 180.011,
+    "sampleRate": 48000,
+    "channels": 2
+  },
+  "sizeBytes": 15115326,
+  "sha256": "58d20fcd9b8bb7a99870ac5ed62042f1cc7fe3d07cce9aa2900b4e671c738853",
+  "fullDecode": "passed"
+}

@@ -145,6 +145,8 @@ try {
         ),
       );
       const duration = Number(metadata.format.duration);
+      if (!metadata.streams.some((stream) => stream.codec_type === "audio"))
+        throw new Error(`Missing audio stream: ${scene.file}`);
       if (
         !(duration > 0) ||
         duration + scene.fromSeconds > scene.sceneDurationSeconds
@@ -156,6 +158,22 @@ try {
         stdio: "pipe",
         windowsHide: true,
       });
+      let captionEnd = 0;
+      for (const caption of scene.captions ?? []) {
+        if (
+          !caption.text?.trim() ||
+          !Number.isFinite(caption.startSeconds) ||
+          !Number.isFinite(caption.endSeconds) ||
+          caption.startSeconds < captionEnd - 0.0001 ||
+          caption.endSeconds <= caption.startSeconds ||
+          caption.endSeconds > scene.sceneDurationSeconds
+        ) {
+          throw new Error(
+            `Invalid, overlapping or out-of-scene subtitle: ${scene.file}`,
+          );
+        }
+        captionEnd = caption.endSeconds;
+      }
       report.audio.push({
         file: scene.file,
         durationSeconds: duration,
@@ -165,6 +183,7 @@ try {
           ),
         ),
         fullDecode: "passed",
+        captionCount: scene.captions?.length ?? 0,
       });
       totalSeconds += scene.sceneDurationSeconds;
     }

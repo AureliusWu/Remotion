@@ -1,0 +1,63 @@
+{
+  "checkedAt": "2026-10-29T01:03:23.886Z",
+  "source": "decoded AAC from final MP4, not source MP3 files",
+  "measurement": "44.1kHz mono signed 16-bit PCM",
+  "decodedDurationSeconds": 180.01068027210886,
+  "status": "passed",
+  "scenes": [
+    {
+      "scene": "01-encounters.mp3",
+      "rmsDbfs": -27.599,
+      "peakDbfs": -4.063,
+      "audibleNarration": "passed"
+    },
+    {
+      "scene": "02-counting.mp3",
+      "rmsDbfs": -25.202,
+      "peakDbfs": -2.729,
+      "audibleNarration": "passed"
+    },
+    {
+      "scene": "03-assumptions.mp3",
+      "rmsDbfs": -24.68,
+      "peakDbfs": -2.154,
+      "audibleNarration": "passed"
+    },
+    {
+      "scene": "04-counts.mp3",
+      "rmsDbfs": -25.893,
+      "peakDbfs": -0.974,
+      "audibleNarration": "passed"
+    },
+    {
+      "scene": "05-waiting.mp3",
+      "rmsDbfs": -24.274,
+      "peakDbfs": -1.121,
+      "audibleNarration": "passed"
+    },
+    {
+      "scene": "06-memory.mp3",
+      "rmsDbfs": -25.072,
+      "peakDbfs": -0.981,
+      "audibleNarration": "passed"
+    },
+    {
+      "scene": "07-history.mp3",
+      "rmsDbfs": -25.144,
+      "peakDbfs": -2.155,
+      "audibleNarration": "passed"
+    },
+    {
+      "scene": "08-limits.mp3",
+      "rmsDbfs": -24.844,
+      "peakDbfs": -1.353,
+      "audibleNarration": "passed"
+    },
+    {
+      "scene": "09-ending.mp3",
+      "rmsDbfs": -25.818,
+      "peakDbfs": -1.738,
+      "audibleNarration": "passed"
+    }
+  ]
+}

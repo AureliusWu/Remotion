@@ -1,6 +1,7 @@
 import { SmokeTestComposition } from "./Composition";
 import { PelicanRideComposition } from "./pelican-ride/PelicanRide";
 import { ChinaGenAiCompositions } from "./china-genai/ChinaGenAiTimeline";
+import { PoissonCompositions } from "./poisson-process/PoissonFilm";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ export const RemotionRoot: React.FC = () => {
       <SmokeTestComposition />
       <PelicanRideComposition />
       <ChinaGenAiCompositions />
+      <PoissonCompositions />
     </>
   );
 };

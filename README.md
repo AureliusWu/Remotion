@@ -16,6 +16,7 @@ video/                  Remotion + React + TypeScript 工程
   src/Composition.tsx   SmokeTest 测试视频与合成注册
   src/pelican-ride/     鹈鹕海岸骑行：插画、踩踏运动与背景视差
   src/china-genai/     中国生成式 AI 用户规模：数据、分镜与旁白时间轴
+  src/poisson-process/ 泊松过程科普：数学、人文、逐句字幕与原创音乐
   scripts/              规格/静帧/音频验证与本地旁白生成工具
   out/                  本地渲染输出（不纳入 Git）
 examples/               已验证的小型测试成片、封面和媒体信息
@@ -57,6 +58,25 @@ npm run still:test
 - `node_modules`、构建缓存和日常渲染输出均被 Git 忽略。
 
 ## 测试视频
+
+### 等待与偶遇：泊松过程
+
+`PoissonEncounters` 为 1920×1080、60 fps、10800 帧（3 分钟）的科普短片。用书店里的
+等待与偶遇串起泊松计数、指数等待、无记忆性、1837 年历史书目和模型的适用边界。
+包含中文旁白、36 条逐句字幕、原创轻音乐，数学依据为 MIT 课程讲义，历史依据为 BnF 书目。
+
+![等待与偶遇：泊松过程](examples/poisson-process/cover.png)
+
+启动 Studio 后打开 `http://localhost:3000/PoissonEncounters`。
+`npm run verify:poisson` 验证合成、关键帧、旁白和字幕；`npm run render:poisson` 导出本地
+`video/out/poisson-process-1080p60.mp4`。导出后可运行：
+
+```powershell
+node scripts/verify-export.mjs out/poisson-process-1080p60.mp4 180 60
+```
+
+以上命令在 `video/` 中执行。完整数学口径、时间轴与复现方式见
+[作品说明](docs/POISSON-FILM.md)，实际检查结果见[工程日志](docs/VIDEO-ENGINEERING-LOG.md)。
 
 ### 中国生成式 AI 用户规模
 

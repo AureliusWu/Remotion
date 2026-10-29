@@ -1,0 +1,145 @@
+{
+  "composition": "PoissonEncounters",
+  "checkedAt": "2026-10-29T00:55:44.847Z",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  },
+  "frames": [
+    {
+      "frame": 600,
+      "file": "frame-0600.png",
+      "bytes": 223107,
+      "sha256": "7a9b6a742a8fcb8e465f947a4626b8a3c7a47238f6bdc3a3425a92def5ca9dde"
+    },
+    {
+      "frame": 2100,
+      "file": "frame-2100.png",
+      "bytes": 158566,
+      "sha256": "dd100081b376f83fd237c9c726641c5d0a4bf989f38396e2522702f0848cb7c9"
+    },
+    {
+      "frame": 3300,
+      "file": "frame-3300.png",
+      "bytes": 201917,
+      "sha256": "dd1158016428f47a7d849d444e615b04faa0e127803e874fb1bb3b4324062d98"
+    },
+    {
+      "frame": 4500,
+      "file": "frame-4500.png",
+      "bytes": 186134,
+      "sha256": "a6af42047049529083a6632f707ff2988b8d2e27b8ae08076ceeec1cd49df553"
+    },
+    {
+      "frame": 5700,
+      "file": "frame-5700.png",
+      "bytes": 198288,
+      "sha256": "db730374dbe0305f5c44f182d392e168a1a5fbc84559f927098cce88071a9ba0"
+    },
+    {
+      "frame": 6900,
+      "file": "frame-6900.png",
+      "bytes": 233711,
+      "sha256": "d902996f3dc2ae1de33555c59c9711b8b9d05e4d1d62feff649e860de2a7a61b"
+    },
+    {
+      "frame": 8100,
+      "file": "frame-8100.png",
+      "bytes": 257317,
+      "sha256": "7441343d39c15b173039cba13fbbdefd6d098a1e7c23431a02b6b5d0e88ec857"
+    },
+    {
+      "frame": 9300,
+      "file": "frame-9300.png",
+      "bytes": 210785,
+      "sha256": "7a6f0dc7b5394e468da04d63024599f6cd252063aec12b13485b81fa27ab5678"
+    },
+    {
+      "frame": 10500,
+      "file": "frame-10500.png",
+      "bytes": 259288,
+      "sha256": "7384a248551d5cca1b575365d2fe25ecefad1cd5d4ee2a26b76de881adeffab2"
+    },
+    {
+      "frame": 10799,
+      "file": "frame-10799.png",
+      "bytes": 110697,
+      "sha256": "ef8a498847c8ee72900cbdc8bfec9a5f7bcaab636ac122cde03ebf6cc3119042"
+    }
+  ],
+  "audio": [
+    {
+      "file": "01-encounters.mp3",
+      "durationSeconds": 16.692245,
+      "tailRoomSeconds": 2.608,
+      "fullDecode": "passed",
+      "captionCount": 4
+    },
+    {
+      "file": "02-counting.mp3",
+      "durationSeconds": 16.613878,
+      "tailRoomSeconds": 2.686,
+      "fullDecode": "passed",
+      "captionCount": 4
+    },
+    {
+      "file": "03-assumptions.mp3",
+      "durationSeconds": 17.946122,
+      "tailRoomSeconds": 1.354,
+      "fullDecode": "passed",
+      "captionCount": 4
+    },
+    {
+      "file": "04-counts.mp3",
+      "durationSeconds": 17.502041,
+      "tailRoomSeconds": 1.798,
+      "fullDecode": "passed",
+      "captionCount": 4
+    },
+    {
+      "file": "05-waiting.mp3",
+      "durationSeconds": 17.502041,
+      "tailRoomSeconds": 1.798,
+      "fullDecode": "passed",
+      "captionCount": 4
+    },
+    {
+      "file": "06-memory.mp3",
+      "durationSeconds": 17.423673,
+      "tailRoomSeconds": 1.876,
+      "fullDecode": "passed",
+      "captionCount": 4
+    },
+    {
+      "file": "07-history.mp3",
+      "durationSeconds": 16.875102,
+      "tailRoomSeconds": 2.425,
+      "fullDecode": "passed",
+      "captionCount": 4
+    },
+    {
+      "file": "08-limits.mp3",
+      "durationSeconds": 17.946122,
+      "tailRoomSeconds": 1.354,
+      "fullDecode": "passed",
+      "captionCount": 4
+    },
+    {
+      "file": "09-ending.mp3",
+      "durationSeconds": 18.364082,
+      "tailRoomSeconds": 0.936,
+      "fullDecode": "passed",
+      "captionCount": 4
+    }
+  ],
+  "browserErrors": [],
+  "status": "passed",
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  }
+}

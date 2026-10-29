@@ -37,6 +37,8 @@
     "lint": "eslint src && tsc --noEmit",
     "check:versions": "remotion versions",
     "verify:genai": "node scripts/verify-composition.mjs ChinaGenAiTimeline --seconds=60 --fps=60 --frames=180,1080,1740,2220,2820,3420,3599 --voiceover=china-genai/voiceover-manifest.json",
+    "verify:poisson": "node scripts/verify-composition.mjs PoissonEncounters --seconds=180 --fps=60 --frames=600,2100,3300,4500,5700,6900,8100,9300,10500,10799 --voiceover=poisson-process/voiceover-manifest.json",
+    "render:poisson": "remotion render PoissonEncounters out/poisson-process-1080p60.mp4 --codec=h264 --crf=19 --pixel-format=yuv420p --image-format=jpeg --jpeg-quality=92 --audio-codec=aac --audio-bitrate=192k --concurrency=4",
     "render:test": "remotion render SmokeTest out/smoke-test.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --concurrency=2",
     "still:test": "remotion still SmokeTest out/smoke-test.png --frame=90"
   },

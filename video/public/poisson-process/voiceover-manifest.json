@@ -1,0 +1,390 @@
+{
+  "generatedAt": "2026-10-29T08:55:07.5207933+08:00",
+  "generator": "Windows SAPI, local installed Microsoft Huihui Desktop voice; sentence-level PCM timing",
+  "storyboard": "src/poisson-process/storyboard.json",
+  "language": "zh-CN",
+  "encoding": "MP3, 128 kbps, 44.1 kHz, mono",
+  "fps": 60,
+  "totalSceneDurationSeconds": 180.0,
+  "scenes": [
+    {
+      "file": "01-encounters.mp3",
+      "text": "街角书店的门铃，有时接连响起，有时很久没有动静。我们等一位读者，等一封回信，也等一次偶遇。偶然发生的时刻，能不能有一种可以理解的规律？今天，就从一扇门，走进泊松过程。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 3,
+      "durationSeconds": 16.692245,
+      "rawWavDurationSeconds": 16.641723,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -4.03,
+        "rmsDbfs": -27.5547,
+        "sampleCount": 733900,
+        "decodedDurationSeconds": 16.64172335600907
+      },
+      "captions": [
+        {
+          "text": "街角书店的门铃，有时接连响起，有时很久没有动静。",
+          "startSeconds": 0.7,
+          "endSeconds": 5.462789
+        },
+        {
+          "text": "我们等一位读者，等一封回信，也等一次偶遇。",
+          "startSeconds": 5.532789,
+          "endSeconds": 9.688277
+        },
+        {
+          "text": "偶然发生的时刻，能不能有一种可以理解的规律？",
+          "startSeconds": 9.758277,
+          "endSeconds": 13.727914
+        },
+        {
+          "text": "今天，就从一扇门，走进泊松过程。",
+          "startSeconds": 13.797914,
+          "endSeconds": 17.491723
+        }
+      ]
+    },
+    {
+      "file": "02-counting.mp3",
+      "text": "每次到来，都是时间轴上的一个点。从零数到时刻t，累计到来次数叫N t。平均每分钟两人，写作速率拉姆达等于二。平均两人，不是每隔三十秒就准时来一人。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 2,
+      "durationSeconds": 16.613878,
+      "rawWavDurationSeconds": 16.565986,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -2.7044,
+        "rmsDbfs": -25.1607,
+        "sampleCount": 730560,
+        "decodedDurationSeconds": 16.56598639455782
+      },
+      "captions": [
+        {
+          "text": "每次到来，都是时间轴上的一个点。",
+          "startSeconds": 0.7,
+          "endSeconds": 4.288912
+        },
+        {
+          "text": "从零数到时刻t，累计到来次数叫N t。",
+          "startSeconds": 4.358912,
+          "endSeconds": 8.659615
+        },
+        {
+          "text": "平均每分钟两人，写作速率拉姆达等于二。",
+          "startSeconds": 8.729615,
+          "endSeconds": 13.073311
+        },
+        {
+          "text": "平均两人，不是每隔三十秒就准时来一人。",
+          "startSeconds": 13.143311,
+          "endSeconds": 17.415986
+        }
+      ]
+    },
+    {
+      "file": "03-assumptions.mp3",
+      "text": "齐次泊松过程，有三个重要条件。不相交时段的增量独立；同样时长，同样规律。在很短时间内，一次到来的概率约为速率乘时间。两次以上到来的概率，比时间长度更快趋近于零。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 2,
+      "durationSeconds": 17.946122,
+      "rawWavDurationSeconds": 17.906349,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -2.0259,
+        "rmsDbfs": -24.6441,
+        "sampleCount": 789670,
+        "decodedDurationSeconds": 17.906349206349205
+      },
+      "captions": [
+        {
+          "text": "齐次泊松过程，有三个重要条件。",
+          "startSeconds": 0.7,
+          "endSeconds": 4.382063
+        },
+        {
+          "text": "不相交时段的增量独立；同样时长，同样规律。",
+          "startSeconds": 4.452063,
+          "endSeconds": 9.205737
+        },
+        {
+          "text": "在很短时间内，一次到来的概率约为速率乘时间。",
+          "startSeconds": 9.275737,
+          "endSeconds": 13.953265
+        },
+        {
+          "text": "两次以上到来的概率，比时间长度更快趋近于零。",
+          "startSeconds": 14.023265,
+          "endSeconds": 18.756349
+        }
+      ]
+    },
+    {
+      "file": "04-counts.mp3",
+      "text": "长度为t的时间里，次数服从泊松分布。拉姆达乘t，就是这段时间的平均次数。平均每分钟两人，零人、一人、两人都可能。一分钟无人到来的概率，约为百分之十三点五。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 2,
+      "durationSeconds": 17.502041,
+      "rawWavDurationSeconds": 17.456508,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -0.9551,
+        "rmsDbfs": -25.8584,
+        "sampleCount": 769832,
+        "decodedDurationSeconds": 17.456507936507936
+      },
+      "captions": [
+        {
+          "text": "长度为t的时间里，次数服从泊松分布。",
+          "startSeconds": 0.7,
+          "endSeconds": 4.646145
+        },
+        {
+          "text": "拉姆达乘t，就是这段时间的平均次数。",
+          "startSeconds": 4.716145,
+          "endSeconds": 8.763197
+        },
+        {
+          "text": "平均每分钟两人，零人、一人、两人都可能。",
+          "startSeconds": 8.833197,
+          "endSeconds": 13.888413
+        },
+        {
+          "text": "一分钟无人到来的概率，约为百分之十三点五。",
+          "startSeconds": 13.958413,
+          "endSeconds": 18.306508
+        }
+      ]
+    },
+    {
+      "file": "05-waiting.mp3",
+      "text": "到来之间的等待时间，服从指数分布。每分钟平均两人，平均等待半分钟，不是保证三十秒。等超过一分钟，和一分钟内无人到来，是同一件事。概率仍约百分之十三点五。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 2,
+      "durationSeconds": 17.502041,
+      "rawWavDurationSeconds": 17.458957,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -1.1145,
+        "rmsDbfs": -24.2414,
+        "sampleCount": 769940,
+        "decodedDurationSeconds": 17.458956916099773
+      },
+      "captions": [
+        {
+          "text": "到来之间的等待时间，服从指数分布。",
+          "startSeconds": 0.7,
+          "endSeconds": 4.593311
+        },
+        {
+          "text": "每分钟平均两人，平均等待半分钟，不是保证三十秒。",
+          "startSeconds": 4.663311,
+          "endSeconds": 10.1661
+        },
+        {
+          "text": "等超过一分钟，和一分钟内无人到来，是同一件事。",
+          "startSeconds": 10.2361,
+          "endSeconds": 15.42941
+        },
+        {
+          "text": "概率仍约百分之十三点五。",
+          "startSeconds": 15.49941,
+          "endSeconds": 18.308957
+        }
+      ]
+    },
+    {
+      "file": "06-memory.mp3",
+      "text": "指数等待有个反直觉的性质：无记忆性。已经等了一分钟，未来半分钟也不会更容易等到人。条件是，尚无人到来；我们比较的是剩余等待。过去的空白，不会积攒即将兑现的好运。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 2,
+      "durationSeconds": 17.423673,
+      "rawWavDurationSeconds": 17.385714,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -0.9545,
+        "rmsDbfs": -25.0342,
+        "sampleCount": 766710,
+        "decodedDurationSeconds": 17.385714285714286
+      },
+      "captions": [
+        {
+          "text": "指数等待有个反直觉的性质：无记忆性。",
+          "startSeconds": 0.7,
+          "endSeconds": 4.618299
+        },
+        {
+          "text": "已经等了一分钟，未来半分钟也不会更容易等到人。",
+          "startSeconds": 4.688299,
+          "endSeconds": 9.622698
+        },
+        {
+          "text": "条件是，尚无人到来；我们比较的是剩余等待。",
+          "startSeconds": 9.692698,
+          "endSeconds": 14.343016
+        },
+        {
+          "text": "过去的空白，不会积攒即将兑现的好运。",
+          "startSeconds": 14.413016,
+          "endSeconds": 18.235714
+        }
+      ]
+    },
+    {
+      "file": "07-history.mp3",
+      "text": "概率论也曾走进人的判断。一八三七年，泊松出版了研究司法判决概率的著作。这并不意味着，现代泊松过程在当时已经完整成形。数学描述不确定，不替我们裁定人的价值。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 2,
+      "durationSeconds": 16.875102,
+      "rawWavDurationSeconds": 16.826939,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -2.1462,
+        "rmsDbfs": -25.1072,
+        "sampleCount": 742068,
+        "decodedDurationSeconds": 16.826938775510204
+      },
+      "captions": [
+        {
+          "text": "概率论也曾走进人的判断。",
+          "startSeconds": 0.7,
+          "endSeconds": 3.434036
+        },
+        {
+          "text": "一八三七年，泊松出版了研究司法判决概率的著作。",
+          "startSeconds": 3.504036,
+          "endSeconds": 8.322472
+        },
+        {
+          "text": "这并不意味着，现代泊松过程在当时已经完整成形。",
+          "startSeconds": 8.392472,
+          "endSeconds": 13.404422
+        },
+        {
+          "text": "数学描述不确定，不替我们裁定人的价值。",
+          "startSeconds": 13.474422,
+          "endSeconds": 17.676939
+        }
+      ]
+    },
+    {
+      "file": "08-limits.mp3",
+      "text": "真实街道上，假设未必成立。按表来的公交有固定节拍，散场人群则会聚集。速率改变，要调整齐次假设；事件相关，还需别的模型。该修改的是假设，不是要求生活配合公式。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 2,
+      "durationSeconds": 17.946122,
+      "rawWavDurationSeconds": 17.913515,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -1.2963,
+        "rmsDbfs": -24.8031,
+        "sampleCount": 789986,
+        "decodedDurationSeconds": 17.913514739229026
+      },
+      "captions": [
+        {
+          "text": "真实街道上，假设未必成立。",
+          "startSeconds": 0.7,
+          "endSeconds": 3.811361
+        },
+        {
+          "text": "按表来的公交有固定节拍，散场人群则会聚集。",
+          "startSeconds": 3.881361,
+          "endSeconds": 8.531406
+        },
+        {
+          "text": "速率改变，要调整齐次假设；事件相关，还需别的模型。",
+          "startSeconds": 8.601406,
+          "endSeconds": 14.393311
+        },
+        {
+          "text": "该修改的是假设，不是要求生活配合公式。",
+          "startSeconds": 14.463311,
+          "endSeconds": 18.763515
+        }
+      ]
+    },
+    {
+      "file": "09-ending.mp3",
+      "text": "记住三个问题：来多少？等多久？假设对不对？泊松分布回答计数，指数分布回答等待；泊松过程把它们连在一起。看懂偶然，是为更从容地生活。算得出概率，也为每次相逢留一点不必计算的空间。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 3,
+      "durationSeconds": 18.364082,
+      "rawWavDurationSeconds": 18.32,
+      "sceneDurationSeconds": 20,
+      "fromSeconds": 0.7,
+      "maxAudioDurationSeconds": 18.4,
+      "pauseBetweenLinesSeconds": 0.22,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+        "peakDbfs": -1.666,
+        "rmsDbfs": -25.7781,
+        "sampleCount": 807912,
+        "decodedDurationSeconds": 18.32
+      },
+      "captions": [
+        {
+          "text": "记住三个问题：来多少？等多久？假设对不对？",
+          "startSeconds": 0.7,
+          "endSeconds": 5.868912
+        },
+        {
+          "text": "泊松分布回答计数，指数分布回答等待；泊松过程把它们连在一起。",
+          "startSeconds": 5.938912,
+          "endSeconds": 11.748866
+        },
+        {
+          "text": "看懂偶然，是为更从容地生活。",
+          "startSeconds": 11.818866,
+          "endSeconds": 14.821338
+        },
+        {
+          "text": "算得出概率，也为每次相逢留一点不必计算的空间。",
+          "startSeconds": 14.891338,
+          "endSeconds": 19.17
+        }
+      ]
+    }
+  ],
+  "failures": []
+}

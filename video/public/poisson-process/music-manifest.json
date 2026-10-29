@@ -1,0 +1,26 @@
+{
+  "file": "quiet-pages-music.mp3",
+  "title": "Quiet Pages",
+  "description": "Original deterministic soft electric-piano and sine-pad synthesis, generated for this project.",
+  "durationSeconds": 180.035918,
+  "contentDurationSeconds": 180,
+  "targetPeakDbfs": -42,
+  "audioMeasurement": {
+    "fullDecodePassed": true,
+    "measurement": "decoded 44.1 kHz 16-bit mono PCM",
+    "peakDbfs": -42.4551,
+    "rmsDbfs": -52.8492,
+    "sampleCount": 7938000,
+    "decodedDurationSeconds": 180
+  },
+  "encoding": "MP3, 128 kbps, 44.1 kHz, mono",
+  "source": "scripts/generate-poisson-music.ps1",
+  "externalAssets": [],
+  "suggestedVolume": 1,
+  "relativeToNarration": {
+    "voiceoverManifestSha256": "02659bf237114a1d6ca00314ed93888795c1bbccb7f6674aed9725373d44b2cb",
+    "quietestNarrationRmsDbfs": -27.5547,
+    "minimumRmsDifferenceDb": 25.2945,
+    "passesAtLeast20dB": true
+  }
+}

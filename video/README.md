@@ -34,6 +34,18 @@ node scripts/verify-composition.mjs SmokeTest --seconds=6 --fps=30
 数据来源见[来源记录](../docs/CHINA-GENAI-SOURCES.md)，问题修复和可复用工具见
 [工程日志](../docs/VIDEO-ENGINEERING-LOG.md)。
 
+科普合成：`PoissonEncounters`，1920×1080、60 fps、10800 帧（3 分钟）。九个分镜位于
+`PoissonScenes`，中文旁白与逐句字幕来自 `src/poisson-process/storyboard.json`。
+`npm run verify:poisson` 检查合成和音频；`npm run render:poisson` 导出
+`out/poisson-process-1080p60.mp4`。完整成片检查命令：
+
+```powershell
+node scripts/verify-export.mjs out/poisson-process-1080p60.mp4 180 60
+```
+
+该命令核对实际视频/音频流和帧数，再完整解码，并在 MP4 旁写入验证 JSON。
+数学、人文与模型边界说明见[作品说明](../docs/POISSON-FILM.md)。
+
 本轮已重新渲染验证的小型示例另存于仓库的 `examples/` 目录；新成片与原示例的
 SHA-256 相同，完整验证记录包含一致性证明。
 本轮恢复 Remotion 官方推荐的 Zod `4.5.4`，移除强制版本覆盖，并保留版本检查和

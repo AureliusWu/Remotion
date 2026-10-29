@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-29T00:59:39.342Z",
+  "composition": "PoissonEncounters",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "durationInFrames": 10800,
+  "observation": {
+    "elapsedSeconds": 203.198,
+    "currentFrame": 1400,
+    "playing": true,
+    "looping": true,
+    "error": null
+  },
+  "chapters": [
+    {
+      "name": "01 等待与偶遇",
+      "startFrame": 0,
+      "endFrame": 1199
+    },
+    {
+      "name": "02 计数过程",
+      "startFrame": 1200,
+      "endFrame": 2399
+    },
+    {
+      "name": "03 模型条件",
+      "startFrame": 2400,
+      "endFrame": 3599
+    },
+    {
+      "name": "04 泊松计数",
+      "startFrame": 3600,
+      "endFrame": 4799
+    },
+    {
+      "name": "05 指数等待",
+      "startFrame": 4800,
+      "endFrame": 5999
+    },
+    {
+      "name": "06 无记忆性",
+      "startFrame": 6000,
+      "endFrame": 7199
+    },
+    {
+      "name": "07 概率与人的判断",
+      "startFrame": 7200,
+      "endFrame": 8399
+    },
+    {
+      "name": "08 模型的边界",
+      "startFrame": 8400,
+      "endFrame": 9599
+    },
+    {
+      "name": "09 为相逢留一点空间",
+      "startFrame": 9600,
+      "endFrame": 10799
+    }
+  ]
+}
