@@ -1,0 +1,164 @@
+{
+  "checkedAt": "2026-10-29T14:37:33.174Z",
+  "platform": {
+    "os": "win32",
+    "arch": "x64",
+    "release": "10.0.19045"
+  },
+  "node": {
+    "version": "24.14.1",
+    "executable": "F:\\node.exe",
+    "engine": "^20.19.0 || ^22.13.0 || >=24",
+    "status": "passed"
+  },
+  "npm": {
+    "version": "11.11.0",
+    "cliPath": "F:\\node_modules\\npm\\bin\\npm-cli.js",
+    "engine": null,
+    "semverPath": "F:\\node_modules\\npm\\node_modules\\semver\\index.js",
+    "status": "passed"
+  },
+  "dependencies": {
+    "lockfileVersion": 3,
+    "items": {
+      "@remotion/bundler": {
+        "group": "dependencies",
+        "declared": "4.0.539",
+        "lockDeclared": "4.0.539",
+        "locked": "4.0.539",
+        "installed": "4.0.539",
+        "status": "passed"
+      },
+      "@remotion/cli": {
+        "group": "dependencies",
+        "declared": "4.0.539",
+        "lockDeclared": "4.0.539",
+        "locked": "4.0.539",
+        "installed": "4.0.539",
+        "status": "passed"
+      },
+      "@remotion/media": {
+        "group": "dependencies",
+        "declared": "4.0.539",
+        "lockDeclared": "4.0.539",
+        "locked": "4.0.539",
+        "installed": "4.0.539",
+        "status": "passed"
+      },
+      "@remotion/renderer": {
+        "group": "dependencies",
+        "declared": "4.0.539",
+        "lockDeclared": "4.0.539",
+        "locked": "4.0.539",
+        "installed": "4.0.539",
+        "status": "passed"
+      },
+      "react": {
+        "group": "dependencies",
+        "declared": "19.2.3",
+        "lockDeclared": "19.2.3",
+        "locked": "19.2.3",
+        "installed": "19.2.3",
+        "status": "passed"
+      },
+      "react-dom": {
+        "group": "dependencies",
+        "declared": "19.2.3",
+        "lockDeclared": "19.2.3",
+        "locked": "19.2.3",
+        "installed": "19.2.3",
+        "status": "passed"
+      },
+      "remotion": {
+        "group": "dependencies",
+        "declared": "4.0.539",
+        "lockDeclared": "4.0.539",
+        "locked": "4.0.539",
+        "installed": "4.0.539",
+        "status": "passed"
+      },
+      "zod": {
+        "group": "dependencies",
+        "declared": "4.5.4",
+        "lockDeclared": "4.5.4",
+        "locked": "4.5.4",
+        "installed": "4.5.4",
+        "status": "passed"
+      },
+      "@remotion/eslint-config-flat": {
+        "group": "devDependencies",
+        "declared": "4.0.539",
+        "lockDeclared": "4.0.539",
+        "locked": "4.0.539",
+        "installed": "4.0.539",
+        "status": "passed"
+      },
+      "@types/react": {
+        "group": "devDependencies",
+        "declared": "19.2.7",
+        "lockDeclared": "19.2.7",
+        "locked": "19.2.7",
+        "installed": "19.2.7",
+        "status": "passed"
+      },
+      "@types/web": {
+        "group": "devDependencies",
+        "declared": "0.0.166",
+        "lockDeclared": "0.0.166",
+        "locked": "0.0.166",
+        "installed": "0.0.166",
+        "status": "passed"
+      },
+      "eslint": {
+        "group": "devDependencies",
+        "declared": "10.12.0",
+        "lockDeclared": "10.12.0",
+        "locked": "10.12.0",
+        "installed": "10.12.0",
+        "status": "passed"
+      },
+      "prettier": {
+        "group": "devDependencies",
+        "declared": "3.8.1",
+        "lockDeclared": "3.8.1",
+        "locked": "3.8.1",
+        "installed": "3.8.1",
+        "status": "passed"
+      },
+      "typescript": {
+        "group": "devDependencies",
+        "declared": "5.9.3",
+        "lockDeclared": "5.9.3",
+        "locked": "5.9.3",
+        "installed": "5.9.3",
+        "status": "passed"
+      }
+    },
+    "count": 14,
+    "status": "passed"
+  },
+  "browser": {
+    "versionFile": "H:\\CodexAI\\Remotion\\video\\node_modules\\.remotion\\chrome-headless-shell\\VERSION",
+    "version": "157.0.8080.0",
+    "path": "H:\\CodexAI\\Remotion\\video\\node_modules\\.remotion\\chrome-headless-shell\\win64\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+    "type": "local-puppeteer-browser",
+    "status": "passed"
+  },
+  "remotionVersions": {
+    "version": "4.0.539",
+    "cliPath": "H:\\CodexAI\\Remotion\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+    "summary": "All packages have the correct version.",
+    "status": "passed"
+  },
+  "ffmpeg": {
+    "version": "n7.1",
+    "invokedVia": "H:\\CodexAI\\Remotion\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+    "status": "passed"
+  },
+  "ffprobe": {
+    "version": "n7.1",
+    "invokedVia": "H:\\CodexAI\\Remotion\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+    "status": "passed"
+  },
+  "status": "passed"
+}

@@ -1,0 +1,39 @@
+{
+  "composition": "EnvironmentTest",
+  "checkedAt": "2026-10-29T14:34:49.105Z",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 240
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "file": "frame-0000.png",
+      "bytes": 92512,
+      "sha256": "63dc6fd9079f4b8f92945eb072ebb565d6af1fa13be6bfc4d071334783fda126"
+    },
+    {
+      "frame": 120,
+      "file": "frame-0120.png",
+      "bytes": 95224,
+      "sha256": "8a95f14270407695110d406a6e5b884d182c38fe109845b3689c39a89c0aa06a"
+    },
+    {
+      "frame": 239,
+      "file": "frame-0239.png",
+      "bytes": 93011,
+      "sha256": "936f20d4870df77bef855a377a8ca9643b0720efcd36d258e5b635ae7d9a02da"
+    }
+  ],
+  "audio": [],
+  "browserErrors": [],
+  "status": "passed",
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 240
+  }
+}

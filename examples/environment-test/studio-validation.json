@@ -1,0 +1,131 @@
+{
+  "checkedAt": "2026-10-29T14:36:45.897Z",
+  "status": "passed",
+  "url": "http://localhost:3000/EnvironmentTest",
+  "observedPlaybackSeconds": 94.183,
+  "composition": {
+    "compositionName": "EnvironmentTest",
+    "stack": "Error\n    at remotionOriginalSource (studio-original://.%2Feffects%2Fenvironment-test%2FEnvironmentTest.tsx:87:2)",
+    "durationInFrames": 240,
+    "height": 1080,
+    "width": 1920,
+    "fps": 60,
+    "currentFrame": 120
+  },
+  "playback": {
+    "currentContent": {
+      "type": "composition",
+      "compositionId": "EnvironmentTest"
+    },
+    "currentFrame": 118,
+    "playing": true,
+    "muted": false,
+    "volume": 1,
+    "playbackRate": 1,
+    "looping": true,
+    "timelineZoom": 0
+  },
+  "error": null,
+  "compositions": {
+    "compositions": [
+      {
+        "type": "composition",
+        "compositionName": "SmokeTest"
+      },
+      {
+        "type": "composition",
+        "compositionName": "PelicanRide"
+      },
+      {
+        "type": "composition",
+        "compositionName": "ChinaGenAiTimeline"
+      },
+      {
+        "type": "folder",
+        "folderName": "GenAiScenes",
+        "children": [
+          {
+            "type": "composition",
+            "compositionName": "GenAiLatest"
+          },
+          {
+            "type": "composition",
+            "compositionName": "GenAiHistory"
+          },
+          {
+            "type": "composition",
+            "compositionName": "GenAiGrowth"
+          },
+          {
+            "type": "composition",
+            "compositionName": "GenAiPenetration"
+          },
+          {
+            "type": "composition",
+            "compositionName": "GenAiUses"
+          },
+          {
+            "type": "composition",
+            "compositionName": "GenAiMethod"
+          }
+        ]
+      },
+      {
+        "type": "composition",
+        "compositionName": "PoissonEncounters"
+      },
+      {
+        "type": "folder",
+        "folderName": "PoissonScenes",
+        "children": [
+          {
+            "type": "composition",
+            "compositionName": "PoissonOpening"
+          },
+          {
+            "type": "composition",
+            "compositionName": "PoissonCounting"
+          },
+          {
+            "type": "composition",
+            "compositionName": "PoissonAssumptions"
+          },
+          {
+            "type": "composition",
+            "compositionName": "PoissonCounts"
+          },
+          {
+            "type": "composition",
+            "compositionName": "PoissonWaiting"
+          },
+          {
+            "type": "composition",
+            "compositionName": "PoissonMemory"
+          },
+          {
+            "type": "composition",
+            "compositionName": "PoissonHistory"
+          },
+          {
+            "type": "composition",
+            "compositionName": "PoissonLimits"
+          },
+          {
+            "type": "composition",
+            "compositionName": "PoissonEnding"
+          }
+        ]
+      },
+      {
+        "type": "folder",
+        "folderName": "Effects",
+        "children": [
+          {
+            "type": "composition",
+            "compositionName": "EnvironmentTest"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -2,8 +2,13 @@
 
 本目录是视频工程，完整介绍见[仓库 README](../README.md)。
 
+已有环境先运行 `npm run check:environment`，无需重复安装。新动画放 `effects/<name>/`，
+在 `effects/index.tsx` 注册，所有动画共用本目录的依赖。完整说明见
+[环境与新增动画](../docs/ENVIRONMENT.md) 和 [维护约定](AGENTS.md)。
+仅首次克隆且缺少依赖时使用 `npm ci`。
+
 ```powershell
-npm ci
+npm run check:environment
 npm run dev
 npm run check:versions
 npm run lint

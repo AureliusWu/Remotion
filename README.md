@@ -13,6 +13,8 @@
 
 ```text
 video/                  Remotion + React + TypeScript 工程
+  effects/<name>/       新动画独立模块，共享 video 根依赖
+  AGENTS.md             工程结构、版本管理与环境排查约定
   src/Composition.tsx   SmokeTest 测试视频与合成注册
   src/pelican-ride/     鹈鹕海岸骑行：插画、踩踏运动与背景视差
   src/china-genai/     中国生成式 AI 用户规模：数据、分镜与旁白时间轴
@@ -22,20 +24,23 @@ video/                  Remotion + React + TypeScript 工程
 examples/               已验证的小型测试成片、封面和媒体信息
 docs/VALIDATION.md      预览、构建与渲染验证记录
 docs/DEPENDENCIES.md    依赖版本、安全公告状态与检查命令
+docs/ENVIRONMENT.md     系统环境、诊断与新增动画方法
 docs/VIDEO-ENGINEERING-LOG.md  制作中的问题、修复、验证与经验
 ```
 
 ## 安装与预览
 
-在终端进入仓库根目录后执行：
+已有本地工程先检查环境，无需重复安装：
 
 ```powershell
 cd video
-npm ci
+npm run check:environment
 npm run dev
 ```
 
-打开终端打印的 Studio 地址，选择 `SmokeTest`。本次使用
+仅首次克隆且尚未安装依赖时执行 `npm ci`，使用锁文件版本，不主动升级。
+
+打开终端打印的 Studio 地址，选择 `SmokeTest` 或 `Effects/EnvironmentTest`。本次使用
 `http://localhost:3000/SmokeTest`。在 Codex 中启动且不弹出系统浏览器时，可使用
 `npm run dev -- --no-open`。
 
@@ -56,6 +61,9 @@ npm run still:test
 - `still:test`：导出第 90 帧到 `video/out/smoke-test.png`。
 - 首次渲染会自动下载 Chrome Headless Shell，需要网络连接。
 - `node_modules`、构建缓存和日常渲染输出均被 Git 忽略。
+
+环境检查与新增动画方法见 [ENVIRONMENT.md](docs/ENVIRONMENT.md)。新动画统一放入
+`video/effects/<name>/`，在 `video/effects/index.tsx` 注册；已有作品保持原目录。
 
 ## 测试视频
 

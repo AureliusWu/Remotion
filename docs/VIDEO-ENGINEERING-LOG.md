@@ -106,3 +106,39 @@
 - Studio 连续播放约 203.2 秒后已进入第二轮第 1400 帧，错误查询为 `null`；九章时间轴
   无空隙、覆盖 0–10799 帧，记录见 `studio-validation.json`。
 - 文件 SHA-256：`58d20fcd9b8bb7a99870ac5ed62042f1cc7fe3d07cce9aa2900b4e671c738853`。
+
+## 2026-10-29：长期项目环境检查与共享动画目录
+
+用户要求复用符合条件的环境、先定位后修复，并验证编译、预览和渲染。本轮沿用已有
+`H:\CodexAI\Remotion\video`，没有在父目录或动画目录另建 npm 工程。
+
+### 定位与配置
+
+- Node.js 24.14.1 / npm 11.11.0 已可用，满足项目 engines；14 个直接依赖的声明、锁文件、
+  实装精确一致，Remotion 配套包全为 4.0.539，React 19.2.3、TypeScript 5.9.3、Zod 4.5.4。
+- FFmpeg / FFprobe 的全局命令不在 PATH，但其 n7.1 程序已随 compositor 安装；通过官方
+  `remotion ffmpeg / ffprobe` 均可运行。新增 npm 入口，不重复安装或修改系统 PATH。
+- `remotion browser ensure` 复用已有 Chrome Headless Shell；缓存标记 157.0.8080.0 与
+  当前渲染器要求匹配，没有再次下载。
+- 新增 `effects/<name>/` 结构、明确的 Effects 注册与项目根 `video/AGENTS.md`。
+  旧作品保持原结构；ESLint 增加 effects 覆盖；`.npmrc` 默认保存精确版本。
+- 新增 `check:environment`，只读检查 Node/npm、依赖、浏览器和原生 CLI，写入 JSON 报告；
+  浏览器缺失/不匹配时下载回调直接报错，要求定位后执行单独的 `browser:ensure`。
+  未设置 npm_execpath 的独立 node 调用会明确失败并给出 npm script 运行方式。
+
+### 实际验证
+
+- `npm run check:environment`、`node --check scripts/check-environment.mjs` 通过。
+- `npm run check:versions`、`npm run lint`、`npm run build` 通过。
+- `verify:environment` 检查新诊断合成 `EnvironmentTest`：1920×1080、60 fps、240 帧，
+  真实渲染关键帧 0 / 120 / 239，无浏览器错误。简单图形和中文字体目视检查通过。
+- Studio 在 1x、未静音、循环状态下实际连续播放约 94.183 秒，错误查询为 null。
+  当前注册列表保留旧作品并新增 Effects/EnvironmentTest。
+- `render:environment` 导出 4 秒测试 MP4；`verify:environment-export` 对实际文件检查
+  H.264、1080p、60 fps、240 帧及 AAC，再完整解码通过。文件 239155 字节，视频 4 秒，
+  AAC 48 kHz 双声道 4.011 秒；编码补齐符合容差。实际 yuvj420p / pc 如实记录。
+- MP4 SHA-256：`e52377123f25a808a7bfb1ea5503858c28f79cfa345f69d857140cfc42e6c3bf`。
+
+没有执行依赖安装或升级，`package-lock.json` 无变化。所有环境满足要求；本轮只新增诊断样例，
+未制作正式动画。环境说明见 `docs/ENVIRONMENT.md`；报告和截图副本见 `examples/environment-test/`，
+测试 MP4 保留在被 Git 忽略的 `video/out/`。
