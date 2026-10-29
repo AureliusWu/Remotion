@@ -17,6 +17,7 @@ video/                  Remotion + React + TypeScript 工程
   out/                  本地渲染输出（不纳入 Git）
 examples/               已验证的小型测试成片、封面和媒体信息
 docs/VALIDATION.md      预览、构建与渲染验证记录
+docs/DEPENDENCIES.md    依赖版本、安全公告状态与检查命令
 ```
 
 ## 安装与预览
@@ -38,12 +39,14 @@ npm run dev
 以下命令在 `video` 目录中执行：
 
 ```powershell
+npm run check:versions
 npm run lint
 npm run build
 npm run render:test
 npm run still:test
 ```
 
+- `check:versions`：核对 Remotion 配套包和 Zod 等辅助依赖的版本。
 - `render:test`：导出 `video/out/smoke-test.mp4`，H.264、1920×1080、30 fps、6 秒。
 - `still:test`：导出第 90 帧到 `video/out/smoke-test.png`。
 - 首次渲染会自动下载 Chrome Headless Shell，需要网络连接。
@@ -63,9 +66,13 @@ Remotion 帧数驱动。共 180 帧，没有外部素材或音轨。
 ## 依赖说明
 
 - Remotion 及其配套包固定为 `4.0.539`，通过 `package-lock.json` 锁定依赖。
-- 上游当前锁定的 Zod `4.5.4` 受
-  [GHSA-mrhx-c7xc-m3w5](https://github.com/advisories/GHSA-mrhx-c7xc-m3w5)
-  影响；本工程通过 `overrides` 使用修复版 `4.6.6`，安装审计为 0 个漏洞。
-- Remotion CLI 仍会提示 Zod 与上游建议版本不同；该提示予以保留。当前覆盖版本已通过
-  本次代码检查、构建、Studio 预览、MP4 渲染和静帧导出验证。升级 Remotion 时需重新核对。
-- 中文使用系统字体回退；本次在 Windows 微软雅黑环境验证。跨平台字体外观可能不同。
+- Zod 直接固定为 Remotion 当前推荐的 `4.5.4`，已移除此前强制使用 `4.6.6` 的
+  `overrides`。保留 Remotion 版本检查，不修改上游检查代码。
+- 此前用于覆盖 Zod 的安全公告来源 `CVE-2023-54404` 已被 CNA 拒绝；GitHub 公告与
+  npm 审计尚未同步。本轮审计仍为 `10 high`，唯一公告对象为该 CVE 对应的 GHSA。
+  本工程保留实际审计结果，不宣称漏洞数量为 0。原始证据、时间和
+  [审计摘要](docs/dependency-audit.json)见[依赖说明](docs/DEPENDENCIES.md)。
+- 恢复官方依赖后的干净安装、原生版本检查、代码检查、构建、Studio 预览、MP4 与静帧
+  渲染均已重新验证通过，渲染日志不再输出 Zod 版本差异提示。本轮结果见
+  [验证记录](docs/VALIDATION.md)。
+- 中文使用系统字体回退；本轮在 Windows 微软雅黑环境验证。跨平台字体外观可能不同。

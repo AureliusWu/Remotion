@@ -1,0 +1,24 @@
+{
+  "auditCommand": "npm audit --json",
+  "auditExitCode": 1,
+  "reportedCounts": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 10,
+    "critical": 0,
+    "total": 10
+  },
+  "uniqueAdvisories": {
+    "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5": {
+      "title": "Zod can exhaust memory while validating oversized constrained collections",
+      "range": "<4.6.6",
+      "severity": "high"
+    }
+  },
+  "cveOfficialRecord": "https://cveawg.mitre.org/api/cve/CVE-2023-54404",
+  "cveOfficialState": "REJECTED",
+  "cveRecordUpdatedAt": "2026-10-28T21:17:22.423Z",
+  "ghsaWithdrawalRequest": "https://github.com/github/advisory-database/pull/10750",
+  "reviewNote": "The sole advisory references a CVE rejected by its CNA; npm/GHSA still report it. Audit remains enabled; findings are not suppressed."
+}

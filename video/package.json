@@ -16,7 +16,8 @@
     "@remotion/cli": "4.0.539",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.539"
+    "remotion": "4.0.539",
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.539",
@@ -31,11 +32,9 @@
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc --noEmit",
+    "check:versions": "remotion versions",
     "render:test": "remotion render SmokeTest out/smoke-test.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --concurrency=2",
     "still:test": "remotion still SmokeTest out/smoke-test.png --frame=90"
-  },
-  "overrides": {
-    "zod": "4.6.6"
   },
   "allowScripts": {
     "esbuild": false
