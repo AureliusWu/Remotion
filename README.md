@@ -15,10 +15,13 @@
 video/                  Remotion + React + TypeScript 工程
   src/Composition.tsx   SmokeTest 测试视频与合成注册
   src/pelican-ride/     鹈鹕海岸骑行：插画、踩踏运动与背景视差
+  src/china-genai/     中国生成式 AI 用户规模：数据、分镜与旁白时间轴
+  scripts/              规格/静帧/音频验证与本地旁白生成工具
   out/                  本地渲染输出（不纳入 Git）
 examples/               已验证的小型测试成片、封面和媒体信息
 docs/VALIDATION.md      预览、构建与渲染验证记录
 docs/DEPENDENCIES.md    依赖版本、安全公告状态与检查命令
+docs/VIDEO-ENGINEERING-LOG.md  制作中的问题、修复、验证与经验
 ```
 
 ## 安装与预览
@@ -54,6 +57,22 @@ npm run still:test
 - `node_modules`、构建缓存和日常渲染输出均被 Git 忽略。
 
 ## 测试视频
+
+### 中国生成式 AI 用户规模
+
+`ChinaGenAiTimeline` 为 1920×1080、60 fps、3600 帧（1 分钟）的数据视频，包含六个独立
+分镜及本地合成中文旁白。记录 2024 年 6 月至 2026 年上半年的五个公开人数节点。
+资料检索截至 2026-10-29；最新公开统计为 2026 年上半年突破 7 亿人，不推算今天的实时人数。
+
+启动 Studio 后打开 `http://localhost:3000/ChinaGenAiTimeline`，点击播放。
+
+![中国生成式 AI 用户规模](examples/china-genai/cover.png)
+
+在 `video/` 执行 `npm run verify:genai`，可检查实际合成规格、七个关键帧和六段旁白。
+本次交付为可播放预览和静帧，未导出整段 MP4。
+[数据来源与口径](docs/CHINA-GENAI-SOURCES.md) ·
+[工程问题与经验](docs/VIDEO-ENGINEERING-LOG.md) ·
+[自动验证报告](examples/china-genai/validation.json)
 
 ### 鹈鹕海岸骑行
 

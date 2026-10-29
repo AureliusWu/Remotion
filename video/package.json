@@ -13,7 +13,10 @@
   },
   "private": true,
   "dependencies": {
+    "@remotion/bundler": "4.0.539",
     "@remotion/cli": "4.0.539",
+    "@remotion/media": "4.0.539",
+    "@remotion/renderer": "4.0.539",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.539",
@@ -33,6 +36,7 @@
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc --noEmit",
     "check:versions": "remotion versions",
+    "verify:genai": "node scripts/verify-composition.mjs ChinaGenAiTimeline --seconds=60 --fps=60 --frames=180,1080,1740,2220,2820,3420,3599 --voiceover=china-genai/voiceover-manifest.json",
     "render:test": "remotion render SmokeTest out/smoke-test.mp4 --codec=h264 --crf=18 --pixel-format=yuv420p --concurrency=2",
     "still:test": "remotion still SmokeTest out/smoke-test.png --frame=90"
   },

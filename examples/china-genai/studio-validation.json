@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-29T00:40:19.863Z",
+  "composition": "ChinaGenAiTimeline",
+  "metadata": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 3600
+  },
+  "playbackObservation": {
+    "elapsedSeconds": 68.804,
+    "frame": 544,
+    "playing": true,
+    "looping": true,
+    "muted": false,
+    "playbackRate": 1,
+    "error": null
+  },
+  "scenes": [
+    {
+      "name": "01 最新公开规模",
+      "startFrame": 0,
+      "endFrame": 599,
+      "durationInFrames": 600
+    },
+    {
+      "name": "02 历史公开记录",
+      "startFrame": 600,
+      "endFrame": 1439,
+      "durationInFrames": 840
+    },
+    {
+      "name": "03 2025年规模增量",
+      "startFrame": 1440,
+      "endFrame": 2039,
+      "durationInFrames": 600
+    },
+    {
+      "name": "04 使用覆盖过半",
+      "startFrame": 2040,
+      "endFrame": 2519,
+      "durationInFrames": 480
+    },
+    {
+      "name": "05 主要使用场景",
+      "startFrame": 2520,
+      "endFrame": 3119,
+      "durationInFrames": 600
+    },
+    {
+      "name": "06 统计时点与来源",
+      "startFrame": 3120,
+      "endFrame": 3599,
+      "durationInFrames": 480
+    }
+  ],
+  "audio": [
+    {
+      "name": "01 中文旁白",
+      "startFrame": 36,
+      "endFrame": 599
+    },
+    {
+      "name": "02 中文旁白",
+      "startFrame": 636,
+      "endFrame": 1439
+    },
+    {
+      "name": "03 中文旁白",
+      "startFrame": 1476,
+      "endFrame": 2039
+    },
+    {
+      "name": "04 中文旁白",
+      "startFrame": 2076,
+      "endFrame": 2519
+    },
+    {
+      "name": "05 中文旁白",
+      "startFrame": 2556,
+      "endFrame": 3119
+    },
+    {
+      "name": "06 中文旁白",
+      "startFrame": 3156,
+      "endFrame": 3599
+    }
+  ]
+}

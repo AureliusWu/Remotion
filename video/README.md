@@ -19,6 +19,21 @@ npm run still:test
 预览地址：`http://localhost:3000/PelicanRide`。插画与运动逻辑分别放在
 `src/pelican-ride/` 下的组件和 `motion.ts` 中，无外部素材、无音轨。
 
+数据合成：`ChinaGenAiTimeline`，1920×1080、60 fps、3600 帧（1 分钟），带中文旁白。
+预览地址：`http://localhost:3000/ChinaGenAiTimeline`；各分镜可在 `GenAiScenes` 文件夹
+单独编辑。运行 `npm run verify:genai` 检查规格、七个静帧和六段音频；此命令不会导出 MP4。
+
+旁白资产已随源码保存。若改文案，需要在有 Huihui 中文声线的 Windows 环境执行
+`powershell -NoProfile -File scripts/generate-genai-voiceover.ps1`，然后重新验证。
+通用验证器也可用于其他 1080p 合成，例如：
+
+```powershell
+node scripts/verify-composition.mjs SmokeTest --seconds=6 --fps=30
+```
+
+数据来源见[来源记录](../docs/CHINA-GENAI-SOURCES.md)，问题修复和可复用工具见
+[工程日志](../docs/VIDEO-ENGINEERING-LOG.md)。
+
 本轮已重新渲染验证的小型示例另存于仓库的 `examples/` 目录；新成片与原示例的
 SHA-256 相同，完整验证记录包含一致性证明。
 本轮恢复 Remotion 官方推荐的 Zod `4.5.4`，移除强制版本覆盖，并保留版本检查和

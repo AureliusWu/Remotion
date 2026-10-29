@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-10-29T08:32:11.5258180+08:00",
+  "generator": "Windows SAPI, local installed Microsoft Huihui Desktop voice",
+  "language": "zh-CN",
+  "encoding": "MP3, 128 kbps, 44.1 kHz, mono",
+  "fps": 60,
+  "totalSceneDurationSeconds": 60.0,
+  "scenes": [
+    {
+      "file": "01-latest.mp3",
+      "text": "中国有多少人在使用生成式人工智能？截至二零二六年上半年，最新公开统计是：突破七亿人。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 3,
+      "durationSeconds": 8.254694,
+      "rawWavDurationSeconds": 8.213333,
+      "sceneDurationSeconds": 10,
+      "fromSeconds": 0.6,
+      "maxAudioDurationSeconds": 8.8
+    },
+    {
+      "file": "02-history.mp3",
+      "text": "把公开记录连起来看：二零二四年六月，二点三亿；年底，二点四九亿。二零二五年六月，五点一五亿；年底，六点零二亿。二零二六年上半年，突破七亿。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 4,
+      "durationSeconds": 11.911837,
+      "rawWavDurationSeconds": 11.880454,
+      "sceneDurationSeconds": 14,
+      "fromSeconds": 0.6,
+      "maxAudioDurationSeconds": 12.8
+    },
+    {
+      "file": "03-growth.mp3",
+      "text": "仅看二零二五年，用户规模就增加了三点五三亿人，同比增长百分之一百四十一点七。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 1,
+      "durationSeconds": 8.489796,
+      "rawWavDurationSeconds": 8.455147,
+      "sceneDurationSeconds": 10,
+      "fromSeconds": 0.6,
+      "maxAudioDurationSeconds": 8.8
+    },
+    {
+      "file": "04-penetration.mp3",
+      "text": "报告显示，过半人口在统计期内使用过生成式人工智能。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 0,
+      "durationSeconds": 6.478367,
+      "rawWavDurationSeconds": 6.436825,
+      "sceneDurationSeconds": 8,
+      "fromSeconds": 0.6,
+      "maxAudioDurationSeconds": 6.8
+    },
+    {
+      "file": "05-uses.mp3",
+      "text": "回答问题最普遍。图像、视频、文本和办公，也是主要用途。同一用户可选择多个场景。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 3,
+      "durationSeconds": 8.463673,
+      "rawWavDurationSeconds": 8.421859,
+      "sceneDurationSeconds": 10,
+      "fromSeconds": 0.6,
+      "maxAudioDurationSeconds": 8.8
+    },
+    {
+      "file": "06-method.mp3",
+      "text": "资料检索截至十月二十九日。最新统计期是二零二六年上半年，不代表实时人数。",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 4,
+      "durationSeconds": 6.29551,
+      "rawWavDurationSeconds": 6.258231,
+      "sceneDurationSeconds": 8,
+      "fromSeconds": 0.6,
+      "maxAudioDurationSeconds": 6.8
+    }
+  ]
+}

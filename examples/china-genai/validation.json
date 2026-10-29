@@ -1,0 +1,100 @@
+{
+  "composition": "ChinaGenAiTimeline",
+  "checkedAt": "2026-10-29T00:38:19.007Z",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 3600
+  },
+  "frames": [
+    {
+      "frame": 180,
+      "file": "frame-0180.png",
+      "bytes": 182393,
+      "sha256": "37473f0607fb2d9f10c3d4dca4b3890214a91396ab7261009d7ca270cbf8d686"
+    },
+    {
+      "frame": 1080,
+      "file": "frame-1080.png",
+      "bytes": 138027,
+      "sha256": "db4cccabdf03a574c6af1f13ba7ad3099ebaf650d052436121e67672309bf72a"
+    },
+    {
+      "frame": 1740,
+      "file": "frame-1740.png",
+      "bytes": 144976,
+      "sha256": "2e5348f28e0f5281a19c517ca0d988957c7f64eb8b04a4837eefa30f5a1f2097"
+    },
+    {
+      "frame": 2220,
+      "file": "frame-2220.png",
+      "bytes": 194777,
+      "sha256": "b9b7955706c24bf9a3d79674521a765e403fb3430867c4c2e6d4ebafa5d68c84"
+    },
+    {
+      "frame": 2820,
+      "file": "frame-2820.png",
+      "bytes": 166270,
+      "sha256": "2d61fa30e60904bdb3ea3a853c67ba386135622161ba3c65084ebb331cdd6565"
+    },
+    {
+      "frame": 3420,
+      "file": "frame-3420.png",
+      "bytes": 220849,
+      "sha256": "39b0f152471a6d6df6607f54992e52faea11916b80440920af2320d4ea9a5689"
+    },
+    {
+      "frame": 3599,
+      "file": "frame-3599.png",
+      "bytes": 220849,
+      "sha256": "39b0f152471a6d6df6607f54992e52faea11916b80440920af2320d4ea9a5689"
+    }
+  ],
+  "audio": [
+    {
+      "file": "01-latest.mp3",
+      "durationSeconds": 8.254694,
+      "tailRoomSeconds": 1.145,
+      "fullDecode": "passed"
+    },
+    {
+      "file": "02-history.mp3",
+      "durationSeconds": 11.911837,
+      "tailRoomSeconds": 1.488,
+      "fullDecode": "passed"
+    },
+    {
+      "file": "03-growth.mp3",
+      "durationSeconds": 8.489796,
+      "tailRoomSeconds": 0.91,
+      "fullDecode": "passed"
+    },
+    {
+      "file": "04-penetration.mp3",
+      "durationSeconds": 6.478367,
+      "tailRoomSeconds": 0.922,
+      "fullDecode": "passed"
+    },
+    {
+      "file": "05-uses.mp3",
+      "durationSeconds": 8.463673,
+      "tailRoomSeconds": 0.936,
+      "fullDecode": "passed"
+    },
+    {
+      "file": "06-method.mp3",
+      "durationSeconds": 6.29551,
+      "tailRoomSeconds": 1.104,
+      "fullDecode": "passed"
+    }
+  ],
+  "browserErrors": [],
+  "status": "passed",
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 3600
+  }
+}
