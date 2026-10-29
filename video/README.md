@@ -15,6 +15,10 @@ npm run still:test
 测试合成：`SmokeTest`，1920×1080、30 fps、180 帧（6 秒）。
 默认输出：`out/smoke-test.mp4`；该目录不会上传 GitHub。
 
+骑行合成：`PelicanRide`，1920×1080、60 fps、900 帧（15 秒）。
+预览地址：`http://localhost:3000/PelicanRide`。插画与运动逻辑分别放在
+`src/pelican-ride/` 下的组件和 `motion.ts` 中，无外部素材、无音轨。
+
 本轮已重新渲染验证的小型示例另存于仓库的 `examples/` 目录；新成片与原示例的
 SHA-256 相同，完整验证记录包含一致性证明。
 本轮恢复 Remotion 官方推荐的 Zod `4.5.4`，移除强制版本覆盖，并保留版本检查和

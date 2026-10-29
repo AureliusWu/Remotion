@@ -14,6 +14,7 @@
 ```text
 video/                  Remotion + React + TypeScript 工程
   src/Composition.tsx   SmokeTest 测试视频与合成注册
+  src/pelican-ride/     鹈鹕海岸骑行：插画、踩踏运动与背景视差
   out/                  本地渲染输出（不纳入 Git）
 examples/               已验证的小型测试成片、封面和媒体信息
 docs/VALIDATION.md      预览、构建与渲染验证记录
@@ -53,6 +54,22 @@ npm run still:test
 - `node_modules`、构建缓存和日常渲染输出均被 Git 忽略。
 
 ## 测试视频
+
+### 鹈鹕海岸骑行
+
+`PelicanRide` 是一段暖色海岸插画动画，1920×1080、60 fps、900 帧（15 秒）。
+鹈鹕交替踩踏，蹼足保持贴合踏板，车轮旋转，围巾与身体轻微摆动，背景分层滚动。
+全部画面由本地 SVG 与逐帧计算生成，无外部素材、无音轨。
+
+启动 Studio 后选择 `PelicanRide`，或打开 `http://localhost:3000/PelicanRide`。
+自行车和围巾颜色可通过合成的 `defaultProps` 调整；源文件位于
+[`video/src/pelican-ride/`](video/src/pelican-ride/)。
+
+![鹈鹕海岸骑行封面](examples/pelican-ride.png)
+
+制作与预览验证见[骑行视频说明](docs/PELICAN-RIDE.md)。
+
+### 基础联调示例
 
 `SmokeTest` 包含英文标题、中文副标题、旋转图形、逐帧计数和进度条；动画由
 Remotion 帧数驱动。共 180 帧，没有外部素材或音轨。
