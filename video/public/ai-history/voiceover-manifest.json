@@ -1,0 +1,3249 @@
+{
+  "generatedAt": "2026-10-29T15:52:41.359011+00:00",
+  "storyboard": "H:\\CodexAI\\Remotion\\video\\effects\\ai-history\\storyboard.json",
+  "storyboardSha256": "7ff8bd32d1d7f4a16f5b5746eeaac3dad884f62529333a08ca60a9e42d4fefdf",
+  "engine": {
+    "engine": "sherpa-onnx",
+    "version": "2.0.1",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "speakerId": 3,
+    "speed": 1.0
+  },
+  "pythonVersion": "3.13.1",
+  "model": {
+    "name": "hexgrad/Kokoro-82M-v1.1-zh",
+    "conversion": "official sherpa INT8",
+    "license": "Apache-2.0",
+    "archiveSha256": "259c9c8bc906d6078e4e0570421885dabb68b539c2f970fcbb890a58eeaf3e9c",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "source": "https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh",
+    "download": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-int8-multi-lang-v1_1.tar.bz2"
+  },
+  "encoding": "MP3 128kbps 44.1kHz mono",
+  "workers": 2,
+  "threadsPerWorker": 2,
+  "captionsRelativeTo": "audio start; parent timeline adds 0.7 seconds",
+  "status": "passed",
+  "scenes": [
+    {
+      "id": "01-01",
+      "file": "01-01.mp3",
+      "text": "想象一块屏幕上，机器正在辨认照片，接续一句话，又为一盘棋寻找下一步。这些动作都可能被叫作人工智能，但识别、生成和规划，面对的任务不同。当回答看起来像人写的，我们容易把语气，当成背后也有同样的体验。从能力怎样做出来开始，也追问凭什么信任它。",
+      "hash": "3c8ce7ce4ad46d2c8ea796b4e8d4352ee0c4d7ad90518ded174abe91aa25c600",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.279184,
+      "pcmDurationSeconds": 26.2315,
+      "captions": [
+        {
+          "text": "想象一块屏幕上，机器正在辨认照片，接续一句话，又为一盘棋寻找下一步。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.661417
+        },
+        {
+          "text": "这些动作都可能被叫作人工智能，但识别、生成和规划，面对的任务不同。",
+          "startSeconds": 7.711417,
+          "endSeconds": 14.845292
+        },
+        {
+          "text": "当回答看起来像人写的，我们容易把语气，当成背后也有同样的体验。",
+          "startSeconds": 14.895292,
+          "endSeconds": 21.673542
+        },
+        {
+          "text": "从能力怎样做出来开始，也追问凭什么信任它。",
+          "startSeconds": 21.723542,
+          "endSeconds": 26.3815
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 74.22703460000048,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0540718286498214
+      },
+      "fullDecodePassed": true,
+      "sha256": "07cd95a8195060b20b08c481a1e13822951dc9c1d1be0b34009d200f5fc37366",
+      "bytes": 420927,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.3035,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1156810
+      }
+    },
+    {
+      "id": "01-02",
+      "file": "01-02.mp3",
+      "text": "机器会思考吗，一句话里藏着许多不同要求。我们可以让它给图形分类，解释推理题，或者在陌生摆设之间寻找路线。每添一项要求，都要说明输入是什么，怎样算成功，在哪些情形下会失败。把问题拆小，没有消除关于心智的争论，却让研究者能拿出证据。",
+      "hash": "81950e54f89dc892e27b14a401b9d069ae6285534d247f92c7461f887c303bc5",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.756735,
+      "pcmDurationSeconds": 25.705583333333333,
+      "captions": [
+        {
+          "text": "机器会思考吗，一句话里藏着许多不同要求。",
+          "startSeconds": 0.0,
+          "endSeconds": 4.495125
+        },
+        {
+          "text": "我们可以让它给图形分类，解释推理题，或者在陌生摆设之间寻找路线。",
+          "startSeconds": 4.545125,
+          "endSeconds": 11.584167
+        },
+        {
+          "text": "每添一项要求，都要说明输入是什么，怎样算成功，在哪些情形下会失败。",
+          "startSeconds": 11.634167,
+          "endSeconds": 19.222833
+        },
+        {
+          "text": "把问题拆小，没有消除关于心智的争论，却让研究者能拿出证据。",
+          "startSeconds": 19.272833,
+          "endSeconds": 25.855583
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 73.74328650000098,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.057410260684953
+      },
+      "fullDecodePassed": true,
+      "sha256": "2915d865429fa7c18940a6a732967dd173f0876d4b11b4861aad452b5f4680ab",
+      "bytes": 412568,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.0909,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1133617
+      }
+    },
+    {
+      "id": "01-03",
+      "file": "01-03.mp3",
+      "text": "把一段回答放在画面中央，遮住回答者的姓名、面孔和制作方式。我们会依据措辞和推理判断，可一次精彩回答，不足以证明所有能力。问题换一种问法，材料换一个领域，结论是否可靠，还要检验。机器表现得像人，与它是否拥有人的意识，是两个需要分别讨论的问题。",
+      "hash": "3935e7c4889d2b706a698ed9ad37a75d8704aa17f5f8a5d258a7c8624452c9e4",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.592653,
+      "pcmDurationSeconds": 26.554125,
+      "captions": [
+        {
+          "text": "把一段回答放在画面中央，遮住回答者的姓名、面孔和制作方式。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.515542
+        },
+        {
+          "text": "我们会依据措辞和推理判断，可一次精彩回答，不足以证明所有能力。",
+          "startSeconds": 6.565542,
+          "endSeconds": 13.357542
+        },
+        {
+          "text": "问题换一种问法，材料换一个领域，结论是否可靠，还要检验。",
+          "startSeconds": 13.407542,
+          "endSeconds": 19.78625
+        },
+        {
+          "text": "机器表现得像人，与它是否拥有人的意识，是两个需要分别讨论的问题。",
+          "startSeconds": 19.83625,
+          "endSeconds": 26.704125
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 79.18471219999628,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0333347417704928
+      },
+      "fullDecodePassed": true,
+      "sha256": "93e097333528bbf3dc22203b8d614f5531871e5c1014e3edb13c9c39996c1617",
+      "bytes": 425943,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.1316,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1171037
+      }
+    },
+    {
+      "id": "01-04",
+      "file": "01-04.mp3",
+      "text": "这条时间线，将从纸上的计算规则，走向调整参数的网络，也经过写满经验的规则库。这些路线并非整齐接力，旧方法继续工作，新方法也借用旧问题的答案。我们会分清论文的设想、实验室的演示和真实环境中的使用。才能理解突破为何令人兴奋，期待为何落空。",
+      "hash": "313c7d69f5e1b48ab3e6d7aa9f0bc7dc512ef5043531ed669d91ed88127c0e02",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.148571,
+      "pcmDurationSeconds": 26.113375,
+      "captions": [
+        {
+          "text": "这条时间线，将从纸上的计算规则，走向调整参数的网络，也经过写满经验的规则库。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.6955
+        },
+        {
+          "text": "这些路线并非整齐接力，旧方法继续工作，新方法也借用旧问题的答案。",
+          "startSeconds": 8.7455,
+          "endSeconds": 15.817625
+        },
+        {
+          "text": "我们会分清论文的设想、实验室的演示和真实环境中的使用。",
+          "startSeconds": 15.867625,
+          "endSeconds": 21.625417
+        },
+        {
+          "text": "才能理解突破为何令人兴奋，期待为何落空。",
+          "startSeconds": 21.675417,
+          "endSeconds": 26.263375
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 75.24747249999928,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.057065118160109
+      },
+      "fullDecodePassed": true,
+      "sha256": "2257c835c1250d4a1d3394672d119f84b1ecfab4627be2be01401c42e23c383d",
+      "bytes": 418838,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.8627,
+        "rmsDbfs": -23.4466,
+        "sampleCount": 1151600
+      }
+    },
+    {
+      "id": "02-01",
+      "file": "02-01.mp3",
+      "text": "一九三六年，图灵用抽象机器研究计算：读一个符号，按规则改写，再移动读写头。纸带不断延伸，复杂任务被拆成有限规则指挥的小动作。这不是当年造出的智能机器人，而是讨论什么能够被机械计算的数学模型。它为通用计算提供重要基础，也揭示计算能力存在边界。",
+      "hash": "ce0479f24ac3e5e037600318ce48a33a704ed95653399028657ef57619b432a3",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.462041,
+      "pcmDurationSeconds": 26.429375,
+      "captions": [
+        {
+          "text": "一九三六年，图灵用抽象机器研究计算：读一个符号，按规则改写，再移动读写头。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.568083
+        },
+        {
+          "text": "纸带不断延伸，复杂任务被拆成有限规则指挥的小动作。",
+          "startSeconds": 8.618083,
+          "endSeconds": 14.055042
+        },
+        {
+          "text": "这不是当年造出的智能机器人，而是讨论什么能够被机械计算的数学模型。",
+          "startSeconds": 14.105042,
+          "endSeconds": 20.857583
+        },
+        {
+          "text": "它为通用计算提供重要基础，也揭示计算能力存在边界。",
+          "startSeconds": 20.907583,
+          "endSeconds": 26.579375
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 76.91212109999469,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0769234606339944
+      },
+      "fullDecodePassed": true,
+      "sha256": "80e4f2c3f944eeeb5c963847c6edaf5796c0e62a9717092f7196986a4d9fb902",
+      "bytes": 423853,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.4668,
+        "rmsDbfs": -23.4471,
+        "sampleCount": 1165536
+      }
+    },
+    {
+      "id": "02-02",
+      "file": "02-02.mp3",
+      "text": "一九四三年，麦卡洛克和皮茨，把神经活动抽象成激活与不激活的单元。几个输入共同越过门槛，节点才亮起，就能组成某些逻辑关系。这座桥连接神经系统的启发和形式逻辑，却省略了大量生理细节。作者研究的是理想模型的计算性质，不能当成大脑已被完整解释。",
+      "hash": "f4b24a8bf3afba511059db65306fd5aece861a553e0cd1861198744322078bb6",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.070204,
+      "pcmDurationSeconds": 26.018,
+      "captions": [
+        {
+          "text": "一九四三年，麦卡洛克和皮茨，把神经活动抽象成激活与不激活的单元。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.1545
+        },
+        {
+          "text": "几个输入共同越过门槛，节点才亮起，就能组成某些逻辑关系。",
+          "startSeconds": 7.2045,
+          "endSeconds": 13.526417
+        },
+        {
+          "text": "这座桥连接神经系统的启发和形式逻辑，却省略了大量生理细节。",
+          "startSeconds": 13.576417,
+          "endSeconds": 20.036833
+        },
+        {
+          "text": "作者研究的是理想模型的计算性质，不能当成大脑已被完整解释。",
+          "startSeconds": 20.086833,
+          "endSeconds": 26.168
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 75.13294090000272,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0777286373940178
+      },
+      "fullDecodePassed": true,
+      "sha256": "44c296f606fb766042fa1643f7ad2cce45f0c44ed8c58e0751ab488bdcba5a30",
+      "bytes": 417584,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.5676,
+        "rmsDbfs": -23.4473,
+        "sampleCount": 1147439
+      }
+    },
+    {
+      "id": "02-03",
+      "file": "02-03.mp3",
+      "text": "一九五〇年，图灵发表《计算机器与智能》，借模仿游戏重新组织思考的问题。他把讨论转向文字问答中可观察的表现，并设想机器参与其中。画面里的提问者只看逐行出现的回答，不能凭声音和外貌识别对方。抽象争论由此更接近实验，但对话判断仍不是意识存在的证明。",
+      "hash": "998cff97835a7d4d8c7860017f2f1be95fe069de4e9b60d9943312e04d73faba",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.756735,
+      "pcmDurationSeconds": 25.724875,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九五〇年，图灵发表《计算机器与智能》，借模仿游戏重新组织思考的问题。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.153833
+        },
+        {
+          "text": "他把讨论转向文字问答中可观察的表现，并设想机器参与其中。",
+          "startSeconds": 7.203833,
+          "endSeconds": 13.32675
+        },
+        {
+          "text": "画面里的提问者只看逐行出现的回答，不能凭声音和外貌识别对方。",
+          "startSeconds": 13.37675,
+          "endSeconds": 19.7175
+        },
+        {
+          "text": "抽象争论由此更接近实验，但对话判断仍不是意识存在的证明。",
+          "startSeconds": 19.7675,
+          "endSeconds": 25.874875
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 4.726872200000798,
+      "generatedLines": 0,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1008440920035645
+      },
+      "fullDecodePassed": true,
+      "sha256": "f573fa7074499a6a0cd471776726d6489512c003f572ea3247729b96e9f42817",
+      "bytes": 412568,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.749,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1134467
+      }
+    },
+    {
+      "id": "02-04",
+      "file": "02-04.mp3",
+      "text": "执行写好的步骤，与在经验中改善表现，是相关却不同的问题。图灵在一九五〇年的论文中，也讨论学习机器，以及从较简单起点进行教育的设想。画面左边放固定指令卡，右边放随着训练改变的内部状态。后来反复出现的争论已露轮廓：哪些结构由人设计，哪些从经验获得。",
+      "hash": "ef30b012bacb8d88390384fa74fcfb6885c86e8974d448a761e5515fb06806c9",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 27.08898,
+      "pcmDurationSeconds": 27.057625,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "执行写好的步骤，与在经验中改善表现，是相关却不同的问题。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.246125
+        },
+        {
+          "text": "图灵在一九五〇年的论文中，也讨论学习机器，以及从较简单起点进行教育的设想。",
+          "startSeconds": 6.296125,
+          "endSeconds": 14.48525
+        },
+        {
+          "text": "画面左边放固定指令卡，右边放随着训练改变的内部状态。",
+          "startSeconds": 14.53525,
+          "endSeconds": 20.393583
+        },
+        {
+          "text": "后来反复出现的争论已露轮廓：哪些结构由人设计，哪些从经验获得。",
+          "startSeconds": 20.443583,
+          "endSeconds": 27.207625
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 5.618340000000899,
+      "generatedLines": 0,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.065062070666546
+      },
+      "fullDecodePassed": true,
+      "sha256": "12f3b065498c057b49e7096c0ebd2853d60eb2604c03b9c965e46ee45c5d9aad",
+      "bytes": 433884,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.2357,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1193242
+      }
+    },
+    {
+      "id": "03-01",
+      "file": "03-01.mp3",
+      "text": "一九五五年八月，一份夏季研究提案，把人工智能写进标题。麦卡锡、明斯基、罗切斯特和香农，计划次年夏天到达特茅斯共同研究。纸面安排约十个人、两个月，讨论语言、抽象、学习等问题。这记录的是研究计划及其雄心，不能把计划中的目标，写成已经完成的成果。",
+      "hash": "0d1fb1b1bea6f94f27b7eb88995ad36ae2ae99d9b3b73546198f460ff05033f7",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.383673,
+      "pcmDurationSeconds": 26.337291666666665,
+      "captions": [
+        {
+          "text": "一九五五年八月，一份夏季研究提案，把人工智能写进标题。",
+          "startSeconds": 0.0,
+          "endSeconds": 5.970167
+        },
+        {
+          "text": "麦卡锡、明斯基、罗切斯特和香农，计划次年夏天到达特茅斯共同研究。",
+          "startSeconds": 6.020167,
+          "endSeconds": 13.146458
+        },
+        {
+          "text": "纸面安排约十个人、两个月，讨论语言、抽象、学习等问题。",
+          "startSeconds": 13.196458,
+          "endSeconds": 19.053375
+        },
+        {
+          "text": "这记录的是研究计划及其雄心，不能把计划中的目标，写成已经完成的成果。",
+          "startSeconds": 19.103375,
+          "endSeconds": 26.487292
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 62.96371860000363,
+      "generatedLines": 3,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.039988416031125
+      },
+      "fullDecodePassed": true,
+      "sha256": "67c10f9bd437b50451d9c9725b28856ded65a49ec9db2830dc1ccbcf911bcd3d",
+      "bytes": 422599,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.9609,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 1161475
+      }
+    },
+    {
+      "id": "03-02",
+      "file": "03-02.mp3",
+      "text": "展开提案目录，语言、神经网络、抽象概念和计算规模，并排出现在纸上。文件提出大胆猜想：智能可以被足够精确地描述，再由机器模拟。猜想是出发点，需要后续实验和理论检验，并不是已经证明的自然定律。研究者希望找到共同的问题语言，让不同背景的人交换方法。",
+      "hash": "6fd9cbda031c33509a11f2f6cbd746bcfd43cc7330180695d62415c37f5dcf1c",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.958367,
+      "pcmDurationSeconds": 26.908875,
+      "captions": [
+        {
+          "text": "展开提案目录，语言、神经网络、抽象概念和计算规模，并排出现在纸上。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.456583
+        },
+        {
+          "text": "文件提出大胆猜想：智能可以被足够精确地描述，再由机器模拟。",
+          "startSeconds": 7.506583,
+          "endSeconds": 14.092042
+        },
+        {
+          "text": "猜想是出发点，需要后续实验和理论检验，并不是已经证明的自然定律。",
+          "startSeconds": 14.142042,
+          "endSeconds": 21.126917
+        },
+        {
+          "text": "研究者希望找到共同的问题语言，让不同背景的人交换方法。",
+          "startSeconds": 21.176917,
+          "endSeconds": 27.058875
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 83.47373569999763,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0554088428395079
+      },
+      "fullDecodePassed": true,
+      "sha256": "fadb0902096a5c824e3d4916b94232033340c2eb0ce5aa920c1a51a1b0fecffd",
+      "bytes": 431794,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.4032,
+        "rmsDbfs": -23.4473,
+        "sampleCount": 1186682
+      }
+    },
+    {
+      "id": "03-03",
+      "file": "03-03.mp3",
+      "text": "一九五六年，夏季研讨确实在达特茅斯举行，却没有交出万能的思考机器。来访者停留时间不同，工作包含分散研究与讨论，并非全员整齐开会两个月。日历翻过，桌上留下问题、程序和继续合作的可能。它凝聚了一个研究方向，而不是让此前所有探索突然从零开始。",
+      "hash": "471c77afe06f272c8574dc84e6d3ea33d01fd3c033318a22159321921feeadb6",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.148571,
+      "pcmDurationSeconds": 26.09958333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-v1",
+      "captions": [
+        {
+          "text": "一九五六年，夏季研讨确实在达特茅斯举行，却没有交出万能的思考机器。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.304208
+        },
+        {
+          "text": "来访者停留时间不同，工作包含分散研究与讨论，并非全员整齐开会两个月。",
+          "startSeconds": 7.354208,
+          "endSeconds": 15.019167
+        },
+        {
+          "text": "日历翻过，桌上留下问题、程序和继续合作的可能。",
+          "startSeconds": 15.069167,
+          "endSeconds": 20.193833
+        },
+        {
+          "text": "它凝聚了一个研究方向，而不是让此前所有探索突然从零开始。",
+          "startSeconds": 20.243833,
+          "endSeconds": 26.249583
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 19.55090430000564,
+      "generatedLines": 1,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0716231112440908
+      },
+      "fullDecodePassed": true,
+      "sha256": "eeb44d063b49fa36fb2ecdaf1cf61b26da46c38ce4f6fde0edad55a961b6ace8",
+      "bytes": 418838,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.6197,
+        "rmsDbfs": -23.4467,
+        "sampleCount": 1150992
+      }
+    },
+    {
+      "id": "03-04",
+      "file": "03-04.mp3",
+      "text": "有了人工智能的名字，仍要回答具体问题：一句话怎样表示，一步推理怎样搜索。一条路线写出符号和规则，另一条让简单单元通过连接共同工作。两条线同时保留，避免把历史看成只有一条道路的直线。不同方法放大智能的一部分，也省略了当时难解的复杂性。",
+      "hash": "9cdf2ebeb289f807e0cb5575ec9801412a93c83919cae568f1971d6ec71b73be",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.364898,
+      "pcmDurationSeconds": 25.3355,
+      "spokenTextNormalizationVersion": "zh-year-zero-v1",
+      "captions": [
+        {
+          "text": "有了人工智能的名字，仍要回答具体问题：一句话怎样表示，一步推理怎样搜索。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.897792
+        },
+        {
+          "text": "一条路线写出符号和规则，另一条让简单单元通过连接共同工作。",
+          "startSeconds": 7.947792,
+          "endSeconds": 14.341333
+        },
+        {
+          "text": "两条线同时保留，避免把历史看成只有一条道路的直线。",
+          "startSeconds": 14.391333,
+          "endSeconds": 19.7905
+        },
+        {
+          "text": "不同方法放大智能的一部分，也省略了当时难解的复杂性。",
+          "startSeconds": 19.8405,
+          "endSeconds": 25.4855
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 53.02160459999868,
+      "generatedLines": 3,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0516351567867939
+      },
+      "fullDecodePassed": true,
+      "sha256": "9fdb8f6132b8f31b77aea75017a297591e42f24a66f5d454f8def2b95a4cea87",
+      "bytes": 406299,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.0522,
+        "rmsDbfs": -23.4475,
+        "sampleCount": 1117296
+      }
+    },
+    {
+      "id": "04-01",
+      "file": "04-01.mp3",
+      "text": "一九五七年前后，罗森布拉特提出感知机研究，次年发表详细的理论论文。它借助输入、连接强度和输出，研究系统怎样在经验中形成分类能力。两类图案进入网络，连接的粗细随着学习逐渐改变。与逐条手写识别规则相比，这里出现另一种思路：让训练塑造部分区分能力。",
+      "hash": "0f4487ea7e783c34c7df73458dd213342ab06d11bd476fef4c3a88a8f8b5941a",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 27.219592,
+      "pcmDurationSeconds": 27.186375,
+      "spokenTextNormalizationVersion": "zh-year-zero-v1",
+      "captions": [
+        {
+          "text": "一九五七年前后，罗森布拉特提出感知机研究，次年发表详细的理论论文。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.2745
+        },
+        {
+          "text": "它借助输入、连接强度和输出，研究系统怎样在经验中形成分类能力。",
+          "startSeconds": 7.3245,
+          "endSeconds": 14.515708
+        },
+        {
+          "text": "两类图案进入网络，连接的粗细随着学习逐渐改变。",
+          "startSeconds": 14.565708,
+          "endSeconds": 19.689375
+        },
+        {
+          "text": "与逐条手写识别规则相比，这里出现另一种思路：让训练塑造部分区分能力。",
+          "startSeconds": 19.739375,
+          "endSeconds": 27.336375
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 91.25334890000522,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0559274996487489
+      },
+      "fullDecodePassed": true,
+      "sha256": "83b42a27b7c617d79128138fa28a2d47642937d284bb46499802f66251b082a1",
+      "bytes": 435974,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.2645,
+        "rmsDbfs": -23.447,
+        "sampleCount": 1198920
+      }
+    },
+    {
+      "id": "04-02",
+      "file": "04-02.mp3",
+      "text": "看一个简化模型：两个输入按权重相加，再与门槛比较，决定输出。红点被错分，学习规则便调整权重，让分界线向有利方向移动。这条直线是单层线性分类器的示意，并非所有感知机结构的完整复原。机器获得某种区分规律，能否迁移到新样本，还要看数据和问题本身。",
+      "hash": "122e8f11486733ab1a201bad56b101cff3ce1ccf1720ec99457da847895d1300",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.958367,
+      "pcmDurationSeconds": 26.919958333333334,
+      "spokenTextNormalizationVersion": "zh-year-zero-v1",
+      "captions": [
+        {
+          "text": "看一个简化模型：两个输入按权重相加，再与门槛比较，决定输出。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.057
+        },
+        {
+          "text": "红点被错分，学习规则便调整权重，让分界线向有利方向移动。",
+          "startSeconds": 7.107,
+          "endSeconds": 13.448083
+        },
+        {
+          "text": "这条直线是单层线性分类器的示意，并非所有感知机结构的完整复原。",
+          "startSeconds": 13.498083,
+          "endSeconds": 20.082083
+        },
+        {
+          "text": "机器获得某种区分规律，能否迁移到新样本，还要看数据和问题本身。",
+          "startSeconds": 20.132083,
+          "endSeconds": 27.069958
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 91.33533850000094,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0380635030827168
+      },
+      "fullDecodePassed": true,
+      "sha256": "6ad1de2ca2e0547d1de3526a2db78c17ee443f3156b40005a7821d13dad87644",
+      "bytes": 431794,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.5614,
+        "rmsDbfs": -23.4461,
+        "sampleCount": 1187171
+      }
+    },
+    {
+      "id": "04-03",
+      "file": "04-03.mp3",
+      "text": "一九五六年，纽厄尔、西蒙与肖参与开发的逻辑理论家，探索自动证明。把命题、规则和待证结论排成节点，程序在推导路径间寻找连接。启发式方法让它优先尝试有希望的方向，减少无差别遍历。符号搜索展示了力量，但形式逻辑的证明，并不自动包含生活中的常识。",
+      "hash": "181a7481f76107584a89ce0ad6d25909b2ab8114dca9fbea7280f75110d832fe",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.6,
+      "pcmDurationSeconds": 25.559375,
+      "spokenTextNormalizationVersion": "zh-year-zero-v1",
+      "captions": [
+        {
+          "text": "一九五六年，纽厄尔、西蒙与肖参与开发的逻辑理论家，探索自动证明。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.57325
+        },
+        {
+          "text": "把命题、规则和待证结论排成节点，程序在推导路径间寻找连接。",
+          "startSeconds": 6.62325,
+          "endSeconds": 13.004167
+        },
+        {
+          "text": "启发式方法让它优先尝试有希望的方向，减少无差别遍历。",
+          "startSeconds": 13.054167,
+          "endSeconds": 18.629708
+        },
+        {
+          "text": "符号搜索展示了力量，但形式逻辑的证明，并不自动包含生活中的常识。",
+          "startSeconds": 18.679708,
+          "endSeconds": 25.709375
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 85.66837479999958,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0821660436777742
+      },
+      "fullDecodePassed": true,
+      "sha256": "a2b89596d3fb619e813ae95a1a9cde11b7293a8fe3117489f7ff2acb7417adce",
+      "bytes": 410061,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.374,
+        "rmsDbfs": -23.4467,
+        "sampleCount": 1127169
+      }
+    },
+    {
+      "id": "04-04",
+      "file": "04-04.mp3",
+      "text": "红蓝点放在正方形的交错角上，一条直线就无法把两类完全分开。增加结构或改变表示，可能突破这个例子，却带来训练难题。一九六九年，明斯基和帕普特系统分析一类感知机的能力与限制。这不等于所有神经网络无效；特定模型的局限，不等于整条路线的未来。",
+      "hash": "a074aff4e398b6f9bc5f215e3467287800cb6e82680d6f1b36fe9ed2cf65bfa0",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.678367,
+      "pcmDurationSeconds": 25.641333333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-v1",
+      "captions": [
+        {
+          "text": "红蓝点放在正方形的交错角上，一条直线就无法把两类完全分开。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.394167
+        },
+        {
+          "text": "增加结构或改变表示，可能突破这个例子，却带来训练难题。",
+          "startSeconds": 6.444167,
+          "endSeconds": 12.512958
+        },
+        {
+          "text": "一九六九年，明斯基和帕普特系统分析一类感知机的能力与限制。",
+          "startSeconds": 12.562958,
+          "endSeconds": 18.771583
+        },
+        {
+          "text": "这不等于所有神经网络无效；特定模型的局限，不等于整条路线的未来。",
+          "startSeconds": 18.821583,
+          "endSeconds": 25.791333
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 92.37401680000039,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.050131496762977
+      },
+      "fullDecodePassed": true,
+      "sha256": "4c675e1a65bad8a11bed2abee08ef2d76d04e65ad0df95b8ee67723a3e862e03",
+      "bytes": 411314,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.3864,
+        "rmsDbfs": -23.4467,
+        "sampleCount": 1130783
+      }
+    },
+    {
+      "id": "05-01",
+      "file": "05-01.mp3",
+      "text": "一九六六年，魏岑鲍姆发表伊莱扎，展示一种人机语言交流方式。它寻找关键词，按规则拆开输入，再用重组规则生成回应。把我感到焦虑，改写为你为什么感到焦虑，是解释机制的中文示意。这种回应不需要语言模型式训练，也不能证明它理解了说话者的人生。",
+      "hash": "cb4c8ec9b102e7e9df744e178e00adf20b4fee10f60ece3cb1dc9018ee12455a",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.521633,
+      "pcmDurationSeconds": 25.473791666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九六六年，魏岑鲍姆发表伊莱扎，展示一种人机语言交流方式。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.432667
+        },
+        {
+          "text": "它寻找关键词，按规则拆开输入，再用重组规则生成回应。",
+          "startSeconds": 6.482667,
+          "endSeconds": 12.677667
+        },
+        {
+          "text": "把我感到焦虑，改写为你为什么感到焦虑，是解释机制的中文示意。",
+          "startSeconds": 12.727667,
+          "endSeconds": 19.159667
+        },
+        {
+          "text": "这种回应不需要语言模型式训练，也不能证明它理解了说话者的人生。",
+          "startSeconds": 19.209667,
+          "endSeconds": 25.623792
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 30.209923599999456,
+      "generatedLines": 1,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0785266687901665
+      },
+      "fullDecodePassed": true,
+      "sha256": "667fd05bf18b7e72ebea7c49b598100b05b0501849ca9b15258836da5ca73949",
+      "bytes": 408807,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.6436,
+        "rmsDbfs": -23.4467,
+        "sampleCount": 1123395
+      }
+    },
+    {
+      "id": "05-02",
+      "file": "05-02.mp3",
+      "text": "相同文字，装进普通终端或亲切的聊天窗口，会引导我们怎样判断。伊莱扎的经典脚本借用心理治疗式问答，把不少话题交还给说话者。翻开回应下方的规则卡，让观众同时看见语言表面与生成机制。这里不重演真实用户的情绪经历，而是提醒信任需要超出语气的证据。",
+      "hash": "f7e931523b507528b491e457074f23d904cfc33c4b41390e8d2ebb5751536871",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.6,
+      "pcmDurationSeconds": 25.570541666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "相同文字，装进普通终端或亲切的聊天窗口，会引导我们怎样判断。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.261417
+        },
+        {
+          "text": "伊莱扎的经典脚本借用心理治疗式问答，把不少话题交还给说话者。",
+          "startSeconds": 6.311417,
+          "endSeconds": 12.636917
+        },
+        {
+          "text": "翻开回应下方的规则卡，让观众同时看见语言表面与生成机制。",
+          "startSeconds": 12.686917,
+          "endSeconds": 18.947958
+        },
+        {
+          "text": "这里不重演真实用户的情绪经历，而是提醒信任需要超出语气的证据。",
+          "startSeconds": 18.997958,
+          "endSeconds": 25.720542
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 89.71041200000036,
+      "generatedLines": 3,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.120431325827444
+      },
+      "fullDecodePassed": true,
+      "sha256": "2939a94d586786923b6a4c9e738186ac84ee1f29ca95278373ff34555689e05f",
+      "bytes": 410061,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -5.5441,
+        "rmsDbfs": -23.4472,
+        "sampleCount": 1127661
+      }
+    },
+    {
+      "id": "05-03",
+      "file": "05-03.mp3",
+      "text": "一九六六年到一九七二年，斯坦福研究所的沙基项目，把问题带入实体空间。移动机器人感知环境的一些特征，规划路线和简单物体的重新摆放。从一个房间去往另一个位置，需要把目标拆成可执行动作。依次点亮感知、规划和行动，说明智能系统远不止输出一句答案。",
+      "hash": "4cbe256009faa86c64df76af175d01f0793c27a98b489a609e101e3559803bbb",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.409796,
+      "pcmDurationSeconds": 26.375791666666668,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九六六年到一九七二年，斯坦福研究所的沙基项目，把问题带入实体空间。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.534375
+        },
+        {
+          "text": "移动机器人感知环境的一些特征，规划路线和简单物体的重新摆放。",
+          "startSeconds": 7.584375,
+          "endSeconds": 14.155917
+        },
+        {
+          "text": "从一个房间去往另一个位置，需要把目标拆成可执行动作。",
+          "startSeconds": 14.205917,
+          "endSeconds": 19.974417
+        },
+        {
+          "text": "依次点亮感知、规划和行动，说明智能系统远不止输出一句答案。",
+          "startSeconds": 20.024417,
+          "endSeconds": 26.525792
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 124.51987870000448,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1010908486985467
+      },
+      "fullDecodePassed": true,
+      "sha256": "33212edefbc37b5bb268ea6bd305a518ae1653595181de8440889fef32db835d",
+      "bytes": 423017,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.6658,
+        "rmsDbfs": -23.4467,
+        "sampleCount": 1163173
+      }
+    },
+    {
+      "id": "05-04",
+      "file": "05-04.mp3",
+      "text": "给实验房间加上杂乱家具、移动的人和变化的光线，任务就会变难。这是解释边界的示意，并不是说沙基当时已经能处理这些场景。受控环境中规划与行动的贡献，应与开放世界的可靠自主能力分开评估。演示让可能性可见，研究还要回答，哪些条件下能够重复成功。",
+      "hash": "245b1a5c820b8674d90aa7afef3fba81711b6459dd1b6501797c70c08663a5db",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.044082,
+      "pcmDurationSeconds": 26.001458333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "给实验房间加上杂乱家具、移动的人和变化的光线，任务就会变难。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.7865
+        },
+        {
+          "text": "这是解释边界的示意，并不是说沙基当时已经能处理这些场景。",
+          "startSeconds": 6.8365,
+          "endSeconds": 12.75075
+        },
+        {
+          "text": "受控环境中规划与行动的贡献，应与开放世界的可靠自主能力分开评估。",
+          "startSeconds": 12.80075,
+          "endSeconds": 19.58025
+        },
+        {
+          "text": "演示让可能性可见，研究还要回答，哪些条件下能够重复成功。",
+          "startSeconds": 19.63025,
+          "endSeconds": 26.151458
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 112.61034579999978,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0799080163170753
+      },
+      "fullDecodePassed": true,
+      "sha256": "94d71a3f639fbdf8dcfa8b99dada9956bac31fe5c5ac1075afbd8313af8c691f",
+      "bytes": 417166,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.2976,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 1146665
+      }
+    },
+    {
+      "id": "06-01",
+      "file": "06-01.mp3",
+      "text": "一九六六年，美国阿尔帕克委员会发布《语言与机器》，评估机器翻译。报告比较质量、时间、成本与人工参与，对近期实用目标提出质疑。让文件经过机器、人工修改与交付，画面展示评估应覆盖整个过程。报告有具体任务范围，不能说成全世界所有人工智能研究被同时叫停。",
+      "hash": "69466ee9f2e83f15ca3d6a05317ee29a88e7c7a2d443b48ca27039c6e580b1eb",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.253061,
+      "pcmDurationSeconds": 26.223,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九六六年，美国阿尔帕克委员会发布《语言与机器》，评估机器翻译。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.551417
+        },
+        {
+          "text": "报告比较质量、时间、成本与人工参与，对近期实用目标提出质疑。",
+          "startSeconds": 6.601417,
+          "endSeconds": 13.032292
+        },
+        {
+          "text": "让文件经过机器、人工修改与交付，画面展示评估应覆盖整个过程。",
+          "startSeconds": 13.082292,
+          "endSeconds": 19.821417
+        },
+        {
+          "text": "报告有具体任务范围，不能说成全世界所有人工智能研究被同时叫停。",
+          "startSeconds": 19.871417,
+          "endSeconds": 26.373
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 102.15377719999378,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0689602107535032
+      },
+      "fullDecodePassed": true,
+      "sha256": "04371d6cb064f75d93cb98412d080ce6c7ea9adc36448e435dd2e6d9f5380f96",
+      "bytes": 420510,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.145,
+        "rmsDbfs": -23.4477,
+        "sampleCount": 1156435
+      }
+    },
+    {
+      "id": "06-02",
+      "file": "06-02.mp3",
+      "text": "阿尔帕克报告也建议支持语言学和计算语言学基础研究，发展人类翻译的辅助工具。短期承诺退潮，与研究价值被完全否定，并非同一件事。缩小全自动翻译的招牌，再把语料、语言分析和辅助工具的灯留下。交付方式暂时不通，重新界定问题，往往比放大口号更有建设性。",
+      "hash": "89e6d9322930fd61491f185e398da6907ac0ea4d256f4a15cd2d4cae14bb8c6a",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.540408,
+      "pcmDurationSeconds": 26.509208333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "阿尔帕克报告也建议支持语言学和计算语言学基础研究，发展人类翻译的辅助工具。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.731792
+        },
+        {
+          "text": "短期承诺退潮，与研究价值被完全否定，并非同一件事。",
+          "startSeconds": 7.781792,
+          "endSeconds": 13.6395
+        },
+        {
+          "text": "缩小全自动翻译的招牌，再把语料、语言分析和辅助工具的灯留下。",
+          "startSeconds": 13.6895,
+          "endSeconds": 19.826583
+        },
+        {
+          "text": "交付方式暂时不通，重新界定问题，往往比放大口号更有建设性。",
+          "startSeconds": 19.876583,
+          "endSeconds": 26.659208
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 113.39067010000144,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0709949984022094
+      },
+      "fullDecodePassed": true,
+      "sha256": "c031e3bbac71deeeb07139c7720ad10a4982510549c7c7241a76f9009adb3483",
+      "bytes": 425107,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.6786,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1169057
+      }
+    },
+    {
+      "id": "06-03",
+      "file": "06-03.mp3",
+      "text": "一九七三年，英国科学研究委员会委托的莱特希尔报告，尖锐批评人工智能。它质疑一些方法扩展规模后，能否应付急增的组合可能性。搜索树不断分叉，多走几层，就会增加大量需要考虑的路径。麦卡锡公开反驳，说明这既是资助政策节点，也是学术判断存在分歧的争论。",
+      "hash": "890c721df4e478d73c7b132df6e30809122c2d74f8f6395be3c57e0a7ddac0ab",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.279184,
+      "pcmDurationSeconds": 26.250041666666668,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九七三年，英国科学研究委员会委托的莱特希尔报告，尖锐批评人工智能。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.100833
+        },
+        {
+          "text": "它质疑一些方法扩展规模后，能否应付急增的组合可能性。",
+          "startSeconds": 7.150833,
+          "endSeconds": 12.843458
+        },
+        {
+          "text": "搜索树不断分叉，多走几层，就会增加大量需要考虑的路径。",
+          "startSeconds": 12.893458,
+          "endSeconds": 18.642375
+        },
+        {
+          "text": "麦卡锡公开反驳，说明这既是资助政策节点，也是学术判断存在分歧的争论。",
+          "startSeconds": 18.692375,
+          "endSeconds": 26.400042
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 125.88014920000569,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0642656764975618
+      },
+      "fullDecodePassed": true,
+      "sha256": "f2e5a42bc22dbe4ff7989361e581f802a72eabeb0bc8846fb2e9d65d71bb472c",
+      "bytes": 420927,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.9002,
+        "rmsDbfs": -23.4473,
+        "sampleCount": 1157627
+      }
+    },
+    {
+      "id": "06-04",
+      "file": "06-04.mp3",
+      "text": "后来，人们用人工智能寒冬，概括期待下降、部分资助收缩和项目受挫。美国翻译评估与英国研究评审，时间、对象和制度环境不同，并非同一份禁令。让各地温度曲线分别变化，保留仍推进的规划和知识研究。低潮改变资源与声誉，却没有让所有研究者同时放下问题。",
+      "hash": "f022b593df2a4f19ba87bd497e55d0d531c379a8cb0daa73811e580065eac4a8",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.096327,
+      "pcmDurationSeconds": 26.049708333333335,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "后来，人们用人工智能寒冬，概括期待下降、部分资助收缩和项目受挫。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.059833
+        },
+        {
+          "text": "美国翻译评估与英国研究评审，时间、对象和制度环境不同，并非同一份禁令。",
+          "startSeconds": 7.109833,
+          "endSeconds": 14.659417
+        },
+        {
+          "text": "让各地温度曲线分别变化，保留仍推进的规划和知识研究。",
+          "startSeconds": 14.709417,
+          "endSeconds": 20.370708
+        },
+        {
+          "text": "低潮改变资源与声誉，却没有让所有研究者同时放下问题。",
+          "startSeconds": 20.420708,
+          "endSeconds": 26.199708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 121.18491519999952,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0681694647394708
+      },
+      "fullDecodePassed": true,
+      "sha256": "609aebae98098fb58d19a6a80ab5a19d3bdbb7c1f256719dfa77d24850afbc07",
+      "bytes": 418002,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.2396,
+        "rmsDbfs": -23.4464,
+        "sampleCount": 1148793
+      }
+    },
+    {
+      "id": "07-01",
+      "file": "07-01.mp3",
+      "text": "七十年代，斯坦福的麦辛项目，围绕特定感染的诊断和抗菌治疗建议，研究知识推理。它提问收集病例信息，调用规则形成建议，并说明部分依据。画面仅用抽象病例卡，不把历史程序包装成医疗意见。麦辛没有成为日常临床使用的替代医生，实验评价和临床部署必须区分。",
+      "hash": "078713ea068607db059aa04b5cd1f81cd24c13765b6518bc684ac429aa5597f5",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.279184,
+      "pcmDurationSeconds": 26.243666666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "七十年代，斯坦福的麦辛项目，围绕特定感染的诊断和抗菌治疗建议，研究知识推理。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.03375
+        },
+        {
+          "text": "它提问收集病例信息，调用规则形成建议，并说明部分依据。",
+          "startSeconds": 8.08375,
+          "endSeconds": 14.23325
+        },
+        {
+          "text": "画面仅用抽象病例卡，不把历史程序包装成医疗意见。",
+          "startSeconds": 14.28325,
+          "endSeconds": 19.50075
+        },
+        {
+          "text": "麦辛没有成为日常临床使用的替代医生，实验评价和临床部署必须区分。",
+          "startSeconds": 19.55075,
+          "endSeconds": 26.393667
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 113.46997529999499,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0688589507662987
+      },
+      "fullDecodePassed": true,
+      "sha256": "c3825af07d92c23ac713aeff180145f1991a7d69bf5928cfa1d81bebd229d0ef",
+      "bytes": 420927,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.0858,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1157346
+      }
+    },
+    {
+      "id": "07-02",
+      "file": "07-02.mp3",
+      "text": "专家系统将部分经验写成规则：如果条件成立，那么采取某种判断或动作。推理引擎沿规则链工作，知识工程师从专家获得知识，整理进系统。麦辛用确定性因子表示证据支持程度，不能当作校准的概率。规则连成链，也标出缺失条件：写下经验，仍须核对适用范围。",
+      "hash": "e95b62d520126e597250baa638e1d75262828921421d740cacf0a01bd27e8b4e",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.070204,
+      "pcmDurationSeconds": 26.031083333333335,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "专家系统将部分经验写成规则：如果条件成立，那么采取某种判断或动作。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.336208
+        },
+        {
+          "text": "推理引擎沿规则链工作，知识工程师从专家获得知识，整理进系统。",
+          "startSeconds": 7.386208,
+          "endSeconds": 14.108667
+        },
+        {
+          "text": "麦辛用确定性因子表示证据支持程度，不能当作校准的概率。",
+          "startSeconds": 14.158667,
+          "endSeconds": 19.832167
+        },
+        {
+          "text": "规则连成链，也标出缺失条件：写下经验，仍须核对适用范围。",
+          "startSeconds": 19.882167,
+          "endSeconds": 26.181083
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 115.85127020000073,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0638121676912782
+      },
+      "fullDecodePassed": true,
+      "sha256": "7208489748196899052746690e5b670ed8051297f125af6245d4782508e92e4b",
+      "bytes": 417584,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.5287,
+        "rmsDbfs": -23.4462,
+        "sampleCount": 1147971
+      }
+    },
+    {
+      "id": "07-03",
+      "file": "07-03.mp3",
+      "text": "一九八〇年论文记录，阿尔一专家系统已被数字设备公司制造部门经常使用。后称艾克斯康的系统，根据订单配置计算机部件和连接关系。发现缺少部件时，它补足订单，并输出装配人员使用的配置图。机柜和线缆在画面接好：人工智能的价值，也可以是改善具体工作。",
+      "hash": "96d78d83f0bac0de1335366c89ec45018c16321a07fbe6b9a89d6073ef4dc0c3",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.305306,
+      "pcmDurationSeconds": 26.264708333333335,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九八〇年论文记录，阿尔一专家系统已被数字设备公司制造部门经常使用。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.372833
+        },
+        {
+          "text": "后称艾克斯康的系统，根据订单配置计算机部件和连接关系。",
+          "startSeconds": 7.422833,
+          "endSeconds": 13.406625
+        },
+        {
+          "text": "发现缺少部件时，它补足订单，并输出装配人员使用的配置图。",
+          "startSeconds": 13.456625,
+          "endSeconds": 19.773708
+        },
+        {
+          "text": "机柜和线缆在画面接好：人工智能的价值，也可以是改善具体工作。",
+          "startSeconds": 19.823708,
+          "endSeconds": 26.414708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 118.20899330000248,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0645266355178664
+      },
+      "fullDecodePassed": true,
+      "sha256": "0c62f319fb4cfdb5bd56f2ecea68458a1c44444be31d6e5a53f813e1ee292355",
+      "bytes": 421345,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -5.9273,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1158274
+      }
+    },
+    {
+      "id": "07-04",
+      "file": "07-04.mp3",
+      "text": "八十年代，专家系统迎来热潮，但获取知识、更新规则和处理例外，都要投入。加入新部件，相关连接与约束就要检查，规则多并不代表容易维护。八十年代末至九十年代初的部分商业收缩，常被归入第二次低潮，分期并不统一。成功应用仍在，局部成功却不能保证普遍兑现。",
+      "hash": "f075bbd1fd070d5beacf519ebcd80add0d6dd997210e4ddc2fd6a33c72b72256",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 27.428571,
+      "pcmDurationSeconds": 27.39741666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "八十年代，专家系统迎来热潮，但获取知识、更新规则和处理例外，都要投入。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.754292
+        },
+        {
+          "text": "加入新部件，相关连接与约束就要检查，规则多并不代表容易维护。",
+          "startSeconds": 7.804292,
+          "endSeconds": 14.689167
+        },
+        {
+          "text": "八十年代末至九十年代初的部分商业收缩，常被归入第二次低潮，分期并不统一。",
+          "startSeconds": 14.739167,
+          "endSeconds": 22.829583
+        },
+        {
+          "text": "成功应用仍在，局部成功却不能保证普遍兑现。",
+          "startSeconds": 22.879583,
+          "endSeconds": 27.547417
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 132.30516369999532,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0800326344267328
+      },
+      "fullDecodePassed": true,
+      "sha256": "796efa4cbeea47260e57e2bf09efa774ad8e19e1566855f14be46c83fdafd829",
+      "bytes": 439318,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -5.3849,
+        "rmsDbfs": -23.447,
+        "sampleCount": 1208227
+      }
+    },
+    {
+      "id": "08-01",
+      "file": "08-01.mp3",
+      "text": "回到一九八六年，并行的另一路线重新受到关注：训练含隐藏层的神经网络。输入经过中间节点才得到输出，可答案错了，前面的连接应该怎样调整。把错误标记停在输出端，再展开各层之间的依赖关系。关键问题是：不能只告诉系统错了，还要找到改善结果的调整方向。",
+      "hash": "f8ffa24fb7f41aa73c4355084215c17fd4e0d3428f8b7b5e19377dc481301221",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.697143,
+      "pcmDurationSeconds": 26.657208333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "回到一九八六年，并行的另一路线重新受到关注：训练含隐藏层的神经网络。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.517083
+        },
+        {
+          "text": "输入经过中间节点才得到输出，可答案错了，前面的连接应该怎样调整。",
+          "startSeconds": 7.567083,
+          "endSeconds": 14.561917
+        },
+        {
+          "text": "把错误标记停在输出端，再展开各层之间的依赖关系。",
+          "startSeconds": 14.611917,
+          "endSeconds": 19.996917
+        },
+        {
+          "text": "关键问题是：不能只告诉系统错了，还要找到改善结果的调整方向。",
+          "startSeconds": 20.046917,
+          "endSeconds": 26.807208
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 130.66108530000201,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0765967298184325
+      },
+      "fullDecodePassed": true,
+      "sha256": "1212de7466aed6b5e8a0431be69292aa7b2af4e1ce17f178f09810af7e1677b6",
+      "bytes": 427615,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.5682,
+        "rmsDbfs": -23.4467,
+        "sampleCount": 1175583
+      }
+    },
+    {
+      "id": "08-02",
+      "file": "08-02.mp3",
+      "text": "反向传播先计算网络预测与目标之间的损失，再反向计算梯度。链式法则将复杂变化率拆成局部计算，高效求出许多权重的影响。随后，优化方法根据梯度调整参数，例如小步走向降低损失的方向。反向流动的是求导信息，不是倒着思考，也不保证找到最好的答案。",
+      "hash": "e7b9c9ae8c888ae708a5a6d0fcdf59b0cf74c91eb201f9a354e9059823231ca2",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.756735,
+      "pcmDurationSeconds": 25.716791666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "反向传播先计算网络预测与目标之间的损失，再反向计算梯度。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.004833
+        },
+        {
+          "text": "链式法则将复杂变化率拆成局部计算，高效求出许多权重的影响。",
+          "startSeconds": 6.054833,
+          "endSeconds": 12.500292
+        },
+        {
+          "text": "随后，优化方法根据梯度调整参数，例如小步走向降低损失的方向。",
+          "startSeconds": 12.550292,
+          "endSeconds": 19.003167
+        },
+        {
+          "text": "反向流动的是求导信息，不是倒着思考，也不保证找到最好的答案。",
+          "startSeconds": 19.053167,
+          "endSeconds": 25.866792
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 110.54384299999947,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0987176031433934
+      },
+      "fullDecodePassed": true,
+      "sha256": "0ca9a3fc2baf46c0fe6700d2d15e3670a9c0c2e22a8d6c797f2cd55cf3ce778a",
+      "bytes": 412568,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.6497,
+        "rmsDbfs": -23.4471,
+        "sampleCount": 1134111
+      }
+    },
+    {
+      "id": "08-03",
+      "file": "08-03.mp3",
+      "text": "一九八六年，鲁梅尔哈特、辛顿和威廉斯的论文，展示反传学习内部表示。隐藏单元能形成有助于任务的特征，不必逐个由人预先写好。让交错点经过中间层重新表示，再完成分类，这是简化示意。梯度与训练思想有更早基础，不能将重要论文写成毫无前史的首次发明。",
+      "hash": "b40c733b80dc89011f8ddd8141e74b41b809c8cbc5321a0eb8ac6b7e7bcfcf99",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.331429,
+      "pcmDurationSeconds": 26.284416666666665,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九八六年，鲁梅尔哈特、辛顿和威廉斯的论文，展示反传学习内部表示。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.49825
+        },
+        {
+          "text": "隐藏单元能形成有助于任务的特征，不必逐个由人预先写好。",
+          "startSeconds": 7.54825,
+          "endSeconds": 13.289208
+        },
+        {
+          "text": "让交错点经过中间层重新表示，再完成分类，这是简化示意。",
+          "startSeconds": 13.339208,
+          "endSeconds": 19.560167
+        },
+        {
+          "text": "梯度与训练思想有更早基础，不能将重要论文写成毫无前史的首次发明。",
+          "startSeconds": 19.610167,
+          "endSeconds": 26.434417
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 114.3992797999963,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.066931217177315
+      },
+      "fullDecodePassed": true,
+      "sha256": "728f5bf6bfc8487a278c752cb2e9f570a5dffefedb657e1e6b60dae7cb161e3f",
+      "bytes": 421763,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.3339,
+        "rmsDbfs": -23.4463,
+        "sampleCount": 1159143
+      }
+    },
+    {
+      "id": "08-04",
+      "file": "08-04.mp3",
+      "text": "反向传播让多层网络训练更有希望，却没让当时的机器立刻拥有今天的生成能力。数据、计算、网络结构和训练是否顺利，仍影响模型能够学到什么。学习曲线有时下降、有时停滞，进步需要反复实验。表示能够随任务改变，但怎样可靠面对更大世界，仍有问题待解。",
+      "hash": "7135a0b33d282cebfc4732987634657cbe79672ae4d83917ca49dc7461bf78bd",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.051429,
+      "pcmDurationSeconds": 25.021875,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "反向传播让多层网络训练更有希望，却没让当时的机器立刻拥有今天的生成能力。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.460583
+        },
+        {
+          "text": "数据、计算、网络结构和训练是否顺利，仍影响模型能够学到什么。",
+          "startSeconds": 7.510583,
+          "endSeconds": 13.506875
+        },
+        {
+          "text": "学习曲线有时下降、有时停滞，进步需要反复实验。",
+          "startSeconds": 13.556875,
+          "endSeconds": 18.521042
+        },
+        {
+          "text": "表示能够随任务改变，但怎样可靠面对更大世界，仍有问题待解。",
+          "startSeconds": 18.571042,
+          "endSeconds": 25.171875
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 100.81454170000507,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.076241136181106
+      },
+      "fullDecodePassed": true,
+      "sha256": "0cd1df75a2294945adad19db3d0e08523db0e218fce317835bc4c5bcbf1f49f2",
+      "bytes": 401283,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.868,
+        "rmsDbfs": -23.447,
+        "sampleCount": 1103465
+      }
+    },
+    {
+      "id": "09-01",
+      "file": "09-01.mp3",
+      "text": "进入二十世纪九十年代，一条重要路线是让机器从样本中学习可重复的关系。识别手写邮编时，工程师不只列举笔画规则，还收集不同人的字迹，让算法比较预测与答案。模型调整的是参数，并未经历人的生活。关键考验是能否认出没见过的字，而不只背下练习。",
+      "hash": "6a553fe51f9480d47499dc246f280b163aac36e274012947698a5b1cfb317b83",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.835102,
+      "pcmDurationSeconds": 25.79925,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "进入二十世纪九十年代，一条重要路线是让机器从样本中学习可重复的关系。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.514417
+        },
+        {
+          "text": "识别手写邮编时，工程师不只列举笔画规则，还收集不同人的字迹，让算法比较预测与答案。",
+          "startSeconds": 7.564417,
+          "endSeconds": 16.59625
+        },
+        {
+          "text": "模型调整的是参数，并未经历人的生活。",
+          "startSeconds": 16.64625,
+          "endSeconds": 20.717125
+        },
+        {
+          "text": "关键考验是能否认出没见过的字，而不只背下练习。",
+          "startSeconds": 20.767125,
+          "endSeconds": 25.94925
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 86.64648780000425,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.05609766240828
+      },
+      "fullDecodePassed": true,
+      "sha256": "02101493142b5c4716fe152be2999999a4bc2fdfe3455cfe4a3334275b272e1c",
+      "bytes": 413822,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.1466,
+        "rmsDbfs": -23.4467,
+        "sampleCount": 1137747
+      }
+    },
+    {
+      "id": "09-02",
+      "file": "09-02.mp3",
+      "text": "一九九五年，科尔特斯和瓦普尼克发表支持向量网络论文。把两类邮件画成点，算法寻找分界，尽量留下宽阔间隔，也允许对少量错误作出权衡。核方法可以在另一种特征表示中处理弯曲边界。这是一种数学分类，并不表示机器理解了发件人的意图。",
+      "hash": "b7eeb673e37989b3ef512c2dd8d7537dc0e1cdbf65385431b8a66d902300960a",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 23.666939,
+      "pcmDurationSeconds": 23.639708333333335,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九九五年，科尔特斯和瓦普尼克发表支持向量网络论文。",
+          "startSeconds": 0.0,
+          "endSeconds": 5.40325
+        },
+        {
+          "text": "把两类邮件画成点，算法寻找分界，尽量留下宽阔间隔，也允许对少量错误作出权衡。",
+          "startSeconds": 5.45325,
+          "endSeconds": 14.074167
+        },
+        {
+          "text": "核方法可以在另一种特征表示中处理弯曲边界。",
+          "startSeconds": 14.124167,
+          "endSeconds": 18.434667
+        },
+        {
+          "text": "这是一种数学分类，并不表示机器理解了发件人的意图。",
+          "startSeconds": 18.484667,
+          "endSeconds": 23.789708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 75.45783330000268,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.084058030822893
+      },
+      "fullDecodePassed": true,
+      "sha256": "2e3c5c7a675fea979f276a4ee3337cdd854f3fce57311c961e56dc371e0eb0d3",
+      "bytes": 379132,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.8477,
+        "rmsDbfs": -23.4472,
+        "sampleCount": 1042512
+      }
+    },
+    {
+      "id": "09-03",
+      "file": "09-03.mp3",
+      "text": "概率模型不急于给出非黑即白的答案，而是计算在已有证据下，各种解释有多大可能。比如听含糊的语音，可以把隐藏的发音状态与声音联系起来，比较词序列。九十年代的概率图模型把变量依赖画成图，并研究近似推断。结论依然受模型假设约束。",
+      "hash": "cc7b1237e7d5d85594cf164e0b137baa66afd42e6a277a66a41966547ddd2a28",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 23.745306,
+      "pcmDurationSeconds": 23.718583333333335,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "概率模型不急于给出非黑即白的答案，而是计算在已有证据下，各种解释有多大可能。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.976
+        },
+        {
+          "text": "比如听含糊的语音，可以把隐藏的发音状态与声音联系起来，比较词序列。",
+          "startSeconds": 8.026,
+          "endSeconds": 15.0485
+        },
+        {
+          "text": "九十年代的概率图模型把变量依赖画成图，并研究近似推断。",
+          "startSeconds": 15.0985,
+          "endSeconds": 20.970417
+        },
+        {
+          "text": "结论依然受模型假设约束。",
+          "startSeconds": 21.020417,
+          "endSeconds": 23.868583
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 82.92379900000378,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0715880192535452
+      },
+      "fullDecodePassed": true,
+      "sha256": "51a2b218d1bf8c5eb0f8a73afd53b567bb74cdb9d6854b76f20fda130f671232",
+      "bytes": 380385,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.6733,
+        "rmsDbfs": -23.447,
+        "sampleCount": 1045990
+      }
+    },
+    {
+      "id": "09-04",
+      "file": "09-04.mp3",
+      "text": "一九九八年，勒昆等人的论文展示卷积网络与文档识别，神经网络并未从历史中消失。手写数字让方法有了共同考题，但训练与测试必须分开。如果样本只来自少数写字习惯，换一批人就可能出错。数据代表了谁，怎样划分，也与算法一样值得追问。",
+      "hash": "7152aa79e9e73eb80f689e65229e330ea5f44ccfc0446237aae769f556f8d5ca",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 23.902041,
+      "pcmDurationSeconds": 23.870458333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九九八年，勒昆等人的论文展示卷积网络与文档识别，神经网络并未从历史中消失。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.237542
+        },
+        {
+          "text": "手写数字让方法有了共同考题，但训练与测试必须分开。",
+          "startSeconds": 8.287542,
+          "endSeconds": 13.849
+        },
+        {
+          "text": "如果样本只来自少数写字习惯，换一批人就可能出错。",
+          "startSeconds": 13.899,
+          "endSeconds": 19.098875
+        },
+        {
+          "text": "数据代表了谁，怎样划分，也与算法一样值得追问。",
+          "startSeconds": 19.148875,
+          "endSeconds": 24.020458
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 83.27611819999584,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0519010249947838
+      },
+      "fullDecodePassed": true,
+      "sha256": "31cc17cdbb8a559f83557eae05b6f595864bae1368afbf9a4a5b310beb402ba2",
+      "bytes": 382893,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.7088,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 1052688
+      }
+    },
+    {
+      "id": "10-01",
+      "file": "10-01.mp3",
+      "text": "一九九七年五月，深蓝在六局国际象棋赛中，以三点五比二点五战胜卡斯帕罗夫。它结合高速搜索、局面评估和棋类知识，在明确规则下完成了专门任务。但赢棋不会自然带来聊天、看路或照顾孩子的能力。棋盘内的成就，需要连同边界一起理解。",
+      "hash": "ac095a693965220e86fdb8487bc249d15032dfc5d6e9ffb10463d01d5d81af24",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.450612,
+      "pcmDurationSeconds": 24.399291666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一九九七年五月，深蓝在六局国际象棋赛中，以三点五比二点五战胜卡斯帕罗夫。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.094708
+        },
+        {
+          "text": "它结合高速搜索、局面评估和棋类知识，在明确规则下完成了专门任务。",
+          "startSeconds": 8.144708,
+          "endSeconds": 15.441625
+        },
+        {
+          "text": "但赢棋不会自然带来聊天、看路或照顾孩子的能力。",
+          "startSeconds": 15.491625,
+          "endSeconds": 20.480292
+        },
+        {
+          "text": "棋盘内的成就，需要连同边界一起理解。",
+          "startSeconds": 20.530292,
+          "endSeconds": 24.549292
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 80.344036399998,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0774241651378955
+      },
+      "fullDecodePassed": true,
+      "sha256": "4b145043101f17be7c64c38aa0035c7e41361548d15e925a1f83ea61df7d58b7",
+      "bytes": 391670,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.9212,
+        "rmsDbfs": -23.4476,
+        "sampleCount": 1076015
+      }
+    },
+    {
+      "id": "10-02",
+      "file": "10-02.mp3",
+      "text": "识别生活照片时，同一种猫也会有不同姿势、光线和背景，棋盘式规则就不够用了。二〇〇九年的ImageNet论文，提出按词义层级组织的大规模图像数据库。研究者搜集、清洗图片，并组织人工标注。此后的竞赛把任务和评分口径固定下来，让不同算法能够比较。",
+      "hash": "2b099477e818f9434e921931235d9ff7134d27e7b6bb0e30e5213cf2f33dab73",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.129796,
+      "pcmDurationSeconds": 25.092208333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "识别生活照片时，同一种猫也会有不同姿势、光线和背景，棋盘式规则就不够用了。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.462292
+        },
+        {
+          "text": "二〇〇九年的ImageNet论文，提出按词义层级组织的大规模图像数据库。",
+          "startSeconds": 8.512292,
+          "endSeconds": 14.924292
+        },
+        {
+          "text": "研究者搜集、清洗图片，并组织人工标注。",
+          "startSeconds": 14.974292,
+          "endSeconds": 19.308292
+        },
+        {
+          "text": "此后的竞赛把任务和评分口径固定下来，让不同算法能够比较。",
+          "startSeconds": 19.358292,
+          "endSeconds": 25.242208
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 88.49495549999847,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0676068184914302
+      },
+      "fullDecodePassed": true,
+      "sha256": "08e0a15c3ea559f2f92f3591047e41cdca42a79279a6f52094133d3d3c7f855b",
+      "bytes": 402537,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.9143,
+        "rmsDbfs": -23.4473,
+        "sampleCount": 1106567
+      }
+    },
+    {
+      "id": "10-03",
+      "file": "10-03.mp3",
+      "text": "二〇一二年，AlexNet方案在图像分类竞赛中取得突出成绩。论文报告，参赛组合的前五错误率为百分之十五点三，第二名是百分之二十六点二。前五看的是五个候选类别里有没有正确答案。这不是现实视觉的总正确率，却推动更多研究者投入深度网络。",
+      "hash": "99afcd6f3e99568458084649026875a71151fc900bf44f395617b8d41699f93d",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 23.719184,
+      "pcmDurationSeconds": 23.680666666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇一二年，AlexNet方案在图像分类竞赛中取得突出成绩。",
+          "startSeconds": 0.0,
+          "endSeconds": 5.619583
+        },
+        {
+          "text": "论文报告，参赛组合的前五错误率为百分之十五点三，第二名是百分之二十六点二。",
+          "startSeconds": 5.669583,
+          "endSeconds": 13.542583
+        },
+        {
+          "text": "前五看的是五个候选类别里有没有正确答案。",
+          "startSeconds": 13.592583,
+          "endSeconds": 17.511458
+        },
+        {
+          "text": "这不是现实视觉的总正确率，却推动更多研究者投入深度网络。",
+          "startSeconds": 17.561458,
+          "endSeconds": 23.830667
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 98.89410469999711,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1071098482235224
+      },
+      "fullDecodePassed": true,
+      "sha256": "ac57d26a0c49db1156f9bcb45fae5b2364ca0c021f40324ba566141851bab791",
+      "bytes": 379967,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.7959,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 1044318
+      }
+    },
+    {
+      "id": "10-04",
+      "file": "10-04.mp3",
+      "text": "这次转折来自数据、网络方法与计算工具的配合，并不是某个公式突然奏效。图形处理器并行计算，卷积利用图像局部关系，训练技巧帮助调整参数。研究更多转向让特征表示参与学习。但遮挡、陌生场景和错误标签仍会带来困难，成绩需要放回具体任务中解释。",
+      "hash": "66ff861e4ae0c0f5f7b7c67553b2c297c27a3ddab6ac2f14133bc05efd9269c5",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.417143,
+      "pcmDurationSeconds": 25.372666666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "这次转折来自数据、网络方法与计算工具的配合，并不是某个公式突然奏效。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.641708
+        },
+        {
+          "text": "图形处理器并行计算，卷积利用图像局部关系，训练技巧帮助调整参数。",
+          "startSeconds": 7.691708,
+          "endSeconds": 14.923583
+        },
+        {
+          "text": "研究更多转向让特征表示参与学习。",
+          "startSeconds": 14.973583,
+          "endSeconds": 18.591083
+        },
+        {
+          "text": "但遮挡、陌生场景和错误标签仍会带来困难，成绩需要放回具体任务中解释。",
+          "startSeconds": 18.641083,
+          "endSeconds": 25.522667
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 121.84755649999715,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0773837548015872
+      },
+      "fullDecodePassed": true,
+      "sha256": "97d89d2c8ee87ebd69804adebe7864eb5b2b81b0cd99b99d1726aea8f0c55f15",
+      "bytes": 407135,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.0616,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 1118935
+      }
+    },
+    {
+      "id": "11-01",
+      "file": "11-01.mp3",
+      "text": "二〇一六年三月，AlphaGo在首尔以四比一战胜李世石，引发公众关注。它结合神经网络与搜索，估计值得尝试的落点和局面的胜算。人类棋谱提供起点，系统还通过自我对弈继续调整。学习缩小搜索范围，搜索把局部判断放回完整棋局，两者互相补充。",
+      "hash": "47b318abf11a59f1e3a4520acb120875baa167aa0d1542e0064396dd8f1c530b",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.52898,
+      "pcmDurationSeconds": 24.496125,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇一六年三月，AlphaGo在首尔以四比一战胜李世石，引发公众关注。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.835542
+        },
+        {
+          "text": "它结合神经网络与搜索，估计值得尝试的落点和局面的胜算。",
+          "startSeconds": 6.885542,
+          "endSeconds": 12.50625
+        },
+        {
+          "text": "人类棋谱提供起点，系统还通过自我对弈继续调整。",
+          "startSeconds": 12.55625,
+          "endSeconds": 17.624
+        },
+        {
+          "text": "学习缩小搜索范围，搜索把局部判断放回完整棋局，两者互相补充。",
+          "startSeconds": 17.674,
+          "endSeconds": 24.646125
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 126.31163630000083,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0570094011153484
+      },
+      "fullDecodePassed": true,
+      "sha256": "5a026a990c97fb683577a05b8acde365870d927d3bc75adb08e12cfd12c9324a",
+      "bytes": 392924,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.3951,
+        "rmsDbfs": -23.4473,
+        "sampleCount": 1080280
+      }
+    },
+    {
+      "id": "11-02",
+      "file": "11-02.mp3",
+      "text": "围棋有给定的规则、行动范围与胜负反馈，而现实工作常常要先弄清目标。一次建议面对不同需求，可能带来不同后果。例如安排日程，不只要找到空档，还要理解哪些约定更重要，哪些决定必须确认。从封闭棋盘走向生活，需要重新定义任务，也需要新的验证。",
+      "hash": "f15667f04d45df70afa9299abafa1fd2891b66454dd33837004696a61542b962",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 26.070204,
+      "pcmDurationSeconds": 26.042708333333334,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "围棋有给定的规则、行动范围与胜负反馈，而现实工作常常要先弄清目标。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.49525
+        },
+        {
+          "text": "一次建议面对不同需求，可能带来不同后果。",
+          "startSeconds": 7.54525,
+          "endSeconds": 12.01525
+        },
+        {
+          "text": "例如安排日程，不只要找到空档，还要理解哪些约定更重要，哪些决定必须确认。",
+          "startSeconds": 12.06525,
+          "endSeconds": 20.076042
+        },
+        {
+          "text": "从封闭棋盘走向生活，需要重新定义任务，也需要新的验证。",
+          "startSeconds": 20.126042,
+          "endSeconds": 26.192708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 123.78571530000045,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0349329807121879
+      },
+      "fullDecodePassed": true,
+      "sha256": "54587f770e1b50d4a184fb5baf28e3b5622232f3f829450ace7ae6317aa1f9c7",
+      "bytes": 417584,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.9709,
+        "rmsDbfs": -23.4471,
+        "sampleCount": 1148484
+      }
+    },
+    {
+      "id": "11-03",
+      "file": "11-03.mp3",
+      "text": "二〇一七年的论文提出Transformer架构，最初重点展示机器翻译。一句长句中，决定词义的线索可能在很远的位置，自注意力让各位置按相关程度交换信息。这是一种可训练的加权计算，并非人的专注。它配合位置表示与其他网络层，形成新的序列建模方式。",
+      "hash": "703d7313fef38922c5ec2a70ac6ac8f3ff6098cc7961e04c0ed05fa0b55db89d",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.42449,
+      "pcmDurationSeconds": 24.388958333333335,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇一七年的论文提出Transformer架构，最初重点展示机器翻译。",
+          "startSeconds": 0.0,
+          "endSeconds": 5.842833
+        },
+        {
+          "text": "一句长句中，决定词义的线索可能在很远的位置，自注意力让各位置按相关程度交换信息。",
+          "startSeconds": 5.892833,
+          "endSeconds": 14.315958
+        },
+        {
+          "text": "这是一种可训练的加权计算，并非人的专注。",
+          "startSeconds": 14.365958,
+          "endSeconds": 18.850875
+        },
+        {
+          "text": "它配合位置表示与其他网络层，形成新的序列建模方式。",
+          "startSeconds": 18.900875,
+          "endSeconds": 24.538958
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 95.39768449999974,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1000415363526594
+      },
+      "fullDecodePassed": true,
+      "sha256": "adb4452ac41b8e2a620d11d19302d9cbb5041b8c2b0feb5043b40ecf09843723",
+      "bytes": 391252,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.5229,
+        "rmsDbfs": -23.4464,
+        "sampleCount": 1075554
+      }
+    },
+    {
+      "id": "11-04",
+      "file": "11-04.mp3",
+      "text": "Transformer在训练时更容易并行处理序列中的许多位置，便于利用大规模计算。但架构只是骨架，训练目标决定练习什么，数据决定能接触什么。同一骨架可以用于翻译、文本表示或生成文字，能力却不必相同。下一次转折，便在训练目标与海量文本的结合处。",
+      "hash": "15d400d8b737361d042989d7b0dbf1a78b98987b63b0ad31110599c454d96ec2",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.659592,
+      "pcmDurationSeconds": 24.621208333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "Transformer在训练时更容易并行处理序列中的许多位置，便于利用大规模计算。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.884792
+        },
+        {
+          "text": "但架构只是骨架，训练目标决定练习什么，数据决定能接触什么。",
+          "startSeconds": 6.934792,
+          "endSeconds": 13.368083
+        },
+        {
+          "text": "同一骨架可以用于翻译、文本表示或生成文字，能力却不必相同。",
+          "startSeconds": 13.418083,
+          "endSeconds": 19.838958
+        },
+        {
+          "text": "下一次转折，便在训练目标与海量文本的结合处。",
+          "startSeconds": 19.888958,
+          "endSeconds": 24.771208
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 94.62879979999707,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0607809778166426
+      },
+      "fullDecodePassed": true,
+      "sha256": "e53b0a96fd27092684048e9ed490ee28975350e70cec2f2c9c119246feb187a4",
+      "bytes": 395014,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.6168,
+        "rmsDbfs": -23.447,
+        "sampleCount": 1085796
+      }
+    },
+    {
+      "id": "12-01",
+      "file": "12-01.mp3",
+      "text": "二〇一八年的GPT论文展示一条路径：先在大量未逐项标注的文本上学习，再适应具体任务。模型练习根据前文预测后续片段，从中调整词语与上下文的表示。这样不必为每项任务从零开始。但预训练并未把文字变成核实过的知识库，迁移效果仍要检验。",
+      "hash": "4db33f8582952b6a4e7da7174f7321f15deead378cced4d67da628d5c2c3aa73",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.163265,
+      "pcmDurationSeconds": 24.135291666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇一八年的GPT论文展示一条路径：先在大量未逐项标注的文本上学习，再适应具体任务。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.975625
+        },
+        {
+          "text": "模型练习根据前文预测后续片段，从中调整词语与上下文的表示。",
+          "startSeconds": 9.025625,
+          "endSeconds": 15.249208
+        },
+        {
+          "text": "这样不必为每项任务从零开始。",
+          "startSeconds": 15.299208,
+          "endSeconds": 18.417042
+        },
+        {
+          "text": "但预训练并未把文字变成核实过的知识库，迁移效果仍要检验。",
+          "startSeconds": 18.467042,
+          "endSeconds": 24.285292
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 87.30349489999935,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.105083324639194
+      },
+      "fullDecodePassed": true,
+      "sha256": "0f8173be2fcac47b123940c8edef96d5253dfd3b82455bc16b0e29489e326562",
+      "bytes": 387073,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.5133,
+        "rmsDbfs": -23.4474,
+        "sampleCount": 1064367
+      }
+    },
+    {
+      "id": "12-02",
+      "file": "12-02.mp3",
+      "text": "同年公布的BERT采用另一种训练思路，同时利用左右上下文学习文本表示。它遮住句子中的部分词，让模型练习恢复内容，再把表示用于问答或分类。填空题只是帮助理解的比喻，机器没有经历书中的生活。不同目标能够练出各有长处的模型。",
+      "hash": "1febb765c2e2dda71fbce436386b3a9dcb1a596ad43afeb5020f69a322cb979b",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 23.196735,
+      "pcmDurationSeconds": 23.167333333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "同年公布的BERT采用另一种训练思路，同时利用左右上下文学习文本表示。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.939417
+        },
+        {
+          "text": "它遮住句子中的部分词，让模型练习恢复内容，再把表示用于问答或分类。",
+          "startSeconds": 6.989417,
+          "endSeconds": 14.206958
+        },
+        {
+          "text": "填空题只是帮助理解的比喻，机器没有经历书中的生活。",
+          "startSeconds": 14.256958,
+          "endSeconds": 19.857125
+        },
+        {
+          "text": "不同目标能够练出各有长处的模型。",
+          "startSeconds": 19.907125,
+          "endSeconds": 23.317333
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 72.79351280000265,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.114987894994736
+      },
+      "fullDecodePassed": true,
+      "sha256": "00273dc6e090d9fc66f4a518a53f54d8bd5a1821bff682e6e13f3e3cba27a472",
+      "bytes": 371608,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.1188,
+        "rmsDbfs": -23.4474,
+        "sampleCount": 1021680
+      }
+    },
+    {
+      "id": "12-03",
+      "file": "12-03.mp3",
+      "text": "二〇二〇年的规模规律研究，考察模型大小、数据量与训练计算对预测损失的影响。同年的GPT-3展示了在提示中给少量示例，完成多种语言任务的可能。但经验趋势来自特定实验条件。不能由此推断参数越多，一切能力就必然更好，数据质量与失败案例仍要检查。",
+      "hash": "c77e4eea4ae2f7bf6e7870bc038f44322c3cd6b0f1048919b778013228e28304",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.417143,
+      "pcmDurationSeconds": 25.369041666666668,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇二〇年的规模规律研究，考察模型大小、数据量与训练计算对预测损失的影响。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.927542
+        },
+        {
+          "text": "同年的GPT-3展示了在提示中给少量示例，完成多种语言任务的可能。",
+          "startSeconds": 7.977542,
+          "endSeconds": 14.6935
+        },
+        {
+          "text": "但经验趋势来自特定实验条件。",
+          "startSeconds": 14.7435,
+          "endSeconds": 17.90625
+        },
+        {
+          "text": "不能由此推断参数越多，一切能力就必然更好，数据质量与失败案例仍要检查。",
+          "startSeconds": 17.95625,
+          "endSeconds": 25.519042
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 80.88688150000235,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.081356934937464
+      },
+      "fullDecodePassed": true,
+      "sha256": "0506967711902b1c03f508bb1f7e0523b25b52380beb6978b0d7f33cbf716ee6",
+      "bytes": 407135,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.2329,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1118775
+      }
+    },
+    {
+      "id": "12-04",
+      "file": "12-04.mp3",
+      "text": "二〇二二年十一月三十日，OpenAI推出ChatGPT研究预览，让公众通过对话直接试用。人类示范、回答比较与反馈训练，让系统更容易按指令回应。愿意配合和回答正确却是两回事。发布说明就列出了貌似合理的错误输出，便捷界面也让核实信息更必要。",
+      "hash": "3ddf44e3eab72407f96cff018dd5c2fd672b595deb376ae1716614f903aaf40c",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.189388,
+      "pcmDurationSeconds": 24.144666666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇二二年十一月三十日，OpenAI推出ChatGPT研究预览，让公众通过对话直接试用。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.19575
+        },
+        {
+          "text": "人类示范、回答比较与反馈训练，让系统更容易按指令回应。",
+          "startSeconds": 8.24575,
+          "endSeconds": 13.824875
+        },
+        {
+          "text": "愿意配合和回答正确却是两回事。",
+          "startSeconds": 13.874875,
+          "endSeconds": 17.324208
+        },
+        {
+          "text": "发布说明就列出了貌似合理的错误输出，便捷界面也让核实信息更必要。",
+          "startSeconds": 17.374208,
+          "endSeconds": 24.294667
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 73.63584179999452,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0967517779887175
+      },
+      "fullDecodePassed": true,
+      "sha256": "5613b5cf10f0c1a640a71324d182f3e28ef392a281b718088b0217a8d3ee2f65",
+      "bytes": 387491,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.5133,
+        "rmsDbfs": -23.4465,
+        "sampleCount": 1064780
+      }
+    },
+    {
+      "id": "13-01",
+      "file": "13-01.mp3",
+      "text": "文字之外的生成研究也有自己的路径，把时间拨回二〇一四年，看看生成对抗网络。一个网络生成样本，另一个区分训练数据与生成结果，两者交替调整。这像生成与辨别的练习，网络并没有人的动机。它学习的是数据分布，并不意味着画面真实发生过。",
+      "hash": "fc3431772194c5da794fd3e00f12339ff8fef21efc1b1beea95c1fb279342217",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.607347,
+      "pcmDurationSeconds": 24.564541666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "文字之外的生成研究也有自己的路径，把时间拨回二〇一四年，看看生成对抗网络。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.925917
+        },
+        {
+          "text": "一个网络生成样本，另一个区分训练数据与生成结果，两者交替调整。",
+          "startSeconds": 7.975917,
+          "endSeconds": 14.958167
+        },
+        {
+          "text": "这像生成与辨别的练习，网络并没有人的动机。",
+          "startSeconds": 15.008167,
+          "endSeconds": 19.591833
+        },
+        {
+          "text": "它学习的是数据分布，并不意味着画面真实发生过。",
+          "startSeconds": 19.641833,
+          "endSeconds": 24.714542
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 78.18060550000519,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0646091424083093
+      },
+      "fullDecodePassed": true,
+      "sha256": "c34e2ad7fa07ec619464a087dc6082b8b3e6f16894913bdece96db24c4b60d7d",
+      "bytes": 394178,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.4738,
+        "rmsDbfs": -23.4466,
+        "sampleCount": 1083297
+      }
+    },
+    {
+      "id": "13-02",
+      "file": "13-02.mp3",
+      "text": "二〇二〇年的去噪扩散概率模型，是另一条图像生成路线的重要节点。训练时逐步给图像加噪，让网络学习相应的去噪任务；生成时，再从噪声出发得到样本。画面仿佛从雾中浮现，这是过程示意。它学习的是图像规律，画面逼真也不能证明所描绘的事件真实发生。",
+      "hash": "919c774bb54d9897fc0b372b8f2b4d060aca13c2800674de8c9b93bcbfbb4edf",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.652245,
+      "pcmDurationSeconds": 25.602875,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇二〇年的去噪扩散概率模型，是另一条图像生成路线的重要节点。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.601958
+        },
+        {
+          "text": "训练时逐步给图像加噪，让网络学习相应的去噪任务；生成时，再从噪声出发得到样本。",
+          "startSeconds": 6.651958,
+          "endSeconds": 15.25725
+        },
+        {
+          "text": "画面仿佛从雾中浮现，这是过程示意。",
+          "startSeconds": 15.30725,
+          "endSeconds": 19.263917
+        },
+        {
+          "text": "它学习的是图像规律，画面逼真也不能证明所描绘的事件真实发生。",
+          "startSeconds": 19.313917,
+          "endSeconds": 25.752875
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 78.85849660000531,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1009287132908285
+      },
+      "fullDecodePassed": true,
+      "sha256": "d173cc1277afd3894f2e01fdeccfb8b4a38e06b339b10fadf98bcb29ddeb6899",
+      "bytes": 410896,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.7261,
+        "rmsDbfs": -23.4463,
+        "sampleCount": 1129087
+      }
+    },
+    {
+      "id": "13-03",
+      "file": "13-03.mp3",
+      "text": "二〇二一年的CLIP研究，把图片与文字描述放进可以比较的表示空间。训练鼓励配对图文更接近，不配对的更容易区分。之后可以用自然语言描述类别，测试新的识别任务，而不为每类重新收集训练样本。它本身不是图像生成器，却为图文系统的组合提供了基础。",
+      "hash": "7858ee052a2ab2bef39eb0cb32689da4b47714ef213027994172ef18d3791c2f",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.685714,
+      "pcmDurationSeconds": 24.636791666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇二一年的CLIP研究，把图片与文字描述放进可以比较的表示空间。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.06
+        },
+        {
+          "text": "训练鼓励配对图文更接近，不配对的更容易区分。",
+          "startSeconds": 6.11,
+          "endSeconds": 11.058083
+        },
+        {
+          "text": "之后可以用自然语言描述类别，测试新的识别任务，而不为每类重新收集训练样本。",
+          "startSeconds": 11.108083,
+          "endSeconds": 19.026625
+        },
+        {
+          "text": "它本身不是图像生成器，却为图文系统的组合提供了基础。",
+          "startSeconds": 19.076625,
+          "endSeconds": 24.786792
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 74.25375190000341,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.081677118831733
+      },
+      "fullDecodePassed": true,
+      "sha256": "4173f5f599e77dc7b1be3de72aa635c6f71130ebe3770626da029a84efb2ef59",
+      "bytes": 395432,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.2437,
+        "rmsDbfs": -23.4472,
+        "sampleCount": 1086483
+      }
+    },
+    {
+      "id": "13-04",
+      "file": "13-04.mp3",
+      "text": "潜在扩散论文在二〇二一年预印，二〇二二年会议发表，把扩散计算搬进压缩后的表示。系统不必每一步都处理完整像素，还能结合文字等条件引导生成。这改善了计算需求与细节之间的取舍。创作工具扩大表达空间，也让素材来源与使用责任更加值得追问。",
+      "hash": "b29ca4e8c7a4f43bb693994e9eadb94a407e90c6917ca1a6fdd14db3e90d3b09",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.607347,
+      "pcmDurationSeconds": 24.570708333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "潜在扩散论文在二〇二一年预印，二〇二二年会议发表，把扩散计算搬进压缩后的表示。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.33225
+        },
+        {
+          "text": "系统不必每一步都处理完整像素，还能结合文字等条件引导生成。",
+          "startSeconds": 8.38225,
+          "endSeconds": 14.721042
+        },
+        {
+          "text": "这改善了计算需求与细节之间的取舍。",
+          "startSeconds": 14.771042,
+          "endSeconds": 18.392625
+        },
+        {
+          "text": "创作工具扩大表达空间，也让素材来源与使用责任更加值得追问。",
+          "startSeconds": 18.442625,
+          "endSeconds": 24.720708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 80.87969499999599,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1004140625599481
+      },
+      "fullDecodePassed": true,
+      "sha256": "cb59ee186c2db70df9015c08843f0c236733f38b4cae4572defa323bf3daf386",
+      "bytes": 394178,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.8568,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 1083569
+      }
+    },
+    {
+      "id": "14-01",
+      "file": "14-01.mp3",
+      "text": "二〇二一年的AlphaFold论文，展示蛋白质结构预测的重要进展，并估计可信程度。二〇二四年的阿尔法折叠三，将预测扩展到蛋白质、核酸与配体等相互作用的结构。画面中的序列到结构，是帮助理解的概念示意。它不是真实折叠过程的模拟，预测也不能替代实验验证。",
+      "hash": "0b398e944cd22c9f23d800b5ca76c46932a1918a7e2fe8eda89a40a180dc974c",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.573878,
+      "pcmDurationSeconds": 25.547541666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "二〇二一年的AlphaFold论文，展示蛋白质结构预测的重要进展，并估计可信程度。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.655667
+        },
+        {
+          "text": "二〇二四年的阿尔法折叠三，将预测扩展到蛋白质、核酸与配体等相互作用的结构。",
+          "startSeconds": 7.705667,
+          "endSeconds": 15.742375
+        },
+        {
+          "text": "画面中的序列到结构，是帮助理解的概念示意。",
+          "startSeconds": 15.792375,
+          "endSeconds": 20.294
+        },
+        {
+          "text": "它不是真实折叠过程的模拟，预测也不能替代实验验证。",
+          "startSeconds": 20.344,
+          "endSeconds": 25.697542
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 76.86737900000298,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0733284697492411
+      },
+      "fullDecodePassed": true,
+      "sha256": "29e06eb408e185be6f80af6d3214bba4de4fd4b94f15c5cca8b53984aac44557",
+      "bytes": 409643,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.832,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 1126647
+      }
+    },
+    {
+      "id": "14-02",
+      "file": "14-02.mp3",
+      "text": "可靠性不是一张榜单：答对考题、应对变化和知道何时不确定，是不同要求。二〇二五年，深度求索团队探索用强化学习促进推理。零版本在后训练中仅用强化学习，正式模型则采用多阶段训练。这些进展不等于可靠性已经解决，准确、稳健、公平与效率仍需分别检验。",
+      "hash": "745382879717b35423c2c6bca47513cade924e4fbad36da7ed296e2dfbfd3224",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.49551,
+      "pcmDurationSeconds": 25.465708333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "可靠性不是一张榜单：答对考题、应对变化和知道何时不确定，是不同要求。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.228458
+        },
+        {
+          "text": "二〇二五年，深度求索团队探索用强化学习促进推理。",
+          "startSeconds": 7.278458,
+          "endSeconds": 12.440625
+        },
+        {
+          "text": "零版本在后训练中仅用强化学习，正式模型则采用多阶段训练。",
+          "startSeconds": 12.490625,
+          "endSeconds": 18.847
+        },
+        {
+          "text": "这些进展不等于可靠性已经解决，准确、稳健、公平与效率仍需分别检验。",
+          "startSeconds": 18.897,
+          "endSeconds": 25.615708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 76.70215359999565,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.099343280938439
+      },
+      "fullDecodePassed": true,
+      "sha256": "5850e6fb08845cc2c19ad05bfab11c887a19d85d2a89efec77c9dc5f7693a6cb",
+      "bytes": 408389,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.6756,
+        "rmsDbfs": -23.4465,
+        "sampleCount": 1123038
+      }
+    },
+    {
+      "id": "14-03",
+      "file": "14-03.mp3",
+      "text": "平均成绩不错的系统，仍可能对某些人群表现较差。二〇一八年的性别阴影研究，检查商业人脸性别分类系统在不同肤色与性别组上的误差。它研究特定系统和任务，不能代替今天所有人脸技术的结论。模型卡进一步提倡公开适用范围、评测条件与分组结果。",
+      "hash": "6a25d34b112feb7c8ce2e34ee4690b7f285ee0fd9b25715dc76068e7b908878b",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 24.920816,
+      "pcmDurationSeconds": 24.873041666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "平均成绩不错的系统，仍可能对某些人群表现较差。",
+          "startSeconds": 0.0,
+          "endSeconds": 5.220167
+        },
+        {
+          "text": "二〇一八年的性别阴影研究，检查商业人脸性别分类系统在不同肤色与性别组上的误差。",
+          "startSeconds": 5.270167,
+          "endSeconds": 13.541917
+        },
+        {
+          "text": "它研究特定系统和任务，不能代替今天所有人脸技术的结论。",
+          "startSeconds": 13.591917,
+          "endSeconds": 19.381458
+        },
+        {
+          "text": "模型卡进一步提倡公开适用范围、评测条件与分组结果。",
+          "startSeconds": 19.431458,
+          "endSeconds": 25.023042
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 76.47725609999907,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0969915510629176
+      },
+      "fullDecodePassed": true,
+      "sha256": "30b4f80d585f3de11aec9498da826d92b02ed5c7f69673839b18864df743a752",
+      "bytes": 399194,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.6076,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 1096902
+      }
+    },
+    {
+      "id": "14-04",
+      "file": "14-04.mp3",
+      "text": "人工智能运行在真实芯片与机房里，训练用电，反复生成答案也持续消耗资源。研究表明，模型、硬件、任务与供电条件都会影响能耗和排放。一次实验的测量，不能当成所有提问的成本。比较要公开边界，也要考虑能否用合适的小模型完成任务。",
+      "hash": "34a830495a8480a49716eaff58d88c692027379e08be5e8a4080f188400f9618",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 22.726531,
+      "pcmDurationSeconds": 22.692708333333332,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "人工智能运行在真实芯片与机房里，训练用电，反复生成答案也持续消耗资源。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.110167
+        },
+        {
+          "text": "研究表明，模型、硬件、任务与供电条件都会影响能耗和排放。",
+          "startSeconds": 7.160167,
+          "endSeconds": 12.802417
+        },
+        {
+          "text": "一次实验的测量，不能当成所有提问的成本。",
+          "startSeconds": 12.852417,
+          "endSeconds": 17.346583
+        },
+        {
+          "text": "比较要公开边界，也要考虑能否用合适的小模型完成任务。",
+          "startSeconds": 17.396583,
+          "endSeconds": 22.842708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 68.16019190000225,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0901192353469187
+      },
+      "fullDecodePassed": true,
+      "sha256": "8dbf54213abc83678f1555ca968d516ce01ba8cc225d5c87b6abffb10edf41cb",
+      "bytes": 364085,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.3487,
+        "rmsDbfs": -23.4465,
+        "sampleCount": 1000749
+      }
+    },
+    {
+      "id": "15-01",
+      "file": "15-01.mp3",
+      "text": "回到开场的一天，面对手机建议、工作草稿和屏幕答案，我们可以请它帮忙，也可以要求解释。人机交互研究强调说明能力与限制，让纠正和退出足够方便。自动生成的邮件可以先供你修改。工具越顺手，越要保留确认关键行动的机会，让便利服务自己的目的。",
+      "hash": "0c17f96588a33d32e296c4506137b559f8a85a0cd108043b011f57f69a87fe55",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.338776,
+      "pcmDurationSeconds": 25.288916666666665,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "回到开场的一天，面对手机建议、工作草稿和屏幕答案，我们可以请它帮忙，也可以要求解释。",
+          "startSeconds": 0.0,
+          "endSeconds": 9.306375
+        },
+        {
+          "text": "人机交互研究强调说明能力与限制，让纠正和退出足够方便。",
+          "startSeconds": 9.356375,
+          "endSeconds": 15.314
+        },
+        {
+          "text": "自动生成的邮件可以先供你修改。",
+          "startSeconds": 15.364,
+          "endSeconds": 18.585167
+        },
+        {
+          "text": "工具越顺手，越要保留确认关键行动的机会，让便利服务自己的目的。",
+          "startSeconds": 18.635167,
+          "endSeconds": 25.438917
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 78.90316009999515,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0476190142827708
+      },
+      "fullDecodePassed": true,
+      "sha256": "c053693600f2cf99796393bb5da9a56bca0133a056f7cbf98e1164aca58f09fb",
+      "bytes": 405881,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.133,
+        "rmsDbfs": -23.4462,
+        "sampleCount": 1115242
+      }
+    },
+    {
+      "id": "15-02",
+      "file": "15-02.mp3",
+      "text": "把人工智能放进组织，意味着有人决定目标、选择数据与模型，并安排哪一步需要复核。错误影响人的机会时，不能用算法这么判断结束解释。还要有记录、纠正与申诉路径，让治理和测量贯穿使用过程。明确谁能发现问题、谁必须回应，责任才不会留在黑箱里。",
+      "hash": "1bdf9bdae64b35e819ab42804b8c61e6eb3f95ff48d5e78b67283213a4dd8ac8",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.939592,
+      "pcmDurationSeconds": 25.893625,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "把人工智能放进组织，意味着有人决定目标、选择数据与模型，并安排哪一步需要复核。",
+          "startSeconds": 0.0,
+          "endSeconds": 8.551917
+        },
+        {
+          "text": "错误影响人的机会时，不能用算法这么判断结束解释。",
+          "startSeconds": 8.601917,
+          "endSeconds": 13.749375
+        },
+        {
+          "text": "还要有记录、纠正与申诉路径，让治理和测量贯穿使用过程。",
+          "startSeconds": 13.799375,
+          "endSeconds": 19.898083
+        },
+        {
+          "text": "明确谁能发现问题、谁必须回应，责任才不会留在黑箱里。",
+          "startSeconds": 19.948083,
+          "endSeconds": 26.043625
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 78.3826396000004,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.032178196365922
+      },
+      "fullDecodePassed": true,
+      "sha256": "d3553ef5a7b5423b89a64f2e5fa7175572723adb7c352138d4b10a7a55f73d38",
+      "bytes": 415494,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.5278,
+        "rmsDbfs": -23.4463,
+        "sampleCount": 1141909
+      }
+    },
+    {
+      "id": "15-03",
+      "file": "15-03.mp3",
+      "text": "未来系统会走多远，不能靠流畅对话或漂亮演示判断，还要说明正在比较什么能力。研究者尝试区分表现深度、任务广度与自主程度。陌生情境中的可靠性、目标冲突与风险由谁决定，都仍是开放问题。这条历史没有给出通用智能已经实现的结论。",
+      "hash": "3cb506cbaff469fe13d4cfa6d19a9087546d6dd485588373edf9deb8eeb3ee42",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 23.797551,
+      "pcmDurationSeconds": 23.753208333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "未来系统会走多远，不能靠流畅对话或漂亮演示判断，还要说明正在比较什么能力。",
+          "startSeconds": 0.0,
+          "endSeconds": 7.884208
+        },
+        {
+          "text": "研究者尝试区分表现深度、任务广度与自主程度。",
+          "startSeconds": 7.934208,
+          "endSeconds": 12.924208
+        },
+        {
+          "text": "陌生情境中的可靠性、目标冲突与风险由谁决定，都仍是开放问题。",
+          "startSeconds": 12.974208,
+          "endSeconds": 19.849667
+        },
+        {
+          "text": "这条历史没有给出通用智能已经实现的结论。",
+          "startSeconds": 19.899667,
+          "endSeconds": 23.903208
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 70.7912295999995,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0701816770378774
+      },
+      "fullDecodePassed": true,
+      "sha256": "2efc6d8fafd26b774c868b77d8d5fb967d5bff9800e0d845a94e799a343c767a",
+      "bytes": 381221,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.0422,
+        "rmsDbfs": -23.4474,
+        "sampleCount": 1047517
+      }
+    },
+    {
+      "id": "15-04",
+      "file": "15-04.mp3",
+      "text": "人工智能的历史连接着数学、硬件与实验，也连接着许多人的劳动。节省的时间怎样分配，谁能使用工具，谁的经验被忽略，仍要由我们讨论。模型可以起草问候，但关心谁、是否发送，还是人的选择。未来不仅由下一次训练决定，也由这样的日常选择逐渐形成。",
+      "hash": "f4566b3d3cfce188264be3a747c6affb3414726947e5e53fda7c3eb3afb3b782",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.0,
+      "durationSeconds": 25.626122,
+      "pcmDurationSeconds": 25.599458333333335,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "人工智能的历史连接着数学、硬件与实验，也连接着许多人的劳动。",
+          "startSeconds": 0.0,
+          "endSeconds": 6.502083
+        },
+        {
+          "text": "节省的时间怎样分配，谁能使用工具，谁的经验被忽略，仍要由我们讨论。",
+          "startSeconds": 6.552083,
+          "endSeconds": 13.923792
+        },
+        {
+          "text": "模型可以起草问候，但关心谁、是否发送，还是人的选择。",
+          "startSeconds": 13.973792,
+          "endSeconds": 19.834625
+        },
+        {
+          "text": "未来不仅由下一次训练决定，也由这样的日常选择逐渐形成。",
+          "startSeconds": 19.884625,
+          "endSeconds": 25.749458
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 77.45521150000422,
+      "generatedLines": 4,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0402062585391025
+      },
+      "fullDecodePassed": true,
+      "sha256": "dbcd7c79d94f9d99b7987bc49545068a43e4d93a7fe06a0c6ab79bb6da10703e",
+      "bytes": 410478,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.6863,
+        "rmsDbfs": -23.4471,
+        "sampleCount": 1128937
+      }
+    }
+  ],
+  "spokenTextNormalization": {
+    "version": "zh-year-zero-and-ai-terms-v2",
+    "characterReplacements": {
+      "〇": "零",
+      "《": "",
+      "》": ""
+    },
+    "terms": {
+      "ImageNet": "Image Net",
+      "AlexNet": "Alex Net",
+      "AlphaGo": "Alpha Go",
+      "AlphaFold": "Alpha Fold",
+      "OpenAI": "Open A I",
+      "ChatGPT": "Chat G P T",
+      "GPT-3": "G P T 三",
+      "GPT": "G P T",
+      "AI": "A I"
+    },
+    "captionsPreserveOriginalText": true,
+    "rationale": "sherpa-onnx 2.0.1 skips unknown English words rather than spelling them; every expanded English token is verified against the installed English and Chinese lexicons."
+  },
+  "spokenAsciiLexiconCheck": {
+    "status": "passed",
+    "tokens": [
+      "A",
+      "Alex",
+      "Alpha",
+      "BERT",
+      "CLIP",
+      "Chat",
+      "Fold",
+      "G",
+      "Go",
+      "I",
+      "Image",
+      "Net",
+      "Open",
+      "P",
+      "T",
+      "Transformer"
+    ],
+    "lexicons": [
+      "lexicon-us-en.txt",
+      "lexicon-zh.txt"
+    ]
+  },
+  "totalAudioSeconds": 1530.618779,
+  "elapsedSeconds": 84.13511420000577
+}

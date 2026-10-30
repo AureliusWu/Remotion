@@ -1,0 +1,11 @@
+{
+  "title": "Questions Across Time",
+  "original": true,
+  "deterministic": true,
+  "externalSamples": [],
+  "durationSeconds": 1800,
+  "peakDbfs": -34.774975019426144,
+  "rmsDbfs": -45.44552303916277,
+  "source": "scripts/build-ai-history-audio.mjs --music-only",
+  "sha256": "b2a9719c91e37b36d6e152b5d44241c595bcea111f70d55b213b570300102f63"
+}

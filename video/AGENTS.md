@@ -15,3 +15,5 @@
 - 报错先保留日志并区分依赖、网络、浏览器、媒体与源码原因；不盲目删 node_modules、清缓存、
   更新全部包或修改上游代码。平台限定的 macOS/Linux 可选包未安装不属于 Windows 缺项。
 - 实际有效的修复记录到 `../docs/ENVIRONMENT.md` 与 `../docs/VIDEO-ENGINEERING-LOG.md`。
+- 免费本地语音工具见 `scripts/ai-history-tts/`；复用单一隔离运行环境和句子缓存，先检查年份与专名词典覆盖，字幕保留原稿。
+- 长片可按已完成旁白的章节提前渲染，partial 只允许显式 ready 章节；完整封装必须验证全片 final 状态。

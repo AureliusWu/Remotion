@@ -1,0 +1,479 @@
+{
+  "chapters": [
+    {
+      "id": "09",
+      "title": "从规则走向统计学习",
+      "era": "1990年代",
+      "scenes": [
+        {
+          "id": "09-01",
+          "title": "让样本参与设计",
+          "narration": [
+            "进入二十世纪九十年代，一条重要路线是让机器从样本中学习可重复的关系。",
+            "识别手写邮编时，工程师不只列举笔画规则，还收集不同人的字迹，让算法比较预测与答案。",
+            "模型调整的是参数，并未经历人的生活。",
+            "关键考验是能否认出没见过的字，而不只背下练习。"
+          ],
+          "visual": "learning",
+          "labels": [{"label": "规则设计"}, {"label": "样本学习"}, {"label": "未见数据"}],
+          "takeaway": "学习的目标包括对未见样本的泛化。",
+          "sourceIds": ["b-lenet-1998", "b-svm-1995"]
+        },
+        {
+          "id": "09-02",
+          "title": "支持向量机的间隔",
+          "narration": [
+            "一九九五年，科尔特斯和瓦普尼克发表支持向量网络论文。",
+            "把两类邮件画成点，算法寻找分界，尽量留下宽阔间隔，也允许对少量错误作出权衡。",
+            "核方法可以在另一种特征表示中处理弯曲边界。",
+            "这是一种数学分类，并不表示机器理解了发件人的意图。"
+          ],
+          "visual": "learning",
+          "labels": [{"label": "支持向量网络", "value": "1995"}, {"label": "分类间隔"}, {"label": "核方法"}],
+          "takeaway": "分类边界来自目标函数与数据的共同约束。",
+          "sourceIds": ["b-svm-1995"]
+        },
+        {
+          "id": "09-03",
+          "title": "把不确定性放进模型",
+          "narration": [
+            "概率模型不急于给出非黑即白的答案，而是计算在已有证据下，各种解释有多大可能。",
+            "比如听含糊的语音，可以把隐藏的发音状态与声音联系起来，比较词序列。",
+            "九十年代的概率图模型把变量依赖画成图，并研究近似推断。",
+            "结论依然受模型假设约束。"
+          ],
+          "visual": "network",
+          "labels": [{"label": "观测证据"}, {"label": "隐藏状态"}, {"label": "概率图模型"}],
+          "takeaway": "概率模型表达有条件的不确定性。",
+          "sourceIds": ["b-hmm-1989", "b-graphical-1999"]
+        },
+        {
+          "id": "09-04",
+          "title": "数据也要接受检查",
+          "narration": [
+            "一九九八年，勒昆等人的论文展示卷积网络与文档识别，神经网络并未从历史中消失。",
+            "手写数字让方法有了共同考题，但训练与测试必须分开。",
+            "如果样本只来自少数写字习惯，换一批人就可能出错。",
+            "数据代表了谁，怎样划分，也与算法一样值得追问。"
+          ],
+          "visual": "data",
+          "labels": [{"label": "卷积网络", "value": "1998 文档识别论文"}, {"label": "训练集"}, {"label": "测试集"}],
+          "takeaway": "同一时代多条路线并行，公平比较离不开数据设计。",
+          "sourceIds": ["b-lenet-1998", "b-svm-1995"]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "专门胜利与视觉转折",
+      "era": "1997—2012",
+      "scenes": [
+        {
+          "id": "10-01",
+          "title": "深蓝赢下的是棋局",
+          "narration": [
+            "一九九七年五月，深蓝在六局国际象棋赛中，以三点五比二点五战胜卡斯帕罗夫。",
+            "它结合高速搜索、局面评估和棋类知识，在明确规则下完成了专门任务。",
+            "但赢棋不会自然带来聊天、看路或照顾孩子的能力。",
+            "棋盘内的成就，需要连同边界一起理解。"
+          ],
+          "visual": "game",
+          "labels": [{"label": "深蓝对卡斯帕罗夫", "value": "1997年5月"}, {"label": "六局总分", "value": "3.5 : 2.5"}, {"label": "任务：国际象棋"}],
+          "takeaway": "明确任务中的超人表现，不自动等于通用能力。",
+          "sourceIds": ["b-deep-blue"]
+        },
+        {
+          "id": "10-02",
+          "title": "先修建共同考场",
+          "narration": [
+            "识别生活照片时，同一种猫也会有不同姿势、光线和背景，棋盘式规则就不够用了。",
+            "二〇〇九年的ImageNet论文，提出按词义层级组织的大规模图像数据库。",
+            "研究者搜集、清洗图片，并组织人工标注。",
+            "此后的竞赛把任务和评分口径固定下来，让不同算法能够比较。"
+          ],
+          "visual": "data",
+          "labels": [{"label": "ImageNet", "value": "2009 论文"}, {"label": "图像与类别"}, {"label": "共同评测任务"}],
+          "takeaway": "数据集与评测基础设施也是技术发展的组成部分。",
+          "sourceIds": ["b-imagenet-2009", "b-ilsvrc-2014"]
+        },
+        {
+          "id": "10-03",
+          "title": "AlexNet的成绩单",
+          "narration": [
+            "二〇一二年，AlexNet方案在图像分类竞赛中取得突出成绩。",
+            "论文报告，参赛组合的前五错误率为百分之十五点三，第二名是百分之二十六点二。",
+            "前五看的是五个候选类别里有没有正确答案。",
+            "这不是现实视觉的总正确率，却推动更多研究者投入深度网络。"
+          ],
+          "visual": "evaluation",
+          "labels": [{"label": "ILSVRC 2012 前五测试错误率"}, {"label": "AlexNet参赛组合", "value": "15.3%"}, {"label": "第二名", "value": "26.2%"}],
+          "takeaway": "突破要连同评测口径一起理解。",
+          "sourceIds": ["b-alexnet-2012", "b-ilsvrc-2014"]
+        },
+        {
+          "id": "10-04",
+          "title": "三种条件相遇",
+          "narration": [
+            "这次转折来自数据、网络方法与计算工具的配合，并不是某个公式突然奏效。",
+            "图形处理器并行计算，卷积利用图像局部关系，训练技巧帮助调整参数。",
+            "研究更多转向让特征表示参与学习。",
+            "但遮挡、陌生场景和错误标签仍会带来困难，成绩需要放回具体任务中解释。"
+          ],
+          "visual": "network",
+          "labels": [{"label": "数据"}, {"label": "计算"}, {"label": "可学习的表示"}],
+          "takeaway": "深度学习的转折来自方法、数据与计算条件的配合。",
+          "sourceIds": ["b-alexnet-2012", "b-lenet-1998"]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "从围棋到注意力",
+      "era": "2016—2017",
+      "scenes": [
+        {
+          "id": "11-01",
+          "title": "围棋中的学习与搜索",
+          "narration": [
+            "二〇一六年三月，AlphaGo在首尔以四比一战胜李世石，引发公众关注。",
+            "它结合神经网络与搜索，估计值得尝试的落点和局面的胜算。",
+            "人类棋谱提供起点，系统还通过自我对弈继续调整。",
+            "学习缩小搜索范围，搜索把局部判断放回完整棋局，两者互相补充。"
+          ],
+          "visual": "game",
+          "labels": [{"label": "AlphaGo 对李世石", "value": "2016年3月 · 4 : 1"}, {"label": "策略网络"}, {"label": "价值网络与搜索"}],
+          "takeaway": "学习与搜索能够在同一系统里互相补充。",
+          "sourceIds": ["b-alphago"]
+        },
+        {
+          "id": "11-02",
+          "title": "棋盘之外还有距离",
+          "narration": [
+            "围棋有给定的规则、行动范围与胜负反馈，而现实工作常常要先弄清目标。",
+            "一次建议面对不同需求，可能带来不同后果。",
+            "例如安排日程，不只要找到空档，还要理解哪些约定更重要，哪些决定必须确认。",
+            "从封闭棋盘走向生活，需要重新定义任务，也需要新的验证。"
+          ],
+          "visual": "question",
+          "labels": [{"label": "给定规则"}, {"label": "明确反馈"}, {"label": "开放环境"}],
+          "takeaway": "从封闭任务走向生活，需要新的定义与验证。",
+          "sourceIds": ["b-alphago", "b-agi-levels"]
+        },
+        {
+          "id": "11-03",
+          "title": "一句话中的远近关系",
+          "narration": [
+            "二〇一七年的论文提出Transformer架构，最初重点展示机器翻译。",
+            "一句长句中，决定词义的线索可能在很远的位置，自注意力让各位置按相关程度交换信息。",
+            "这是一种可训练的加权计算，并非人的专注。",
+            "它配合位置表示与其他网络层，形成新的序列建模方式。"
+          ],
+          "visual": "attention",
+          "labels": [{"label": "Transformer", "value": "2017"}, {"label": "自注意力"}, {"label": "位置表示"}],
+          "takeaway": "注意力是连接上下文信息的计算机制。",
+          "sourceIds": ["b-transformer-2017"]
+        },
+        {
+          "id": "11-04",
+          "title": "一种架构，多种任务",
+          "narration": [
+            "Transformer在训练时更容易并行处理序列中的许多位置，便于利用大规模计算。",
+            "但架构只是骨架，训练目标决定练习什么，数据决定能接触什么。",
+            "同一骨架可以用于翻译、文本表示或生成文字，能力却不必相同。",
+            "下一次转折，便在训练目标与海量文本的结合处。"
+          ],
+          "visual": "network",
+          "labels": [{"label": "架构"}, {"label": "训练目标"}, {"label": "数据与评测"}],
+          "takeaway": "相似架构不意味着相同能力，训练方式同样关键。",
+          "sourceIds": ["b-transformer-2017", "b-gpt-2018", "b-bert-2018"]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "预训练与对话入口",
+      "era": "2018—2022",
+      "scenes": [
+        {
+          "id": "12-01",
+          "title": "先从大量文本中学习",
+          "narration": [
+            "二〇一八年的GPT论文展示一条路径：先在大量未逐项标注的文本上学习，再适应具体任务。",
+            "模型练习根据前文预测后续片段，从中调整词语与上下文的表示。",
+            "这样不必为每项任务从零开始。",
+            "但预训练并未把文字变成核实过的知识库，迁移效果仍要检验。"
+          ],
+          "visual": "learning",
+          "labels": [{"label": "GPT 早期论文", "value": "2018"}, {"label": "预训练"}, {"label": "任务适应"}],
+          "takeaway": "预训练使一套表示可以被多个任务继续利用。",
+          "sourceIds": ["b-gpt-2018"]
+        },
+        {
+          "id": "12-02",
+          "title": "从填空理解上下文",
+          "narration": [
+            "同年公布的BERT采用另一种训练思路，同时利用左右上下文学习文本表示。",
+            "它遮住句子中的部分词，让模型练习恢复内容，再把表示用于问答或分类。",
+            "填空题只是帮助理解的比喻，机器没有经历书中的生活。",
+            "不同目标能够练出各有长处的模型。"
+          ],
+          "visual": "attention",
+          "labels": [{"label": "BERT", "value": "2018"}, {"label": "遮盖词预测"}, {"label": "双向上下文"}],
+          "takeaway": "预训练并非只有一种目标或一种使用方式。",
+          "sourceIds": ["b-bert-2018"]
+        },
+        {
+          "id": "12-03",
+          "title": "规模化是一条经验规律",
+          "narration": [
+            "二〇二〇年的规模规律研究，考察模型大小、数据量与训练计算对预测损失的影响。",
+            "同年的GPT-3展示了在提示中给少量示例，完成多种语言任务的可能。",
+            "但经验趋势来自特定实验条件。",
+            "不能由此推断参数越多，一切能力就必然更好，数据质量与失败案例仍要检查。"
+          ],
+          "visual": "data",
+          "labels": [{"label": "规模规律", "value": "2020"}, {"label": "GPT-3", "value": "2020"}, {"label": "少样本提示"}],
+          "takeaway": "规模规律是实验观察，不是通用智能的保证。",
+          "sourceIds": ["b-scaling-2020", "b-gpt3-2020"]
+        },
+        {
+          "id": "12-04",
+          "title": "对话改变了入口",
+          "narration": [
+            "二〇二二年十一月三十日，OpenAI推出ChatGPT研究预览，让公众通过对话直接试用。",
+            "人类示范、回答比较与反馈训练，让系统更容易按指令回应。",
+            "愿意配合和回答正确却是两回事。",
+            "发布说明就列出了貌似合理的错误输出，便捷界面也让核实信息更必要。"
+          ],
+          "visual": "human",
+          "labels": [{"label": "ChatGPT 研究预览", "value": "2022-11-30"}, {"label": "人类反馈训练"}, {"label": "仍可能出错"}],
+          "takeaway": "可用的对话入口，不等于答案已经可靠。",
+          "sourceIds": ["b-chatgpt-2022", "b-instructgpt-2022"]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "当模型开始生成图像",
+      "era": "2014—2022 · 沿另一条线回望",
+      "scenes": [
+        {
+          "id": "13-01",
+          "title": "生成器与判别器",
+          "narration": [
+            "文字之外的生成研究也有自己的路径，把时间拨回二〇一四年，看看生成对抗网络。",
+            "一个网络生成样本，另一个区分训练数据与生成结果，两者交替调整。",
+            "这像生成与辨别的练习，网络并没有人的动机。",
+            "它学习的是数据分布，并不意味着画面真实发生过。"
+          ],
+          "visual": "generative",
+          "labels": [{"label": "GAN", "value": "2014"}, {"label": "生成器"}, {"label": "判别器"}],
+          "takeaway": "生成图像可以来自对数据分布的学习。",
+          "sourceIds": ["b-gan-2014"]
+        },
+        {
+          "id": "13-02",
+          "title": "从噪声一步步重建",
+          "narration": [
+            "二〇二〇年的去噪扩散概率模型，是另一条图像生成路线的重要节点。",
+            "训练时逐步给图像加噪，让网络学习相应的去噪任务；生成时，再从噪声出发得到样本。",
+            "画面仿佛从雾中浮现，这是过程示意。",
+            "它学习的是图像规律，画面逼真也不能证明所描绘的事件真实发生。"
+          ],
+          "visual": "generative",
+          "labels": [{"label": "DDPM", "value": "2020"}, {"label": "逐步加噪"}, {"label": "学习去噪"}],
+          "takeaway": "生成质量与事实真实性是两种不同的判断。",
+          "sourceIds": ["b-ddpm-2020"]
+        },
+        {
+          "id": "13-03",
+          "title": "文字与图像建立联系",
+          "narration": [
+            "二〇二一年的CLIP研究，把图片与文字描述放进可以比较的表示空间。",
+            "训练鼓励配对图文更接近，不配对的更容易区分。",
+            "之后可以用自然语言描述类别，测试新的识别任务，而不为每类重新收集训练样本。",
+            "它本身不是图像生成器，却为图文系统的组合提供了基础。"
+          ],
+          "visual": "network",
+          "labels": [{"label": "CLIP", "value": "2021"}, {"label": "图文配对"}, {"label": "共享表示空间"}],
+          "takeaway": "连接模态的表示学习，与直接生成图像有所区别。",
+          "sourceIds": ["b-clip-2021"]
+        },
+        {
+          "id": "13-04",
+          "title": "在潜在空间里扩散",
+          "narration": [
+            "潜在扩散论文在二〇二一年预印，二〇二二年会议发表，把扩散计算搬进压缩后的表示。",
+            "系统不必每一步都处理完整像素，还能结合文字等条件引导生成。",
+            "这改善了计算需求与细节之间的取舍。",
+            "创作工具扩大表达空间，也让素材来源与使用责任更加值得追问。"
+          ],
+          "visual": "generative",
+          "labels": [{"label": "潜在扩散", "value": "2021 预印本 / CVPR 2022"}, {"label": "压缩表示"}, {"label": "条件生成"}],
+          "takeaway": "生成方法持续演化，技术能力伴随新的使用责任。",
+          "sourceIds": ["b-ldm-2022", "b-nist-genai-2024"]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "能力进入现实之后",
+      "era": "当代 · 事实资料截至2026-10-29",
+      "scenes": [
+        {
+          "id": "14-01",
+          "title": "把进步落到具体任务",
+          "narration": [
+            "二〇二一年的AlphaFold论文，展示蛋白质结构预测的重要进展，并估计可信程度。",
+            "二〇二四年的阿尔法折叠三，将预测扩展到蛋白质、核酸与配体等相互作用的结构。",
+            "画面中的序列到结构，是帮助理解的概念示意。",
+            "它不是真实折叠过程的模拟，预测也不能替代实验验证。"
+          ],
+          "visual": "network",
+          "labels": [{"label": "AlphaFold / AlphaFold 3", "value": "2021 / 2024"}, {"label": "结构预测（概念示意）"}, {"label": "实验与验证"}],
+          "takeaway": "应用价值要通过具体任务与实际验证来判断。",
+          "sourceIds": ["b-alphafold-2021", "b-chatgpt-2022", "b-alphafold3-2024"]
+        },
+        {
+          "id": "14-02",
+          "title": "一张榜单装不下可靠性",
+          "narration": [
+            "可靠性不是一张榜单：答对考题、应对变化和知道何时不确定，是不同要求。",
+            "二〇二五年，深度求索团队探索用强化学习促进推理。",
+            "零版本在后训练中仅用强化学习，正式模型则采用多阶段训练。",
+            "这些进展不等于可靠性已经解决，准确、稳健、公平与效率仍需分别检验。"
+          ],
+          "visual": "evaluation",
+          "labels": [{"label": "R1-Zero", "value": "2025 · 纯RL后训练探索"}, {"label": "DeepSeek-R1", "value": "2025 · 多阶段训练"}, {"label": "分维度评估", "value": "准确 · 稳健 · 公平 · 效率"}],
+          "takeaway": "可靠性需要多个指标，也需要贴近实际的独立测试。",
+          "sourceIds": ["b-helm-2022", "b-gpt3-2020", "b-deepseek-r1-2025"]
+        },
+        {
+          "id": "14-03",
+          "title": "平均值也会遮住人",
+          "narration": [
+            "平均成绩不错的系统，仍可能对某些人群表现较差。",
+            "二〇一八年的性别阴影研究，检查商业人脸性别分类系统在不同肤色与性别组上的误差。",
+            "它研究特定系统和任务，不能代替今天所有人脸技术的结论。",
+            "模型卡进一步提倡公开适用范围、评测条件与分组结果。"
+          ],
+          "visual": "evaluation",
+          "labels": [{"label": "Gender Shades", "value": "2018"}, {"label": "分组评测"}, {"label": "模型卡"}],
+          "takeaway": "谁被漏掉、谁承担误差，需要超越平均分来检查。",
+          "sourceIds": ["b-gender-shades-2018", "b-model-cards-2019"]
+        },
+        {
+          "id": "14-04",
+          "title": "计算背后有物理成本",
+          "narration": [
+            "人工智能运行在真实芯片与机房里，训练用电，反复生成答案也持续消耗资源。",
+            "研究表明，模型、硬件、任务与供电条件都会影响能耗和排放。",
+            "一次实验的测量，不能当成所有提问的成本。",
+            "比较要公开边界，也要考虑能否用合适的小模型完成任务。"
+          ],
+          "visual": "data",
+          "labels": [{"label": "训练"}, {"label": "推理与部署"}, {"label": "能耗不等于碳排放"}],
+          "takeaway": "比较计算代价，需要任务、硬件与能源条件的共同口径。",
+          "sourceIds": ["b-carbon-2021", "b-inference-energy-2024"]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "把选择交回人的生活",
+      "era": "回望与开放的未来",
+      "scenes": [
+        {
+          "id": "15-01",
+          "title": "回到一天里的小选择",
+          "narration": [
+            "回到开场的一天，面对手机建议、工作草稿和屏幕答案，我们可以请它帮忙，也可以要求解释。",
+            "人机交互研究强调说明能力与限制，让纠正和退出足够方便。",
+            "自动生成的邮件可以先供你修改。",
+            "工具越顺手，越要保留确认关键行动的机会，让便利服务自己的目的。"
+          ],
+          "visual": "human",
+          "labels": [{"label": "知道边界"}, {"label": "方便纠正"}, {"label": "保留选择"}],
+          "takeaway": "可理解、可纠正的工具，才能支持人的自主选择。",
+          "sourceIds": ["b-human-ai-2019"]
+        },
+        {
+          "id": "15-02",
+          "title": "责任不能留在黑箱里",
+          "narration": [
+            "把人工智能放进组织，意味着有人决定目标、选择数据与模型，并安排哪一步需要复核。",
+            "错误影响人的机会时，不能用算法这么判断结束解释。",
+            "还要有记录、纠正与申诉路径，让治理和测量贯穿使用过程。",
+            "明确谁能发现问题、谁必须回应，责任才不会留在黑箱里。"
+          ],
+          "visual": "human",
+          "labels": [{"label": "明确责任"}, {"label": "持续测量"}, {"label": "纠正与申诉"}],
+          "takeaway": "自动化参与决策，组织仍需承担可追问的责任。",
+          "sourceIds": ["b-nist-rmf-2023", "b-model-cards-2019"]
+        },
+        {
+          "id": "15-03",
+          "title": "未来需要更好的问题",
+          "narration": [
+            "未来系统会走多远，不能靠流畅对话或漂亮演示判断，还要说明正在比较什么能力。",
+            "研究者尝试区分表现深度、任务广度与自主程度。",
+            "陌生情境中的可靠性、目标冲突与风险由谁决定，都仍是开放问题。",
+            "这条历史没有给出通用智能已经实现的结论。"
+          ],
+          "visual": "question",
+          "labels": [{"label": "能力深度"}, {"label": "任务广度"}, {"label": "自主程度与风险"}],
+          "takeaway": "用可检验的问题讨论未来，避免把演示当作终点。",
+          "sourceIds": ["b-agi-levels", "b-nist-rmf-2023"]
+        },
+        {
+          "id": "15-04",
+          "title": "历史继续，由人参与",
+          "narration": [
+            "人工智能的历史连接着数学、硬件与实验，也连接着许多人的劳动。",
+            "节省的时间怎样分配，谁能使用工具，谁的经验被忽略，仍要由我们讨论。",
+            "模型可以起草问候，但关心谁、是否发送，还是人的选择。",
+            "未来不仅由下一次训练决定，也由这样的日常选择逐渐形成。"
+          ],
+          "visual": "human",
+          "labels": [{"label": "劳动与知识"}, {"label": "可及性与参与"}, {"label": "人的选择"}],
+          "takeaway": "技术改变行动的条件，人仍参与决定它服务怎样的生活。",
+          "sourceIds": ["b-human-ai-2019", "b-nist-rmf-2023"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {"id": "b-svm-1995", "title": "Cortes & Vapnik — Support-vector networks (1995)", "url": "https://doi.org/10.1007/BF00994018", "note": "原始论文；核实1995年、间隔分类、非线性特征映射与允许不可分训练数据的扩展。邮件散点为教学示例。"},
+    {"id": "b-hmm-1989", "title": "Rabiner — A Tutorial on Hidden Markov Models and Selected Applications in Speech Recognition (1989)", "url": "https://www.cs.ubc.ca/~murphyk/Bayes/rabiner.pdf", "note": "原始论文的大学托管副本；支持语音观测、隐藏状态和概率序列建模说明。未把1989年论文写成1990年代的首次发明。"},
+    {"id": "b-graphical-1999", "title": "Jordan et al. — An Introduction to Variational Methods for Graphical Models (1999)", "url": "https://people.eecs.berkeley.edu/~jordan/papers/variational-intro.pdf", "note": "作者大学主页托管的原始论文；支持图模型中的条件概率、隐藏变量与近似推断说明。"},
+    {"id": "b-lenet-1998", "title": "LeCun et al. — Gradient Based Learning Applied to Document Recognition (1998)", "url": "https://bottou.org/papers/lecun-98h", "note": "作者原始论文索引与全文链接；核实1998年卷积网络、手写数字比较及文档识别。关于样本代表性的提问为讲稿的方法论延伸。"},
+    {"id": "b-deep-blue", "title": "IBM History — Deep Blue", "url": "https://www.ibm.com/history/deep-blue", "note": "开发机构官方历史档案；核实1997年5月、六局及3.5比2.5，并说明搜索、局面评估与棋类知识。不同任务不能自动迁移为能力边界解释。"},
+    {"id": "b-imagenet-2009", "title": "Deng et al. — ImageNet: A Large-Scale Hierarchical Image Database (CVPR 2009)", "url": "https://www.image-net.org/static_files/papers/imagenet_cvpr09.pdf", "note": "项目官网托管原始论文；核实2009年及按WordNet层级组织图像、人工校验数据的建设。"},
+    {"id": "b-ilsvrc-2014", "title": "Russakovsky et al. — ImageNet Large Scale Visual Recognition Challenge", "url": "https://arxiv.org/abs/1409.0575", "note": "竞赛组织者的原始研究；支持数据集与竞赛区别、图像分类任务和评测口径。预印本2014年，期刊版2015年。"},
+    {"id": "b-alexnet-2012", "title": "Krizhevsky, Sutskever & Hinton — ImageNet Classification with Deep Convolutional Neural Networks (2012)", "url": "https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf", "note": "原始会议论文摘要及表2；15.3%是ILSVRC-2012参赛组合的top-5测试错误率，第二名26.2%，不是单网络整体视觉准确率；并核实GPU、卷积与训练方法。"},
+    {"id": "b-alphago", "title": "Google DeepMind — AlphaGo research history", "url": "https://deepmind.google/research/alphago/", "note": "开发机构官方研究史；核实2016年3月对李世石4比1，策略网络、价值网络、棋谱、自我对弈与搜索的组合。未将2015年对樊麾5比0混入此赛事。"},
+    {"id": "b-transformer-2017", "title": "Vaswani et al. — Attention Is All You Need (2017)", "url": "https://arxiv.org/abs/1706.03762", "note": "原始论文，首版2017-06-12；支持注意力架构、位置表示、机器翻译与训练并行性。人的专注只是词义区分，不作心理学等同。"},
+    {"id": "b-gpt-2018", "title": "Radford et al. — Improving Language Understanding by Generative Pre-Training (2018)", "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf", "note": "研究机构托管原始论文；支持未标注文本生成式预训练与有监督任务微调。预测下文是训练目标概述，不声称预训练知识必然正确。"},
+    {"id": "b-bert-2018", "title": "Devlin et al. — BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding", "url": "https://arxiv.org/abs/1810.04805", "note": "首版2018-10-11，会议版2019；核实双向上下文、遮盖语言模型与下游任务适应。讲稿按公开预印本年份称2018年。"},
+    {"id": "b-scaling-2020", "title": "Kaplan et al. — Scaling Laws for Neural Language Models (2020)", "url": "https://arxiv.org/abs/2001.08361", "note": "原始研究，首版2020-01-23；研究预测损失随模型、数据和计算变化的经验规律，不将其外推为全部能力的保证。"},
+    {"id": "b-gpt3-2020", "title": "Brown et al. — Language Models are Few-Shot Learners (2020)", "url": "https://arxiv.org/abs/2005.14165", "note": "原始研究，首版2020-05-28；支持提示内少样本示例、实验范围与网页训练数据造成的评估污染问题。未引入未经核实的新模型参数或排名。"},
+    {"id": "b-instructgpt-2022", "title": "Ouyang et al. — Training language models to follow instructions with human feedback (2022)", "url": "https://arxiv.org/abs/2203.02155", "note": "原始研究；支持人类示范、偏好排序和反馈训练，并明确规模不自然等于按用户意图行动，反馈训练后仍会犯错。"},
+    {"id": "b-chatgpt-2022", "title": "OpenAI — Introducing ChatGPT (2022-11-30)", "url": "https://openai.com/index/chatgpt/", "note": "当时的官方发布与方法、限制说明；核实发布日期、研究预览、反馈训练及看似合理的错误输出。仅描述2022年发布情况。"},
+    {"id": "b-gan-2014", "title": "Goodfellow et al. — Generative Adversarial Networks (2014)", "url": "https://arxiv.org/abs/1406.2661", "note": "原始论文，首版2014-06-10；支持生成器、判别器和对抗训练。讲稿明确回溯另一条技术路线，并避免赋予网络人的动机。"},
+    {"id": "b-ddpm-2020", "title": "Ho, Jain & Abbeel — Denoising Diffusion Probabilistic Models (2020)", "url": "https://arxiv.org/abs/2006.11239", "note": "原始论文，首版2020-06-19；支持前向加噪、学习反向去噪与图像生成。未称扩散思想始于2020年。"},
+    {"id": "b-clip-2021", "title": "Radford et al. — Learning Transferable Visual Models From Natural Language Supervision (2021)", "url": "https://arxiv.org/abs/2103.00020", "note": "原始论文，首版2021-02-26；支持图文配对对比训练、自然语言类别与零样本迁移。CLIP本身不被描述为图像生成器。"},
+    {"id": "b-ldm-2022", "title": "Rombach et al. — High-Resolution Image Synthesis with Latent Diffusion Models", "url": "https://arxiv.org/abs/2112.10752", "note": "原始论文；首版2021-12-20，CVPR 2022；支持潜在空间扩散、计算需求取舍与条件生成。年份区分已在旁白和标签说明。"},
+    {"id": "b-alphafold-2021", "title": "Jumper et al. — Highly accurate protein structure prediction with AlphaFold (2021)", "url": "https://www.nature.com/articles/s41586-021-03819-2", "note": "原始研究，2021-07-15发表；支持结构预测进展与逐残基可靠性估计。未将结构预测说成药物获批、全部生物学已解或替代全部实验。"},
+    {"id": "b-helm-2022", "title": "Liang et al. — Holistic Evaluation of Language Models (2022)", "url": "https://arxiv.org/abs/2211.09110", "note": "原始研究，首版2022-11-16；支持多场景、多指标、标准化评测及披露覆盖缺口，未引用随时间变化的模型榜单。"},
+    {"id": "b-gender-shades-2018", "title": "Buolamwini & Gebru — Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification (2018)", "url": "https://proceedings.mlr.press/v81/buolamwini18a.html", "note": "原始会议研究；支持特定商业人脸性别分类系统分组误差差异，不外推到所有系统、身份识别任务或今日产品。"},
+    {"id": "b-model-cards-2019", "title": "Mitchell et al. — Model Cards for Model Reporting", "url": "https://arxiv.org/abs/1810.03993", "note": "原始研究；2018年预印、2019年会议发表；支持适用范围、评测条件、不同群体的性能记录。"},
+    {"id": "b-carbon-2021", "title": "Patterson et al. — Carbon Emissions and Large Neural Network Training (2021)", "url": "https://arxiv.org/abs/2104.10350", "note": "原始研究；支持模型、处理器、机房与能源结构影响训练能耗和碳排放，不将特定实验估算外推为普遍单次成本。"},
+    {"id": "b-inference-energy-2024", "title": "Luccioni, Jernite & Strubell — Power Hungry Processing: Watts Driving the Cost of AI Deployment?", "url": "https://arxiv.org/abs/2311.16863", "note": "原始研究；2023年预印、FAccT 2024发表；比较具体任务和模型的推理能耗，支持按应用权衡专用与通用生成模型。"},
+    {"id": "b-nist-genai-2024", "title": "NIST AI 600-1 — Generative Artificial Intelligence Profile (2024)", "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf", "note": "官方研究框架；支持生成内容来源、信息完整性与使用风险的讨论。未把框架当成所有模型已完成合规的证明。"},
+    {"id": "b-nist-rmf-2023", "title": "NIST AI 100-1 — Artificial Intelligence Risk Management Framework (AI RMF 1.0)", "url": "https://doi.org/10.6028/NIST.AI.100-1", "note": "官方研究框架，2023-01-26发布；治理、场景理解、测量、管理贯穿生命周期。结尾分配与参与问题是作者人文提问，不是未来事实预测。"},
+    {"id": "b-human-ai-2019", "title": "Amershi et al. — Guidelines for Human-AI Interaction (CHI 2019)", "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf", "note": "原始研究与设计准则；支持说明系统能力、限制、纠正与用户控制。邮件与日常生活场景是讲稿示例及人文讨论。"},
+    {"id": "b-agi-levels", "title": "Morris et al. — Levels of AGI for Operationalizing Progress on the Path to AGI", "url": "https://arxiv.org/abs/2311.02462", "note": "原始研究框架；2023年预印、ICML 2024、2025年修订；区分能力表现、广度与自主性。本片不宣称AGI已实现，也不设未经证实的实现日期。"},
+    {"id": "b-alphafold3-2024", "title": "Abramson et al. — Accurate structure prediction of biomolecular interactions with AlphaFold 3 (Nature 2024)", "url": "https://www.nature.com/articles/s41586-024-07487-w", "note": "原团队一手研究；在线发表于2024-05-08，Nature 630:493–500。预测包含蛋白质、核酸、小分子、离子及修饰残基的复合物联合结构；不是实际折叠轨迹模拟或全部实验的替代。现有序列到结构画面只作概念示意，不冒充完整AF3输入与架构。"},
+    {"id": "b-deepseek-r1-2025", "title": "DeepSeek-AI et al. — DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning (2025)", "url": "https://arxiv.org/html/2501.12948v1", "note": "原团队原始论文v1，2025-01-22公开；第2.2节：R1-Zero在预训练基础模型上直接进行强化学习、无SFT前置；第2.3节：R1使用冷启动监督微调、推理强化学习、拒绝采样与监督微调、面向全部场景的强化学习等多阶段流程。未将纯RL后训练写成从零训练，也未宣称推理成绩解决全部可靠性。"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-30T00:43:02.141Z",
+  "metadata": {
+    "compositionName": "AiHistory30m",
+    "stack": "Error\n    at remotionOriginalSource (studio-original://.%2Feffects%2Fai-history%2FAiHistoryFilm.tsx:207:4)",
+    "durationInFrames": 108000,
+    "height": 1080,
+    "width": 1920,
+    "fps": 60,
+    "currentFrame": 96993
+  },
+  "error": null,
+  "frameForScreenshot": 900,
+  "notes": "Studio restarted after interrupted production; final composition loaded and seeking works."
+}

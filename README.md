@@ -67,6 +67,20 @@ npm run still:test
 
 ## 测试视频
 
+### 从提问到共创：人工智能发展历程
+
+`AiHistory30m` 为 1920×1080、60 fps、108000 帧（30 分钟）的科普长片，15 章、60 个独立镜头。
+使用本地 Kokoro 中文神经语音、逐句字幕与原创轻音乐，免付费语音 API。
+源码在 `video/effects/ai-history/`；Studio 的 `AiHistoryChapters` / `AiHistoryShots` 可独立查看章节与镜头。
+完整稿件、61 条来源、免费语音选择和复现步骤见
+[讲稿与来源](docs/AI-HISTORY-SCRIPT.md) · [制作说明](docs/AI-HISTORY-PRODUCTION.md)。
+
+在 `video/` 首次执行 `npm run audio:ai-history` 构建旁白母带，再执行
+`npm run render:ai-history` 导出 `out/ai-history-1080p60.mp4`。
+它复用通过指纹和实际媒体规格检查的完整章节，不复用未完成片段。
+`npm run verify:ai-history-export` 检查整片规格并完整解码；`npm run verify:ai-history-audio`
+检查成片实际 AAC 的逐场音量。完成状态以 `examples/ai-history/` 的实际报告为准。
+
 ### 等待与偶遇：泊松过程
 
 `PoissonEncounters` 为 1920×1080、60 fps、10800 帧（3 分钟）的科普短片。用书店里的

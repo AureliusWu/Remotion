@@ -1,0 +1,117 @@
+{
+  "composition": "AiHistory30m",
+  "checkedAt": "2026-10-29T15:55:24.389Z",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 108000
+  },
+  "frames": [
+    {
+      "frame": 900,
+      "file": "frame-0900.png",
+      "bytes": 234158,
+      "sha256": "f49f1c54cc7874f837de740748a3eac64db7630a5dbd1aab892b80f7cad74ad4"
+    },
+    {
+      "frame": 8100,
+      "file": "frame-8100.png",
+      "bytes": 181123,
+      "sha256": "d28a9937855ff810f54f596dab964c0acca7ff9e415a758d2867c0ec340d13de"
+    },
+    {
+      "frame": 15300,
+      "file": "frame-15300.png",
+      "bytes": 183815,
+      "sha256": "9bc63029bab0fe10044d3ea69d9c0c50bcc7974fd1b5f9ac4b9ae3dce96fea51"
+    },
+    {
+      "frame": 22500,
+      "file": "frame-22500.png",
+      "bytes": 240024,
+      "sha256": "3750d675ba362a8c26a81e2c781d49a477978d7a6b1536db574e19cd5a1c678c"
+    },
+    {
+      "frame": 29700,
+      "file": "frame-29700.png",
+      "bytes": 185400,
+      "sha256": "c17eecc6c18960d75a2eba4cddfe290de50735254d39818434121c037ccc4d19"
+    },
+    {
+      "frame": 36900,
+      "file": "frame-36900.png",
+      "bytes": 261519,
+      "sha256": "2984b1a45474fdaa9046b40f033d99333b3dc53e894577b24e510c69a31aa126"
+    },
+    {
+      "frame": 44100,
+      "file": "frame-44100.png",
+      "bytes": 198921,
+      "sha256": "3f9e6c3bc0402ee490e80ce1f93499c75d80c39acd9a9fc7b0d62406f05d4b59"
+    },
+    {
+      "frame": 51300,
+      "file": "frame-51300.png",
+      "bytes": 315684,
+      "sha256": "ecba8a1debc2a9494bd85586844d799860cb0dc75436c3f59f870e68521b9d8c"
+    },
+    {
+      "frame": 58500,
+      "file": "frame-58500.png",
+      "bytes": 232352,
+      "sha256": "f1801b9572dfae66992c0eb9c1063123daf79eecaef5c8340793cbdeb00ffbbb"
+    },
+    {
+      "frame": 65700,
+      "file": "frame-65700.png",
+      "bytes": 261561,
+      "sha256": "5408c672c1b4664b059301f0f1b7b96d5e6847875d0e7aef4cdab82731f5706f"
+    },
+    {
+      "frame": 72900,
+      "file": "frame-72900.png",
+      "bytes": 214008,
+      "sha256": "03464d798304e3693cb5c2d80147e9e0d7d6d258f6e5d129b0ad11982b48173d"
+    },
+    {
+      "frame": 80100,
+      "file": "frame-80100.png",
+      "bytes": 241772,
+      "sha256": "b502c2f7095742874b0b66a9eb2f3d650982c1932b9dd27536a3a5ccceb9caee"
+    },
+    {
+      "frame": 87300,
+      "file": "frame-87300.png",
+      "bytes": 245940,
+      "sha256": "f0723e2e83082679306f7dc88079616d4c76d97586a0496f27368619f616b645"
+    },
+    {
+      "frame": 94500,
+      "file": "frame-94500.png",
+      "bytes": 282336,
+      "sha256": "191c2c3a6761eadefb682153aa573789415f1d1e397c0f11874cec63babcddda"
+    },
+    {
+      "frame": 101700,
+      "file": "frame-101700.png",
+      "bytes": 182616,
+      "sha256": "c29bc200aba8cef1a82121959b07956ba1da9883a5fcc30f10531caae41eea82"
+    },
+    {
+      "frame": 107999,
+      "file": "frame-107999.png",
+      "bytes": 174698,
+      "sha256": "4afed1cbd06dae3a02dfcc9dc33d2529a28ca8c4f35bd8524f1b7e84d10b85a3"
+    }
+  ],
+  "audio": [],
+  "browserErrors": [],
+  "status": "passed",
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 108000
+  }
+}

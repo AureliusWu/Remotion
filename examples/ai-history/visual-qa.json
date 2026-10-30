@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T00:44:06.954Z",
+  "method": "Frames extracted from final exported MP4 with FFmpeg and visually inspected",
+  "source": "out/ai-history-1080p60.mp4",
+  "sourceSha256": "3575dca68ae643daa88c24722ad6765bd3e5ff63cda8f73bf0b949f74e8b7395",
+  "imageDimensions": {
+    "width": 960,
+    "height": 540
+  },
+  "scope": "Sampled visual inspection, not a claim of watching every frame or auditing narration by ear",
+  "samples": [
+    {
+      "seconds": 15,
+      "file": "final-opening.png",
+      "result": "No unexpected black screen, error overlay or main-content collision observed"
+    },
+    {
+      "seconds": 915,
+      "file": "final-middle.png",
+      "result": "No unexpected black screen, error overlay or main-content collision observed"
+    },
+    {
+      "seconds": 1608,
+      "file": "final-r1.png",
+      "result": "No unexpected black screen, error overlay or main-content collision observed"
+    },
+    {
+      "seconds": 1799.98,
+      "file": "final-ending.png",
+      "result": "No unexpected black screen, error overlay or main-content collision observed"
+    }
+  ],
+  "additionalChapterSamples": [
+    {
+      "chapter": "02",
+      "seconds": 48
+    },
+    {
+      "chapter": "04",
+      "seconds": 48
+    },
+    {
+      "chapter": "06",
+      "seconds": 48
+    },
+    {
+      "chapter": "08",
+      "seconds": 48
+    },
+    {
+      "chapter": "10",
+      "seconds": 87
+    },
+    {
+      "chapter": "14",
+      "seconds": 15
+    },
+    {
+      "chapter": "14",
+      "seconds": 48
+    }
+  ],
+  "note": "Full source citations are in accompanying script; long citation footers may truncate in the video."
+}

@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-29T15:25:06.647Z",
+  "status": "passed",
+  "observedSeconds": 358.46,
+  "composition": {
+    "compositionName": "AiHistoryChapter01",
+    "stack": "Error\n    at remotionOriginalSource (studio-original://.%2Feffects%2Fai-history%2Fchapters%2FChapter01.tsx:42:2)",
+    "durationInFrames": 7200,
+    "height": 1080,
+    "width": 1920,
+    "fps": 60,
+    "currentFrame": 7059
+  },
+  "playback": {
+    "currentContent": {
+      "type": "composition",
+      "compositionId": "AiHistoryChapter01"
+    },
+    "currentFrame": 7052,
+    "playing": true,
+    "muted": false,
+    "volume": 1,
+    "playbackRate": 1,
+    "looping": true,
+    "timelineZoom": 0
+  },
+  "error": null
+}

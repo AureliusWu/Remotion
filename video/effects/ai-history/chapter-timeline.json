@@ -1,0 +1,107 @@
+[
+  {
+    "id": "01",
+    "title": "机器会思考吗",
+    "composition": "AiHistoryChapter01",
+    "startFrame": 0,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "02",
+    "title": "让计算与推理拥有形式",
+    "composition": "AiHistoryChapter02",
+    "startFrame": 7200,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "03",
+    "title": "达特茅斯：一个领域得到名字",
+    "composition": "AiHistoryChapter03",
+    "startFrame": 14400,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "04",
+    "title": "感知机与符号推理",
+    "composition": "AiHistoryChapter04",
+    "startFrame": 21600,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "05",
+    "title": "会回应的程序，会规划的机器人",
+    "composition": "AiHistoryChapter05",
+    "startFrame": 28800,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "06",
+    "title": "低潮：承诺遇到现实",
+    "composition": "AiHistoryChapter06",
+    "startFrame": 36000,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "07",
+    "title": "把专家经验写进规则",
+    "composition": "AiHistoryChapter07",
+    "startFrame": 43200,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "08",
+    "title": "反向传播与连接主义回归",
+    "composition": "AiHistoryChapter08",
+    "startFrame": 50400,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "09",
+    "title": "从规则走向统计学习",
+    "composition": "AiHistoryChapter09",
+    "startFrame": 57600,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "10",
+    "title": "专门胜利与视觉转折",
+    "composition": "AiHistoryChapter10",
+    "startFrame": 64800,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "11",
+    "title": "从围棋到注意力",
+    "composition": "AiHistoryChapter11",
+    "startFrame": 72000,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "12",
+    "title": "预训练与对话入口",
+    "composition": "AiHistoryChapter12",
+    "startFrame": 79200,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "13",
+    "title": "当模型开始生成图像",
+    "composition": "AiHistoryChapter13",
+    "startFrame": 86400,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "14",
+    "title": "能力进入现实之后",
+    "composition": "AiHistoryChapter14",
+    "startFrame": 93600,
+    "durationInFrames": 7200
+  },
+  {
+    "id": "15",
+    "title": "把选择交回人的生活",
+    "composition": "AiHistoryChapter15",
+    "startFrame": 100800,
+    "durationInFrames": 7200
+  }
+]

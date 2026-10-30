@@ -1,0 +1,24 @@
+{
+  "file": "ai-history-1080p60.mp4",
+  "checkedAt": "2026-10-30T00:44:58.277Z",
+  "status": "passed",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": 60,
+    "frames": 108000,
+    "durationSeconds": 1800,
+    "pixelFormat": "yuvj420p",
+    "colorRange": "pc"
+  },
+  "audio": {
+    "codec": "aac",
+    "durationSeconds": 1800,
+    "sampleRate": 48000,
+    "channels": 2
+  },
+  "sizeBytes": 287480245,
+  "sha256": "3575dca68ae643daa88c24722ad6765bd3e5ff63cda8f73bf0b949f74e8b7395",
+  "fullDecode": "passed"
+}

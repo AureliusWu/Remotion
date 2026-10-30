@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 1,
+  "parameters": {
+    "version": "ai-history-nvenc-h264-v2",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "codec": "h264",
+    "videoBitrate": "4M",
+    "pixelFormat": "yuv420p",
+    "imageFormat": "jpeg",
+    "jpegQuality": 90,
+    "concurrency": 4,
+    "muted": true,
+    "hardwareAcceleration": "required",
+    "bundler": "rspack"
+  },
+  "commonSources": [
+    {
+      "file": "effects/ai-history/Diagrams.tsx",
+      "sha256": "86e24943b3277e28577b0536968bb8ff4a0064efb9945d99dbe66293303d0398"
+    },
+    {
+      "file": "effects/ai-history/SpecialDiagrams.tsx",
+      "sha256": "273acd6858df7da5a2fb165971a53cacb6d03b3e95cb2d36ff64428faa1e0102"
+    },
+    {
+      "file": "effects/ai-history/HistoryScene.tsx",
+      "sha256": "a13a8dbbdf2bf6d54045f302b4ff85c7ba7da76368adfe0b5f45d74b27011705"
+    },
+    {
+      "file": "effects/ai-history/HistoryCaptions.tsx",
+      "sha256": "f369291e08cbd3d05d39864a3a238ea4052449e8fc22b89922d470cf5d7b03d3"
+    },
+    {
+      "file": "effects/ai-history/palette.ts",
+      "sha256": "4377b43442282a2f4114211350812be928f66f6070c1097549c8cf254ecc4388"
+    },
+    {
+      "file": "effects/ai-history/types.ts",
+      "sha256": "53f9656a8c26155152ce7aa590f1c320cbf36b736949a3b8bb5f9b89288c3381"
+    },
+    {
+      "file": "effects/ai-history/AiHistoryFilm.tsx",
+      "sha256": "c9c29d4ffc24602cc74dff018af580a1d99883fa26fee9f6bbcecf3b6fdf6580"
+    },
+    {
+      "file": "src/index.ts",
+      "sha256": "957e481dd33a29b4a55ae0e95dbf763b7e48c37c427ca4bd1275faf34bc07a74"
+    },
+    {
+      "file": "src/Root.tsx",
+      "sha256": "11674647a3b62b912f24621d425b0777b1a9ef6a10bb4c641e79449fe144bdda"
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "9967bdbb528e68086b89e494202f0137523f2bcdab69a9ab6c5d26c08fd2a084"
+    }
+  ],
+  "status": "complete",
+  "stage": "complete",
+  "startedAt": "2026-10-30T00:42:13.239Z",
+  "requestedChapters": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+  ],
+  "chapters": {
+    "10": {
+      "status": "complete",
+      "fingerprint": "f3d056564481dce359d2f963839fcd1229590df0e626599588b0f5d79c377a65",
+      "composition": "AiHistoryChapter10",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-10.mp4",
+      "startedAt": "2026-10-29T16:14:59.395Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T16:19:15.874Z"
+      },
+      "completedAt": "2026-10-29T16:19:16.071Z",
+      "validatedAt": "2026-10-30T00:42:13.987Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 16621358,
+      "sha256": "e89ebe6ac566daf24c61095a57545ef010d81ffbc8c90b97f49086aa6963273b"
+    },
+    "11": {
+      "status": "complete",
+      "fingerprint": "2234fcdf2c004637c7cd24600923d0f99fdf6bf9f7a0c364e5ce51b594a6eb11",
+      "composition": "AiHistoryChapter11",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-11.mp4",
+      "startedAt": "2026-10-29T16:19:16.088Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T16:22:32.447Z"
+      },
+      "completedAt": "2026-10-29T16:22:32.607Z",
+      "validatedAt": "2026-10-30T00:42:14.060Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 18905179,
+      "sha256": "edef4636875c51ac01f0dac81ea35a4051c3b6c12235698eb0f9c422242ef474"
+    },
+    "12": {
+      "status": "complete",
+      "fingerprint": "55eb3e1abc8d13b1ece723a36f817180d7e60e285344faf4d4ab825c87690e84",
+      "composition": "AiHistoryChapter12",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-12.mp4",
+      "startedAt": "2026-10-29T16:22:32.623Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T16:25:39.791Z"
+      },
+      "completedAt": "2026-10-29T16:25:39.936Z",
+      "validatedAt": "2026-10-30T00:42:14.129Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 15054590,
+      "sha256": "9479a07b29120086975cae789ccc0d137bf79301127a36c9640b9a6addc087b1"
+    },
+    "13": {
+      "status": "complete",
+      "fingerprint": "f53752e8e09f9e8e956d49301997c7d050b90b1db367e28e266b6b32759affee",
+      "composition": "AiHistoryChapter13",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-13.mp4",
+      "startedAt": "2026-10-30T00:30:04.618Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-30T00:34:35.693Z"
+      },
+      "completedAt": "2026-10-30T00:34:36.414Z",
+      "validatedAt": "2026-10-30T00:42:14.189Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 16741655,
+      "sha256": "86515c23ea1903defe0ceb80c654f475acc65c3d4939538bb8951d8f76718f9d"
+    },
+    "14": {
+      "status": "complete",
+      "fingerprint": "b97c16dd2ae6a8c2b0b1d474e4f828033772733d1dc2d262355c370eeaa1bd63",
+      "composition": "AiHistoryChapter14",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-14.mp4",
+      "startedAt": "2026-10-30T00:34:36.696Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-30T00:38:19.578Z"
+      },
+      "completedAt": "2026-10-30T00:38:19.749Z",
+      "validatedAt": "2026-10-30T00:42:14.245Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 12566239,
+      "sha256": "30ef2870ab5322881e70de024f6f2726c39cf0c1ec9e6de09317e01d7c9d2fd8"
+    },
+    "15": {
+      "status": "complete",
+      "fingerprint": "a7eced6ee3f66d391f549553b258230db05333aceb4230b734d326b5c939a3af",
+      "composition": "AiHistoryChapter15",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-15.mp4",
+      "startedAt": "2026-10-30T00:38:19.894Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-30T00:41:46.215Z"
+      },
+      "completedAt": "2026-10-30T00:41:46.377Z",
+      "validatedAt": "2026-10-30T00:42:14.313Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 24739117,
+      "sha256": "e1ae02e96dd1769978928126307845dff982be526b766454d1e5bd8fed353ebd"
+    },
+    "01": {
+      "status": "complete",
+      "fingerprint": "843f82e24cd7a7b0efb1ebf0c9d2ab779026bd3776f6fa809d35eb05157b9199",
+      "composition": "AiHistoryChapter01",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-01.mp4",
+      "startedAt": "2026-10-29T15:15:30.551Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T15:23:55.656Z"
+      },
+      "completedAt": "2026-10-29T15:23:56.691Z",
+      "validatedAt": "2026-10-30T00:42:13.339Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 15258647,
+      "sha256": "c43c11fb8095782423c9be93a171b096f9165037e90164cafff7d663eb877912"
+    },
+    "02": {
+      "status": "complete",
+      "fingerprint": "d1858b3b3f633d5b0a36fbd427206d101fed455503b203c1447eb07f0eb938eb",
+      "composition": "AiHistoryChapter02",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-02.mp4",
+      "startedAt": "2026-10-29T15:23:56.880Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T15:30:32.470Z"
+      },
+      "completedAt": "2026-10-29T15:30:33.898Z",
+      "validatedAt": "2026-10-30T00:42:13.400Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 12061048,
+      "sha256": "9bc6520878a055a1762b91b0d0fb67d713ededb756a9875adf6c8fdba01cdb2e"
+    },
+    "03": {
+      "status": "complete",
+      "fingerprint": "c749b51331ca2b7f3eb93c24258cc8a0c5e69d893a07b6d0c89839fc21952b10",
+      "composition": "AiHistoryChapter03",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-03.mp4",
+      "startedAt": "2026-10-29T15:30:33.975Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T15:38:31.409Z"
+      },
+      "completedAt": "2026-10-29T15:38:31.792Z",
+      "validatedAt": "2026-10-30T00:42:13.479Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 20880908,
+      "sha256": "1d7b435ed3eb5ba5963f82289d830f60af72b10dcbf71bd9c913f717821fa3b5"
+    },
+    "04": {
+      "status": "complete",
+      "fingerprint": "5879ef5e88b89b30cd08563ab477d5d06b12dd1457dd75876d2ce129902d76fe",
+      "composition": "AiHistoryChapter04",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-04.mp4",
+      "startedAt": "2026-10-29T15:38:31.810Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T15:44:45.091Z"
+      },
+      "completedAt": "2026-10-29T15:44:45.365Z",
+      "validatedAt": "2026-10-30T00:42:13.572Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 14810694,
+      "sha256": "213c71f6491db62be1e57ff0c574fe2633f138cee81d527fdba45a4cedba4d1c"
+    },
+    "05": {
+      "status": "complete",
+      "fingerprint": "5109b644d5ad0c9fb401648b7730eaf2f341d6b72bf16705243c52360c33eb11",
+      "composition": "AiHistoryChapter05",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-05.mp4",
+      "startedAt": "2026-10-29T15:44:45.375Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T15:50:34.470Z"
+      },
+      "completedAt": "2026-10-29T15:50:34.742Z",
+      "validatedAt": "2026-10-30T00:42:13.652Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 11203951,
+      "sha256": "fd20c8611020de3831c3c14542cd3b095baad67e7d7eb90df154e89aa9afafce"
+    },
+    "06": {
+      "status": "complete",
+      "fingerprint": "5743b0c2b0711160dc1536dcc6059fa26208445203ff4e4875b8685482519fc9",
+      "composition": "AiHistoryChapter06",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-06.mp4",
+      "startedAt": "2026-10-29T15:51:00.941Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T15:56:51.912Z"
+      },
+      "completedAt": "2026-10-29T15:56:52.575Z",
+      "validatedAt": "2026-10-30T00:42:13.718Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 12894579,
+      "sha256": "43c623ff1a9489b193b581ee8d81b4eb6019c0aa43d3ec788d2833c85ac55c86"
+    },
+    "07": {
+      "status": "complete",
+      "fingerprint": "251501a7c80f4530fbf0811945025d53449b45c64b2c18f0a48d52cd701b7db8",
+      "composition": "AiHistoryChapter07",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-07.mp4",
+      "startedAt": "2026-10-29T15:59:29.804Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T16:04:31.273Z"
+      },
+      "completedAt": "2026-10-29T16:04:31.575Z",
+      "validatedAt": "2026-10-30T00:42:13.782Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 12152502,
+      "sha256": "52a6fa600e19b07540469cb5a26d1296e1988f236937fb5dbdf4b3f9992ef418"
+    },
+    "08": {
+      "status": "complete",
+      "fingerprint": "a85cdb27cb493cf95f925f8591f7190b9f1b30a59f3f6b144407a0d9563d681b",
+      "composition": "AiHistoryChapter08",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-08.mp4",
+      "startedAt": "2026-10-29T16:04:31.597Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T16:08:36.224Z"
+      },
+      "completedAt": "2026-10-29T16:08:36.657Z",
+      "validatedAt": "2026-10-30T00:42:13.848Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 26140651,
+      "sha256": "a4bf1922cd2f6c4e85532d8084a99b54db9d73643b9054ea2189e9ba8e23a9b0"
+    },
+    "09": {
+      "status": "complete",
+      "fingerprint": "0e7c9c2a820c07dba48a6030fb49d04e8fa31af3bf290ee680d32c228bc7012a",
+      "composition": "AiHistoryChapter09",
+      "durationInFrames": 7200,
+      "output": "out/ai-history-render/chapter-09.mp4",
+      "startedAt": "2026-10-29T16:08:36.715Z",
+      "progress": {
+        "renderedFrames": 7200,
+        "encodedFrames": 7200,
+        "stitchStage": "muxing",
+        "updatedAt": "2026-10-29T16:14:58.962Z"
+      },
+      "completedAt": "2026-10-29T16:14:59.358Z",
+      "validatedAt": "2026-10-30T00:42:13.914Z",
+      "metadata": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 60,
+        "frames": 7200,
+        "durationSeconds": 120,
+        "pixelFormat": "yuvj420p",
+        "profile": "77",
+        "level": 42,
+        "timeBase": "1/90000"
+      },
+      "sizeBytes": 12786387,
+      "sha256": "5597a5cd5946b597c8beddf1be122bec75bd57e090cf416ae339f2c01b1e473a"
+    }
+  },
+  "error": null,
+  "updatedAt": "2026-10-30T00:43:03.155Z",
+  "completedAt": "2026-10-30T00:43:03.155Z",
+  "concatenation": {
+    "status": "complete",
+    "output": "out/ai-history-render/video-only.mp4",
+    "metadata": {
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "frames": 108000,
+      "durationSeconds": 1800,
+      "pixelFormat": "yuvj420p",
+      "profile": "77",
+      "level": 42,
+      "timeBase": "1/90000"
+    },
+    "completedAt": "2026-10-30T00:42:16.880Z"
+  },
+  "final": {
+    "status": "complete",
+    "output": "out/ai-history-1080p60.mp4",
+    "sha256": "3575dca68ae643daa88c24722ad6765bd3e5ff63cda8f73bf0b949f74e8b7395",
+    "sizeBytes": 287480245,
+    "video": {
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "frames": 108000,
+      "durationSeconds": 1800,
+      "pixelFormat": "yuvj420p",
+      "profile": "77",
+      "level": 42,
+      "timeBase": "1/90000"
+    },
+    "audio": {
+      "codec": "aac",
+      "sampleRate": 48000,
+      "channels": 2,
+      "durationSeconds": 1800
+    },
+    "narration": "out/ai-history-render/narration.wav",
+    "music": "public/ai-history/music.mp3",
+    "completedAt": "2026-10-30T00:43:03.143Z"
+  }
+}

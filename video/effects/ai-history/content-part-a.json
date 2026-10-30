@@ -1,0 +1,1167 @@
+{
+  "chapters": [
+    {
+      "id": "01",
+      "title": "机器会思考吗",
+      "era": "从当代问题回到历史起点",
+      "scenes": [
+        {
+          "id": "01-01",
+          "title": "一块屏幕，几个不同的问题",
+          "narration": [
+            "想象一块屏幕上，机器正在辨认照片，接续一句话，又为一盘棋寻找下一步。",
+            "这些动作都可能被叫作人工智能，但识别、生成和规划，面对的任务不同。",
+            "当回答看起来像人写的，我们容易把语气，当成背后也有同样的体验。",
+            "从能力怎样做出来开始，也追问凭什么信任它。"
+          ],
+          "visual": "question",
+          "labels": [
+            {
+              "label": "识别"
+            },
+            {
+              "label": "生成"
+            },
+            {
+              "label": "规划"
+            },
+            {
+              "label": "当代任务示意"
+            }
+          ],
+          "takeaway": "相似的表现，可能来自不同的机制。",
+          "sourceIds": [
+            "turing1950",
+            "dartmouth1955"
+          ]
+        },
+        {
+          "id": "01-02",
+          "title": "把大问题拆成可以检查的任务",
+          "narration": [
+            "机器会思考吗，一句话里藏着许多不同要求。",
+            "我们可以让它给图形分类，解释推理题，或者在陌生摆设之间寻找路线。",
+            "每添一项要求，都要说明输入是什么，怎样算成功，在哪些情形下会失败。",
+            "把问题拆小，没有消除关于心智的争论，却让研究者能拿出证据。"
+          ],
+          "visual": "logic",
+          "labels": [
+            {
+              "label": "输入"
+            },
+            {
+              "label": "任务"
+            },
+            {
+              "label": "评价"
+            },
+            {
+              "label": "失败边界"
+            }
+          ],
+          "takeaway": "先说清任务，才能比较能力。",
+          "sourceIds": [
+            "turing1950",
+            "dartmouth1955"
+          ]
+        },
+        {
+          "id": "01-03",
+          "title": "答案之外，还要看条件",
+          "narration": [
+            "把一段回答放在画面中央，遮住回答者的姓名、面孔和制作方式。",
+            "我们会依据措辞和推理判断，可一次精彩回答，不足以证明所有能力。",
+            "问题换一种问法，材料换一个领域，结论是否可靠，还要检验。",
+            "机器表现得像人，与它是否拥有人的意识，是两个需要分别讨论的问题。"
+          ],
+          "visual": "dialogue",
+          "labels": [
+            {
+              "label": "可观察的表现"
+            },
+            {
+              "label": "换一种问法"
+            },
+            {
+              "label": "意识问题仍需另论"
+            }
+          ],
+          "takeaway": "表现测试不自动回答意识问题。",
+          "sourceIds": [
+            "turing1950"
+          ]
+        },
+        {
+          "id": "01-04",
+          "title": "沿着问题，而不是神话前进",
+          "narration": [
+            "这条时间线，将从纸上的计算规则，走向调整参数的网络，也经过写满经验的规则库。",
+            "这些路线并非整齐接力，旧方法继续工作，新方法也借用旧问题的答案。",
+            "我们会分清论文的设想、实验室的演示和真实环境中的使用。",
+            "才能理解突破为何令人兴奋，期待为何落空。"
+          ],
+          "visual": "timeline",
+          "labels": [
+            {
+              "label": "设想"
+            },
+            {
+              "label": "演示"
+            },
+            {
+              "label": "实际使用"
+            },
+            {
+              "label": "多条路线并行"
+            }
+          ],
+          "takeaway": "研究设想、实验结果与落地使用，需要分开判断。",
+          "sourceIds": [
+            "dartmouth1955",
+            "r1_1980",
+            "backprop1986"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "让计算与推理拥有形式",
+      "era": "1936—1950",
+      "scenes": [
+        {
+          "id": "02-01",
+          "title": "一条纸带上的计算",
+          "narration": [
+            "一九三六年，图灵用抽象机器研究计算：读一个符号，按规则改写，再移动读写头。",
+            "纸带不断延伸，复杂任务被拆成有限规则指挥的小动作。",
+            "这不是当年造出的智能机器人，而是讨论什么能够被机械计算的数学模型。",
+            "它为通用计算提供重要基础，也揭示计算能力存在边界。"
+          ],
+          "visual": "logic",
+          "labels": [
+            {
+              "label": "1936"
+            },
+            {
+              "label": "图灵机",
+              "value": "Turing machine"
+            },
+            {
+              "label": "读写 · 状态 · 移动"
+            }
+          ],
+          "takeaway": "先把计算写成规则，才能研究它的能力与限制。",
+          "sourceIds": [
+            "turing1936_archive",
+            "turing1936_paper"
+          ]
+        },
+        {
+          "id": "02-02",
+          "title": "神经元成为逻辑单元",
+          "narration": [
+            "一九四三年，麦卡洛克和皮茨，把神经活动抽象成激活与不激活的单元。",
+            "几个输入共同越过门槛，节点才亮起，就能组成某些逻辑关系。",
+            "这座桥连接神经系统的启发和形式逻辑，却省略了大量生理细节。",
+            "作者研究的是理想模型的计算性质，不能当成大脑已被完整解释。"
+          ],
+          "visual": "network",
+          "labels": [
+            {
+              "label": "1943"
+            },
+            {
+              "label": "McCulloch–Pitts"
+            },
+            {
+              "label": "理想化神经元"
+            },
+            {
+              "label": "阈值与逻辑"
+            }
+          ],
+          "takeaway": "神经启发可以形成数学模型，模型并不等于真实大脑。",
+          "sourceIds": [
+            "mcculloch1943"
+          ]
+        },
+        {
+          "id": "02-03",
+          "title": "图灵换了一种提问方式",
+          "narration": [
+            "一九五〇年，图灵发表《计算机器与智能》，借模仿游戏重新组织思考的问题。",
+            "他把讨论转向文字问答中可观察的表现，并设想机器参与其中。",
+            "画面里的提问者只看逐行出现的回答，不能凭声音和外貌识别对方。",
+            "抽象争论由此更接近实验，但对话判断仍不是意识存在的证明。"
+          ],
+          "visual": "dialogue",
+          "labels": [
+            {
+              "label": "1950"
+            },
+            {
+              "label": "Computing Machinery and Intelligence"
+            },
+            {
+              "label": "模仿游戏"
+            }
+          ],
+          "takeaway": "从争论词义，转向可以讨论和检验的表现。",
+          "sourceIds": [
+            "turing1950",
+            "turing1950_archive"
+          ]
+        },
+        {
+          "id": "02-04",
+          "title": "执行规则与获得规则",
+          "narration": [
+            "执行写好的步骤，与在经验中改善表现，是相关却不同的问题。",
+            "图灵在一九五〇年的论文中，也讨论学习机器，以及从较简单起点进行教育的设想。",
+            "画面左边放固定指令卡，右边放随着训练改变的内部状态。",
+            "后来反复出现的争论已露轮廓：哪些结构由人设计，哪些从经验获得。"
+          ],
+          "visual": "learning",
+          "labels": [
+            {
+              "label": "执行程序"
+            },
+            {
+              "label": "学习机器"
+            },
+            {
+              "label": "结构与经验"
+            }
+          ],
+          "takeaway": "研究智能，既要考虑怎样执行，也要考虑怎样改善。",
+          "sourceIds": [
+            "turing1950"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "达特茅斯：一个领域得到名字",
+      "era": "1955提案 · 1956夏季研讨",
+      "scenes": [
+        {
+          "id": "03-01",
+          "title": "先有一份提案",
+          "narration": [
+            "一九五五年八月，一份夏季研究提案，把人工智能写进标题。",
+            "麦卡锡、明斯基、罗切斯特和香农，计划次年夏天到达特茅斯共同研究。",
+            "纸面安排约十个人、两个月，讨论语言、抽象、学习等问题。",
+            "这记录的是研究计划及其雄心，不能把计划中的目标，写成已经完成的成果。"
+          ],
+          "visual": "timeline",
+          "labels": [
+            {
+              "label": "1955-08-31",
+              "value": "提案日期"
+            },
+            {
+              "label": "1956夏季",
+              "value": "计划开展研究"
+            },
+            {
+              "label": "Artificial Intelligence"
+            }
+          ],
+          "takeaway": "1955年是提案，1956年是夏季研讨。",
+          "sourceIds": [
+            "dartmouth1955"
+          ]
+        },
+        {
+          "id": "03-02",
+          "title": "把雄心展开成研究清单",
+          "narration": [
+            "展开提案目录，语言、神经网络、抽象概念和计算规模，并排出现在纸上。",
+            "文件提出大胆猜想：智能可以被足够精确地描述，再由机器模拟。",
+            "猜想是出发点，需要后续实验和理论检验，并不是已经证明的自然定律。",
+            "研究者希望找到共同的问题语言，让不同背景的人交换方法。"
+          ],
+          "visual": "network",
+          "labels": [
+            {
+              "label": "语言"
+            },
+            {
+              "label": "神经网络"
+            },
+            {
+              "label": "抽象"
+            },
+            {
+              "label": "计算规模"
+            }
+          ],
+          "takeaway": "共同的研究议程，比单一算法更早形成。",
+          "sourceIds": [
+            "dartmouth1955"
+          ]
+        },
+        {
+          "id": "03-03",
+          "title": "夏天并没有交出万能机器",
+          "narration": [
+            "一九五六年，夏季研讨确实在达特茅斯举行，却没有交出万能的思考机器。",
+            "来访者停留时间不同，工作包含分散研究与讨论，并非全员整齐开会两个月。",
+            "日历翻过，桌上留下问题、程序和继续合作的可能。",
+            "它凝聚了一个研究方向，而不是让此前所有探索突然从零开始。"
+          ],
+          "visual": "timeline",
+          "labels": [
+            {
+              "label": "1956"
+            },
+            {
+              "label": "Dartmouth Summer Research Project"
+            },
+            {
+              "label": "形成领域，不等于解决全部智能"
+            }
+          ],
+          "takeaway": "领域的形成，不是通用智能的完成。",
+          "sourceIds": [
+            "dartmouth1955",
+            "dartmouth_history"
+          ]
+        },
+        {
+          "id": "03-04",
+          "title": "从名字回到可以运行的工作",
+          "narration": [
+            "有了人工智能的名字，仍要回答具体问题：一句话怎样表示，一步推理怎样搜索。",
+            "一条路线写出符号和规则，另一条让简单单元通过连接共同工作。",
+            "两条线同时保留，避免把历史看成只有一条道路的直线。",
+            "不同方法放大智能的一部分，也省略了当时难解的复杂性。"
+          ],
+          "visual": "network",
+          "labels": [
+            {
+              "label": "符号与规则"
+            },
+            {
+              "label": "连接与学习"
+            },
+            {
+              "label": "路线并行"
+            }
+          ],
+          "takeaway": "人工智能从一开始就包含多种研究路线。",
+          "sourceIds": [
+            "dartmouth1955",
+            "logic_theory1956",
+            "rosenblatt1958"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "感知机与符号推理",
+      "era": "1957—1960年代",
+      "scenes": [
+        {
+          "id": "04-01",
+          "title": "让连接随例子改变",
+          "narration": [
+            "一九五七年前后，罗森布拉特提出感知机研究，次年发表详细的理论论文。",
+            "它借助输入、连接强度和输出，研究系统怎样在经验中形成分类能力。",
+            "两类图案进入网络，连接的粗细随着学习逐渐改变。",
+            "与逐条手写识别规则相比，这里出现另一种思路：让训练塑造部分区分能力。"
+          ],
+          "visual": "learning",
+          "labels": [
+            {
+              "label": "1957",
+              "value": "早期报告"
+            },
+            {
+              "label": "1958",
+              "value": "感知机论文"
+            },
+            {
+              "label": "Perceptron"
+            }
+          ],
+          "takeaway": "分类能力可以通过调整连接，从例子中形成。",
+          "sourceIds": [
+            "rosenblatt1958",
+            "rosenblatt1957_record"
+          ]
+        },
+        {
+          "id": "04-02",
+          "title": "一条会移动的分界线",
+          "narration": [
+            "看一个简化模型：两个输入按权重相加，再与门槛比较，决定输出。",
+            "红点被错分，学习规则便调整权重，让分界线向有利方向移动。",
+            "这条直线是单层线性分类器的示意，并非所有感知机结构的完整复原。",
+            "机器获得某种区分规律，能否迁移到新样本，还要看数据和问题本身。"
+          ],
+          "visual": "learning",
+          "labels": [
+            {
+              "label": "加权求和"
+            },
+            {
+              "label": "阈值"
+            },
+            {
+              "label": "调整权重"
+            },
+            {
+              "label": "简化教学模型"
+            }
+          ],
+          "takeaway": "学习得到的分界，需要在新数据上检验。",
+          "sourceIds": [
+            "rosenblatt1958"
+          ]
+        },
+        {
+          "id": "04-03",
+          "title": "另一条路：寻找一条证明",
+          "narration": [
+            "一九五六年，纽厄尔、西蒙与肖参与开发的逻辑理论家，探索自动证明。",
+            "把命题、规则和待证结论排成节点，程序在推导路径间寻找连接。",
+            "启发式方法让它优先尝试有希望的方向，减少无差别遍历。",
+            "符号搜索展示了力量，但形式逻辑的证明，并不自动包含生活中的常识。"
+          ],
+          "visual": "search",
+          "labels": [
+            {
+              "label": "1956"
+            },
+            {
+              "label": "Logic Theorist"
+            },
+            {
+              "label": "符号表示"
+            },
+            {
+              "label": "启发式搜索"
+            }
+          ],
+          "takeaway": "把问题表示清楚，再寻找有希望的推理路径。",
+          "sourceIds": [
+            "logic_theory1956",
+            "cmu_logic_history"
+          ]
+        },
+        {
+          "id": "04-04",
+          "title": "能力边界开始显形",
+          "narration": [
+            "红蓝点放在正方形的交错角上，一条直线就无法把两类完全分开。",
+            "增加结构或改变表示，可能突破这个例子，却带来训练难题。",
+            "一九六九年，明斯基和帕普特系统分析一类感知机的能力与限制。",
+            "这不等于所有神经网络无效；特定模型的局限，不等于整条路线的未来。"
+          ],
+          "visual": "learning",
+          "labels": [
+            {
+              "label": "XOR",
+              "value": "线性不可分示意"
+            },
+            {
+              "label": "1969",
+              "value": "Perceptrons"
+            },
+            {
+              "label": "限定模型的结论"
+            }
+          ],
+          "takeaway": "看见边界，是为了明确需要改变什么。",
+          "sourceIds": [
+            "perceptrons1969",
+            "rosenblatt1958",
+            "backprop1986"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "会回应的程序，会规划的机器人",
+      "era": "1960年代—1972",
+      "scenes": [
+        {
+          "id": "05-01",
+          "title": "伊莱扎怎样接话",
+          "narration": [
+            "一九六六年，魏岑鲍姆发表伊莱扎，展示一种人机语言交流方式。",
+            "它寻找关键词，按规则拆开输入，再用重组规则生成回应。",
+            "把我感到焦虑，改写为你为什么感到焦虑，是解释机制的中文示意。",
+            "这种回应不需要语言模型式训练，也不能证明它理解了说话者的人生。"
+          ],
+          "visual": "dialogue",
+          "labels": [
+            {
+              "label": "1966"
+            },
+            {
+              "label": "ELIZA"
+            },
+            {
+              "label": "关键词 → 拆解 → 重组"
+            },
+            {
+              "label": "中文对话为机制示意"
+            }
+          ],
+          "takeaway": "能接住一句话，不等于理解整个人。",
+          "sourceIds": [
+            "eliza1966"
+          ]
+        },
+        {
+          "id": "05-02",
+          "title": "熟悉的语气怎样影响判断",
+          "narration": [
+            "相同文字，装进普通终端或亲切的聊天窗口，会引导我们怎样判断。",
+            "伊莱扎的经典脚本借用心理治疗式问答，把不少话题交还给说话者。",
+            "翻开回应下方的规则卡，让观众同时看见语言表面与生成机制。",
+            "这里不重演真实用户的情绪经历，而是提醒信任需要超出语气的证据。"
+          ],
+          "visual": "dialogue",
+          "labels": [
+            {
+              "label": "DOCTOR脚本"
+            },
+            {
+              "label": "语言表面"
+            },
+            {
+              "label": "规则机制"
+            },
+            {
+              "label": "非真实用户轶事"
+            }
+          ],
+          "takeaway": "判断可靠性，不能只凭回应是否亲切。",
+          "sourceIds": [
+            "eliza1966"
+          ]
+        },
+        {
+          "id": "05-03",
+          "title": "沙基把感知、规划与行动连起来",
+          "narration": [
+            "一九六六年到一九七二年，斯坦福研究所的沙基项目，把问题带入实体空间。",
+            "移动机器人感知环境的一些特征，规划路线和简单物体的重新摆放。",
+            "从一个房间去往另一个位置，需要把目标拆成可执行动作。",
+            "依次点亮感知、规划和行动，说明智能系统远不止输出一句答案。"
+          ],
+          "visual": "search",
+          "labels": [
+            {
+              "label": "1966—1972"
+            },
+            {
+              "label": "Shakey"
+            },
+            {
+              "label": "SRI"
+            },
+            {
+              "label": "感知 · 规划 · 行动"
+            }
+          ],
+          "takeaway": "在物理世界完成任务，需要连接多个能力环节。",
+          "sourceIds": [
+            "shakey_sri"
+          ]
+        },
+        {
+          "id": "05-04",
+          "title": "从整洁房间走向真实世界有多远",
+          "narration": [
+            "给实验房间加上杂乱家具、移动的人和变化的光线，任务就会变难。",
+            "这是解释边界的示意，并不是说沙基当时已经能处理这些场景。",
+            "受控环境中规划与行动的贡献，应与开放世界的可靠自主能力分开评估。",
+            "演示让可能性可见，研究还要回答，哪些条件下能够重复成功。"
+          ],
+          "visual": "search",
+          "labels": [
+            {
+              "label": "受控环境"
+            },
+            {
+              "label": "开放环境"
+            },
+            {
+              "label": "条件变化示意"
+            },
+            {
+              "label": "可重复成功"
+            }
+          ],
+          "takeaway": "演示的价值，要连同成立条件一起理解。",
+          "sourceIds": [
+            "shakey_sri",
+            "shakey_sri_retrospective"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "低潮：承诺遇到现实",
+      "era": "1966—1970年代",
+      "scenes": [
+        {
+          "id": "06-01",
+          "title": "阿尔帕克评估的具体对象",
+          "narration": [
+            "一九六六年，美国阿尔帕克委员会发布《语言与机器》，评估机器翻译。",
+            "报告比较质量、时间、成本与人工参与，对近期实用目标提出质疑。",
+            "让文件经过机器、人工修改与交付，画面展示评估应覆盖整个过程。",
+            "报告有具体任务范围，不能说成全世界所有人工智能研究被同时叫停。"
+          ],
+          "visual": "winter",
+          "labels": [
+            {
+              "label": "1966"
+            },
+            {
+              "label": "ALPAC"
+            },
+            {
+              "label": "美国机器翻译评估"
+            },
+            {
+              "label": "质量 · 时间 · 成本"
+            }
+          ],
+          "takeaway": "一次领域评估，不等于对全部人工智能的判决。",
+          "sourceIds": [
+            "alpac1966"
+          ]
+        },
+        {
+          "id": "06-02",
+          "title": "缩小承诺，继续研究语言",
+          "narration": [
+            "阿尔帕克报告也建议支持语言学和计算语言学基础研究，发展人类翻译的辅助工具。",
+            "短期承诺退潮，与研究价值被完全否定，并非同一件事。",
+            "缩小全自动翻译的招牌，再把语料、语言分析和辅助工具的灯留下。",
+            "交付方式暂时不通，重新界定问题，往往比放大口号更有建设性。"
+          ],
+          "visual": "winter",
+          "labels": [
+            {
+              "label": "计算语言学"
+            },
+            {
+              "label": "基础研究"
+            },
+            {
+              "label": "人机辅助翻译"
+            },
+            {
+              "label": "区分研究与近期交付"
+            }
+          ],
+          "takeaway": "收缩短期承诺，可以与支持基础研究同时发生。",
+          "sourceIds": [
+            "alpac1966"
+          ]
+        },
+        {
+          "id": "06-03",
+          "title": "英国的莱特希尔报告与争论",
+          "narration": [
+            "一九七三年，英国科学研究委员会委托的莱特希尔报告，尖锐批评人工智能。",
+            "它质疑一些方法扩展规模后，能否应付急增的组合可能性。",
+            "搜索树不断分叉，多走几层，就会增加大量需要考虑的路径。",
+            "麦卡锡公开反驳，说明这既是资助政策节点，也是学术判断存在分歧的争论。"
+          ],
+          "visual": "search",
+          "labels": [
+            {
+              "label": "1973"
+            },
+            {
+              "label": "Lighthill Report"
+            },
+            {
+              "label": "英国SRC"
+            },
+            {
+              "label": "组合规模与公开争论"
+            }
+          ],
+          "takeaway": "规模难题是真问题，如何评价研究仍存在争议。",
+          "sourceIds": [
+            "lighthill1973_archive",
+            "mccarthy_lighthill1973"
+          ]
+        },
+        {
+          "id": "06-04",
+          "title": "寒冬不是全球统一的停机按钮",
+          "narration": [
+            "后来，人们用人工智能寒冬，概括期待下降、部分资助收缩和项目受挫。",
+            "美国翻译评估与英国研究评审，时间、对象和制度环境不同，并非同一份禁令。",
+            "让各地温度曲线分别变化，保留仍推进的规划和知识研究。",
+            "低潮改变资源与声誉，却没有让所有研究者同时放下问题。"
+          ],
+          "visual": "winter",
+          "labels": [
+            {
+              "label": "领域不同"
+            },
+            {
+              "label": "地区不同"
+            },
+            {
+              "label": "分期是回顾性概括"
+            },
+            {
+              "label": "研究持续"
+            }
+          ],
+          "takeaway": "谈论寒冬时，要说明哪里、何时、哪些研究受影响。",
+          "sourceIds": [
+            "alpac1966",
+            "mccarthy_lighthill1973",
+            "mit_ai_history2019",
+            "r1_1980"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "把专家经验写进规则",
+      "era": "1970年代—1980年代末",
+      "scenes": [
+        {
+          "id": "07-01",
+          "title": "麦辛：窄领域里的推理",
+          "narration": [
+            "七十年代，斯坦福的麦辛项目，围绕特定感染的诊断和抗菌治疗建议，研究知识推理。",
+            "它提问收集病例信息，调用规则形成建议，并说明部分依据。",
+            "画面仅用抽象病例卡，不把历史程序包装成医疗意见。",
+            "麦辛没有成为日常临床使用的替代医生，实验评价和临床部署必须区分。"
+          ],
+          "visual": "expert",
+          "labels": [
+            {
+              "label": "1970年代"
+            },
+            {
+              "label": "MYCIN"
+            },
+            {
+              "label": "知识驱动"
+            },
+            {
+              "label": "研究系统，非日常临床部署"
+            }
+          ],
+          "takeaway": "窄领域里的实验表现，不自动等于真实环境中的可用性。",
+          "sourceIds": [
+            "mycin1984",
+            "shortliffe2006"
+          ]
+        },
+        {
+          "id": "07-02",
+          "title": "规则库让经验可以被检查",
+          "narration": [
+            "专家系统将部分经验写成规则：如果条件成立，那么采取某种判断或动作。",
+            "推理引擎沿规则链工作，知识工程师从专家获得知识，整理进系统。",
+            "麦辛用确定性因子表示证据支持程度，不能当作校准的概率。",
+            "规则连成链，也标出缺失条件：写下经验，仍须核对适用范围。"
+          ],
+          "visual": "expert",
+          "labels": [
+            {
+              "label": "IF → THEN"
+            },
+            {
+              "label": "知识库 + 推理引擎"
+            },
+            {
+              "label": "Certainty factor ≠ 校准概率"
+            }
+          ],
+          "takeaway": "知识被写成规则之后，仍然需要维护和检验。",
+          "sourceIds": [
+            "mycin1984",
+            "mycin1982"
+          ]
+        },
+        {
+          "id": "07-03",
+          "title": "从论文走向订单配置",
+          "narration": [
+            "一九八〇年论文记录，阿尔一专家系统已被数字设备公司制造部门经常使用。",
+            "后称艾克斯康的系统，根据订单配置计算机部件和连接关系。",
+            "发现缺少部件时，它补足订单，并输出装配人员使用的配置图。",
+            "机柜和线缆在画面接好：人工智能的价值，也可以是改善具体工作。"
+          ],
+          "visual": "expert",
+          "labels": [
+            {
+              "label": "1980"
+            },
+            {
+              "label": "R1 / XCON"
+            },
+            {
+              "label": "DEC"
+            },
+            {
+              "label": "订单 → 部件配置图"
+            }
+          ],
+          "takeaway": "边界清楚的实际任务，可以产生可检查的应用价值。",
+          "sourceIds": [
+            "r1_1980",
+            "xcon1989"
+          ]
+        },
+        {
+          "id": "07-04",
+          "title": "繁荣之后，维护账单浮现",
+          "narration": [
+            "八十年代，专家系统迎来热潮，但获取知识、更新规则和处理例外，都要投入。",
+            "加入新部件，相关连接与约束就要检查，规则多并不代表容易维护。",
+            "八十年代末至九十年代初的部分商业收缩，常被归入第二次低潮，分期并不统一。",
+            "成功应用仍在，局部成功却不能保证普遍兑现。"
+          ],
+          "visual": "winter",
+          "labels": [
+            {
+              "label": "知识获取"
+            },
+            {
+              "label": "维护与例外"
+            },
+            {
+              "label": "1980年代末—1990年代初"
+            },
+            {
+              "label": "第二次低潮的常见分期"
+            }
+          ],
+          "takeaway": "交付成本和长期维护，决定应用能否持续。",
+          "sourceIds": [
+            "xcon1989",
+            "expert_brittleness1988",
+            "mit_ai_history2019",
+            "expert_pioneers2018"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "反向传播与连接主义回归",
+      "era": "回到并行时间线：1986及其前后",
+      "scenes": [
+        {
+          "id": "08-01",
+          "title": "中间那层，应该怎样学",
+          "narration": [
+            "回到一九八六年，并行的另一路线重新受到关注：训练含隐藏层的神经网络。",
+            "输入经过中间节点才得到输出，可答案错了，前面的连接应该怎样调整。",
+            "把错误标记停在输出端，再展开各层之间的依赖关系。",
+            "关键问题是：不能只告诉系统错了，还要找到改善结果的调整方向。"
+          ],
+          "visual": "learning",
+          "labels": [
+            {
+              "label": "1986"
+            },
+            {
+              "label": "输入 → 隐藏层 → 输出"
+            },
+            {
+              "label": "误差怎样影响各层"
+            }
+          ],
+          "takeaway": "多层网络需要把输出误差与内部参数联系起来。",
+          "sourceIds": [
+            "backprop1986",
+            "hinton2014"
+          ]
+        },
+        {
+          "id": "08-02",
+          "title": "前向计算，反向求导",
+          "narration": [
+            "反向传播先计算网络预测与目标之间的损失，再反向计算梯度。",
+            "链式法则将复杂变化率拆成局部计算，高效求出许多权重的影响。",
+            "随后，优化方法根据梯度调整参数，例如小步走向降低损失的方向。",
+            "反向流动的是求导信息，不是倒着思考，也不保证找到最好的答案。"
+          ],
+          "visual": "learning",
+          "labels": [
+            {
+              "label": "前向：预测与损失"
+            },
+            {
+              "label": "反向：梯度"
+            },
+            {
+              "label": "更新：优化器"
+            },
+            {
+              "label": "Chain rule"
+            }
+          ],
+          "takeaway": "反向传播计算梯度，优化方法据此更新参数。",
+          "sourceIds": [
+            "backprop1986",
+            "hinton2014"
+          ]
+        },
+        {
+          "id": "08-03",
+          "title": "学习的不只是最后一道分界",
+          "narration": [
+            "一九八六年，鲁梅尔哈特、辛顿和威廉斯的论文，展示反传学习内部表示。",
+            "隐藏单元能形成有助于任务的特征，不必逐个由人预先写好。",
+            "让交错点经过中间层重新表示，再完成分类，这是简化示意。",
+            "梯度与训练思想有更早基础，不能将重要论文写成毫无前史的首次发明。"
+          ],
+          "visual": "network",
+          "labels": [
+            {
+              "label": "1986-10-09"
+            },
+            {
+              "label": "Rumelhart · Hinton · Williams"
+            },
+            {
+              "label": "学习内部表示"
+            },
+            {
+              "label": "重要推广，不是无前史发明"
+            }
+          ],
+          "takeaway": "网络可以学习中间表示，历史贡献也需要准确归属。",
+          "sourceIds": [
+            "backprop1986",
+            "hinton2014",
+            "hinton_backprop_lecture"
+          ]
+        },
+        {
+          "id": "08-04",
+          "title": "方法回归，困难并未消失",
+          "narration": [
+            "反向传播让多层网络训练更有希望，却没让当时的机器立刻拥有今天的生成能力。",
+            "数据、计算、网络结构和训练是否顺利，仍影响模型能够学到什么。",
+            "学习曲线有时下降、有时停滞，进步需要反复实验。",
+            "表示能够随任务改变，但怎样可靠面对更大世界，仍有问题待解。"
+          ],
+          "visual": "learning",
+          "labels": [
+            {
+              "label": "数据"
+            },
+            {
+              "label": "计算"
+            },
+            {
+              "label": "结构"
+            },
+            {
+              "label": "优化"
+            }
+          ],
+          "takeaway": "一种有效方法，还需要数据、计算与工程共同支撑。",
+          "sourceIds": [
+            "backprop1986",
+            "hinton2014"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "turing1936_archive",
+      "title": "King's College Cambridge — About Alan Turing",
+      "url": "https://turingarchive.kings.cam.ac.uk/about-alan-turing",
+      "note": "剑桥国王学院图灵档案馆记载1936年完成《可计算数》草稿；讲稿把1936作为提出计算模型的节点，不将其写成实体计算机制造年。"
+    },
+    {
+      "id": "turing1936_paper",
+      "title": "A. M. Turing — On Computable Numbers, with an Application to the Entscheidungsproblem",
+      "url": "https://doi.org/10.1112/plms/s2-42.1.230",
+      "note": "原始论文，Proceedings of the London Mathematical Society, Series 2, volume 42, pp.230–265，通常标作1936或1936–37。用于抽象计算机器、通用计算及能力边界；不把现代所有计算术语逐字归于该文。"
+    },
+    {
+      "id": "turing1950",
+      "title": "A. M. Turing — Computing Machinery and Intelligence (1950)",
+      "url": "https://www.cs.toronto.edu/~frank/csc2501/Readings/R1_Turing/Turing-1950.pdf",
+      "note": "多伦多大学托管原论文，Mind 59(236), 433–460，1950年10月。包括模仿游戏和学习机器讨论；原始游戏的设置比影片文字问答示意更复杂，不把表现测试称为意识证明。"
+    },
+    {
+      "id": "turing1950_archive",
+      "title": "The Turing Digital Archive — AMT/B/9, Computing machinery and intelligence",
+      "url": "https://turingarchive.kings.cam.ac.uk/publications-lectures-and-talks-amtb/amt-b-9",
+      "note": "剑桥国王学院原始档案著录，核对1950年文章题名和刊载信息；本片不复制受版权保护的档案影像。"
+    },
+    {
+      "id": "mcculloch1943",
+      "title": "McCulloch & Pitts — A Logical Calculus of the Ideas Immanent in Nervous Activity (1943)",
+      "url": "https://home.csulb.edu/~cwallis/382/readings/482/mccolloch.logical.calculus.ideas.1943.pdf",
+      "note": "加州州立大学长滩分校托管原论文，Bulletin of Mathematical Biophysics 5, 115–133。理想化全或无神经元与命题逻辑的形式联系；作者明确区分形式等价与事实性生理解释。"
+    },
+    {
+      "id": "dartmouth1955",
+      "title": "McCarthy, Minsky, Rochester & Shannon — A Proposal for the Dartmouth Summer Research Project on Artificial Intelligence",
+      "url": "https://www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html",
+      "note": "麦卡锡的斯坦福大学档案原文，日期1955-08-31；提议于1956夏开展约10人、2个月研究。提案中的猜想、目标和预期人数不是完成成果或实际全程出席人数；文末1996年注释提醒并非名单上所有人均出席。"
+    },
+    {
+      "id": "dartmouth_history",
+      "title": "Dartmouth — Report on Artificial Intelligence at Dartmouth (2025)",
+      "url": "https://provost.dartmouth.edu/sites/provost/files/2025-12/Report%20on%20Artificial%20Intelligence%20at%20Dartmouth%20%28Dobson%2C%202025.06.30%29.pdf",
+      "note": "达特茅斯学院官方机构报告的历史部分，辅助核对1955年命名提案与1956年夏季项目的关系；属于机构回顾，不将回顾性措辞当作1956年原话。"
+    },
+    {
+      "id": "rosenblatt1958",
+      "title": "Frank Rosenblatt — The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain (1958)",
+      "url": "https://web.stanford.edu/class/psych209a/ReadingsByDate/01_30/Rosenblatt58Perceptron.pdf",
+      "note": "斯坦福大学托管原论文，Psychological Review 65(6), 386–408。用于感知机、连接变化与模式分类；影片中二维分界线为简化单层分类教学示意，不声称完整重现原装置。"
+    },
+    {
+      "id": "rosenblatt1957_record",
+      "title": "UC Berkeley AIMA bibliography — Rosenblatt (1957), Technical Report 85-460-1",
+      "url": "https://aima.cs.berkeley.edu/Bibliography.pdf",
+      "note": "伯克利大学教材作者官方书目列出1957年康奈尔航空实验室技术报告《The perceptron: A perceiving and recognizing automaton》。只用于确认1957早期报告的题名年份，理论细节依据1958原论文。"
+    },
+    {
+      "id": "logic_theory1956",
+      "title": "Newell & Simon — The Logic Theory Machine: A Complex Information Processing System (RAND P-868, 1956)",
+      "url": "https://www.rand.org/pubs/papers/P868.html",
+      "note": "兰德公司原始报告及官方著录，讨论符号逻辑证明与启发式。该份报告侧重系统规格，实际程序开发团队归属另以卡内基梅隆大学记录交叉核对；不使用该报告独自证明某次现场演示。"
+    },
+    {
+      "id": "cmu_logic_history",
+      "title": "Carnegie Mellon University — The Simon Initiative: History",
+      "url": "https://www.cmu.edu/simon/what-is-simon/history.html",
+      "note": "开发机构官方历史将1956年Logic Theorist开发归于西蒙、纽厄尔和J. C. Shaw。影片不采用其宣传性唯一首创措辞，且AI名称年份优先依据1955提案原件。"
+    },
+    {
+      "id": "perceptrons1969",
+      "title": "Marvin Minsky & Seymour Papert — Perceptrons (MIT Press, 1969)",
+      "url": "https://mitpress.mit.edu/9780262130431/perceptrons/",
+      "note": "原著官方出版社书目，核对1969年首次出版及研究对象。线性不可分的XOR是影片自行绘制的数学示意；不得扩写为证明所有神经网络不可能有效，或单一著作独自导致全部资助中断。"
+    },
+    {
+      "id": "eliza1966",
+      "title": "Joseph Weizenbaum — ELIZA: A Computer Program for the Study of Natural Language Communication Between Man and Machine (1966)",
+      "url": "https://courses.cs.umbc.edu/undergraduate/CMSC331/resources/papers/eliza.january1966.html",
+      "note": "马里兰大学巴尔的摩县分校托管原论文全文，原载Communications of the ACM 9(1), 36–45，1966年1月，DOI 10.1145/365153.365168。关键词、拆解与重组、DOCTOR脚本依据原文；中文对话为自编机制示意，不伪托真实用户或作者引语。"
+    },
+    {
+      "id": "shakey_sri",
+      "title": "SRI — Shakey the Robot",
+      "url": "https://www.sri.com/hoi/shakey-the-robot/",
+      "note": "原项目机构SRI的官方项目史，明确研究期1966–1972，能力涉及规划、寻路与简单物体重排。页面历史日期字段不是回顾文字的实际写作日期；不采用电子人等媒体拟人化称号作为能力事实。"
+    },
+    {
+      "id": "shakey_sri_retrospective",
+      "title": "SRI — Meet Shakey the Robot, the World's First AI-based Robot",
+      "url": "https://www.sri.com/case-study/the-man-the-myth-the-legend-meet-shakey-the-robot-the-worlds-first-ai-based-robot/",
+      "note": "SRI原项目机构回顾，补充设备与规划任务语境。杂乱房间、移动行人与光照变化是影片用于说明外推边界的假想条件，不声称为当年的已完成演示。"
+    },
+    {
+      "id": "alpac1966",
+      "title": "ALPAC — Language and Machines: Computers in Translation and Linguistics (National Academy of Sciences, 1966)",
+      "url": "https://nap.nationalacademies.org/resource/alpac_lm/ARC000005.pdf",
+      "note": "美国国家科学院原报告官方数字版，1966年首次印行。报告针对机器翻译的需求、质量和经济性；前置信函明确担忧误读会终止计算语言学支持，并建议基础研究和人工翻译辅助工具。不要概括为全球AI停止资助；不直接引用数字重排本作排版原件。"
+    },
+    {
+      "id": "lighthill1973_archive",
+      "title": "UCL Archives — LIGHTHILL/K/684: SRC Artificial Intelligence: a paper symposium (April 1973)",
+      "url": "https://archives.ucl.ac.uk/CalmView/Record.aspx?id=LIGHTHILL%2FK%2F668-685%2F683-685%2F684&src=CalmView.Catalog",
+      "note": "伦敦大学学院莱特希尔原始档案著录，用于核对英国SRC文件及1973年时间节点；详细争论另据麦卡锡当年回应，不把仅有目录的记录当作完整报告正文。"
+    },
+    {
+      "id": "mccarthy_lighthill1973",
+      "title": "John McCarthy — Review of Artificial Intelligence: A General Survey (1973)",
+      "url": "https://www-formal.stanford.edu/jmc/reviews/lighthill/lighthill.html",
+      "note": "麦卡锡本人在斯坦福大学档案中的回应，描述SRC委托、报告分类与组合爆炸争论，并反驳报告结论。它是争论一方的一手文本，影片明确呈现争议，不把其立场当作无争议的政策全貌。"
+    },
+    {
+      "id": "mycin1984",
+      "title": "Buchanan & Shortliffe — Rule-Based Expert Systems: The MYCIN Experiments, Chapter 1 (1984)",
+      "url": "https://people.dbmi.columbia.edu/~ehs7001/Buchanan-Shortliffe-1984/Chapter-01.pdf",
+      "note": "项目参与者主编原著，作者哥伦比亚大学主页提供全文。用于MYCIN研究语境、窄领域知识工程和规则系统；医学情节均为历史说明，不提供病例处置建议。"
+    },
+    {
+      "id": "mycin1982",
+      "title": "Stanford Computer Science Technical Report CS-TR-82-926 (1982)",
+      "url": "https://i.stanford.edu/pub/cstr/reports/cs/tr/82/926/CS-TR-82-926.pdf",
+      "note": "斯坦福原始技术报告，讨论MYCIN的规则知识、问答和不确定性表达。确定性因子是其特定证据组合机制，影片明确不将其简单等同校准后的诊断概率。"
+    },
+    {
+      "id": "shortliffe2006",
+      "title": "Presentation of the 2006 Morris F. Collen Award to Edward H. Shortliffe",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2244891/",
+      "note": "美国国立医学图书馆官方全文库收录、含项目参与者回顾的学术文章，明确MYCIN未在实验环境之外部署。用于避免把研究评价写成常规临床使用。"
+    },
+    {
+      "id": "r1_1980",
+      "title": "John McDermott — R1: An Expert in the Computer Systems Domain (AAAI 1980)",
+      "url": "https://cdn.aaai.org/AAAI/1980/AAAI80-076.pdf",
+      "note": "开发者原论文，AAAI官方档案，描述截至1980年6月的R1；明确DEC制造部门经常使用，输入客户订单、输出部件空间关系配置图并补足缺失部件。本版实现语言为OPS4，不与后来版本混写。"
+    },
+    {
+      "id": "xcon1989",
+      "title": "Barker, O'Connor, Bachant & Soloway — Expert systems for configuration at Digital: XCON and beyond (1989)",
+      "url": "https://doi.org/10.1145/62065.62067",
+      "note": "Digital项目团队原始经验论文，Communications of the ACM 32(3), 298–318。用于R1/XCON延续与实际配置应用；影片不使用未经独立核对的节省金额、准确率或唯一首创排名。"
+    },
+    {
+      "id": "expert_brittleness1988",
+      "title": "Of Brittleness and Bottlenecks: Challenges in the Creation of Pattern-Recognition and Expert-System Models (1988)",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/B9780444871374500291",
+      "note": "当年原始学术章节、出版社页面，Machine Intelligence and Pattern Recognition 7, 335–352；讨论专家知识获取瓶颈和异常情境下的脆弱性。支持维护限制，不据此推断所有专家系统商业失败。"
+    },
+    {
+      "id": "expert_pioneers2018",
+      "title": "Computer History Museum — AI: Expert Systems Pioneer Meeting, Session 2",
+      "url": "https://archive.computerhistory.org/resources/access/text/2020/05/102781122-05-01-acc.pdf",
+      "note": "计算机历史博物馆组织、2018年录制的专家系统先驱口述史，包含领域参与者对1990年代专家系统关注退潮等回忆。口述回顾用于补充视角，不单独作为精确年份或财务数字证据。"
+    },
+    {
+      "id": "mit_ai_history2019",
+      "title": "MIT Lincoln Laboratory — Artificial Intelligence: Short History, Present Developments, and Future Outlook (2019)",
+      "url": "https://www.ll.mit.edu/sites/default/files/publication/doc/2021-03/Artificial%20Intelligence%20Short%20History%2C%20Present%20Developments%2C%20and%20Future%20Outlook%20-%20Final%20Report%20-%202021-03-16_0.pdf",
+      "note": "MIT林肯实验室官方报告，正文封面2019年1月，网络文件路径为2021年上传。只辅助说明繁荣/低潮的常见回顾分期；其图文边界有1987/1988差别，因此讲稿不用某个单年宣告全球统一开始，也不采用其中未核对的二手数字。"
+    },
+    {
+      "id": "backprop1986",
+      "title": "Rumelhart, Hinton & Williams — Learning representations by back-propagating errors (Nature, 1986)",
+      "url": "https://www.cs.toronto.edu/~hinton/absps/naturebp.pdf",
+      "note": "作者多伦多大学主页托管原论文，Nature 323, 533–536，1986-10-09，DOI 10.1038/323533a0。用于误差反传、隐藏表示与实验进展；不将此文误称反向求导思想没有前史的首次发明。"
+    },
+    {
+      "id": "hinton2014",
+      "title": "Geoffrey Hinton — Learning distributed representations of concepts (2014)",
+      "url": "https://www.cs.toronto.edu/~hinton/absps/cogsci14.pdf",
+      "note": "1986论文作者在大学主页提供的一手学术回顾，解释链式法则、分布式表示、此前反传研究及早期多隐藏层训练限制。用于区分1986影响力与独占首创，并说明当时方法的实际局限。"
+    },
+    {
+      "id": "hinton_backprop_lecture",
+      "title": "Geoffrey Hinton — Neural Networks for Machine Learning, Lecture 13",
+      "url": "https://www.cs.toronto.edu/~hinton/coursera/lecture13/lec13.pdf",
+      "note": "作者大学主页原讲义，将反向传播关联到更早研究，包括Werbos1974等；影片只采用存在更早基础的谨慎表述，不裁定所有技术史优先权争议。"
+    }
+  ]
+}

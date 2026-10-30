@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-29T16:11:10.209Z",
+  "metadata": {
+    "compositionName": "AiHistory30m",
+    "stack": "Error\n    at remotionOriginalSource (studio-original://.%2Feffects%2Fai-history%2FAiHistoryFilm.tsx:207:4)",
+    "durationInFrames": 108000,
+    "height": 1080,
+    "width": 1920,
+    "fps": 60,
+    "currentFrame": 106114
+  },
+  "playback": {
+    "currentContent": {
+      "type": "composition",
+      "compositionId": "AiHistory30m"
+    },
+    "currentFrame": 106081,
+    "playing": true,
+    "muted": false,
+    "volume": 1,
+    "playbackRate": 1,
+    "looping": true,
+    "timelineZoom": 0
+  },
+  "error": null,
+  "observedSeconds": 189.346,
+  "notes": "Main composition playback sampled from frame 96000 at 1x with audio. No error overlay. This is a sample playback check, not a claim of watching all 30 minutes."
+}

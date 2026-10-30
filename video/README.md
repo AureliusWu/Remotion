@@ -2,6 +2,11 @@
 
 本目录是视频工程，完整介绍见[仓库 README](../README.md)。
 
+AI 历史长片：`AiHistory30m`，30 分钟、1080p/60 fps。源码位于 `effects/ai-history/`，
+免费本地神经语音工具位于 `scripts/ai-history-tts/`。
+`npm run render:ai-history` 使用已完成的语音/时间轴并复用章节缓存；完整步骤见
+[制作说明](../docs/AI-HISTORY-PRODUCTION.md)。
+
 已有环境先运行 `npm run check:environment`，无需重复安装。新动画放 `effects/<name>/`，
 在 `effects/index.tsx` 注册，所有动画共用本目录的依赖。完整说明见
 [环境与新增动画](../docs/ENVIRONMENT.md) 和 [维护约定](AGENTS.md)。

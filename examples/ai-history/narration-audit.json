@@ -1,0 +1,381 @@
+{
+  "checkedAt": "2026-10-29T15:54:06.965173+00:00",
+  "status": "passed",
+  "sceneCount": 60,
+  "captionCount": 240,
+  "totalAudioSeconds": 1530.618779,
+  "minimumSceneSeconds": 22.726531,
+  "maximumSceneSeconds": 27.428571,
+  "highestPeakDbfs": -5.3849,
+  "rmsRangeDbfs": [
+    -23.4477,
+    -23.4461
+  ],
+  "totalMp3Bytes": 24517529,
+  "storyboardFileHashMatches": true,
+  "narrationMatchesApprovedStoryboard": true,
+  "voiceoverManifestSha256": "90ea47052016ea7f110ac59ffb830eb2358c4ad7305bd9674108e921cd17b0b8",
+  "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+  "scenes": [
+    {
+      "id": "01-01",
+      "durationSeconds": 26.279184,
+      "sha256": "07cd95a8195060b20b08c481a1e13822951dc9c1d1be0b34009d200f5fc37366",
+      "status": "passed"
+    },
+    {
+      "id": "01-02",
+      "durationSeconds": 25.756735,
+      "sha256": "2915d865429fa7c18940a6a732967dd173f0876d4b11b4861aad452b5f4680ab",
+      "status": "passed"
+    },
+    {
+      "id": "01-03",
+      "durationSeconds": 26.592653,
+      "sha256": "93e097333528bbf3dc22203b8d614f5531871e5c1014e3edb13c9c39996c1617",
+      "status": "passed"
+    },
+    {
+      "id": "01-04",
+      "durationSeconds": 26.148571,
+      "sha256": "2257c835c1250d4a1d3394672d119f84b1ecfab4627be2be01401c42e23c383d",
+      "status": "passed"
+    },
+    {
+      "id": "02-01",
+      "durationSeconds": 26.462041,
+      "sha256": "80e4f2c3f944eeeb5c963847c6edaf5796c0e62a9717092f7196986a4d9fb902",
+      "status": "passed"
+    },
+    {
+      "id": "02-02",
+      "durationSeconds": 26.070204,
+      "sha256": "44c296f606fb766042fa1643f7ad2cce45f0c44ed8c58e0751ab488bdcba5a30",
+      "status": "passed"
+    },
+    {
+      "id": "02-03",
+      "durationSeconds": 25.756735,
+      "sha256": "f573fa7074499a6a0cd471776726d6489512c003f572ea3247729b96e9f42817",
+      "status": "passed"
+    },
+    {
+      "id": "02-04",
+      "durationSeconds": 27.08898,
+      "sha256": "12f3b065498c057b49e7096c0ebd2853d60eb2604c03b9c965e46ee45c5d9aad",
+      "status": "passed"
+    },
+    {
+      "id": "03-01",
+      "durationSeconds": 26.383673,
+      "sha256": "67c10f9bd437b50451d9c9725b28856ded65a49ec9db2830dc1ccbcf911bcd3d",
+      "status": "passed"
+    },
+    {
+      "id": "03-02",
+      "durationSeconds": 26.958367,
+      "sha256": "fadb0902096a5c824e3d4916b94232033340c2eb0ce5aa920c1a51a1b0fecffd",
+      "status": "passed"
+    },
+    {
+      "id": "03-03",
+      "durationSeconds": 26.148571,
+      "sha256": "eeb44d063b49fa36fb2ecdaf1cf61b26da46c38ce4f6fde0edad55a961b6ace8",
+      "status": "passed"
+    },
+    {
+      "id": "03-04",
+      "durationSeconds": 25.364898,
+      "sha256": "9fdb8f6132b8f31b77aea75017a297591e42f24a66f5d454f8def2b95a4cea87",
+      "status": "passed"
+    },
+    {
+      "id": "04-01",
+      "durationSeconds": 27.219592,
+      "sha256": "83b42a27b7c617d79128138fa28a2d47642937d284bb46499802f66251b082a1",
+      "status": "passed"
+    },
+    {
+      "id": "04-02",
+      "durationSeconds": 26.958367,
+      "sha256": "6ad1de2ca2e0547d1de3526a2db78c17ee443f3156b40005a7821d13dad87644",
+      "status": "passed"
+    },
+    {
+      "id": "04-03",
+      "durationSeconds": 25.6,
+      "sha256": "a2b89596d3fb619e813ae95a1a9cde11b7293a8fe3117489f7ff2acb7417adce",
+      "status": "passed"
+    },
+    {
+      "id": "04-04",
+      "durationSeconds": 25.678367,
+      "sha256": "4c675e1a65bad8a11bed2abee08ef2d76d04e65ad0df95b8ee67723a3e862e03",
+      "status": "passed"
+    },
+    {
+      "id": "05-01",
+      "durationSeconds": 25.521633,
+      "sha256": "667fd05bf18b7e72ebea7c49b598100b05b0501849ca9b15258836da5ca73949",
+      "status": "passed"
+    },
+    {
+      "id": "05-02",
+      "durationSeconds": 25.6,
+      "sha256": "2939a94d586786923b6a4c9e738186ac84ee1f29ca95278373ff34555689e05f",
+      "status": "passed"
+    },
+    {
+      "id": "05-03",
+      "durationSeconds": 26.409796,
+      "sha256": "33212edefbc37b5bb268ea6bd305a518ae1653595181de8440889fef32db835d",
+      "status": "passed"
+    },
+    {
+      "id": "05-04",
+      "durationSeconds": 26.044082,
+      "sha256": "94d71a3f639fbdf8dcfa8b99dada9956bac31fe5c5ac1075afbd8313af8c691f",
+      "status": "passed"
+    },
+    {
+      "id": "06-01",
+      "durationSeconds": 26.253061,
+      "sha256": "04371d6cb064f75d93cb98412d080ce6c7ea9adc36448e435dd2e6d9f5380f96",
+      "status": "passed"
+    },
+    {
+      "id": "06-02",
+      "durationSeconds": 26.540408,
+      "sha256": "c031e3bbac71deeeb07139c7720ad10a4982510549c7c7241a76f9009adb3483",
+      "status": "passed"
+    },
+    {
+      "id": "06-03",
+      "durationSeconds": 26.279184,
+      "sha256": "f2e5a42bc22dbe4ff7989361e581f802a72eabeb0bc8846fb2e9d65d71bb472c",
+      "status": "passed"
+    },
+    {
+      "id": "06-04",
+      "durationSeconds": 26.096327,
+      "sha256": "609aebae98098fb58d19a6a80ab5a19d3bdbb7c1f256719dfa77d24850afbc07",
+      "status": "passed"
+    },
+    {
+      "id": "07-01",
+      "durationSeconds": 26.279184,
+      "sha256": "c3825af07d92c23ac713aeff180145f1991a7d69bf5928cfa1d81bebd229d0ef",
+      "status": "passed"
+    },
+    {
+      "id": "07-02",
+      "durationSeconds": 26.070204,
+      "sha256": "7208489748196899052746690e5b670ed8051297f125af6245d4782508e92e4b",
+      "status": "passed"
+    },
+    {
+      "id": "07-03",
+      "durationSeconds": 26.305306,
+      "sha256": "0c62f319fb4cfdb5bd56f2ecea68458a1c44444be31d6e5a53f813e1ee292355",
+      "status": "passed"
+    },
+    {
+      "id": "07-04",
+      "durationSeconds": 27.428571,
+      "sha256": "796efa4cbeea47260e57e2bf09efa774ad8e19e1566855f14be46c83fdafd829",
+      "status": "passed"
+    },
+    {
+      "id": "08-01",
+      "durationSeconds": 26.697143,
+      "sha256": "1212de7466aed6b5e8a0431be69292aa7b2af4e1ce17f178f09810af7e1677b6",
+      "status": "passed"
+    },
+    {
+      "id": "08-02",
+      "durationSeconds": 25.756735,
+      "sha256": "0ca9a3fc2baf46c0fe6700d2d15e3670a9c0c2e22a8d6c797f2cd55cf3ce778a",
+      "status": "passed"
+    },
+    {
+      "id": "08-03",
+      "durationSeconds": 26.331429,
+      "sha256": "728f5bf6bfc8487a278c752cb2e9f570a5dffefedb657e1e6b60dae7cb161e3f",
+      "status": "passed"
+    },
+    {
+      "id": "08-04",
+      "durationSeconds": 25.051429,
+      "sha256": "0cd1df75a2294945adad19db3d0e08523db0e218fce317835bc4c5bcbf1f49f2",
+      "status": "passed"
+    },
+    {
+      "id": "09-01",
+      "durationSeconds": 25.835102,
+      "sha256": "02101493142b5c4716fe152be2999999a4bc2fdfe3455cfe4a3334275b272e1c",
+      "status": "passed"
+    },
+    {
+      "id": "09-02",
+      "durationSeconds": 23.666939,
+      "sha256": "2e3c5c7a675fea979f276a4ee3337cdd854f3fce57311c961e56dc371e0eb0d3",
+      "status": "passed"
+    },
+    {
+      "id": "09-03",
+      "durationSeconds": 23.745306,
+      "sha256": "51a2b218d1bf8c5eb0f8a73afd53b567bb74cdb9d6854b76f20fda130f671232",
+      "status": "passed"
+    },
+    {
+      "id": "09-04",
+      "durationSeconds": 23.902041,
+      "sha256": "31cc17cdbb8a559f83557eae05b6f595864bae1368afbf9a4a5b310beb402ba2",
+      "status": "passed"
+    },
+    {
+      "id": "10-01",
+      "durationSeconds": 24.450612,
+      "sha256": "4b145043101f17be7c64c38aa0035c7e41361548d15e925a1f83ea61df7d58b7",
+      "status": "passed"
+    },
+    {
+      "id": "10-02",
+      "durationSeconds": 25.129796,
+      "sha256": "08e0a15c3ea559f2f92f3591047e41cdca42a79279a6f52094133d3d3c7f855b",
+      "status": "passed"
+    },
+    {
+      "id": "10-03",
+      "durationSeconds": 23.719184,
+      "sha256": "ac57d26a0c49db1156f9bcb45fae5b2364ca0c021f40324ba566141851bab791",
+      "status": "passed"
+    },
+    {
+      "id": "10-04",
+      "durationSeconds": 25.417143,
+      "sha256": "97d89d2c8ee87ebd69804adebe7864eb5b2b81b0cd99b99d1726aea8f0c55f15",
+      "status": "passed"
+    },
+    {
+      "id": "11-01",
+      "durationSeconds": 24.52898,
+      "sha256": "5a026a990c97fb683577a05b8acde365870d927d3bc75adb08e12cfd12c9324a",
+      "status": "passed"
+    },
+    {
+      "id": "11-02",
+      "durationSeconds": 26.070204,
+      "sha256": "54587f770e1b50d4a184fb5baf28e3b5622232f3f829450ace7ae6317aa1f9c7",
+      "status": "passed"
+    },
+    {
+      "id": "11-03",
+      "durationSeconds": 24.42449,
+      "sha256": "adb4452ac41b8e2a620d11d19302d9cbb5041b8c2b0feb5043b40ecf09843723",
+      "status": "passed"
+    },
+    {
+      "id": "11-04",
+      "durationSeconds": 24.659592,
+      "sha256": "e53b0a96fd27092684048e9ed490ee28975350e70cec2f2c9c119246feb187a4",
+      "status": "passed"
+    },
+    {
+      "id": "12-01",
+      "durationSeconds": 24.163265,
+      "sha256": "0f8173be2fcac47b123940c8edef96d5253dfd3b82455bc16b0e29489e326562",
+      "status": "passed"
+    },
+    {
+      "id": "12-02",
+      "durationSeconds": 23.196735,
+      "sha256": "00273dc6e090d9fc66f4a518a53f54d8bd5a1821bff682e6e13f3e3cba27a472",
+      "status": "passed"
+    },
+    {
+      "id": "12-03",
+      "durationSeconds": 25.417143,
+      "sha256": "0506967711902b1c03f508bb1f7e0523b25b52380beb6978b0d7f33cbf716ee6",
+      "status": "passed"
+    },
+    {
+      "id": "12-04",
+      "durationSeconds": 24.189388,
+      "sha256": "5613b5cf10f0c1a640a71324d182f3e28ef392a281b718088b0217a8d3ee2f65",
+      "status": "passed"
+    },
+    {
+      "id": "13-01",
+      "durationSeconds": 24.607347,
+      "sha256": "c34e2ad7fa07ec619464a087dc6082b8b3e6f16894913bdece96db24c4b60d7d",
+      "status": "passed"
+    },
+    {
+      "id": "13-02",
+      "durationSeconds": 25.652245,
+      "sha256": "d173cc1277afd3894f2e01fdeccfb8b4a38e06b339b10fadf98bcb29ddeb6899",
+      "status": "passed"
+    },
+    {
+      "id": "13-03",
+      "durationSeconds": 24.685714,
+      "sha256": "4173f5f599e77dc7b1be3de72aa635c6f71130ebe3770626da029a84efb2ef59",
+      "status": "passed"
+    },
+    {
+      "id": "13-04",
+      "durationSeconds": 24.607347,
+      "sha256": "cb59ee186c2db70df9015c08843f0c236733f38b4cae4572defa323bf3daf386",
+      "status": "passed"
+    },
+    {
+      "id": "14-01",
+      "durationSeconds": 25.573878,
+      "sha256": "29e06eb408e185be6f80af6d3214bba4de4fd4b94f15c5cca8b53984aac44557",
+      "status": "passed"
+    },
+    {
+      "id": "14-02",
+      "durationSeconds": 25.49551,
+      "sha256": "5850e6fb08845cc2c19ad05bfab11c887a19d85d2a89efec77c9dc5f7693a6cb",
+      "status": "passed"
+    },
+    {
+      "id": "14-03",
+      "durationSeconds": 24.920816,
+      "sha256": "30b4f80d585f3de11aec9498da826d92b02ed5c7f69673839b18864df743a752",
+      "status": "passed"
+    },
+    {
+      "id": "14-04",
+      "durationSeconds": 22.726531,
+      "sha256": "8dbf54213abc83678f1555ca968d516ce01ba8cc225d5c87b6abffb10edf41cb",
+      "status": "passed"
+    },
+    {
+      "id": "15-01",
+      "durationSeconds": 25.338776,
+      "sha256": "c053693600f2cf99796393bb5da9a56bca0133a056f7cbf98e1164aca58f09fb",
+      "status": "passed"
+    },
+    {
+      "id": "15-02",
+      "durationSeconds": 25.939592,
+      "sha256": "d3553ef5a7b5423b89a64f2e5fa7175572723adb7c352138d4b10a7a55f73d38",
+      "status": "passed"
+    },
+    {
+      "id": "15-03",
+      "durationSeconds": 23.797551,
+      "sha256": "2efc6d8fafd26b774c868b77d8d5fb967d5bff9800e0d845a94e799a343c767a",
+      "status": "passed"
+    },
+    {
+      "id": "15-04",
+      "durationSeconds": 25.626122,
+      "sha256": "dbcd7c79d94f9d99b7987bc49545068a43e4d93a7fe06a0c6ab79bb6da10703e",
+      "status": "passed"
+    }
+  ]
+}

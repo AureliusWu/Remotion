@@ -1,0 +1,53 @@
+{
+  "engine": "sherpa-onnx",
+  "version": "2.0.1",
+  "model": "Kokoro-82M-v1.1-zh (official sherpa INT8 conversion)",
+  "modelLicense": "Apache-2.0",
+  "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+  "text": [
+    "一九五六年，达特茅斯研究项目，开启了人工智能的一段重要历史。",
+    "从机器学习到 Transformer，再到生成式 AI，变化的不只是模型，还有数据、算力和人的选择。",
+    "每分钟平均来两人，无人到来的概率，是 e 的负二次方，约为百分之十三点五。",
+    "理解人工智能，要分清能力、假设与证据。"
+  ],
+  "samples": [
+    {
+      "file": "tts-sample-kokoro-zf001.mp3",
+      "speakerId": 3,
+      "speakerName": "zf001",
+      "speed": 1.0,
+      "durationSeconds": 27.557666666666666,
+      "encodedDurationSeconds": 27.585306,
+      "synthesisSeconds": 58.03271449999738,
+      "realTimeFactor": 2.105864593035116,
+      "sampleRate": 24000,
+      "threads": 4,
+      "normalizationGain": 1.0245078000778396,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "tts-sample-kokoro-zm031.mp3",
+      "speakerId": 70,
+      "speakerName": "zm031",
+      "speed": 1.0,
+      "durationSeconds": 36.39425,
+      "encodedDurationSeconds": 36.440816,
+      "synthesisSeconds": 81.69067460000224,
+      "realTimeFactor": 2.2446038756122806,
+      "sampleRate": 24000,
+      "threads": 4,
+      "normalizationGain": 0.9517047192124195,
+      "fullDecodePassed": true
+    },
+    {
+      "file": "tts-sample-huihui.mp3",
+      "engine": "Windows SAPI",
+      "voice": "Microsoft Huihui Desktop - Chinese (Simplified)",
+      "sapiRate": 1,
+      "durationSeconds": 28.928798185941044,
+      "synthesisSeconds": 0.4731819,
+      "normalizationGain": 1.107994185475627,
+      "fullDecodePassed": true
+    }
+  ]
+}

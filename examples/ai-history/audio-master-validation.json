@@ -1,0 +1,551 @@
+{
+  "checkedAt": "2026-10-29T16:06:44.821Z",
+  "status": "passed",
+  "sampleRate": 48000,
+  "durationSeconds": 1800,
+  "inputFingerprint": "fc4cb706301732e1bec05648caeed0e2cef5eedf2b1822c714828b367a889e47",
+  "scenes": [
+    {
+      "id": "01-01",
+      "audioDurationSeconds": 26.231520833333335,
+      "slotSeconds": 29.866666666666667,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.9351458333333333,
+      "peakDbfs": -6.302387396698881,
+      "rmsDbfs": -23.44694120636752
+    },
+    {
+      "id": "01-02",
+      "audioDurationSeconds": 25.705604166666667,
+      "slotSeconds": 30.166666666666668,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.7610625,
+      "peakDbfs": -6.126207978063691,
+      "rmsDbfs": -23.446968396691798
+    },
+    {
+      "id": "01-03",
+      "audioDurationSeconds": 26.554145833333333,
+      "slotSeconds": 30.183333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.9291875,
+      "peakDbfs": -6.155234432482738,
+      "rmsDbfs": -23.44693535844566
+    },
+    {
+      "id": "01-04",
+      "audioDurationSeconds": 26.113395833333332,
+      "slotSeconds": 29.783333333333335,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.9699375,
+      "peakDbfs": -7.856818227674558,
+      "rmsDbfs": -23.446689618658077
+    },
+    {
+      "id": "02-01",
+      "audioDurationSeconds": 26.429395833333334,
+      "slotSeconds": 30.266666666666666,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.1372708333333335,
+      "peakDbfs": -7.459957897867548,
+      "rmsDbfs": -23.447122389356615
+    },
+    {
+      "id": "02-02",
+      "audioDurationSeconds": 26.019041666666666,
+      "slotSeconds": 29.883333333333333,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.1642916666666667,
+      "peakDbfs": -7.568249603404105,
+      "rmsDbfs": -23.447339691197765
+    },
+    {
+      "id": "02-03",
+      "audioDurationSeconds": 25.724895833333335,
+      "slotSeconds": 28.916666666666668,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.4917708333333333,
+      "peakDbfs": -6.766352358358862,
+      "rmsDbfs": -23.446937408723436
+    },
+    {
+      "id": "02-04",
+      "audioDurationSeconds": 27.057645833333332,
+      "slotSeconds": 30.933333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.1756875,
+      "peakDbfs": -8.24661362828008,
+      "rmsDbfs": -23.44690340150651
+    },
+    {
+      "id": "03-01",
+      "audioDurationSeconds": 26.3373125,
+      "slotSeconds": 29.8,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.7626875,
+      "peakDbfs": -6.963242901175727,
+      "rmsDbfs": -23.446836238047275
+    },
+    {
+      "id": "03-02",
+      "audioDurationSeconds": 26.908895833333332,
+      "slotSeconds": 31.1,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.4911041666666667,
+      "peakDbfs": -6.40651023946076,
+      "rmsDbfs": -23.4472980329631
+    },
+    {
+      "id": "03-03",
+      "audioDurationSeconds": 26.099604166666666,
+      "slotSeconds": 29.55,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.750395833333333,
+      "peakDbfs": -6.627668585361138,
+      "rmsDbfs": -23.446732485859954
+    },
+    {
+      "id": "03-04",
+      "audioDurationSeconds": 25.335520833333334,
+      "slotSeconds": 29.55,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.514479166666667,
+      "peakDbfs": -8.053548277086954,
+      "rmsDbfs": -23.447497054493503
+    },
+    {
+      "id": "04-01",
+      "audioDurationSeconds": 27.186395833333332,
+      "slotSeconds": 31.016666666666666,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.1302708333333333,
+      "peakDbfs": -7.284667122065239,
+      "rmsDbfs": -23.447058914246153
+    },
+    {
+      "id": "04-02",
+      "audioDurationSeconds": 26.919979166666668,
+      "slotSeconds": 30.75,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.1300208333333335,
+      "peakDbfs": -6.551818692375092,
+      "rmsDbfs": -23.446173086857407
+    },
+    {
+      "id": "04-03",
+      "audioDurationSeconds": 25.559395833333333,
+      "slotSeconds": 28.75,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.4906041666666665,
+      "peakDbfs": -7.349292285518255,
+      "rmsDbfs": -23.44671774658753
+    },
+    {
+      "id": "04-04",
+      "audioDurationSeconds": 25.641354166666666,
+      "slotSeconds": 29.483333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.1419791666666668,
+      "peakDbfs": -7.374657984314843,
+      "rmsDbfs": -23.446767618061422
+    },
+    {
+      "id": "05-01",
+      "audioDurationSeconds": 25.4738125,
+      "slotSeconds": 29.616666666666667,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.4428541666666668,
+      "peakDbfs": -6.633355673653135,
+      "rmsDbfs": -23.446766226298756
+    },
+    {
+      "id": "05-02",
+      "audioDurationSeconds": 25.5705625,
+      "slotSeconds": 29.7,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.4294375,
+      "peakDbfs": -5.539545560227232,
+      "rmsDbfs": -23.44721388807497
+    },
+    {
+      "id": "05-03",
+      "audioDurationSeconds": 26.3758125,
+      "slotSeconds": 30.5,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.4241875,
+      "peakDbfs": -6.661276358453026,
+      "rmsDbfs": -23.446729735492582
+    },
+    {
+      "id": "05-04",
+      "audioDurationSeconds": 26.001479166666666,
+      "slotSeconds": 30.183333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.4818541666666665,
+      "peakDbfs": -7.265678885683254,
+      "rmsDbfs": -23.446844085459844
+    },
+    {
+      "id": "06-01",
+      "audioDurationSeconds": 26.223020833333333,
+      "slotSeconds": 29.966666666666665,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.043645833333333,
+      "peakDbfs": -6.148775721337652,
+      "rmsDbfs": -23.447754843586416
+    },
+    {
+      "id": "06-02",
+      "audioDurationSeconds": 26.509229166666668,
+      "slotSeconds": 30.25,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.040770833333333,
+      "peakDbfs": -7.682400818338162,
+      "rmsDbfs": -23.446941371760865
+    },
+    {
+      "id": "06-03",
+      "audioDurationSeconds": 26.2500625,
+      "slotSeconds": 29.983333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.0332708333333334,
+      "peakDbfs": -6.9020039164106795,
+      "rmsDbfs": -23.44735155599979
+    },
+    {
+      "id": "06-04",
+      "audioDurationSeconds": 26.049729166666665,
+      "slotSeconds": 29.8,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.0502708333333333,
+      "peakDbfs": -6.213579973483963,
+      "rmsDbfs": -23.446396481574183
+    },
+    {
+      "id": "07-01",
+      "audioDurationSeconds": 26.2436875,
+      "slotSeconds": 29.75,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.8063125,
+      "peakDbfs": -8.037484363182998,
+      "rmsDbfs": -23.446929365975354
+    },
+    {
+      "id": "07-02",
+      "audioDurationSeconds": 26.031104166666665,
+      "slotSeconds": 29.55,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.8188958333333334,
+      "peakDbfs": -6.535490239797719,
+      "rmsDbfs": -23.446279060691538
+    },
+    {
+      "id": "07-03",
+      "audioDurationSeconds": 26.264729166666665,
+      "slotSeconds": 29.783333333333335,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.818604166666667,
+      "peakDbfs": -5.958793413313813,
+      "rmsDbfs": -23.446926099535723
+    },
+    {
+      "id": "07-04",
+      "audioDurationSeconds": 27.397458333333333,
+      "slotSeconds": 30.916666666666668,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 2.8192083333333335,
+      "peakDbfs": -5.377057717066963,
+      "rmsDbfs": -23.44700160714405
+    },
+    {
+      "id": "08-01",
+      "audioDurationSeconds": 26.657229166666667,
+      "slotSeconds": 30.733333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.3761041666666665,
+      "peakDbfs": -7.580929736514559,
+      "rmsDbfs": -23.446724537538735
+    },
+    {
+      "id": "08-02",
+      "audioDurationSeconds": 25.7168125,
+      "slotSeconds": 29.8,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.3831875,
+      "peakDbfs": -8.648985307663695,
+      "rmsDbfs": -23.44717527742809
+    },
+    {
+      "id": "08-03",
+      "audioDurationSeconds": 26.2844375,
+      "slotSeconds": 30.366666666666667,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.382229166666667,
+      "peakDbfs": -7.33077883700723,
+      "rmsDbfs": -23.446338837158287
+    },
+    {
+      "id": "08-04",
+      "audioDurationSeconds": 25.021895833333332,
+      "slotSeconds": 29.1,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.3781041666666667,
+      "peakDbfs": -6.869207045151988,
+      "rmsDbfs": -23.447084715170917
+    },
+    {
+      "id": "09-01",
+      "audioDurationSeconds": 25.799270833333335,
+      "slotSeconds": 31.85,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.3507291666666665,
+      "peakDbfs": -7.136924702964819,
+      "rmsDbfs": -23.44679327092752
+    },
+    {
+      "id": "09-02",
+      "audioDurationSeconds": 23.639729166666665,
+      "slotSeconds": 29.683333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.343604166666666,
+      "peakDbfs": -7.848308104124225,
+      "rmsDbfs": -23.44723596566242
+    },
+    {
+      "id": "09-03",
+      "audioDurationSeconds": 23.718604166666665,
+      "slotSeconds": 29.75,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.331395833333334,
+      "peakDbfs": -6.672698399204871,
+      "rmsDbfs": -23.447054263108157
+    },
+    {
+      "id": "09-04",
+      "audioDurationSeconds": 23.870479166666666,
+      "slotSeconds": 28.716666666666665,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.1461875,
+      "peakDbfs": -6.684707729386066,
+      "rmsDbfs": -23.44683201453067
+    },
+    {
+      "id": "10-01",
+      "audioDurationSeconds": 24.3994375,
+      "slotSeconds": 29.45,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.3505625,
+      "peakDbfs": -7.924540960722691,
+      "rmsDbfs": -23.447664511743312
+    },
+    {
+      "id": "10-02",
+      "audioDurationSeconds": 25.092229166666666,
+      "slotSeconds": 30.116666666666667,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.3244375,
+      "peakDbfs": -6.9090479578629544,
+      "rmsDbfs": -23.447339004369834
+    },
+    {
+      "id": "10-03",
+      "audioDurationSeconds": 23.6806875,
+      "slotSeconds": 28.716666666666665,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.335979166666666,
+      "peakDbfs": -8.813401052555706,
+      "rmsDbfs": -23.446891531865965
+    },
+    {
+      "id": "10-04",
+      "audioDurationSeconds": 25.3726875,
+      "slotSeconds": 31.716666666666665,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.643979166666667,
+      "peakDbfs": -8.061591388677714,
+      "rmsDbfs": -23.446862771328576
+    },
+    {
+      "id": "11-01",
+      "audioDurationSeconds": 24.496145833333333,
+      "slotSeconds": 29.033333333333335,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.8371875,
+      "peakDbfs": -7.382096126184994,
+      "rmsDbfs": -23.447333905574517
+    },
+    {
+      "id": "11-02",
+      "audioDurationSeconds": 26.042729166666668,
+      "slotSeconds": 30.583333333333332,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 3.8406041666666666,
+      "peakDbfs": -7.968878766475025,
+      "rmsDbfs": -23.44712853643692
+    },
+    {
+      "id": "11-03",
+      "audioDurationSeconds": 24.389,
+      "slotSeconds": 30.05,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.961,
+      "peakDbfs": -8.524324071886392,
+      "rmsDbfs": -23.446413863732538
+    },
+    {
+      "id": "11-04",
+      "audioDurationSeconds": 24.621229166666666,
+      "slotSeconds": 30.333333333333332,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.012104166666667,
+      "peakDbfs": -8.623194128455756,
+      "rmsDbfs": -23.447047673473143
+    },
+    {
+      "id": "12-01",
+      "audioDurationSeconds": 24.1353125,
+      "slotSeconds": 30.566666666666666,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.731354166666667,
+      "peakDbfs": -7.507012202178469,
+      "rmsDbfs": -23.44744642621132
+    },
+    {
+      "id": "12-02",
+      "audioDurationSeconds": 23.167354166666666,
+      "slotSeconds": 29.6,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.732645833333334,
+      "peakDbfs": -8.109332802796512,
+      "rmsDbfs": -23.44747675162701
+    },
+    {
+      "id": "12-03",
+      "audioDurationSeconds": 25.3690625,
+      "slotSeconds": 30.516666666666666,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.447604166666666,
+      "peakDbfs": -8.23292428007522,
+      "rmsDbfs": -23.44697932312801
+    },
+    {
+      "id": "12-04",
+      "audioDurationSeconds": 24.1446875,
+      "slotSeconds": 29.316666666666666,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.471979166666666,
+      "peakDbfs": -7.507641318148618,
+      "rmsDbfs": -23.4465878263072
+    },
+    {
+      "id": "13-01",
+      "audioDurationSeconds": 24.5645625,
+      "slotSeconds": 29.4,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.1354375,
+      "peakDbfs": -6.465458176939314,
+      "rmsDbfs": -23.446615682275144
+    },
+    {
+      "id": "13-02",
+      "audioDurationSeconds": 25.602895833333335,
+      "slotSeconds": 30.45,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.147104166666667,
+      "peakDbfs": -8.736962692086534,
+      "rmsDbfs": -23.446316809620424
+    },
+    {
+      "id": "13-03",
+      "audioDurationSeconds": 24.6368125,
+      "slotSeconds": 30.716666666666665,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.379854166666667,
+      "peakDbfs": -7.244900697508672,
+      "rmsDbfs": -23.447260843003402
+    },
+    {
+      "id": "13-04",
+      "audioDurationSeconds": 24.570729166666666,
+      "slotSeconds": 29.433333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.162604166666667,
+      "peakDbfs": -7.873207322008428,
+      "rmsDbfs": -23.44688285845629
+    },
+    {
+      "id": "14-01",
+      "audioDurationSeconds": 25.5475625,
+      "slotSeconds": 31.85,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 5.6024375,
+      "peakDbfs": -7.841113737083745,
+      "rmsDbfs": -23.446832343024365
+    },
+    {
+      "id": "14-02",
+      "audioDurationSeconds": 25.465729166666666,
+      "slotSeconds": 30.483333333333334,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.3176041666666665,
+      "peakDbfs": -6.677271424457231,
+      "rmsDbfs": -23.446526380170454
+    },
+    {
+      "id": "14-03",
+      "audioDurationSeconds": 24.8730625,
+      "slotSeconds": 29.916666666666668,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.343604166666666,
+      "peakDbfs": -7.598713079218631,
+      "rmsDbfs": -23.44690375111664
+    },
+    {
+      "id": "14-04",
+      "audioDurationSeconds": 22.692729166666666,
+      "slotSeconds": 27.75,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.357270833333334,
+      "peakDbfs": -7.3153810495355955,
+      "rmsDbfs": -23.44655977157755
+    },
+    {
+      "id": "15-01",
+      "audioDurationSeconds": 25.2889375,
+      "slotSeconds": 30.166666666666668,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.1777291666666665,
+      "peakDbfs": -8.154626488789102,
+      "rmsDbfs": -23.44619692392525
+    },
+    {
+      "id": "15-02",
+      "audioDurationSeconds": 25.893645833333334,
+      "slotSeconds": 30.766666666666666,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.173020833333333,
+      "peakDbfs": -7.534736501674124,
+      "rmsDbfs": -23.446374279011017
+    },
+    {
+      "id": "15-03",
+      "audioDurationSeconds": 23.753229166666667,
+      "slotSeconds": 28.616666666666667,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.1634375,
+      "peakDbfs": -7.043981708941746,
+      "rmsDbfs": -23.447446595639633
+    },
+    {
+      "id": "15-04",
+      "audioDurationSeconds": 25.599479166666665,
+      "slotSeconds": 30.45,
+      "prefixSeconds": 0.7,
+      "tailSeconds": 4.150520833333333,
+      "peakDbfs": -7.68561103740788,
+      "rmsDbfs": -23.44711320848159
+    }
+  ],
+  "wavSha256": "79dc5598687719e12450c94b410cb0ac95a46992a84d8f4e70fce203e2f5f963",
+  "sizeBytes": 172800044
+}

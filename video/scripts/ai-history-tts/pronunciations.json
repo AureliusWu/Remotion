@@ -1,0 +1,17 @@
+{
+  "version": "zh-year-zero-and-ai-terms-v2",
+  "characterReplacements": { "〇": "零", "《": "", "》": "" },
+  "terms": {
+    "ImageNet": "Image Net",
+    "AlexNet": "Alex Net",
+    "AlphaGo": "Alpha Go",
+    "AlphaFold": "Alpha Fold",
+    "OpenAI": "Open A I",
+    "ChatGPT": "Chat G P T",
+    "GPT-3": "G P T 三",
+    "GPT": "G P T",
+    "AI": "A I"
+  },
+  "captionsPreserveOriginalText": true,
+  "rationale": "sherpa-onnx 2.0.1 skips unknown English words rather than spelling them; every expanded English token is verified against the installed English and Chinese lexicons."
+}
