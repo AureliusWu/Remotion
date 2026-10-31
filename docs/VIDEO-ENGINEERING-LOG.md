@@ -261,3 +261,34 @@ AI周报最终导出通过：B站111061998字节、抖音79454451字节；均60f
 Studio两版1倍速未静音自然循环跨片尾，错误null、控制台warn/error为空。
 B站SHA 5ec64376cab3816737213698458b9ca10ebb356f1044a19e0e14b5686fbe103c；抖音SHA 0fe3ebabbcb347a5e629e3982bd8cc2a5acc0f866f864dce6cf3ef49f571c95e。
 最终记录examples/ai-weekly/delivery-validation.json，独立字幕、章节和投稿草稿在video/out；未上传平台。
+
+## 2026-10-31：重整本地与GitHub工作流
+
+先备份173个待提交文件（12,424,493字节）及逐文件SHA，保留此前三期的源码、音频和证据，
+在独立分支接入远端main的28c2efa基线，保留远端简化README、LICENSE和CI。大成片与运行环境未入Git。
+新增workflow.config.json与统一workflow命令：doctor/check/preview/audio/qa/render/master/package/smoke。
+旧两个新闻渲染脚本变为兼容入口，共用固定bundle/源指纹/明确partial状态/标准AAC验收的通用渲染器。
+
+发现git checkout的CRLF改变原稿字节，严格旁白哈希检查失败。原始失败日志保留；按备份SHA只恢复
+与原哈希匹配的LF字节，新增.gitattributes固定JSON/源码/字幕LF，没有放宽源哈希。
+媒体工具改按操作系统和架构定位配套二进制，移除三处Windows路径硬编码，旧AAC CLI仍兼容。
+新增PCM24与外部Atmos验收；Atmos必须有原始Dolby QC/JOC、音轨SHA及原报告哈希，缺失即拒绝。
+这些检查不认证第三方报告出具者，也不代替实际设备/平台验收；当前没有真实Atmos正例资产。
+
+无损母带从FLOAT原句缓存构建，48kHz/24bit/双声道/180秒，11场22句/每声道8,640,000采样帧。
+音乐用原函数48k浮点重合成，不读有损样本。源旁白24k、升采样、dual-mono及非原生HiRes均明确记录。
+Windows文件占用故障审查发现WAV/manifest分两次replace可能留错配，已加入发布回滚和故障注入测试。
+18项Python fixture通过；母带最高样本峰值-7.375314dBFS，逐声道削波0，FFmpeg全解码通过。
+
+本地已完成版本/类型/lint/build、13项Node流程/媒体fixture、三期内容哈希校验、横竖各3帧真实QA，
+4秒240帧CPU H.264/AAC smoke完整解码，以及通用渲染器横竖各2秒120帧显式partial完整解码。
+AI两版PCM24 MOV完整180秒解码通过，10800个视频包SHA逐一保持一致，原标准MP4哈希不变。
+B站MOV 158,504,683字节，SHA c3e4d19b706244166246639b8de34c8432ae98eab5c641c1549c9773b78b45ec；
+抖音MOV 126,897,136字节，SHA 0998bb5b4f5ee1b5a5c09770309b5325de3945289e93db12a424c5276d4b6662。
+本轮没有重新生成标准三分钟画面，完整PCM24交付使用原H.264流无重编码封装。
+
+GitHub工作流扩为Ubuntu24.04/Windows与Node24矩阵，统一入口检查、六帧QA、4秒CPU编码/解码，
+另用Python3.12及固定NumPy/SoundFile运行无损音频fixture，不下载大模型或运行真实配音。
+CI始终保留失败日志和小体积Artifacts/Job Summary，不上传整片、PCM或bundle。远程成功须绑定
+本轮PR实际head SHA，以GitHub检查与Artifacts为准，不能用本地PASS或push成功代替。
+必要本地证据examples/workflow/local-validation.json；详细使用与边界docs/WORKFLOW.md。

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "defaultEdition": "ai-weekly",
+  "fps": 60,
+  "durationSeconds": 180,
+  "editions": {
+    "daily-ten": {
+      "title": "此刻，世界在发生什么",
+      "compositions": {
+        "bilibili": "DailyTen-Bilibili",
+        "douyin": "DailyTen-Douyin"
+      },
+      "contentValidator": "verify-daily-ten.mjs",
+      "audioGenerator": "generate-hotspot-audio.py"
+    },
+    "weekly-ten": {
+      "title": "这一周，世界留下什么",
+      "compositions": {
+        "bilibili": "WeeklyTen-Bilibili",
+        "douyin": "WeeklyTen-Douyin"
+      },
+      "contentValidator": "verify-news-edition.mjs",
+      "audioGenerator": "generate-weekly-ten-audio.py"
+    },
+    "ai-weekly": {
+      "title": "AI一周热点观察",
+      "compositions": {
+        "bilibili": "AiWeekly-Bilibili",
+        "douyin": "AiWeekly-Douyin"
+      },
+      "contentValidator": "verify-news-edition.mjs",
+      "audioGenerator": "generate-ai-weekly-audio.py"
+    }
+  },
+  "profiles": {
+    "standard": {
+      "audioCodec": "aac",
+      "audioBitrate": "192k",
+      "sampleRate": 48000,
+      "container": "mp4"
+    },
+    "hires-pcm": {
+      "audioCodec": "pcm_s24le",
+      "sampleRate": 48000,
+      "bitsPerSample": 24,
+      "channels": 2,
+      "container": "mov",
+      "externalMaster": true
+    },
+    "atmos": {
+      "audioCodec": "eac3",
+      "sampleRate": 48000,
+      "minimumBitrate": 320000,
+      "channels": [6, 8],
+      "container": "mp4",
+      "externalMaster": true,
+      "requiresJocEvidence": true
+    }
+  }
+}

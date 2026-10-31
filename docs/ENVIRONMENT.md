@@ -118,3 +118,13 @@ Studio的WebMCP播放命令可能返回playing=true而首帧不动；必须再�
 verify-export.mjs原先固定1920×1080，现支持FILE SECONDS FPS [WIDTH HEIGHT]，默认行为保留，允许竖版准确验收。
 新增verify-weekly-ten-media.mjs读取最终MP4的AAC并完整解码到out下PCM WAV，测量真实混音的12个语音窗口；
 源MP3成功不能替代成片音轨成功。音量为RMS/peak dBFS，不标成LUFS或自然度评分。
+
+## 2026-10-31：跨平台联调与PCM24分支
+
+媒体二进制经scripts/lib/media-tools.mjs按renderer支持的系统/架构包定位，不写死Windows目录。
+GitHub CI用Ubuntu24.04与Windows、Node24，显式安装匹配Chromium及Linux字体/运行库。
+本地实际Remotion仍4.0.539，依赖锁未升级；Python本地3.14.4，fixture CI3.12，NumPy2.3.4、SoundFile0.13.1。
+Remotion公开音频编码只含pcm-16/aac/mp3/opus，内部有PCM16混音；24bit母带直接读原始FLOAT句缓存，
+独立生成PCM24 WAV，再用现有FFmpeg复制H.264画面封装MOV，避免把16bit/AAC转码冒称原生高解析。
+FLAC/ALAC与Atmos编码器未配置；Atmos仅接外部已编码JOC及真实QC，负例测试不等于真实Atmos验收。
+源JSON字节哈希受Windows CRLF检出影响，现以.gitattributes固定LF并保留严格字节校验。

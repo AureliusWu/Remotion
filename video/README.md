@@ -1,5 +1,7 @@
 # Remotion Video Lab
 
+统一流程入口：`npm run workflow -- help`；完整操作、本地与GitHub分工、PCM24母带和外部Atmos接口见 [工作流说明](../docs/WORKFLOW.md)。
+
 AI一周热点观察（10.26—10.30截至目前）：`AiWeekly-Bilibili` / `AiWeekly-Douyin`，9条AI进展，180秒/60fps，横1920×1080、竖1080×1920。
 `npm run verify:ai-weekly-content` 校验文稿与声音；`npm run verify:ai-weekly-bilibili` / `verify:ai-weekly-douyin` 检查画面与音频；
 `npm run render:ai-weekly` 导出并验收两版MP4。来源、开放状态与复现见[本期AI周报](../docs/AI-WEEKLY-20261030.md)。

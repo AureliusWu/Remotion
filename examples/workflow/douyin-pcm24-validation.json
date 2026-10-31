@@ -1,0 +1,34 @@
+{
+  "file": "ai-weekly-20261030-douyin-hires-pcm.mov",
+  "checkedAt": "2026-10-31T05:24:11.850Z",
+  "status": "passed",
+  "profile": "hires-pcm",
+  "expected": {
+    "seconds": 180,
+    "fps": 60,
+    "width": 1080,
+    "height": 1920
+  },
+  "fullDecode": "passed",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "codec": "h264",
+    "fps": 60,
+    "frames": 10800,
+    "durationSeconds": 180,
+    "pixelFormat": "yuvj420p",
+    "colorRange": "pc"
+  },
+  "audio": {
+    "codec": "pcm_s24le",
+    "durationSeconds": 180,
+    "sampleRate": 48000,
+    "channels": 2,
+    "bitsPerSample": 24,
+    "bitRate": 2304000,
+    "precisionScope": "Declared delivered PCM precision; this does not establish the effective resolution of source recordings or a Hi-Res certification."
+  },
+  "sizeBytes": 126897136,
+  "sha256": "0998bb5b4f5ee1b5a5c09770309b5325de3945289e93db12a424c5276d4b6662"
+}

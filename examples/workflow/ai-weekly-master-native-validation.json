@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "ffprobeExitCode": 0,
+  "fullFfmpegDecodeExitCode": 0,
+  "sha256": "8DAA698C4B69D4A58979C6E1D48F0DAC47E72F5DE0AEECADDC793DBD46B1E7B7",
+  "shaMatchesManifest": true,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "pcm_s24le",
+        "sample_fmt": "s32",
+        "sample_rate": "48000",
+        "channels": 2,
+        "bits_per_sample": 24,
+        "time_base": "1/48000",
+        "duration_ts": 8640000,
+        "duration": "180.000000",
+        "bit_rate": "2304000"
+      }
+    ]
+  }
+}

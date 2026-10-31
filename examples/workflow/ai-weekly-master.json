@@ -1,0 +1,857 @@
+{
+  "status": "passed",
+  "stage": "lossless_master",
+  "masterVerified": true,
+  "edition": "ai-weekly",
+  "generatedAt": "2026-10-31T05:28:03.938855+00:00",
+  "file": "out\\ai-weekly-master\\master-48k24.wav",
+  "sha256": "8daa698c4b69d4a58979c6e1d48f0dac47e72f5de0aeecaddc793dbd46b1e7b7",
+  "pcm24DataSha256": "fbe838f8b19c2d6066bf857a81b4d15016d1f1b215013e3f9c31fffe554279c1",
+  "float64MixSha256": "c3eeba488d48df30665536b676f8451893ec7eedf65481067af3bd7d65ecec78",
+  "compositionSha256": "5973bad9947a68842b60fe8e1c4a8339db3336043363e5de3f28555ea43ae311",
+  "bytes": 51840044,
+  "sampleRate": 48000,
+  "bitsPerSample": 24,
+  "channels": 2,
+  "layout": "dual-mono",
+  "spatialAudio": false,
+  "atmos": false,
+  "sourceNativeSampleRate": 24000,
+  "resampled": true,
+  "nativeHiRes": false,
+  "sourcePrecision": "original IEEE float32 model samples, not a native 24-bit recording",
+  "quantization": {
+    "format": "PCM_24",
+    "dither": "none",
+    "implementation": "libsndfile"
+  },
+  "durationSeconds": 180,
+  "framesPerChannel": 8640000,
+  "sceneCount": 11,
+  "sentenceCount": 22,
+  "originalInputsUnchanged": true,
+  "usedLossyInput": false,
+  "storyboardSha256": "3f1c4e0140d5f483f4dd48cfa27cf52ac5de75d55b01beb317396ec025d8c127",
+  "sourceInputs": [
+    {
+      "file": "effects\\ai-weekly\\storyboard.json",
+      "sha256": "3f1c4e0140d5f483f4dd48cfa27cf52ac5de75d55b01beb317396ec025d8c127"
+    },
+    {
+      "file": "public\\ai-weekly\\voiceover-manifest.json",
+      "sha256": "048954caa923e8a753ecf34d1b1b81898aab3962ff10576dfbe004369845f16b"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\f79edf3a5b8047947d0b45f634440702f16ae10eb3356b51b630db8d605722a8.wav",
+      "sha256": "55775ec36c6c458e69f5d2f2cc99f1bb11925868584ebd0c238e7c3e7a117e0c"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\2a78f33aa43e585904fbde55f436ce14530ffaaf2e1a071d08dbc623cd4c10eb.wav",
+      "sha256": "9f0418f2b9c45f91f4e24d8863f6543d98fab9e42723ceae7c1480221b5f3505"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\45f1bdc2e9a2dee398b570cd0f61cae6a1ea029561806dd38dfaf9645cd0176c.wav",
+      "sha256": "ef1642ee88ae67610fa51a43e49290c848146f805094e47d4bdc1e85cc416e1e"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\50869036f14b93b22610bc61c36f3512e365e46bccb45a5e588adba4b3d8e687.wav",
+      "sha256": "4e38bd2e3c37125badc7343abff659c38696ebca788c17caf7c873711dfb47f0"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\df776259ff47d41c8f5644929999649529e2989037f4d3c296f35eb5bb9c2bdb.wav",
+      "sha256": "1fc91945f476728419374b5dd42e8347c00e3b56756a74e4d1ca0078d848600c"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\8b9bce456d3912b679015b9a3209714b58dd7776d68b816894def2d2f24262ac.wav",
+      "sha256": "85fee9c15171f1423d8fbd2e9f5cf7c793ab48176000a968e2bf828ac8fd82ed"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\4a454082b68ec78cb17ae839a23674eaa5a46f01d8abbb1ee6598c83b4e9dea6.wav",
+      "sha256": "1147407927e3e69fdea6cba9febf141cc8af73d802ec70c9336fc16ad84bf564"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\ba682bc81f8c5da9a0cd091a6cd74be38c699b56b7ac2b2568ea7e36eccd6f26.wav",
+      "sha256": "c77e3a044a3894f27a60187449b063c4436c88c5f31843901ce6dcdbf03ebcfa"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\b7ae52e1f26a3ae1b5f69cfc38994f4a5f38877223a33a29d30ed10919a15ece.wav",
+      "sha256": "e144e8534122d34ba7d33645f51dd5b0dbd7f724a17c13c3bf5740f64078e0b4"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\a7c82e0dda885476584465b23b3251979ef0032df44e647df66d853edfc36d1e.wav",
+      "sha256": "2d14b37de8979e7960f41ed8a5a1512f7d26e596a0af86ff33478ddf36bcb894"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\df30cf5d40eb45a62b91e22dcc11ba3ff5c2ecbcc331645eb3be1f252ab2bcc5.wav",
+      "sha256": "0938c5d5beaffdafda69eeffbf3769dbefa49a3dba3fcdd2e68a3898a5f0df2e"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\d239b034c8785eef75b4133bf731dadba3ef716ae6490d07610547f5de3a0a7a.wav",
+      "sha256": "c7a330c6853c0165d508a23e5723b118e4fb912908232eb6ff47319a2ad741a0"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\e49ce7f969caf32c68ba890c4a0ec3cecfbf4e64255d804f9d081f781191b08a.wav",
+      "sha256": "ccbd04fcf383a94cfa45cb2e415502628558aa7de1ca4d013ea4cb5f7879edaf"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\3fb8e597d57c12918d2bbd005887a1721edd762a8960c041fab7f184972f7f0f.wav",
+      "sha256": "cb427b7a1d84f5e6608ac02a50e3e07cd023077af63a9472e11d4763ce64062c"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\b11694b8bacaa1c9d1c12a0c9a13f5e2daafd3790688699a3299619f6f8c43d5.wav",
+      "sha256": "373be22821f650dae78b932cab9372161fa6defd5fe140820a3bc7cb0f096e4a"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\1ce98fdacdf03aa958b4dff9466d5bd4440ac4c99b98d841b5c7da6fee8f97ea.wav",
+      "sha256": "055c7cc8ceff87237ae241c81563fce7c43a653afeaea012ccbcd1db0fc33a95"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\ec8ae24951a85ce5780d79b09ce42daba73f19a0cbfe85c390bc222f720352f0.wav",
+      "sha256": "f85e5d881b66fe1930fdb5869b15205290efaa195595f3abf3d8b6760b3e9148"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\1d036bf293063915b090170275ed14c1dca197236993fc01ff80df26c92880a7.wav",
+      "sha256": "aad06e2d0acd76bd788c40d80e77542fa6785ffb596f202b482565b0b6dae720"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\699201dd0cd9ebddce12ee9ec9686819765aa1f331522125e915d867dfaf7d31.wav",
+      "sha256": "803db0d2571de9fa94400983cc7e7d2cd9a4df1286f7dcd42434a2058dc2279b"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\e0b803046afbb2e36d9b701e2a04ca0dc41187a139eb6a4e57aa79872f841ccc.wav",
+      "sha256": "d149fde00e5405a6f6e4e2d107a29a9e5aa91279c84f7ef1702d6a4ab28a8106"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\083815afcbc640e931e71f5a347e61e9b84a55096ff07c8c4ad2cd9ee7022060.wav",
+      "sha256": "6406231a853ac79dc49e852142d579af170aa98a409751a8864fd23de85df44e"
+    },
+    {
+      "file": "out\\ai-history-tts\\line-cache\\46b9e568466705f334705ed8f948ab1ed024b6bde55e6e3a770aa19424d9e465.wav",
+      "sha256": "abbfb8c0b64e61aad539b917d32d3c5b87cb01ddeff8a80621cd1bd56410d107"
+    }
+  ],
+  "engine": {
+    "engine": "sherpa-onnx",
+    "version": "2.0.1",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "speakerId": 3,
+    "speed": 1.03
+  },
+  "scenes": [
+    {
+      "id": "intro",
+      "startSample": 0,
+      "endSampleExclusive": 480000,
+      "slotSamples": 480000,
+      "voiceStartSample": 28800,
+      "voiceEndSampleExclusive": 367418,
+      "voiceSamples": 338618,
+      "nativeSamples": 169309,
+      "normalizationGain": 1.0607504693921799,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\f79edf3a5b8047947d0b45f634440702f16ae10eb3356b51b630db8d605722a8.wav",
+          "sha256": "55775ec36c6c458e69f5d2f2cc99f1bb11925868584ebd0c238e7c3e7a117e0c",
+          "cacheKey": "f79edf3a5b8047947d0b45f634440702f16ae10eb3356b51b630db8d605722a8",
+          "cacheKeyKind": "current",
+          "frames": 77443,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "2edc7de9e6ff11e1ed714e6d88639e4915fad7fbaa191fddc3d4fe47023c3e00",
+          "spokenTextSha256": "2edc7de9e6ff11e1ed714e6d88639e4915fad7fbaa191fddc3d4fe47023c3e00",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 28800,
+          "masterEndSampleExclusive": 183686
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\2a78f33aa43e585904fbde55f436ce14530ffaaf2e1a071d08dbc623cd4c10eb.wav",
+          "sha256": "9f0418f2b9c45f91f4e24d8863f6543d98fab9e42723ceae7c1480221b5f3505",
+          "cacheKey": "2a78f33aa43e585904fbde55f436ce14530ffaaf2e1a071d08dbc623cd4c10eb",
+          "cacheKeyKind": "current",
+          "frames": 87066,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "63237ca9061d68b2d86d10129e3081a59ff36fc5a507204d573b8bc67c0e5285",
+          "spokenTextSha256": "63237ca9061d68b2d86d10129e3081a59ff36fc5a507204d573b8bc67c0e5285",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 82243,
+          "masterStartSample": 193286,
+          "masterEndSampleExclusive": 367418
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.11036,
+      "reconstructedVoiceFloat64Sha256": "1510258c8798edf3288be603b495cc1b7899d1df49a21fcab5fea20452855f71"
+    },
+    {
+      "id": "terra",
+      "startSample": 480000,
+      "endSampleExclusive": 1344000,
+      "slotSamples": 864000,
+      "voiceStartSample": 508800,
+      "voiceEndSampleExclusive": 1150316,
+      "voiceSamples": 641516,
+      "nativeSamples": 320758,
+      "normalizationGain": 1.0645235896858016,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\45f1bdc2e9a2dee398b570cd0f61cae6a1ea029561806dd38dfaf9645cd0176c.wav",
+          "sha256": "ef1642ee88ae67610fa51a43e49290c848146f805094e47d4bdc1e85cc416e1e",
+          "cacheKey": "45f1bdc2e9a2dee398b570cd0f61cae6a1ea029561806dd38dfaf9645cd0176c",
+          "cacheKeyKind": "current",
+          "frames": 137920,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "41cbf9ffcb87514ee7099331e981167f55c64cd4fd3d1373544ec6553ed8923a",
+          "spokenTextSha256": "41cbf9ffcb87514ee7099331e981167f55c64cd4fd3d1373544ec6553ed8923a",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 508800,
+          "masterEndSampleExclusive": 784640
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\50869036f14b93b22610bc61c36f3512e365e46bccb45a5e588adba4b3d8e687.wav",
+          "sha256": "4e38bd2e3c37125badc7343abff659c38696ebca788c17caf7c873711dfb47f0",
+          "cacheKey": "50869036f14b93b22610bc61c36f3512e365e46bccb45a5e588adba4b3d8e687",
+          "cacheKeyKind": "current",
+          "frames": 178038,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "c0df4ebedec5e4b668d313e516a0bcb885396da9d343effa626ceaa9392e6d6d",
+          "spokenTextSha256": "c0df4ebedec5e4b668d313e516a0bcb885396da9d343effa626ceaa9392e6d6d",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 142720,
+          "masterStartSample": 794240,
+          "masterEndSampleExclusive": 1150316
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.11038,
+      "reconstructedVoiceFloat64Sha256": "e09ec68c0d2232d97e2a5471cb90079f2ad8207b7698663d2b8345638dd3ead0"
+    },
+    {
+      "id": "nvidia-meta",
+      "startSample": 1344000,
+      "endSampleExclusive": 2208000,
+      "slotSamples": 864000,
+      "voiceStartSample": 1372800,
+      "voiceEndSampleExclusive": 1981924,
+      "voiceSamples": 609124,
+      "nativeSamples": 304562,
+      "normalizationGain": 1.1314704548241068,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\df776259ff47d41c8f5644929999649529e2989037f4d3c296f35eb5bb9c2bdb.wav",
+          "sha256": "1fc91945f476728419374b5dd42e8347c00e3b56756a74e4d1ca0078d848600c",
+          "cacheKey": "df776259ff47d41c8f5644929999649529e2989037f4d3c296f35eb5bb9c2bdb",
+          "cacheKeyKind": "current",
+          "frames": 138374,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "3a7b737fadec47f3ffcf2ac19e3eb70e8fbd8edad7dd14a8235e68350d37a60b",
+          "spokenTextSha256": "3a7b737fadec47f3ffcf2ac19e3eb70e8fbd8edad7dd14a8235e68350d37a60b",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 1372800,
+          "masterEndSampleExclusive": 1649548
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\8b9bce456d3912b679015b9a3209714b58dd7776d68b816894def2d2f24262ac.wav",
+          "sha256": "85fee9c15171f1423d8fbd2e9f5cf7c793ab48176000a968e2bf828ac8fd82ed",
+          "cacheKey": "8b9bce456d3912b679015b9a3209714b58dd7776d68b816894def2d2f24262ac",
+          "cacheKeyKind": "current",
+          "frames": 161388,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "4ec49df9e3813b9dfbf86ebefb37342a911945d8a4c35065372085ad245d8990",
+          "spokenTextSha256": "4ec49df9e3813b9dfbf86ebefb37342a911945d8a4c35065372085ad245d8990",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 143174,
+          "masterStartSample": 1659148,
+          "masterEndSampleExclusive": 1981924
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.110352,
+      "reconstructedVoiceFloat64Sha256": "8591960c6e03c61d0b999ee20449619dfca49acfc744e5ea556a16aafc575628"
+    },
+    {
+      "id": "baidu-ocr",
+      "startSample": 2208000,
+      "endSampleExclusive": 3072000,
+      "slotSamples": 864000,
+      "voiceStartSample": 2236800,
+      "voiceEndSampleExclusive": 2933508,
+      "voiceSamples": 696708,
+      "nativeSamples": 348354,
+      "normalizationGain": 1.1178966847328,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\4a454082b68ec78cb17ae839a23674eaa5a46f01d8abbb1ee6598c83b4e9dea6.wav",
+          "sha256": "1147407927e3e69fdea6cba9febf141cc8af73d802ec70c9336fc16ad84bf564",
+          "cacheKey": "4a454082b68ec78cb17ae839a23674eaa5a46f01d8abbb1ee6598c83b4e9dea6",
+          "cacheKeyKind": "current",
+          "frames": 129094,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "b02fd4982e57a80b56fe4fa1354c7e130be45f888b8ee8ae1010b64d1d20edac",
+          "spokenTextSha256": "b02fd4982e57a80b56fe4fa1354c7e130be45f888b8ee8ae1010b64d1d20edac",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 2236800,
+          "masterEndSampleExclusive": 2494988
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\ba682bc81f8c5da9a0cd091a6cd74be38c699b56b7ac2b2568ea7e36eccd6f26.wav",
+          "sha256": "c77e3a044a3894f27a60187449b063c4436c88c5f31843901ce6dcdbf03ebcfa",
+          "cacheKey": "ba682bc81f8c5da9a0cd091a6cd74be38c699b56b7ac2b2568ea7e36eccd6f26",
+          "cacheKeyKind": "current",
+          "frames": 214460,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "471cd0e82683a18ec34c6e72124b7b6b61619210b0c4ddb19608320225258add",
+          "spokenTextSha256": "471cd0e82683a18ec34c6e72124b7b6b61619210b0c4ddb19608320225258add",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 133894,
+          "masterStartSample": 2504588,
+          "masterEndSampleExclusive": 2933508
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.110363,
+      "reconstructedVoiceFloat64Sha256": "849f9f43303da86e1070fdb50088b3a761cd3a6b84880689c90575ccaec3ace3"
+    },
+    {
+      "id": "claude-research",
+      "startSample": 3072000,
+      "endSampleExclusive": 3936000,
+      "slotSamples": 864000,
+      "voiceStartSample": 3100800,
+      "voiceEndSampleExclusive": 3692574,
+      "voiceSamples": 591774,
+      "nativeSamples": 295887,
+      "normalizationGain": 1.0657260644996518,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\b7ae52e1f26a3ae1b5f69cfc38994f4a5f38877223a33a29d30ed10919a15ece.wav",
+          "sha256": "e144e8534122d34ba7d33645f51dd5b0dbd7f724a17c13c3bf5740f64078e0b4",
+          "cacheKey": "b7ae52e1f26a3ae1b5f69cfc38994f4a5f38877223a33a29d30ed10919a15ece",
+          "cacheKeyKind": "current",
+          "frames": 124245,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "522b23c11162049038f31ef2763cd1cfcb4f155a171f919eb33869ca71f84f76",
+          "spokenTextSha256": "522b23c11162049038f31ef2763cd1cfcb4f155a171f919eb33869ca71f84f76",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 3100800,
+          "masterEndSampleExclusive": 3349290
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\a7c82e0dda885476584465b23b3251979ef0032df44e647df66d853edfc36d1e.wav",
+          "sha256": "2d14b37de8979e7960f41ed8a5a1512f7d26e596a0af86ff33478ddf36bcb894",
+          "cacheKey": "a7c82e0dda885476584465b23b3251979ef0032df44e647df66d853edfc36d1e",
+          "cacheKeyKind": "current",
+          "frames": 166842,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "18d6d39ee2a520ac12e939b7092dc7c6e8ef8d9b4e8b91a6d680bdc3f1826a09",
+          "spokenTextSha256": "18d6d39ee2a520ac12e939b7092dc7c6e8ef8d9b4e8b91a6d680bdc3f1826a09",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 129045,
+          "masterStartSample": 3358890,
+          "masterEndSampleExclusive": 3692574
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.110346,
+      "reconstructedVoiceFloat64Sha256": "3b3122ca02a108748fe200d746d00f1591a50d3f10ab51e01f61fe9791fc7732"
+    },
+    {
+      "id": "microsoft-literacy",
+      "startSample": 3936000,
+      "endSampleExclusive": 4800000,
+      "slotSamples": 864000,
+      "voiceStartSample": 3964800,
+      "voiceEndSampleExclusive": 4587788,
+      "voiceSamples": 622988,
+      "nativeSamples": 311494,
+      "normalizationGain": 1.0722695282536432,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\df30cf5d40eb45a62b91e22dcc11ba3ff5c2ecbcc331645eb3be1f252ab2bcc5.wav",
+          "sha256": "0938c5d5beaffdafda69eeffbf3769dbefa49a3dba3fcdd2e68a3898a5f0df2e",
+          "cacheKey": "df30cf5d40eb45a62b91e22dcc11ba3ff5c2ecbcc331645eb3be1f252ab2bcc5",
+          "cacheKeyKind": "current",
+          "frames": 151628,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "e5429286c06fc8814110c7aa32cabb5a2b85b2c3777a893e74eca06769f4c677",
+          "spokenTextSha256": "e5429286c06fc8814110c7aa32cabb5a2b85b2c3777a893e74eca06769f4c677",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 3964800,
+          "masterEndSampleExclusive": 4268056
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\d239b034c8785eef75b4133bf731dadba3ef716ae6490d07610547f5de3a0a7a.wav",
+          "sha256": "c7a330c6853c0165d508a23e5723b118e4fb912908232eb6ff47319a2ad741a0",
+          "cacheKey": "d239b034c8785eef75b4133bf731dadba3ef716ae6490d07610547f5de3a0a7a",
+          "cacheKeyKind": "current",
+          "frames": 155066,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "99f9cbd770ec1ffccd1bce63ae185036d7563fbe3a54ea13e2a4a85f92c18575",
+          "spokenTextSha256": "99f9cbd770ec1ffccd1bce63ae185036d7563fbe3a54ea13e2a4a85f92c18575",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 156428,
+          "masterStartSample": 4277656,
+          "masterEndSampleExclusive": 4587788
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.110358,
+      "reconstructedVoiceFloat64Sha256": "1f724169441baf83f3572c62da07a90cd3b3952c0b8fb13ae243175113d45e49"
+    },
+    {
+      "id": "clover",
+      "startSample": 4800000,
+      "endSampleExclusive": 5664000,
+      "slotSamples": 864000,
+      "voiceStartSample": 4828800,
+      "voiceEndSampleExclusive": 5341016,
+      "voiceSamples": 512216,
+      "nativeSamples": 256108,
+      "normalizationGain": 1.0781779122364954,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\e49ce7f969caf32c68ba890c4a0ec3cecfbf4e64255d804f9d081f781191b08a.wav",
+          "sha256": "ccbd04fcf383a94cfa45cb2e415502628558aa7de1ca4d013ea4cb5f7879edaf",
+          "cacheKey": "e49ce7f969caf32c68ba890c4a0ec3cecfbf4e64255d804f9d081f781191b08a",
+          "cacheKeyKind": "current",
+          "frames": 79415,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "442cccdb65f14f22d885bf0c81f1853736c2b917c0005fa9869239fbc24fdf46",
+          "spokenTextSha256": "442cccdb65f14f22d885bf0c81f1853736c2b917c0005fa9869239fbc24fdf46",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 4828800,
+          "masterEndSampleExclusive": 4987630
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\3fb8e597d57c12918d2bbd005887a1721edd762a8960c041fab7f184972f7f0f.wav",
+          "sha256": "cb427b7a1d84f5e6608ac02a50e3e07cd023077af63a9472e11d4763ce64062c",
+          "cacheKey": "3fb8e597d57c12918d2bbd005887a1721edd762a8960c041fab7f184972f7f0f",
+          "cacheKeyKind": "current",
+          "frames": 171893,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "b72f6d51f15880d404a65ce9b57761754b38ff3ff516e7a14b3d80cbbbb89ff0",
+          "spokenTextSha256": "b72f6d51f15880d404a65ce9b57761754b38ff3ff516e7a14b3d80cbbbb89ff0",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 84215,
+          "masterStartSample": 4997230,
+          "masterEndSampleExclusive": 5341016
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.110413,
+      "reconstructedVoiceFloat64Sha256": "dc9b2f04ca492e68843d2fd549becfb382d1fe1a87af2c0af4394f9dd6952b37"
+    },
+    {
+      "id": "apex",
+      "startSample": 5664000,
+      "endSampleExclusive": 6528000,
+      "slotSamples": 864000,
+      "voiceStartSample": 5692800,
+      "voiceEndSampleExclusive": 6276802,
+      "voiceSamples": 584002,
+      "nativeSamples": 292001,
+      "normalizationGain": 1.0712675596173205,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\b11694b8bacaa1c9d1c12a0c9a13f5e2daafd3790688699a3299619f6f8c43d5.wav",
+          "sha256": "373be22821f650dae78b932cab9372161fa6defd5fe140820a3bc7cb0f096e4a",
+          "cacheKey": "b11694b8bacaa1c9d1c12a0c9a13f5e2daafd3790688699a3299619f6f8c43d5",
+          "cacheKeyKind": "current",
+          "frames": 115187,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "39ee3ea5ee37e558289d27eed5b4c9b8b3ea2e18a56e78f0efdccaa2a494ed19",
+          "spokenTextSha256": "39ee3ea5ee37e558289d27eed5b4c9b8b3ea2e18a56e78f0efdccaa2a494ed19",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 5692800,
+          "masterEndSampleExclusive": 5923174
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\1ce98fdacdf03aa958b4dff9466d5bd4440ac4c99b98d841b5c7da6fee8f97ea.wav",
+          "sha256": "055c7cc8ceff87237ae241c81563fce7c43a653afeaea012ccbcd1db0fc33a95",
+          "cacheKey": "1ce98fdacdf03aa958b4dff9466d5bd4440ac4c99b98d841b5c7da6fee8f97ea",
+          "cacheKeyKind": "current",
+          "frames": 172014,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "c7f7a6c918cf3ef85d1e93bcadea5993c92b3ac4c26aa729b8be17d20b509106",
+          "spokenTextSha256": "f8c97143dfeec7508ae485be66e5c0b82ea8f9b27341060c69c4cf5f8832a8a4",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 119987,
+          "masterStartSample": 5932774,
+          "masterEndSampleExclusive": 6276802
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.110367,
+      "reconstructedVoiceFloat64Sha256": "be80c4f9744363dbb377fbb340a0c200e11803c7f862586742528512e9bfa9d2"
+    },
+    {
+      "id": "carbon",
+      "startSample": 6528000,
+      "endSampleExclusive": 7344000,
+      "slotSamples": 816000,
+      "voiceStartSample": 6556800,
+      "voiceEndSampleExclusive": 7188880,
+      "voiceSamples": 632080,
+      "nativeSamples": 316040,
+      "normalizationGain": 1.0736319137165555,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\ec8ae24951a85ce5780d79b09ce42daba73f19a0cbfe85c390bc222f720352f0.wav",
+          "sha256": "f85e5d881b66fe1930fdb5869b15205290efaa195595f3abf3d8b6760b3e9148",
+          "cacheKey": "ec8ae24951a85ce5780d79b09ce42daba73f19a0cbfe85c390bc222f720352f0",
+          "cacheKeyKind": "current",
+          "frames": 128997,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "1bd042a0e3ef963e0ff9cd0e17ee7185ec626429279b2bccf6b5fb688d0d3387",
+          "spokenTextSha256": "1bd042a0e3ef963e0ff9cd0e17ee7185ec626429279b2bccf6b5fb688d0d3387",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 6556800,
+          "masterEndSampleExclusive": 6814794
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\1d036bf293063915b090170275ed14c1dca197236993fc01ff80df26c92880a7.wav",
+          "sha256": "aad06e2d0acd76bd788c40d80e77542fa6785ffb596f202b482565b0b6dae720",
+          "cacheKey": "1d036bf293063915b090170275ed14c1dca197236993fc01ff80df26c92880a7",
+          "cacheKeyKind": "current",
+          "frames": 182243,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "891b506d99a012b1da6339ff8c648091a855d09da68973f3b5b0522d02da5975",
+          "spokenTextSha256": "891b506d99a012b1da6339ff8c648091a855d09da68973f3b5b0522d02da5975",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 133797,
+          "masterStartSample": 6824394,
+          "masterEndSampleExclusive": 7188880
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.110356,
+      "reconstructedVoiceFloat64Sha256": "25161b9423f8d8e8f3f15ac8ca18d13784711f1dafb7a9a9b17010466fe1d74b"
+    },
+    {
+      "id": "go3",
+      "startSample": 7344000,
+      "endSampleExclusive": 8160000,
+      "slotSamples": 816000,
+      "voiceStartSample": 7372800,
+      "voiceEndSampleExclusive": 7903486,
+      "voiceSamples": 530686,
+      "nativeSamples": 265343,
+      "normalizationGain": 1.081606526332722,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\699201dd0cd9ebddce12ee9ec9686819765aa1f331522125e915d867dfaf7d31.wav",
+          "sha256": "803db0d2571de9fa94400983cc7e7d2cd9a4df1286f7dcd42434a2058dc2279b",
+          "cacheKey": "699201dd0cd9ebddce12ee9ec9686819765aa1f331522125e915d867dfaf7d31",
+          "cacheKeyKind": "current",
+          "frames": 68575,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "2df581aebe699796b3f50055d2eb15450b329dbb68548be3a8d74949a3f07e2c",
+          "spokenTextSha256": "2df581aebe699796b3f50055d2eb15450b329dbb68548be3a8d74949a3f07e2c",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 7372800,
+          "masterEndSampleExclusive": 7509950
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\e0b803046afbb2e36d9b701e2a04ca0dc41187a139eb6a4e57aa79872f841ccc.wav",
+          "sha256": "d149fde00e5405a6f6e4e2d107a29a9e5aa91279c84f7ef1702d6a4ab28a8106",
+          "cacheKey": "e0b803046afbb2e36d9b701e2a04ca0dc41187a139eb6a4e57aa79872f841ccc",
+          "cacheKeyKind": "current",
+          "frames": 191968,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "02e28de6ae31693f1e637c1a29cba40394f8c3f3d4df0fd504a580c7cc32fd3d",
+          "spokenTextSha256": "02e28de6ae31693f1e637c1a29cba40394f8c3f3d4df0fd504a580c7cc32fd3d",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 73375,
+          "masterStartSample": 7519550,
+          "masterEndSampleExclusive": 7903486
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.11037,
+      "reconstructedVoiceFloat64Sha256": "5b67c312d0bd014f213defde0d77793036c78a9a8d9280859d9b44c256276caf"
+    },
+    {
+      "id": "outro",
+      "startSample": 8160000,
+      "endSampleExclusive": 8640000,
+      "slotSamples": 480000,
+      "voiceStartSample": 8188800,
+      "voiceEndSampleExclusive": 8568466,
+      "voiceSamples": 379666,
+      "nativeSamples": 189833,
+      "normalizationGain": 1.1114236386064444,
+      "voiceVolume": 0.88,
+      "sentenceGapSeconds": 0.2,
+      "sentences": [
+        {
+          "file": "out\\ai-history-tts\\line-cache\\083815afcbc640e931e71f5a347e61e9b84a55096ff07c8c4ad2cd9ee7022060.wav",
+          "sha256": "6406231a853ac79dc49e852142d579af170aa98a409751a8864fd23de85df44e",
+          "cacheKey": "083815afcbc640e931e71f5a347e61e9b84a55096ff07c8c4ad2cd9ee7022060",
+          "cacheKeyKind": "current",
+          "frames": 88511,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "0557d16d3edcc1e28eaa91dd5e15b7b813a82cd007dc21b1e1105c20893378eb",
+          "spokenTextSha256": "0557d16d3edcc1e28eaa91dd5e15b7b813a82cd007dc21b1e1105c20893378eb",
+          "sentenceIndex": 0,
+          "sceneNativeStartSample": 0,
+          "masterStartSample": 8188800,
+          "masterEndSampleExclusive": 8365822
+        },
+        {
+          "file": "out\\ai-history-tts\\line-cache\\46b9e568466705f334705ed8f948ab1ed024b6bde55e6e3a770aa19424d9e465.wav",
+          "sha256": "abbfb8c0b64e61aad539b917d32d3c5b87cb01ddeff8a80621cd1bd56410d107",
+          "cacheKey": "46b9e568466705f334705ed8f948ab1ed024b6bde55e6e3a770aa19424d9e465",
+          "cacheKeyKind": "current",
+          "frames": 96522,
+          "sampleRate": 24000,
+          "subtype": "FLOAT",
+          "channels": 1,
+          "textSha256": "445350114b7ead3d5c5d253a27950b609a1301bb9175f7a973e14a8ce5c37832",
+          "spokenTextSha256": "445350114b7ead3d5c5d253a27950b609a1301bb9175f7a973e14a8ce5c37832",
+          "sentenceIndex": 1,
+          "sceneNativeStartSample": 93311,
+          "masterStartSample": 8375422,
+          "masterEndSampleExclusive": 8568466
+        }
+      ],
+      "reconstructedVoiceRmsDbfs": -24.1104,
+      "reconstructedVoiceFloat64Sha256": "35747ceea05938bebecd786ae2516f2f509935864b72dd3247f957ad85b8a3fc"
+    }
+  ],
+  "music": {
+    "title": "Ten Windows, One Day",
+    "tempoBpm": 76,
+    "chordsMidi": [
+      [
+        50,
+        57,
+        61,
+        64
+      ],
+      [
+        52,
+        59,
+        62,
+        66
+      ],
+      [
+        55,
+        62,
+        66,
+        69
+      ],
+      [
+        57,
+        64,
+        69,
+        71
+      ]
+    ],
+    "pattern": [
+      [
+        0,
+        1
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4.5,
+        1
+      ],
+      [
+        6.5,
+        2
+      ]
+    ],
+    "bars": 30,
+    "targetRmsDbfs": -41,
+    "peakCeilingDbfs": -29,
+    "synthesisFadeInSeconds": 3,
+    "synthesisFadeOutSeconds": 7,
+    "compositionFadeInSeconds": 2,
+    "compositionFadeOutSeconds": 4,
+    "externalSamples": [],
+    "nativeSampleRate": 48000,
+    "parametersSha256": "ce92a76dd579ebf4b56c7bed79bc4e89e2192e849420880f3ccc336454e47bfd",
+    "normalizationGain": 0.0544589520889983,
+    "preCompositionFadeRmsDbfs": -41.0,
+    "postCompositionFadeRmsDbfs": -41.00789,
+    "referenceLevel": "same -41 dBFS pre-MP3 RMS target and -29 dBFS ceiling as original synthesis",
+    "regeneratedFromAnalyticFunctions": true,
+    "usedPcm16OrMp3": false,
+    "float64DataSha256": "24aba6da8ef70d762b7b2d13cb1a85798f874f77b2fd8078f4ef29bf96c02b82"
+  },
+  "resampler": {
+    "method": "2x zero insertion and linear-phase Kaiser-windowed sinc FIR",
+    "taps": 129,
+    "kaiserBeta": 8.6,
+    "cutoffHz": 12000,
+    "groupDelayCompensated": true,
+    "boundary": "zero extension",
+    "outputSamples": "exactly twice the input sample count"
+  },
+  "builderSha256": "324ad4cc1e26c6c04cb367bc73ee5175fb2b910716f51d9cae3b8792adcd97e9",
+  "runtime": {
+    "pythonVersion": "3.14.4",
+    "numpyVersion": "2.3.4",
+    "soundfileVersion": "0.13.1",
+    "libsndfileVersion": "1.2.2"
+  },
+  "verification": {
+    "status": "passed",
+    "fullDecodePassed": true,
+    "sampleRate": 48000,
+    "bitsPerSample": 24,
+    "channels": 2,
+    "layout": "dual-mono",
+    "framesPerChannel": 8640000,
+    "durationSeconds": 180.0,
+    "clippedSamplesPerChannel": [
+      0,
+      0
+    ],
+    "nonIdenticalChannelFrames": 0,
+    "samplePeakDbfsPerChannel": [
+      -7.375314,
+      -7.375314
+    ],
+    "rmsDbfsPerChannel": [
+      -25.473552,
+      -25.473552
+    ],
+    "scenes": [
+      {
+        "id": "intro",
+        "frames": 480000,
+        "rmsDbfs": -25.526553,
+        "peakDbfs": -9.268275
+      },
+      {
+        "id": "terra",
+        "frames": 864000,
+        "rmsDbfs": -25.282311,
+        "peakDbfs": -9.254471
+      },
+      {
+        "id": "nvidia-meta",
+        "frames": 864000,
+        "rmsDbfs": -25.49531,
+        "peakDbfs": -9.13173
+      },
+      {
+        "id": "baidu-ocr",
+        "frames": 864000,
+        "rmsDbfs": -24.937841,
+        "peakDbfs": -7.375314
+      },
+      {
+        "id": "claude-research",
+        "frames": 864000,
+        "rmsDbfs": -25.628122,
+        "peakDbfs": -8.565306
+      },
+      {
+        "id": "microsoft-literacy",
+        "frames": 864000,
+        "rmsDbfs": -25.409634,
+        "peakDbfs": -9.111976
+      },
+      {
+        "id": "clover",
+        "frames": 864000,
+        "rmsDbfs": -26.233255,
+        "peakDbfs": -7.969571
+      },
+      {
+        "id": "apex",
+        "frames": 864000,
+        "rmsDbfs": -25.676795,
+        "peakDbfs": -9.453546
+      },
+      {
+        "id": "carbon",
+        "frames": 816000,
+        "rmsDbfs": -25.100941,
+        "peakDbfs": -9.166117
+      },
+      {
+        "id": "go3",
+        "frames": 816000,
+        "rmsDbfs": -25.846275,
+        "peakDbfs": -8.837742
+      },
+      {
+        "id": "outro",
+        "frames": 480000,
+        "rmsDbfs": -25.064698,
+        "peakDbfs": -8.358446
+      }
+    ]
+  }
+}

@@ -4,6 +4,7 @@ import { createReadStream } from "node:fs";
 import { mkdir, mkdtemp, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { getMediaTools } from "./lib/media-tools.mjs";
 
 // Measures the actual exported mix, never the source MP3s. Keeps decoded PCM.
 // Usage: node scripts/verify-weekly-ten-media.mjs FILE [EDITION]
@@ -15,12 +16,7 @@ if (!input || extra.length || !/^[a-z0-9-]+$/.test(edition))
   );
 const file = path.resolve(root, input);
 const reportPath = `${file}.audio-validation.json`;
-const binaries = path.join(
-  root,
-  "node_modules/@remotion/compositor-win32-x64-msvc",
-);
-const ffmpeg = path.join(binaries, "ffmpeg.exe");
-const ffprobe = path.join(binaries, "ffprobe.exe");
+const { ffmpeg, ffprobe } = getMediaTools();
 const storyboardPath = path.join(root, `effects/${edition}/storyboard.json`);
 const manifestPath = path.join(
   root,
@@ -285,7 +281,7 @@ try {
     execFileSync(
       ffprobe,
       ["-v", "error", "-show_streams", "-show_format", "-of", "json", file],
-      { encoding: "utf8", windowsHide: true, timeout: 30000 },
+      { encoding: "utf8", windowsHide: true, shell: false, timeout: 30000 },
     ),
   );
   const audioStreams =
@@ -344,7 +340,7 @@ try {
       "wav",
       wavFile,
     ],
-    { windowsHide: true, stdio: "pipe", timeout: 300000 },
+    { windowsHide: true, shell: false, stdio: "pipe", timeout: 300000 },
   );
   const wav = await readFile(wavFile);
   const { pcm, format } = pcmFromWav(wav);

@@ -6,6 +6,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseArgs } from "node:util";
+import { getMediaTools } from "./lib/media-tools.mjs";
 
 // Exercise the real bundler, Chromium renderer and local audio files.
 // This command creates QA stills and a report, not an MP4 export.
@@ -30,7 +31,12 @@ if (!id || !/^[a-zA-Z0-9_-]+$/.test(id) || !(seconds > 0) || !(fps > 0)) {
     "Usage: node scripts/verify-composition.mjs ID --seconds=60 --fps=60 [--width=1080 --height=1920] [--frames=180,1080] [--voiceover=china-genai/voiceover-manifest.json]",
   );
 }
-if (!Number.isInteger(width) || !Number.isInteger(height) || width <= 0 || height <= 0) {
+if (
+  !Number.isInteger(width) ||
+  !Number.isInteger(height) ||
+  width <= 0 ||
+  height <= 0
+) {
   throw new Error("Expected positive integer --width and --height");
 }
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -123,14 +129,7 @@ try {
     if (!manifestFile.startsWith(`${root}${path.sep}public${path.sep}`))
       throw new Error("Invalid voiceover manifest path");
     const manifest = JSON.parse(await readFile(manifestFile, "utf8"));
-    const ffmpeg = path.join(
-      root,
-      "node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe",
-    );
-    const ffprobe = path.join(
-      root,
-      "node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe",
-    );
+    const { ffmpeg, ffprobe } = getMediaTools();
     let totalSeconds = 0;
     for (const scene of manifest.scenes) {
       const file = path.resolve(path.dirname(manifestFile), scene.file);
@@ -148,7 +147,7 @@ try {
             "json",
             file,
           ],
-          { encoding: "utf8", windowsHide: true },
+          { encoding: "utf8", windowsHide: true, shell: false },
         ),
       );
       const duration = Number(metadata.format.duration);
@@ -161,10 +160,29 @@ try {
         throw new Error(`Audio overruns scene: ${scene.file}`);
       if (Math.abs(duration - scene.durationSeconds) > 0.1)
         throw new Error(`Audio manifest is stale: ${scene.file}`);
-      execFileSync(ffmpeg, ["-v", "error", "-i", file, "-f", "null", "-"], {
-        stdio: "pipe",
-        windowsHide: true,
-      });
+      execFileSync(
+        ffmpeg,
+        [
+          "-v",
+          "error",
+          "-xerror",
+          "-i",
+          file,
+          "-map",
+          "0:a:0",
+          "-vn",
+          "-c:a",
+          "pcm_s16le",
+          "-f",
+          "null",
+          "-",
+        ],
+        {
+          stdio: "pipe",
+          windowsHide: true,
+          shell: false,
+        },
+      );
       let captionEnd = 0;
       for (const caption of scene.captions ?? []) {
         if (

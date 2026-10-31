@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-31T05:27:44.983853+00:00",
+  "scope": "Local workflow integration; GitHub results must be verified separately at the PR head SHA",
+  "checks": {
+    "nodeFixtures": 13,
+    "pythonFixtures": 18,
+    "editionContentChecks": 3,
+    "quickQaFramesPerPlatform": 3,
+    "cpuSmokeSeconds": 4,
+    "genericPartialRenderSecondsPerPlatform": 2,
+    "pcm24FullRemuxSecondsPerPlatform": 180,
+    "pcm24SampleRate": 48000,
+    "pcm24Bits": 24,
+    "pcm24Channels": 2,
+    "originalVideoPacketMatchesPerPlatform": 10800
+  },
+  "originalMp4HashesUnchanged": {
+    "ai-weekly-20261030-bilibili-1080p60.mp4": "5ec64376cab3816737213698458b9ca10ebb356f1044a19e0e14b5686fbe103c",
+    "ai-weekly-20261030-douyin-1080p60.mp4": "0fe3ebabbcb347a5e629e3982bd8cc2a5acc0f866f864dce6cf3ef49f571c95e"
+  },
+  "sourceNativeSampleRate": 24000,
+  "resampled": true,
+  "nativeHiRes": false,
+  "atmosPositiveFixture": "not available; external authentic JOC/QC required",
+  "evidenceFiles": [
+    "local-cpu-smoke.json",
+    "ai-weekly-master.json",
+    "ai-weekly-master-native-validation.json",
+    "local-partial-render.json",
+    "local-bilibili-quick-qa.json",
+    "local-douyin-quick-qa.json",
+    "bilibili-pcm24-validation.json",
+    "bilibili-remux-integrity.json",
+    "douyin-pcm24-validation.json",
+    "douyin-remux-integrity.json"
+  ]
+}
