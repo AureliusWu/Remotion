@@ -87,6 +87,9 @@ npm run workflow -- package --edition ai-weekly --platform douyin --profile hire
 要提高原生解析度，应先采用更高采样率的原始声源。
 
 当前Remotion公开音频编码及内部混音不能直接保留完整24bit制作链路，因此母带独立于其音频输出制作。
+封装源片必须有同名 `.audio-validation.json`（标准完整渲染自动生成），其中的作品名、视频SHA、
+原稿和配音清单SHA须与当前期一致，避免把同规格的其他视频配上本期旁白。
+母带清单的全部原始输入在封装前后重新核对，改过配音或原句样本就必须重建母带。
 项目自带FFmpeg可编码PCM24并封装MOV；FLAC/ALAC需要另接具备相应能力的编码器。
 PCM24视频保存在 `out/workflow-packages/<edition>/hires-pcm/`，标准MP4不会被覆盖。
 封装后完整解码、核验48kHz/24bit/双声道，并比较10800个原视频包的SHA，确认画面未经重编码。

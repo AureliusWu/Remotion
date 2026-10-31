@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { resolveNewsCount } from "./lib/news-contract.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const [edition, ...extra] = process.argv.slice(2);
@@ -26,16 +27,7 @@ const manifest = JSON.parse(
 );
 assert(Array.isArray(plan.shots) && plan.shots.length >= 3);
 const sceneCount = plan.shots.length;
-const newsCount = sceneCount - 2;
-// The existing 12-scene Weekly Ten predates explicit newsCount metadata.
-const declaredNewsCount =
-  plan.newsCount ?? (edition === "weekly-ten" ? 10 : undefined);
-assert(Number.isSafeInteger(declaredNewsCount) && declaredNewsCount > 0);
-assert.equal(
-  declaredNewsCount,
-  newsCount,
-  "newsCount must match the interior scenes",
-);
+const newsCount = resolveNewsCount(plan, edition);
 assert.equal(plan.shots[0].id, "intro");
 assert.equal(plan.shots.at(-1).id, "outro");
 assert.equal(plan.shots[0].durationSeconds, 10);

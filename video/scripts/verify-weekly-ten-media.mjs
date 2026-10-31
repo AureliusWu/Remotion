@@ -5,6 +5,7 @@ import { mkdir, mkdtemp, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { getMediaTools } from "./lib/media-tools.mjs";
+import { resolveNewsCount } from "./lib/news-contract.mjs";
 
 // Measures the actual exported mix, never the source MP3s. Keeps decoded PCM.
 // Usage: node scripts/verify-weekly-ten-media.mjs FILE [EDITION]
@@ -185,13 +186,7 @@ try {
     "Storyboard must contain an introduction, news scenes and an outro",
   );
   expected.scenes = storyboard.shots.length;
-  expected.newsCount = expected.scenes - 2;
-  const declaredNewsCount =
-    storyboard.newsCount ?? (edition === "weekly-ten" ? 10 : undefined);
-  requireCondition(
-    declaredNewsCount === expected.newsCount,
-    "Storyboard newsCount does not match its interior scenes",
-  );
+  expected.newsCount = resolveNewsCount(storyboard, edition);
   requireCondition(
     storyboard.shots[0].id === "intro" &&
       storyboard.shots.at(-1).id === "outro" &&

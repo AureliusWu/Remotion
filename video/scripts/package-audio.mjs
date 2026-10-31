@@ -6,6 +6,7 @@ import path from "node:path";
 import { parseArgs } from "node:util";
 import { getMediaTools } from "./lib/media-tools.mjs";
 import { assertCurrentMaster } from "./lib/master-integrity.mjs";
+import { assertEditionVideoSource } from "./lib/source-video-integrity.mjs";
 import {
   dimensions,
   loadEdition,
@@ -35,6 +36,15 @@ assert(
 assert(values.source, "--source is required; use an existing complete video");
 const source = path.resolve(videoRoot, values.source);
 assert(existsSync(source), "Source video does not exist");
+const sourceEvidence = () =>
+  assertEditionVideoSource({
+    report: readJson(`${source}.audio-validation.json`),
+    source,
+    root: videoRoot,
+    edition: edition.name,
+    sceneCount: edition.storyboard.shots.length,
+  });
+sourceEvidence();
 const { ffmpeg, ffprobe } = getMediaTools();
 const run = (binary, args) =>
   execFileSync(binary, args, {
@@ -244,6 +254,7 @@ try {
       seconds: edition.seconds,
       file: audio,
     });
+  sourceEvidence();
   report.audioOrigin = master
     ? {
         sourceNativeSampleRate: master.sourceNativeSampleRate ?? 24000,
