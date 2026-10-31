@@ -6,12 +6,27 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const [input, secondsArg, fpsArg] = process.argv.slice(2);
-if (!input || !(Number(secondsArg) > 0) || !(Number(fpsArg) > 0))
-  throw new Error("Usage: node scripts/verify-export.mjs FILE SECONDS FPS");
+const args = process.argv.slice(2);
+const [input, secondsArg, fpsArg, widthArg, heightArg] = args;
+const positive = (value) => Number.isFinite(Number(value)) && Number(value) > 0;
+const positiveInteger = (value) =>
+  positive(value) && Number.isSafeInteger(Number(value));
+if (
+  !input ||
+  !positive(secondsArg) ||
+  !positive(fpsArg) ||
+  ![3, 5].includes(args.length) ||
+  (args.length === 5 &&
+    (!positiveInteger(widthArg) || !positiveInteger(heightArg)))
+)
+  throw new Error(
+    "Usage: node scripts/verify-export.mjs FILE SECONDS FPS [WIDTH HEIGHT]; dimensions must be positive integers",
+  );
 const file = path.resolve(root, input);
 const seconds = Number(secondsArg);
 const fps = Number(fpsArg);
+const width = widthArg === undefined ? 1920 : Number(widthArg);
+const height = heightArg === undefined ? 1080 : Number(heightArg);
 const binaries = path.join(
   root,
   "node_modules/@remotion/compositor-win32-x64-msvc",
@@ -31,15 +46,15 @@ const rational = (value) => {
 };
 if (
   !video ||
-  video.width !== 1920 ||
-  video.height !== 1080 ||
+  video.width !== width ||
+  video.height !== height ||
   video.codec_name !== "h264" ||
   rational(video.avg_frame_rate) !== fps ||
   Number(video.nb_frames) !== seconds * fps ||
   Math.abs(Number(video.duration) - seconds) > 1 / fps
 )
   throw new Error(
-    "Exported video does not match the requested 1080p H.264 frame rate, frame count or duration",
+    `Exported video does not match the requested ${width}x${height} H.264 frame rate, frame count or duration`,
   );
 if (
   !audio ||

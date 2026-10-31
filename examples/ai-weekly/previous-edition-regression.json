@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-10-30T10:47:15.457Z",
+  "status": "passed",
+  "composition": "WeeklyTen-Bilibili",
+  "bundle": "out\\AiWeekly-Bilibili-validation\\bundle",
+  "baselineReport": "out\\WeeklyTen-Bilibili-validation\\report.json",
+  "baselineReportSha256": "de11696f0032d9da4cc31446cc849ce19dbe85697f19ff0fe65087127f1af51c",
+  "sourceFiles": [
+    {
+      "file": "effects/daily-ten/SceneFrame.tsx",
+      "sha256": "1064a77a54adfa388b659aa415d1f6f001ca6b6ad1a22a43883292ae9c1d9151",
+      "modifiedAt": "2026-10-30T10:45:09.086Z"
+    },
+    {
+      "file": "effects/daily-ten/PortraitScene.tsx",
+      "sha256": "87b2c791466d7eee4f1abdb677a640d3c59ec28ceda1d0b1f61c8233b832a18d",
+      "modifiedAt": "2026-10-30T10:46:56.338Z"
+    },
+    {
+      "file": "effects/daily-ten/EditionContext.tsx",
+      "sha256": "dfe96f6dacd52714e8833ad0f5b4ac572e0737d46bcf7c939a06689321176763",
+      "modifiedAt": "2026-10-30T10:45:09.085Z"
+    }
+  ],
+  "frames": [
+    {
+      "frame": 840,
+      "baseline": "out\\WeeklyTen-Bilibili-validation\\frame-0840.png",
+      "output": "out\\ai-weekly-regression\\frame-0840.png",
+      "baselineSha256": "95934b0d7ea35dfa577cdd47a208bbf77448921f712dd97af0259a453768f0e6",
+      "actualSha256": "95934b0d7ea35dfa577cdd47a208bbf77448921f712dd97af0259a453768f0e6",
+      "identical": true,
+      "baselinePreserved": true,
+      "status": "passed"
+    },
+    {
+      "frame": 2220,
+      "baseline": "out\\WeeklyTen-Bilibili-validation\\frame-2220.png",
+      "output": "out\\ai-weekly-regression\\frame-2220.png",
+      "baselineSha256": "057c869f13bb91fbbf99186a11da93a31aa8e1946b7658f36150b4032a39ccd9",
+      "actualSha256": "057c869f13bb91fbbf99186a11da93a31aa8e1946b7658f36150b4032a39ccd9",
+      "identical": true,
+      "baselinePreserved": true,
+      "status": "passed"
+    },
+    {
+      "frame": 7980,
+      "baseline": "out\\WeeklyTen-Bilibili-validation\\frame-7980.png",
+      "output": "out\\ai-weekly-regression\\frame-7980.png",
+      "baselineSha256": "5b87b6f76e1af68a53b19bdf6d4fea1519dfc7a0b062731926601edb8228b89d",
+      "actualSha256": "5b87b6f76e1af68a53b19bdf6d4fea1519dfc7a0b062731926601edb8228b89d",
+      "identical": true,
+      "baselinePreserved": true,
+      "status": "passed"
+    },
+    {
+      "frame": 9900,
+      "baseline": "out\\WeeklyTen-Bilibili-validation\\frame-9900.png",
+      "output": "out\\ai-weekly-regression\\frame-9900.png",
+      "baselineSha256": "92842391c9b01e53521a80ae3b6d7d30496477a38b093ee945ebb53ff7682d04",
+      "actualSha256": "92842391c9b01e53521a80ae3b6d7d30496477a38b093ee945ebb53ff7682d04",
+      "identical": true,
+      "baselinePreserved": true,
+      "status": "passed"
+    }
+  ],
+  "browserErrors": [],
+  "scope": "Four still frames only; no old MP4 or source-audio decode, source edits or baseline writes.",
+  "bundleIndexSha256": "b8834d238396346b22b0e8940dad563b1f4e08e5c455365f02f515c3628478e8",
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  },
+  "baselineReportPreserved": true
+}

@@ -16,15 +16,22 @@ const { values, positionals } = parseArgs({
     fps: { type: "string" },
     frames: { type: "string" },
     voiceover: { type: "string" },
+    width: { type: "string" },
+    height: { type: "string" },
   },
 });
 const id = positionals[0];
 const seconds = Number(values.seconds);
 const fps = Number(values.fps);
+const width = values.width === undefined ? 1920 : Number(values.width);
+const height = values.height === undefined ? 1080 : Number(values.height);
 if (!id || !/^[a-zA-Z0-9_-]+$/.test(id) || !(seconds > 0) || !(fps > 0)) {
   throw new Error(
-    "Usage: node scripts/verify-composition.mjs ID --seconds=60 --fps=60 [--frames=180,1080] [--voiceover=china-genai/voiceover-manifest.json]",
+    "Usage: node scripts/verify-composition.mjs ID --seconds=60 --fps=60 [--width=1080 --height=1920] [--frames=180,1080] [--voiceover=china-genai/voiceover-manifest.json]",
   );
+}
+if (!Number.isInteger(width) || !Number.isInteger(height) || width <= 0 || height <= 0) {
+  throw new Error("Expected positive integer --width and --height");
 }
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const outputDir = path.join(root, "out", `${id}-validation`);
@@ -34,7 +41,7 @@ await mkdir(outputDir, { recursive: true });
 const report = {
   composition: id,
   checkedAt: new Date().toISOString(),
-  expected: { width: 1920, height: 1080, fps, durationInFrames: seconds * fps },
+  expected: { width, height, fps, durationInFrames: seconds * fps },
   frames: [],
   audio: [],
   browserErrors: [],
@@ -99,17 +106,17 @@ try {
     const png = await readFile(output);
     if (
       png.subarray(1, 4).toString() !== "PNG" ||
-      png.readUInt32BE(16) !== 1920 ||
-      png.readUInt32BE(20) !== 1080
+      png.readUInt32BE(16) !== width ||
+      png.readUInt32BE(20) !== height
     )
-      throw new Error(`Invalid 1080p PNG at frame ${frame}`);
+      throw new Error(`Invalid ${width}x${height} PNG at frame ${frame}`);
     report.frames.push({
       frame,
       file: path.basename(output),
       bytes: png.length,
       sha256: createHash("sha256").update(png).digest("hex"),
     });
-    console.log(`Verified 1080p frame ${frame}`);
+    console.log(`Verified ${width}x${height} frame ${frame}`);
   }
   if (values.voiceover) {
     const manifestFile = path.resolve(root, "public", values.voiceover);

@@ -1,0 +1,22 @@
+{
+  "title": "Ten Windows, One Day",
+  "original": true,
+  "deterministic": true,
+  "externalSamples": [],
+  "generatedAt": "2026-10-30T09:34:24.148641+00:00",
+  "durationSeconds": 180,
+  "tempoBpm": 76,
+  "source": "scripts/generate-hotspot-audio.py --music-only",
+  "sha256": "035e8a0484f0e7ddb88865b0cf65f6898c1d307883e258c30b6e1fb0cf67ad16",
+  "bytes": 3601284,
+  "audioMeasurement": {
+    "fullDecodePassed": true,
+    "sampleRate": 24000,
+    "decodedDurationSeconds": 180.0,
+    "measurement": "decoded mono PCM16; dBFS, not LUFS",
+    "peakDbfs": -30.8835,
+    "rmsDbfs": -41.4454,
+    "clippedSampleCount": 0,
+    "sampleCount": 4320000
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T18:53:57.6964028+08:00",
+  "source": {
+    "file": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-20261030-bilibili-1080p60.mp4",
+    "bytes": 111061998,
+    "sha256": "5ec64376cab3816737213698458b9ca10ebb356f1044a19e0e14b5686fbe103c",
+    "lastWriteTimeUtc": "2026-10-30T10:52:33.1406657Z",
+    "type": "actual final encoded MP4, not source composition stills"
+  },
+  "extractor": "D:\\AI项目\\Remotion\\video\\node_modules\\@remotion\\compositor-win32-x64-msvc\\ffmpeg.exe",
+  "extractionArguments": "-hide_banner -loglevel error -y -ss <seconds> -i <source MP4> -frames:v 1 -an <PNG>",
+  "frames": [
+    {
+      "seconds": 3.5,
+      "file": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-final-frames\\bilibili-3.5s.png",
+      "sha256": "80a8b5dff63b30cadaf37de7f21fa4d87efbcd94d5e781228af05e33f160e100",
+      "extractionExitCode": 0,
+      "visualResult": "passed"
+    },
+    {
+      "seconds": 22.0,
+      "file": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-final-frames\\bilibili-22s.png",
+      "sha256": "be0f576cd845f2752ca4a50a4cfa2c80c38fce07cd4f7e358861bd78753aa76e",
+      "extractionExitCode": 0,
+      "visualResult": "passed"
+    },
+    {
+      "seconds": 58.0,
+      "file": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-final-frames\\bilibili-58s.png",
+      "sha256": "d66e489cd9c377464b030e1066f614f36a68607a89e956e1f3269a4f41b2084e",
+      "extractionExitCode": 0,
+      "visualResult": "passed"
+    },
+    {
+      "seconds": 179.0,
+      "file": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-final-frames\\bilibili-179s.png",
+      "sha256": "c2ca68fca4dc16fd3ee8fa75d90be0fa7221a8a0d4f197267ba8724bfc1f65f2",
+      "extractionExitCode": 0,
+      "visualResult": "passed"
+    }
+  ],
+  "findings": [
+    "3.5s: opening title, nine-item count, 10.26-10.30 as-of-now period and illustrative-sample label are intact and legible.",
+    "22s: long Chinese/English body, 105万token and 最大输出12.8万token remain complete; source and subtitle lines remain separate.",
+    "58s: long OCR background paragraph, MarathonDocBench term, core label and active subtitle remain complete; thin illustration lines remain visible.",
+    "179s: closing title, nine AI developments, date and preview-versus-release disclosure remain intact.",
+    "No visible unexpected black frame, text/art cropping, layout shift or encoding artefact that made reviewed text difficult to read. Reviewed appearance matches the corresponding authored composition content."
+  ],
+  "hardIssues": [],
+  "completeDecodeRepeated": false,
+  "sourceCodeChanged": false,
+  "scopeLimits": [
+    "Four stills extracted from the actual MP4 only; not exhaustive viewing of all frames",
+    "No new full-decode, complete manual listening or platform-transcoding/device-playback claim"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T10:55:24.391297+00:00",
+  "surface": "actual local Remotion Studio through WebMCP and trusted Play button",
+  "settings": {
+    "playbackRate": 1,
+    "muted": false,
+    "volume": 1,
+    "looping": true
+  },
+  "compositions": [
+    {
+      "id": "AiWeekly-Douyin",
+      "observedFrames": [
+        0,
+        4415,
+        8094,
+        9736,
+        3087
+      ],
+      "naturalEndWrapObserved": true,
+      "currentError": null,
+      "consoleWarnError": []
+    },
+    {
+      "id": "AiWeekly-Bilibili",
+      "observedFrames": [
+        1,
+        7116,
+        9362,
+        1651
+      ],
+      "naturalEndWrapObserved": true,
+      "currentError": null,
+      "consoleWarnError": []
+    }
+  ],
+  "finalState": {
+    "composition": "AiWeekly-Douyin",
+    "frame": 210,
+    "playing": false,
+    "markedDeliverable": true
+  },
+  "limits": "Observed continuous playback and natural loop; not a claim of human full-frame viewing, complete subjective listening, or platform transcoding acceptance."
+}

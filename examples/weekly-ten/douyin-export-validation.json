@@ -1,0 +1,24 @@
+{
+  "file": "weekly-ten-20261030-douyin-1080p60.mp4",
+  "checkedAt": "2026-10-30T10:28:47.797Z",
+  "status": "passed",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "codec": "h264",
+    "fps": 60,
+    "frames": 10800,
+    "durationSeconds": 180,
+    "pixelFormat": "yuvj420p",
+    "colorRange": "pc"
+  },
+  "audio": {
+    "codec": "aac",
+    "durationSeconds": 180.011,
+    "sampleRate": 48000,
+    "channels": 2
+  },
+  "sizeBytes": 89200428,
+  "sha256": "885fa12a14cd265d57986508a8d69c42f990edc71f3af48a147849c72223b7c8",
+  "fullDecode": "passed"
+}

@@ -1,0 +1,136 @@
+{
+  "composition": "DailyTen-Bilibili",
+  "checkedAt": "2026-10-30T09:49:11.513Z",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  },
+  "frames": [
+    {
+      "frame": 210,
+      "file": "frame-0210.png",
+      "bytes": 599171,
+      "sha256": "1aaab688074c6e42798a8a80b10fae5703a517ab6ff1a5d70f09b684884d94de"
+    },
+    {
+      "frame": 840,
+      "file": "frame-0840.png",
+      "bytes": 341903,
+      "sha256": "ed42579548e2d6c8d65dc880bb8eed16047aaa2ddc531785748e9aa4c7c3dc05"
+    },
+    {
+      "frame": 5640,
+      "file": "frame-5640.png",
+      "bytes": 242876,
+      "sha256": "2a42bf58fdd0deda8e1d7515132f27838427e86b2eec2559bb3b70904059a0e4"
+    },
+    {
+      "frame": 7980,
+      "file": "frame-7980.png",
+      "bytes": 338285,
+      "sha256": "c18987b4dd8ba19ccbd35250d8ca6b9c0c6d94344c764863f575e4f2ec0082f9"
+    },
+    {
+      "frame": 10799,
+      "file": "frame-10799.png",
+      "bytes": 137217,
+      "sha256": "306cbaa2d0ee84d4067211feb16a69d8318c537b26b5cd9a59fee0f96a0eacb2"
+    }
+  ],
+  "audio": [
+    {
+      "file": "intro.mp3",
+      "durationSeconds": 7.993469,
+      "tailRoomSeconds": 1.407,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "football.mp3",
+      "durationSeconds": 11.441633,
+      "tailRoomSeconds": 3.958,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "calendar.mp3",
+      "durationSeconds": 10.997551,
+      "tailRoomSeconds": 4.402,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "trade.mp3",
+      "durationSeconds": 11.859592,
+      "tailRoomSeconds": 3.54,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "robot.mp3",
+      "durationSeconds": 11.284898,
+      "tailRoomSeconds": 4.115,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "loans.mp3",
+      "durationSeconds": 11.493878,
+      "tailRoomSeconds": 3.906,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "rates.mp3",
+      "durationSeconds": 10.762449,
+      "tailRoomSeconds": 4.638,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "vote.mp3",
+      "durationSeconds": 11.964082,
+      "tailRoomSeconds": 3.436,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "mars.mp3",
+      "durationSeconds": 11.62449,
+      "tailRoomSeconds": 3.776,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "voyager.mp3",
+      "durationSeconds": 11.154286,
+      "tailRoomSeconds": 4.246,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "baseball.mp3",
+      "durationSeconds": 11.389388,
+      "tailRoomSeconds": 4.011,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "outro.mp3",
+      "durationSeconds": 7.497143,
+      "tailRoomSeconds": 1.903,
+      "fullDecode": "passed",
+      "captionCount": 2
+    }
+  ],
+  "browserErrors": [],
+  "status": "passed",
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  }
+}

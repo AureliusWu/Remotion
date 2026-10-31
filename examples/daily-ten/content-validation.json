@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T09:41:32.228Z",
+  "newsItems": 10,
+  "timelineSeconds": 180,
+  "frames": 10800,
+  "scenes": [
+    {
+      "id": "intro",
+      "startFrame": 0,
+      "endFrame": 599,
+      "narrationSha256": "410f727da618db78212d03bccb8ed6e6b1ca6e54f68151fc31c31ae7ffcf0a97"
+    },
+    {
+      "id": "football",
+      "startFrame": 600,
+      "endFrame": 1559,
+      "narrationSha256": "9fac7ae9e4e3e2feab8c92071b859eda995691c599c4002558686f26cec7f5ed"
+    },
+    {
+      "id": "calendar",
+      "startFrame": 1560,
+      "endFrame": 2519,
+      "narrationSha256": "ec47c4aa9210a9c7dfe08b490d258f0d85d4d469e033cf6fafc7bf51f5aafebd"
+    },
+    {
+      "id": "trade",
+      "startFrame": 2520,
+      "endFrame": 3479,
+      "narrationSha256": "0d9d1fac6a1aa756d8da4ebe0af253897a8b0d52a11d4838906431c450a41c70"
+    },
+    {
+      "id": "robot",
+      "startFrame": 3480,
+      "endFrame": 4439,
+      "narrationSha256": "b1f6a9942489cb01ebae822993f837522b0462cbfc6a10ebdddf541a7c1a30e3"
+    },
+    {
+      "id": "loans",
+      "startFrame": 4440,
+      "endFrame": 5399,
+      "narrationSha256": "51fa0379b6b8a3113d6e50bfe1e2ca7e13a002e7b36d348a7cdee9ca83c1e655"
+    },
+    {
+      "id": "rates",
+      "startFrame": 5400,
+      "endFrame": 6359,
+      "narrationSha256": "44e0b1abbb6ae172950a1197f9537abf8ad22fab9c5c3fd535319b6465206100"
+    },
+    {
+      "id": "vote",
+      "startFrame": 6360,
+      "endFrame": 7319,
+      "narrationSha256": "44fe51dddac84d4a081676870b86f519dcddba66562d85bd1cbc7e90fdb231bf"
+    },
+    {
+      "id": "mars",
+      "startFrame": 7320,
+      "endFrame": 8279,
+      "narrationSha256": "6ded5e433c0e167f362bced36edbce5fd4dd94ca0b084ea4c6afcf0f5036134a"
+    },
+    {
+      "id": "voyager",
+      "startFrame": 8280,
+      "endFrame": 9239,
+      "narrationSha256": "6c97a893bc77ffd1901df0a53724b2ff718bdf81156b97208096163db19e1710"
+    },
+    {
+      "id": "baseball",
+      "startFrame": 9240,
+      "endFrame": 10199,
+      "narrationSha256": "ccd880311ef4a408aecdef51b8e24bcbb7ff1c55c434fadd3114db3cccbab871"
+    },
+    {
+      "id": "outro",
+      "startFrame": 10200,
+      "endFrame": 10799,
+      "narrationSha256": "2a3d516a20b9f9ef743d356e5ae9ec7ddcc56190af147f1c5df71e49e21984ff"
+    }
+  ],
+  "captionCount": 24
+}

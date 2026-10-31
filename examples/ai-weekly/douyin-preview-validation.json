@@ -1,0 +1,225 @@
+{
+  "composition": "AiWeekly-Douyin",
+  "checkedAt": "2026-10-30T10:45:57.677Z",
+  "expected": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationInFrames": 10800
+  },
+  "frames": [
+    {
+      "frame": 210,
+      "file": "frame-0210.png",
+      "bytes": 218280,
+      "sha256": "5bc25b4c21e99e649ddfbe51756d32a81d65dda542e1ca9cd236edd74180443d"
+    },
+    {
+      "frame": 840,
+      "file": "frame-0840.png",
+      "bytes": 223818,
+      "sha256": "e5eb2db1326fbfcbc2aeb93f55261604b547546bf56e7f04434c48dcd5ca21f2"
+    },
+    {
+      "frame": 1320,
+      "file": "frame-1320.png",
+      "bytes": 243490,
+      "sha256": "67c23231c8029fe66ae8ed622da635a54ab87b99de1a20a4eec1f8b32f404556"
+    },
+    {
+      "frame": 1920,
+      "file": "frame-1920.png",
+      "bytes": 233273,
+      "sha256": "1200afe08209d888da57f8cd05b216464ecc94af6e0a2270face65f2679a1300"
+    },
+    {
+      "frame": 2400,
+      "file": "frame-2400.png",
+      "bytes": 249313,
+      "sha256": "12d5721310438147d3528a161a945add500de47e706fcf348014c0c903183575"
+    },
+    {
+      "frame": 3000,
+      "file": "frame-3000.png",
+      "bytes": 213477,
+      "sha256": "3c332b140a828c116df26d1fcedf47208087f11760b43c52ce64852a7c24e0ba"
+    },
+    {
+      "frame": 3480,
+      "file": "frame-3480.png",
+      "bytes": 237739,
+      "sha256": "a8af32453156666ffd71e79b4f8346c72cfd077ee7686cf583ba289f922fd983"
+    },
+    {
+      "frame": 4080,
+      "file": "frame-4080.png",
+      "bytes": 222780,
+      "sha256": "6e795c4aa4303e19066d5aca0bac6b63f4a091cd84576c4cff29c20a3758bc54"
+    },
+    {
+      "frame": 4560,
+      "file": "frame-4560.png",
+      "bytes": 231934,
+      "sha256": "ab4edcc4a38ed94f81b4e3da7393716b67247eb55954ac5d80b984aac7d74251"
+    },
+    {
+      "frame": 5160,
+      "file": "frame-5160.png",
+      "bytes": 220913,
+      "sha256": "efd0d5ac190957c7d1b2bc9dd42ba150f497e776e225244dce647ba6eb8d954d"
+    },
+    {
+      "frame": 5640,
+      "file": "frame-5640.png",
+      "bytes": 226329,
+      "sha256": "5b9b4e1c48ad0cfdb90c700b65fceb5dc7f6fc1600931aee49d5ca19380f8694"
+    },
+    {
+      "frame": 6240,
+      "file": "frame-6240.png",
+      "bytes": 250191,
+      "sha256": "9026d384ebf3e3043dd1888cb495906d945df44d12aafba010375ad722dc2dc4"
+    },
+    {
+      "frame": 6720,
+      "file": "frame-6720.png",
+      "bytes": 246179,
+      "sha256": "96d9b719188f59c3fc6252921562af51578bff2d71e1f9fcc7b88beca48fe419"
+    },
+    {
+      "frame": 7320,
+      "file": "frame-7320.png",
+      "bytes": 200278,
+      "sha256": "9a523d3136df9a594040902d02825c6a97a5b98fbc98af0d4b6b4fe1b1072189"
+    },
+    {
+      "frame": 7800,
+      "file": "frame-7800.png",
+      "bytes": 218152,
+      "sha256": "63d8b35f51a1991e6889f8e5ad868571ddc6703a461e734569c0aec12ef12379"
+    },
+    {
+      "frame": 8400,
+      "file": "frame-8400.png",
+      "bytes": 220238,
+      "sha256": "bd5c87a097fa882967762ce3f630c7ad994c6da947650fc189c86833450ec456"
+    },
+    {
+      "frame": 8880,
+      "file": "frame-8880.png",
+      "bytes": 227437,
+      "sha256": "72481881d8f80b2ef7e52865146e2a91a95327be2375349970ef756b7a35dd96"
+    },
+    {
+      "frame": 9420,
+      "file": "frame-9420.png",
+      "bytes": 216714,
+      "sha256": "efe5f877504b0d129d1e05d67dba567871430049381158371be27a67f1e8f4de"
+    },
+    {
+      "frame": 9900,
+      "file": "frame-9900.png",
+      "bytes": 190804,
+      "sha256": "5117cd6d3f68e7f7d47571ba96c0e51551191677f1f818f26bc1ce78d8b8903b"
+    },
+    {
+      "frame": 10410,
+      "file": "frame-10410.png",
+      "bytes": 156486,
+      "sha256": "fdc17686fe291932897202d7aba7e92b0f766b2ef51393ac29dcac769b27775c"
+    },
+    {
+      "frame": 10799,
+      "file": "frame-10799.png",
+      "bytes": 144587,
+      "sha256": "52e7dd4d8feb77c217a31c31b4d4f7aa18594e695d4e6af75792a09732f4b694"
+    }
+  ],
+  "audio": [
+    {
+      "file": "intro.mp3",
+      "durationSeconds": 7.105306,
+      "tailRoomSeconds": 2.295,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "terra.mp3",
+      "durationSeconds": 13.400816,
+      "tailRoomSeconds": 3.999,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "nvidia-meta.mp3",
+      "durationSeconds": 12.721633,
+      "tailRoomSeconds": 4.678,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "baidu-ocr.mp3",
+      "durationSeconds": 14.550204,
+      "tailRoomSeconds": 2.85,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "claude-research.mp3",
+      "durationSeconds": 12.355918,
+      "tailRoomSeconds": 5.044,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "microsoft-literacy.mp3",
+      "durationSeconds": 13.00898,
+      "tailRoomSeconds": 4.391,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "clover.mp3",
+      "durationSeconds": 10.710204,
+      "tailRoomSeconds": 6.69,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "apex.mp3",
+      "durationSeconds": 12.199184,
+      "tailRoomSeconds": 5.201,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "carbon.mp3",
+      "durationSeconds": 13.217959,
+      "tailRoomSeconds": 3.182,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "go3.mp3",
+      "durationSeconds": 11.102041,
+      "tailRoomSeconds": 5.298,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "outro.mp3",
+      "durationSeconds": 7.941224,
+      "tailRoomSeconds": 1.459,
+      "fullDecode": "passed",
+      "captionCount": 2
+    }
+  ],
+  "browserErrors": [],
+  "status": "passed",
+  "actual": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 60,
+    "durationInFrames": 10800
+  }
+}

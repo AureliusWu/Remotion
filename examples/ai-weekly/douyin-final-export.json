@@ -1,0 +1,24 @@
+{
+  "file": "ai-weekly-20261030-douyin-1080p60.mp4",
+  "checkedAt": "2026-10-30T10:57:53.232Z",
+  "status": "passed",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "codec": "h264",
+    "fps": 60,
+    "frames": 10800,
+    "durationSeconds": 180,
+    "pixelFormat": "yuvj420p",
+    "colorRange": "pc"
+  },
+  "audio": {
+    "codec": "aac",
+    "durationSeconds": 180.011,
+    "sampleRate": 48000,
+    "channels": 2
+  },
+  "sizeBytes": 79454451,
+  "sha256": "0fe3ebabbcb347a5e629e3982bd8cc2a5acc0f866f864dce6cf3ef49f571c95e",
+  "fullDecode": "passed"
+}

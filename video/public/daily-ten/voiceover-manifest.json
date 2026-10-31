@@ -1,0 +1,608 @@
+{
+  "generatedAt": "2026-10-30T09:41:01.811872+00:00",
+  "storyboard": "D:\\AI项目\\Remotion\\video\\effects\\daily-ten\\storyboard.json",
+  "storyboardSha256": "664f5185f80f09623670589f38b16a4e872e8d5b49e7a9ad2be4fbabe08df806",
+  "engine": {
+    "engine": "sherpa-onnx",
+    "version": "2.0.1",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "speakerId": 3,
+    "speed": 1.03
+  },
+  "pythonVersion": "3.14.4",
+  "model": {
+    "name": "hexgrad/Kokoro-82M-v1.1-zh",
+    "conversion": "official sherpa INT8",
+    "license": "Apache-2.0",
+    "archiveSha256": "259c9c8bc906d6078e4e0570421885dabb68b539c2f970fcbb890a58eeaf3e9c",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "source": "https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh",
+    "download": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-int8-multi-lang-v1_1.tar.bz2"
+  },
+  "encoding": "MP3 128kbps 44.1kHz mono",
+  "workers": 2,
+  "threadsPerWorker": 2,
+  "captionsRelativeTo": "scene start; fromSeconds is added to sentence PCM timing",
+  "status": "passed",
+  "scenes": [
+    {
+      "id": "intro",
+      "file": "intro.mp3",
+      "text": "十月三十日，三分钟，十条新闻。从身边政策到遥远太空，看见变化从何而来。",
+      "hash": "d3efce0723d599edc3c4a8c3adcce4cb09bcc69e7c52836cd548f5185cb42057",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 7.993469,
+      "pcmDurationSeconds": 7.964291666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "十月三十日，三分钟，十条新闻。",
+          "startSeconds": 0.6,
+          "endSeconds": 4.017333
+        },
+        {
+          "text": "从身边政策到遥远太空，看见变化从何而来。",
+          "startSeconds": 4.067333,
+          "endSeconds": 8.714292
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 15.189536699999735,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0443672230061722
+      },
+      "fullDecodePassed": true,
+      "sha256": "410f727da618db78212d03bccb8ed6e6b1ca6e54f68151fc31c31ae7ffcf0a97",
+      "bytes": 128356,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -9.6454,
+        "rmsDbfs": -23.447,
+        "sampleCount": 351226
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 10.0
+    },
+    {
+      "id": "football",
+      "file": "football.mp3",
+      "text": "中国十七岁以下女足，点球四比三淘汰法国，首次闯入世界杯八强。门将牛子琪两次扑点；下一场，她们将迎战巴西。",
+      "hash": "cade81631a626398fa42668b20bf1f1d6634716da452d7b643c53b105092bf20",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.441633,
+      "pcmDurationSeconds": 11.394041666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "中国十七岁以下女足，点球四比三淘汰法国，首次闯入世界杯八强。",
+          "startSeconds": 0.6,
+          "endSeconds": 7.445292
+        },
+        {
+          "text": "门将牛子琪两次扑点；下一场，她们将迎战巴西。",
+          "startSeconds": 7.495292,
+          "endSeconds": 12.144042
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 23.469852099999116,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0426928219939111
+      },
+      "fullDecodePassed": true,
+      "sha256": "9fac7ae9e4e3e2feab8c92071b859eda995691c599c4002558686f26cec7f5ed",
+      "bytes": 183527,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.3073,
+        "rmsDbfs": -23.4466,
+        "sampleCount": 502478
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "calendar",
+      "file": "calendar.mp3",
+      "text": "北京汽车换新补贴，申报时间延长到明年一月十日。购车登记等材料仍须在今年内取得，资金用完也会提前结束。",
+      "hash": "72c85b6a314301919a2d461364753c4b81c42ef874c56ba7eebf9affda937e1b",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 10.997551,
+      "pcmDurationSeconds": 10.955625,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "北京汽车换新补贴，申报时间延长到明年一月十日。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.814833
+        },
+        {
+          "text": "购车登记等材料仍须在今年内取得，资金用完也会提前结束。",
+          "startSeconds": 5.864833,
+          "endSeconds": 11.705625
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 21.851689299997815,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0887100418010176
+      },
+      "fullDecodePassed": true,
+      "sha256": "ec47c4aa9210a9c7dfe08b490d258f0d85d4d469e033cf6fafc7bf51f5aafebd",
+      "bytes": 176421,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.1357,
+        "rmsDbfs": -23.447,
+        "sampleCount": 483144
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "trade",
+      "file": "trade.mp3",
+      "text": "中秘自贸协定升级议定书，将在十一月一日生效。从二零零九年签署原协定，到今天完成升级，两国贸易合作再向前一步。",
+      "hash": "4887210cfda40091fcdb22ff47c4fcd954a19828afd48afab78886b45b884b54",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.859592,
+      "pcmDurationSeconds": 11.827458333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "中秘自贸协定升级议定书，将在十一月一日生效。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.328167
+        },
+        {
+          "text": "从二零零九年签署原协定，到今天完成升级，两国贸易合作再向前一步。",
+          "startSeconds": 5.378167,
+          "endSeconds": 12.577458
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 24.29862530000173,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0722489023456447
+      },
+      "fullDecodePassed": true,
+      "sha256": "0d9d1fac6a1aa756d8da4ebe0af253897a8b0d52a11d4838906431c450a41c70",
+      "bytes": 190214,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.808,
+        "rmsDbfs": -23.447,
+        "sampleCount": 521591
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "robot",
+      "file": "robot.mp3",
+      "text": "智元披露，上半年机器人出货九千七百台，收入接近二十亿元。截至九月累计下线两万台；出货和下线，要分开来看。",
+      "hash": "3e8d83af1881b1a0cbd0855adb00ff6a3c59e3055c14e10ef8edcf62acd82427",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.284898,
+      "pcmDurationSeconds": 11.244291666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "智元披露，上半年机器人出货九千七百台，收入接近二十亿元。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.398583
+        },
+        {
+          "text": "截至九月累计下线两万台；出货和下线，要分开来看。",
+          "startSeconds": 6.448583,
+          "endSeconds": 11.994292
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 23.560416899999836,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.052512852453581
+      },
+      "fullDecodePassed": true,
+      "sha256": "b1f6a9942489cb01ebae822993f837522b0462cbfc6a10ebdddf541a7c1a30e3",
+      "bytes": 181019,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.4588,
+        "rmsDbfs": -23.446,
+        "sampleCount": 495874
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "loans",
+      "file": "loans.mp3",
+      "text": "三季度末，科技型中小企业获贷率达到百分之五十一点一。超过三十万家企业获得贷款支持，相关贷款余额四点二七万亿元。",
+      "hash": "f8b97026ffc6ac65f32a67a1d2a54c48d8d53e17a12cd65afbcd91da420a68fe",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.493878,
+      "pcmDurationSeconds": 11.451166666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "三季度末，科技型中小企业获贷率达到百分之五十一点一。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.911125
+        },
+        {
+          "text": "超过三十万家企业获得贷款支持，相关贷款余额四点二七万亿元。",
+          "startSeconds": 5.961125,
+          "endSeconds": 12.201167
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 22.602820399999473,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1187370152038691
+      },
+      "fullDecodePassed": true,
+      "sha256": "51fa0379b6b8a3113d6e50bfe1e2ca7e13a002e7b36d348a7cdee9ca83c1e655",
+      "bytes": 184363,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.2345,
+        "rmsDbfs": -23.4472,
+        "sampleCount": 504997
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "rates",
+      "file": "rates.mp3",
+      "text": "美联储维持利率不变，目标区间为百分之三点七五到四。声明认为通胀仍高。十票赞成，两票反对，分歧仍在。",
+      "hash": "7570cc58f7b09a2b0ab65710ebd01075a312a2084b9c7951b0427ecbc368f71b",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 10.762449,
+      "pcmDurationSeconds": 10.718166666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "美联储维持利率不变，目标区间为百分之三点七五到四。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.991
+        },
+        {
+          "text": "声明认为通胀仍高。十票赞成，两票反对，分歧仍在。",
+          "startSeconds": 6.041,
+          "endSeconds": 11.468167
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 23.70769719999953,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0556688964673098
+      },
+      "fullDecodePassed": true,
+      "sha256": "44e0b1abbb6ae172950a1197f9537abf8ad22fab9c5c3fd535319b6465206100",
+      "bytes": 172660,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.8235,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 472672
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "vote",
+      "file": "vote.mp3",
+      "text": "联合国大会以一百三十票赞成，再次要求结束美国对古巴禁运。这是第三十四次同类表态；决议通过，并不意味着禁运已经解除。",
+      "hash": "c18c7ca62f48efb21238334907d75a4ff636f6db7afe4c1af39ea7f9889d1d82",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.964082,
+      "pcmDurationSeconds": 11.914083333333334,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "联合国大会以一百三十票赞成，再次要求结束美国对古巴禁运。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.655042
+        },
+        {
+          "text": "这是第三十四次同类表态；决议通过，并不意味着禁运已经解除。",
+          "startSeconds": 6.705042,
+          "endSeconds": 12.664083
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 24.806432999997924,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0872591543442258
+      },
+      "fullDecodePassed": true,
+      "sha256": "44fe51dddac84d4a081676870b86f519dcddba66562d85bd1cbc7e90fdb231bf",
+      "bytes": 191886,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.4632,
+        "rmsDbfs": -23.4474,
+        "sampleCount": 525412
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "mars",
+      "file": "mars.mp3",
+      "text": "一块约八百克的陨石，保存了火星超过四十一亿年前的地壳记录。研究发现它曾受到水活动影响，为早期火星留下新的线索。",
+      "hash": "3659be6a831028bd70fa0db55c8fecf10aa660a119d4fdac6b5c65bc2afb987c",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.62449,
+      "pcmDurationSeconds": 11.588541666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "一块约八百克的陨石，保存了火星超过四十一亿年前的地壳记录。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.478208
+        },
+        {
+          "text": "研究发现它曾受到水活动影响，为早期火星留下新的线索。",
+          "startSeconds": 6.528208,
+          "endSeconds": 12.338542
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 9.859765299999708,
+      "generatedLines": 1,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1063446791832428
+      },
+      "fullDecodePassed": true,
+      "sha256": "6ded5e433c0e167f362bced36edbce5fd4dd94ca0b084ea4c6afcf0f5036134a",
+      "bytes": 186452,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.885,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 511055
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "voyager",
+      "file": "voyager.mp3",
+      "text": "旅行者一号恢复通讯，继续在星际空间航行。预计十一月十八日，它将距地球一光日，一声问候往返，要等两天。",
+      "hash": "689d762875b6844f80be76f690c65846b53ebb1cf795c567d61a782e93b98dca",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.154286,
+      "pcmDurationSeconds": 11.1255,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "旅行者一号恢复通讯，继续在星际空间航行。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.159958
+        },
+        {
+          "text": "预计十一月十八日，它将距地球一光日，一声问候往返，要等两天。",
+          "startSeconds": 5.209958,
+          "endSeconds": 11.8755
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 8.70970970000053,
+      "generatedLines": 1,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0031738492095903
+      },
+      "fullDecodePassed": true,
+      "sha256": "6c97a893bc77ffd1901df0a53724b2ff718bdf81156b97208096163db19e1710",
+      "bytes": 178929,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.9603,
+        "rmsDbfs": -23.4466,
+        "sampleCount": 490635
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "baseball",
+      "file": "baseball.mp3",
+      "text": "密尔沃基酿酒人，拿下队史首个世界大赛冠军。第五场四比一战胜光芒，总比分同样是四比一。漫长等待，终于有了回声。",
+      "hash": "5ac2fff925ca9b9b350700be24d9619198d69854a9056c5b5c90c89a00d2254b",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.389388,
+      "pcmDurationSeconds": 11.358625,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "密尔沃基酿酒人，拿下队史首个世界大赛冠军。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.239458
+        },
+        {
+          "text": "第五场四比一战胜光芒，总比分同样是四比一。漫长等待，终于有了回声。",
+          "startSeconds": 5.289458,
+          "endSeconds": 12.108625
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 24.36758340000233,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0821029601755972
+      },
+      "fullDecodePassed": true,
+      "sha256": "ccd880311ef4a408aecdef51b8e24bcbb7ff1c55c434fadd3114db3cccbab871",
+      "bytes": 182691,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.1883,
+        "rmsDbfs": -23.4477,
+        "sampleCount": 500916
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "outro",
+      "file": "outro.mp3",
+      "text": "十条新闻，十个观察世界的切口。记住发生了什么，也多问一句，意味着什么。",
+      "hash": "0989bdd078cdd51cd5d4d682ef0936c6f4ec7af6712eae4ec14da7da573dcc93",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 7.497143,
+      "pcmDurationSeconds": 7.463125,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "十条新闻，十个观察世界的切口。",
+          "startSeconds": 0.6,
+          "endSeconds": 3.878167
+        },
+        {
+          "text": "记住发生了什么，也多问一句，意味着什么。",
+          "startSeconds": 3.928167,
+          "endSeconds": 8.213125
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 16.504693400001997,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0127618006938763
+      },
+      "fullDecodePassed": true,
+      "sha256": "2a3d516a20b9f9ef743d356e5ae9ec7ddcc56190af147f1c5df71e49e21984ff",
+      "bytes": 120415,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.9773,
+        "rmsDbfs": -23.4475,
+        "sampleCount": 329124
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 10.0
+    }
+  ],
+  "spokenTextNormalization": {
+    "version": "zh-year-zero-and-ai-terms-v2",
+    "characterReplacements": {
+      "〇": "零",
+      "《": "",
+      "》": ""
+    },
+    "terms": {
+      "ImageNet": "Image Net",
+      "AlexNet": "Alex Net",
+      "AlphaGo": "Alpha Go",
+      "AlphaFold": "Alpha Fold",
+      "OpenAI": "Open A I",
+      "ChatGPT": "Chat G P T",
+      "GPT-3": "G P T 三",
+      "GPT": "G P T",
+      "AI": "A I"
+    },
+    "captionsPreserveOriginalText": true,
+    "rationale": "sherpa-onnx 2.0.1 skips unknown English words rather than spelling them; every expanded English token is verified against the installed English and Chinese lexicons."
+  },
+  "spokenAsciiLexiconCheck": {
+    "status": "passed",
+    "tokens": [],
+    "lexicons": [
+      "lexicon-us-en.txt",
+      "lexicon-zh.txt"
+    ]
+  },
+  "totalAudioSeconds": 129.462859,
+  "elapsedSeconds": 0.0010350000011385418,
+  "totalSceneDurationSeconds": 180,
+  "fps": 60,
+  "modelPathWorkaround": {
+    "reason": "kaldifst narrow Windows path",
+    "singleModelCache": "D:\\AI项目\\Remotion\\video\\out\\ai-history-tts\\kokoro-int8-multi-lang-v1_1",
+    "asciiJunction": "C:\\Users\\84046\\.codex\\runtimes\\remotion-kokoro-05d79370"
+  },
+  "failures": []
+}

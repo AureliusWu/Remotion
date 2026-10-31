@@ -1,0 +1,81 @@
+{
+  "edition": "ai-weekly",
+  "status": "passed",
+  "checkedAt": "2026-10-30T10:47:17.703Z",
+  "period": [
+    "2026-10-26",
+    "2026-10-30"
+  ],
+  "retrievedOn": "2026-10-30",
+  "sceneCount": 11,
+  "scenes": [
+    {
+      "id": "intro",
+      "startFrame": 0,
+      "endFrame": 599,
+      "source": null
+    },
+    {
+      "id": "terra",
+      "startFrame": 600,
+      "endFrame": 1679,
+      "source": "https://developers.openai.com/api/docs/changelog"
+    },
+    {
+      "id": "nvidia-meta",
+      "startFrame": 1680,
+      "endFrame": 2759,
+      "source": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth"
+    },
+    {
+      "id": "baidu-ocr",
+      "startFrame": 2760,
+      "endFrame": 3839,
+      "source": "https://github.com/baidu/Unlimited-OCR"
+    },
+    {
+      "id": "claude-research",
+      "startFrame": 3840,
+      "endFrame": 4919,
+      "source": "https://www.anthropic.com/research/early-progress-drug-development"
+    },
+    {
+      "id": "microsoft-literacy",
+      "startFrame": 4920,
+      "endFrame": 5999,
+      "source": "https://blogs.microsoft.com/on-the-issues/2026/10/27/in-an-age-of-ai-deciding-what-to-trust-is-a-foundational-skill-heres-how-were-helping-educators-teach-it/"
+    },
+    {
+      "id": "clover",
+      "startFrame": 6000,
+      "endFrame": 7079,
+      "source": "https://diffuspace.ai/blog/clover-35b/"
+    },
+    {
+      "id": "apex",
+      "startFrame": 7080,
+      "endFrame": 8159,
+      "source": "https://www.apexin.com/apex-35b/"
+    },
+    {
+      "id": "carbon",
+      "startFrame": 8160,
+      "endFrame": 9179,
+      "source": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+    },
+    {
+      "id": "go3",
+      "startFrame": 9180,
+      "endFrame": 10199,
+      "source": "https://www.prnewswire.com/news-releases/agibot-introduces-worken-to-measure-productive-robot-work-at-agibot-innovation-day-2026-302923486.html"
+    },
+    {
+      "id": "outro",
+      "startFrame": 10200,
+      "endFrame": 10799,
+      "source": null
+    }
+  ],
+  "captionCount": 22,
+  "newsCount": 9
+}

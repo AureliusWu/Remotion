@@ -1,0 +1,240 @@
+{
+  "edition": "2026.10.26—10.30",
+  "periodStart": "2026-10-26",
+  "periodEnd": "2026-10-30",
+  "retrievedOn": "2026-10-30",
+  "title": "AI一周热点观察",
+  "newsCount": 9,
+  "selectionNote": "10月26日至30日截至目前，9条AI进展精选；本周尚未结束，非热搜排行，厂商披露与独立验证分开。",
+  "shots": [
+    {
+      "id": "intro",
+      "durationSeconds": 10,
+      "title": "AI 一周\n热点观察",
+      "narration": [
+        "三分钟，回看本周九条人工智能进展。",
+        "从模型更新，到工具、研究和机器人。"
+      ]
+    },
+    {
+      "id": "terra",
+      "kind": "computer",
+      "durationSeconds": 18,
+      "category": "10.26 / 模型与电脑操作",
+      "title": "从看懂屏幕，\n到完成电脑任务",
+      "stat": "105万token",
+      "statLabel": "上下文窗口 · 最大输出12.8万token",
+      "details": [
+        "OpenAI于周一发布GPT-6.1 Terra开发接口，强调视觉推理、电脑操作与自然写作，供开发者集成到工作流程。",
+        "官方规格给出105万token上下文、12.8万token最大输出。图像作为输入；上下文容量与一次输出长度是两个指标，工具调用需用Responses接口。"
+      ],
+      "narration": [
+        "周一上线的新模型，重点放在看图、操作电脑和文字写作。",
+        "开发接口已经提供调用，约一百零五万词元的上下文，为处理大量资料留下空间。"
+      ],
+      "sourceLabel": "OpenAI · 10月26日 / API已发布",
+      "sourceUrl": "https://developers.openai.com/api/docs/changelog",
+      "publishedOn": "2026-10-26",
+      "eventOn": "2026-10-26",
+      "status": "已发布",
+      "accent": "#B85640",
+      "secondarySourceUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+    },
+    {
+      "id": "nvidia-meta",
+      "kind": "infrastructure",
+      "durationSeconds": 18,
+      "category": "10.26 / 智能体基础设施",
+      "title": "智能体背后，\n算力合作再加码",
+      "stat": "拟投30亿美元",
+      "statLabel": "NVIDIA×Meta合作计划 · 非已完成交割",
+      "details": [
+        "英伟达宣布与Meta扩大Muse模型和智能体合作，计划优化训练、推理及工作流程，并扩展计算与网络设施部署。",
+        "双方还拟探索安全部署和行为监控。公告中的30亿美元指拟参与Meta股权发行，不是已完成投资，也不是设备采购金额。"
+      ],
+      "narration": [
+        "英伟达与Meta宣布扩展智能体合作，重点优化模型训练和推理。",
+        "双方还计划探索安全部署与行为监控；三十亿美元股权投资仍是拟议安排。"
+      ],
+      "sourceLabel": "NVIDIA官方公告 · 10月26日 / 合作计划",
+      "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+      "publishedOn": "2026-10-26",
+      "eventOn": "2026-10-26",
+      "status": "计划",
+      "accent": "#416E83"
+    },
+    {
+      "id": "baidu-ocr",
+      "kind": "document",
+      "durationSeconds": 18,
+      "category": "10.27 / 长文档识别",
+      "title": "长文档，\n接着往下读",
+      "stat": "跨页阅读",
+      "statLabel": "Unlimited OCR 2 · 代码和权重已发布",
+      "details": [
+        "百度发布Unlimited OCR 2，用稀疏参考滑动窗口注意力处理长文档，将文字与视觉交互压缩到固定规模的工作参考中。",
+        "官方同时公布MarathonDocBench评测集。跨页上下文有助衔接内容，准确率与显存占用仍受文档和部署设置影响；项目名不代表无限资源。"
+      ],
+      "narration": [
+        "百度周二发布新一代长文档识别模型，把跨页阅读接起来。",
+        "它通过稀疏参考注意力控制计算开销，代码和模型权重已经提供，实际效果还要结合文档检验。"
+      ],
+      "sourceLabel": "百度官方仓库 · 10月27日 / 已发布",
+      "sourceUrl": "https://github.com/baidu/Unlimited-OCR",
+      "publishedOn": "2026-10-27",
+      "eventOn": "2026-10-27",
+      "status": "已发布",
+      "accent": "#D3B373",
+      "secondarySourceUrl": "https://huggingface.co/baidu/Unlimited-OCR-2"
+    },
+    {
+      "id": "claude-research",
+      "kind": "research",
+      "durationSeconds": 18,
+      "category": "10.27 / 药物研发早期案例",
+      "title": "AI走进实验室，\n结果还需检验",
+      "stat": "6家机构",
+      "statLabel": "本周公布早期案例 · 多数处于临床前",
+      "details": [
+        "Anthropic公布与六家药物研发机构合作的早期进展，涉及分子设计、候选优化、生产文件审查及临床试验规划。",
+        "合作在此前数月开展，本周发布阶段结果。厂商说明多数研究仍在临床前，实验室改进不能直接当作人体疗效。"
+      ],
+      "narration": [
+        "克劳德的药物研发合作，本周公布六家机构的早期案例。",
+        "多数仍在临床前，分子设计和材料审查的进步，还要继续接受实验检验。"
+      ],
+      "sourceLabel": "Anthropic · 10月27日 / 早期研究报告",
+      "sourceUrl": "https://www.anthropic.com/research/early-progress-drug-development",
+      "publishedOn": "2026-10-27",
+      "eventOn": "2026-10-27",
+      "status": "早期研究报告",
+      "accent": "#477A73"
+    },
+    {
+      "id": "microsoft-literacy",
+      "kind": "literacy",
+      "durationSeconds": 18,
+      "category": "10.27 / 信息核验教育",
+      "title": "会使用AI，\n也要会核对来源",
+      "stat": "追溯来源",
+      "statLabel": "AI课堂工具包扩展版 · 首版始于2023年",
+      "details": [
+        "微软与Cyberlite发布扩展版AI课堂工具包，在原有安全教学之外，强化批判思考、信息核验与媒体素养练习。",
+        "新内容用虚构宣传帖、游戏聊天机器人等情境，帮助学生练习查证和隐私判断。本周是教材扩展，不是整套工具包首次发布。"
+      ],
+      "narration": [
+        "微软本周扩展人工智能课堂工具包，教学生核对信息、追溯来源。",
+        "课程从虚构帖子和聊天机器人出发，让判断力跟上生成内容的速度。"
+      ],
+      "sourceLabel": "Microsoft · 10月27日 / 扩展版教材",
+      "sourceUrl": "https://blogs.microsoft.com/on-the-issues/2026/10/27/in-an-age-of-ai-deciding-what-to-trust-is-a-foundational-skill-heres-how-were-helping-educators-teach-it/",
+      "publishedOn": "2026-10-27",
+      "eventOn": "2026-10-27",
+      "status": "扩展版已发布",
+      "accent": "#466E89"
+    },
+    {
+      "id": "clover",
+      "kind": "diffusion",
+      "durationSeconds": 18,
+      "category": "10.28 / 开源编程模型",
+      "title": "代码生成，\n试试另一种节奏",
+      "stat": "350亿 / 30亿",
+      "statLabel": "总参数 / 每次激活约数 · Clover Preview",
+      "details": [
+        "Clover预览版采用混合专家与块扩散架构，总参数350亿、每次激活约30亿，支持128K上下文，面向编程与工具使用。",
+        "权重和相关代码已开放，在线体验需申请。团队公布的速度与编程成绩受任务、硬件和配置影响；桌面客户端等仍属后续计划。"
+      ],
+      "narration": [
+        "扩散模型也在学写代码、用工具。",
+        "本周发布的Clover预览版采用分块并行生成，尝试加快智能体的一轮轮执行与反馈。"
+      ],
+      "sourceLabel": "DiffuSpace官方模型卡 · 10月28日 / Preview",
+      "sourceUrl": "https://diffuspace.ai/blog/clover-35b/",
+      "publishedOn": "2026-10-28",
+      "eventOn": "2026-10-28",
+      "status": "预览，权重已发布",
+      "accent": "#C78B59",
+      "secondarySourceUrl": "https://huggingface.co/Diffuspace/Clover-35B-A3B-Preview"
+    },
+    {
+      "id": "apex",
+      "kind": "training",
+      "durationSeconds": 18,
+      "category": "10.28—29 / AI参与训练研究",
+      "title": "研究AI，\n也让AI参与研究",
+      "stat": "AI参与研究",
+      "statLabel": "Apex首款开放模型 · 研究能力为公司披露",
+      "details": [
+        "Apex发布首款开放模型，基于Qwen3.6继续训练，面向通用、编程和计算研究任务。权重以Apache 2.0许可开放。",
+        "公司称AI参与了数据构造、实验设计与训练结果分析。这提供了研究流程自动化的新线索，相关能力仍需外部复验。"
+      ],
+      "narration": [
+        "另一款开放模型，尝试让人工智能参与研究本身。",
+        "Apex称AI参与数据构造、实验设计和结果分析，相关能力仍需要外部复验。"
+      ],
+      "sourceLabel": "Apex官方模型卡 · 10月28日 / 10月29日公告",
+      "sourceUrl": "https://www.apexin.com/apex-35b/",
+      "publishedOn": "2026-10-28",
+      "eventOn": "2026-10-28",
+      "status": "权重开放，公司披露",
+      "accent": "#447C90",
+      "secondarySourceUrl": "https://huggingface.co/Apexintelligence-AI/Apex-35B-V1.0"
+    },
+    {
+      "id": "carbon",
+      "kind": "security",
+      "durationSeconds": 17,
+      "category": "10.28 / 网络防御模型",
+      "title": "新的能力，\n先面向防御者",
+      "stat": "定向开放",
+      "statLabel": "Gemini 4 Carbon · 广泛开放仍待后续",
+      "details": [
+        "谷歌公布Gemini 4 Carbon，面向网络防御与长时工程任务。官方评测结果来自特定基准，不能直接等同真实系统效果。",
+        "本周计划先向部分网络防御人员提供，再逐步扩展至可信伙伴。开发者、企业和消费者的广泛开放仍待后续。"
+      ],
+      "narration": [
+        "谷歌周三公布新模型，面向网络防御和长时间工程任务。",
+        "本周计划先向部分防御人员开放，开发者与普通用户何时能用，还要等后续安排。"
+      ],
+      "sourceLabel": "Google官方发布 · 10月28日 / 定向提供计划",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "publishedOn": "2026-10-28",
+      "eventOn": "2026-10-28",
+      "status": "公布，定向提供计划",
+      "accent": "#D28C70"
+    },
+    {
+      "id": "go3",
+      "kind": "robotics",
+      "durationSeconds": 17,
+      "category": "10.29 / 具身智能",
+      "title": "动作之前，\n先预测后果",
+      "stat": "GO-3 Preview",
+      "statLabel": "推理 → 预测 → 动作 · 发布会展示",
+      "details": [
+        "智元展示GO-3 Preview，以统一的推理、预测与动作框架，尝试让机器人预判行动后果，并适应环境和任务变化。",
+        "公司展示零样本、少样本任务能力，并公布机器人评测结果。模型仍处预览阶段，演示表现还需要长期现场验证。"
+      ],
+      "narration": [
+        "机器人也在补上行动前的预测。",
+        "智元周四展示GO三预览版，把推理、预测和动作连接起来，并探索部署后的持续改进。"
+      ],
+      "sourceLabel": "智元公司发布稿 · 10月29日 / Preview",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/agibot-introduces-worken-to-measure-productive-robot-work-at-agibot-innovation-day-2026-302923486.html",
+      "publishedOn": "2026-10-29",
+      "eventOn": "2026-10-29",
+      "status": "预览展示",
+      "accent": "#A9CBD8"
+    },
+    {
+      "id": "outro",
+      "durationSeconds": 10,
+      "title": "看见进展，\n也读懂边界。",
+      "narration": [
+        "看见新能力，也看清它们走到了哪一步。",
+        "这是十月二十六日至三十日的人工智能周记。"
+      ]
+    }
+  ]
+}

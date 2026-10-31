@@ -1,0 +1,303 @@
+{
+  "status": "passed",
+  "edition": "ai-weekly",
+  "startedAt": "2026-10-30T10:47:17.630Z",
+  "inputHash": "8f1dfde1e26950335453d2d4fe9ba9b1701e768f6d2ea5cef1f3c0f7544254b6",
+  "sourceFingerprint": {
+    "sha256": "8f1dfde1e26950335453d2d4fe9ba9b1701e768f6d2ea5cef1f3c0f7544254b6",
+    "files": [
+      {
+        "file": "effects/ai-weekly/AiArt.tsx",
+        "bytes": 17661,
+        "sha256": "1b92a767e0d30db4d7a08a55aad4dd1eeb54947367995b8ff924538999b73de9"
+      },
+      {
+        "file": "effects/ai-weekly/AiClosing.tsx",
+        "bytes": 8799,
+        "sha256": "2eb4e4ea8cad5c9cb91a67b858021dad168da243911b9c268d56cdd681bd2dd7"
+      },
+      {
+        "file": "effects/ai-weekly/AiEdition.tsx",
+        "bytes": 1359,
+        "sha256": "709e0327fd18015bb61603631f251261b6ca36586f27da2761027b5cedf7e3fe"
+      },
+      {
+        "file": "effects/ai-weekly/AiFilm.tsx",
+        "bytes": 7980,
+        "sha256": "9dcc96a57fa1cc0a7b5309af8bfb4a444959aff44e1780b4ef12cd22e74f6880"
+      },
+      {
+        "file": "effects/ai-weekly/AiOpening.tsx",
+        "bytes": 12345,
+        "sha256": "ab54b244d6bef2d9317c6db53cdb5452000013fbe5343a8ed1b6df431500b529"
+      },
+      {
+        "file": "effects/ai-weekly/Scene01.tsx",
+        "bytes": 99,
+        "sha256": "b0d551ffdd168b95d555e5f40d57cbcfcf6140866745bec4e84dcf02352e91d2"
+      },
+      {
+        "file": "effects/ai-weekly/Scene02.tsx",
+        "bytes": 99,
+        "sha256": "4587a9c751fda20f4bf8d801d6cc7d2e8dbadd54168df8ca3085d45eeea269b3"
+      },
+      {
+        "file": "effects/ai-weekly/Scene03.tsx",
+        "bytes": 99,
+        "sha256": "b1fd736e60bb4fe14e6b8f63304fa239f29e6ff7b162e774fead90f488bb7624"
+      },
+      {
+        "file": "effects/ai-weekly/Scene04.tsx",
+        "bytes": 99,
+        "sha256": "28e023930882f464b55b8c8a6c367b242d3e7f0748c83da7a96b9052311cbdc8"
+      },
+      {
+        "file": "effects/ai-weekly/Scene05.tsx",
+        "bytes": 99,
+        "sha256": "32e77c1f40d868ecbdd5f6fb7916aee54ab030ab47986289611460a0884cb11e"
+      },
+      {
+        "file": "effects/ai-weekly/Scene06.tsx",
+        "bytes": 99,
+        "sha256": "310b19ed4b649938202dff552dc2181e0c702863b9da39002973c4fefef0e1d4"
+      },
+      {
+        "file": "effects/ai-weekly/Scene07.tsx",
+        "bytes": 99,
+        "sha256": "735c8db8416352e64d046a789327bca9290c3a267f707ebffe3afbed2fafb867"
+      },
+      {
+        "file": "effects/ai-weekly/Scene08.tsx",
+        "bytes": 99,
+        "sha256": "8ef3eb4f202d042ee660a3856fdd5081dd78d1260da6d44752c09dfe02d5d35b"
+      },
+      {
+        "file": "effects/ai-weekly/Scene09.tsx",
+        "bytes": 99,
+        "sha256": "a4de53490469c2c1379a12a2180bc5a7e3f97bcca51c560bae158d53350b8808"
+      },
+      {
+        "file": "effects/ai-weekly/audio-manifest.json",
+        "bytes": 22258,
+        "sha256": "048954caa923e8a753ecf34d1b1b81898aab3962ff10576dfbe004369845f16b"
+      },
+      {
+        "file": "effects/ai-weekly/pronunciations.json",
+        "bytes": 286,
+        "sha256": "1d9425fd6d3c3588db02743d69ecd24e687e7a3a36bf0d056810de4cd2f3d4bb"
+      },
+      {
+        "file": "effects/ai-weekly/storyboard.json",
+        "bytes": 11905,
+        "sha256": "3f1c4e0140d5f483f4dd48cfa27cf52ac5de75d55b01beb317396ec025d8c127"
+      },
+      {
+        "file": "effects/daily-ten/EditionContext.tsx",
+        "bytes": 1403,
+        "sha256": "dfe96f6dacd52714e8833ad0f5b4ac572e0737d46bcf7c939a06689321176763"
+      },
+      {
+        "file": "effects/daily-ten/NewsArt.tsx",
+        "bytes": 32174,
+        "sha256": "2870fa0151d2aa4fc0f1710e33b692b5475c67247ea27bed88bd52a97a356412"
+      },
+      {
+        "file": "effects/daily-ten/PortraitScene.tsx",
+        "bytes": 6355,
+        "sha256": "87b2c791466d7eee4f1abdb677a640d3c59ec28ceda1d0b1f61c8233b832a18d"
+      },
+      {
+        "file": "effects/daily-ten/SceneFrame.tsx",
+        "bytes": 10188,
+        "sha256": "1064a77a54adfa388b659aa415d1f6f001ca6b6ad1a22a43883292ae9c1d9151"
+      },
+      {
+        "file": "effects/daily-ten/storyboard.json",
+        "bytes": 9720,
+        "sha256": "664f5185f80f09623670589f38b16a4e872e8d5b49e7a9ad2be4fbabe08df806"
+      },
+      {
+        "file": "effects/index.tsx",
+        "bytes": 829,
+        "sha256": "1e8eabc442608c42dd6e3e1aa8f7e784594b53340c0e69a1f41360d5ea28ec59"
+      },
+      {
+        "file": "package-lock.json",
+        "bytes": 196744,
+        "sha256": "ff11b2b8e13cb6980c9bcd3d3e4215e4d6bcfaf7d9e832b42d9acbfb10969456"
+      },
+      {
+        "file": "package.json",
+        "bytes": 5977,
+        "sha256": "35e0fecfb175d461c2d041d42f4a32c6871e327c1de036754aac6226b07d81c3"
+      },
+      {
+        "file": "public/ai-weekly/apex.mp3",
+        "bytes": 195647,
+        "sha256": "e1bf98fa42c8c32165a520d104957aa561418d2c8a5dca93ffbae40779b06e05"
+      },
+      {
+        "file": "public/ai-weekly/baidu-ocr.mp3",
+        "bytes": 233264,
+        "sha256": "560fa0d3846521aaf6718261a4a9a73a53cf5540d004b342f0ce4a961e73b74b"
+      },
+      {
+        "file": "public/ai-weekly/captions.zh.srt",
+        "bytes": 2635,
+        "sha256": "ecf038916dab05c00bbb94424ec77026af2b4822ce878c8d24f7c3ccf919f922"
+      },
+      {
+        "file": "public/ai-weekly/carbon.mp3",
+        "bytes": 211948,
+        "sha256": "9ed17cd609ccacd25b99e1040297bb2f0b6ec9b5ee0cd12bcd4dac3b17c52e82"
+      },
+      {
+        "file": "public/ai-weekly/claude-research.mp3",
+        "bytes": 198155,
+        "sha256": "3b594dd7017c0bda27433a563d6a179dbb9683cd9215dc242f36477227c46238"
+      },
+      {
+        "file": "public/ai-weekly/clover.mp3",
+        "bytes": 171824,
+        "sha256": "6a7f6df93780475805a8be1ff7804f8bcf587039d9b7a79c0b609721142facf2"
+      },
+      {
+        "file": "public/ai-weekly/go3.mp3",
+        "bytes": 178093,
+        "sha256": "407d0eae06b937346a14c95c570e842efa5d6568d1b4728c4f8678b84849aef4"
+      },
+      {
+        "file": "public/ai-weekly/intro.mp3",
+        "bytes": 114145,
+        "sha256": "5f7da93ee8461df72be7b851a9e285b31c2a0ccffbd6cea9c5f780eeac2b1d31"
+      },
+      {
+        "file": "public/ai-weekly/microsoft-literacy.mp3",
+        "bytes": 208604,
+        "sha256": "a82817fb892e89237f762c89b496ed4d5b48d0c82f58170e1cf0a2ca79f47ce7"
+      },
+      {
+        "file": "public/ai-weekly/music-reference.json",
+        "bytes": 193,
+        "sha256": "5c3889fde113260b2faaf69854282524cb575fbdbdeea4fef31c9bff533edb68"
+      },
+      {
+        "file": "public/ai-weekly/nvidia-meta.mp3",
+        "bytes": 204007,
+        "sha256": "b93cb23741b0bf2185ca5573b81585f0df105e17126853ca40b663db38bd2caf"
+      },
+      {
+        "file": "public/ai-weekly/outro.mp3",
+        "bytes": 127520,
+        "sha256": "d70ec736ec5638be7ac96bfa2c1445d7922d507e20ce4360576c65709088db6e"
+      },
+      {
+        "file": "public/ai-weekly/terra.mp3",
+        "bytes": 214874,
+        "sha256": "c751021facaaed7f27bd3e822c4c32ed9ed513662dd4e7002d873a758457eec8"
+      },
+      {
+        "file": "public/ai-weekly/voiceover-manifest.json",
+        "bytes": 22258,
+        "sha256": "048954caa923e8a753ecf34d1b1b81898aab3962ff10576dfbe004369845f16b"
+      },
+      {
+        "file": "public/daily-ten/music-manifest.json",
+        "bytes": 674,
+        "sha256": "91d2e9fcb679f02e99f7a599ac309402a3176bc841b5aaa4a672e04933b609e9"
+      },
+      {
+        "file": "public/daily-ten/music.mp3",
+        "bytes": 3601284,
+        "sha256": "035e8a0484f0e7ddb88865b0cf65f6898c1d307883e258c30b6e1fb0cf67ad16"
+      },
+      {
+        "file": "public/daily-ten/voiceover-manifest.json",
+        "bytes": 22554,
+        "sha256": "78d865282b70c154d70dc4320384c272ca1e52304f6b2001a38044072734ef8e"
+      },
+      {
+        "file": "remotion.config.ts",
+        "bytes": 384,
+        "sha256": "d9a9540ea4fd7f6a5c987f2e77b0ee2afb82b4a2139d8072858b0b80cec53a78"
+      },
+      {
+        "file": "scripts/render-ai-weekly.mjs",
+        "bytes": 9731,
+        "sha256": "c12dfd39dccb8b789b4e230d0b42e4450e90b93811a46d9c055d772b5455e45b"
+      },
+      {
+        "file": "scripts/verify-export.mjs",
+        "bytes": 3496,
+        "sha256": "6ccdf3cd142efae439b82740e58371b59b21333d17d3e40af64ac04b435fed7e"
+      },
+      {
+        "file": "scripts/verify-news-edition.mjs",
+        "bytes": 4927,
+        "sha256": "2123c188dcd7d46af1a0acd1128ff7965109208e8e1edea7e63b2db9d9f679c6"
+      },
+      {
+        "file": "scripts/verify-weekly-ten-media.mjs",
+        "bytes": 15289,
+        "sha256": "13efe75fbb12a5bd9ff444aba585c9fddfd60893ea8042d9e94b684218a72e47"
+      },
+      {
+        "file": "src/Root.tsx",
+        "bytes": 572,
+        "sha256": "d8112887c4123ac2e7bc08febf4d2a0f88f963e097a40a2070f3256408c5be33"
+      },
+      {
+        "file": "src/index.ts",
+        "bytes": 113,
+        "sha256": "9add656193bc0a61896d26d3067000fcff56ef7b69270af1f8883b0e4ce65cc4"
+      },
+      {
+        "file": "tsconfig.json",
+        "bytes": 416,
+        "sha256": "964a264e611af4127afde08120daf4884a13782f1544be0f89bb23b5990b2c57"
+      }
+    ]
+  },
+  "sceneCount": 11,
+  "newsCount": 9,
+  "fps": 60,
+  "frames": 10800,
+  "seconds": 180,
+  "options": {
+    "codec": "h264",
+    "videoBitrate": "10M",
+    "audioCodec": "aac",
+    "audioBitrate": "192k",
+    "sampleRate": 48000,
+    "pixelFormat": "yuv420p",
+    "imageFormat": "jpeg",
+    "jpegQuality": 95,
+    "hardwareAcceleration": "required",
+    "concurrency": 6
+  },
+  "platforms": [
+    {
+      "id": "AiWeekly-Bilibili",
+      "platform": "bilibili",
+      "width": 1920,
+      "height": 1080,
+      "file": "out\\ai-weekly-20261030-bilibili-1080p60.mp4",
+      "status": "passed",
+      "startedAt": "2026-10-30T10:47:20.819Z",
+      "completedAt": "2026-10-30T10:52:47.024Z",
+      "sizeBytes": 111061998
+    },
+    {
+      "id": "AiWeekly-Douyin",
+      "platform": "douyin",
+      "width": 1080,
+      "height": 1920,
+      "file": "out\\ai-weekly-20261030-douyin-1080p60.mp4",
+      "status": "passed",
+      "startedAt": "2026-10-30T10:52:47.050Z",
+      "completedAt": "2026-10-30T10:57:53.941Z",
+      "sizeBytes": 79454451
+    }
+  ],
+  "completedAt": "2026-10-30T10:57:53.942Z"
+}

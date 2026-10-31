@@ -1,0 +1,9 @@
+{
+  "version": "ai-weekly-letter-acronyms-v1",
+  "terms": {
+    "OCR": "O C R",
+    "API": "A P I"
+  },
+  "captionsPreserveOriginalText": true,
+  "rationale": "Only this edition spells uncovered OCR and API acronyms; the global historical pronunciation dictionary remains unchanged."
+}

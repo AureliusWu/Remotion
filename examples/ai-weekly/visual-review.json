@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T18:47:05.9887912+08:00",
+  "reviewType": "AI visual inspection using view_image on actual rendered composition stills",
+  "reviewedFrameCount": 12,
+  "frames": [
+    {
+      "platform": "Bilibili",
+      "frame": 210,
+      "file": "AiWeekly-Bilibili-validation/frame-0210.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Bilibili",
+      "frame": 1320,
+      "file": "AiWeekly-Bilibili-validation/frame-1320.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Bilibili",
+      "frame": 3480,
+      "file": "AiWeekly-Bilibili-validation/frame-3480.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Bilibili",
+      "frame": 6720,
+      "file": "AiWeekly-Bilibili-validation/frame-6720.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Bilibili",
+      "frame": 9900,
+      "file": "AiWeekly-Bilibili-validation/frame-9900.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Bilibili",
+      "frame": 10799,
+      "file": "AiWeekly-Bilibili-validation/frame-10799.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Douyin",
+      "frame": 210,
+      "file": "AiWeekly-Douyin-validation/frame-0210.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Douyin",
+      "frame": 1320,
+      "file": "AiWeekly-Douyin-validation/frame-1320.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Douyin",
+      "frame": 3480,
+      "file": "AiWeekly-Douyin-validation/frame-3480.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Douyin",
+      "frame": 6720,
+      "file": "AiWeekly-Douyin-validation/frame-6720.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Douyin",
+      "frame": 9900,
+      "file": "AiWeekly-Douyin-validation/frame-9900.png",
+      "result": "passed"
+    },
+    {
+      "platform": "Douyin",
+      "frame": 10799,
+      "file": "AiWeekly-Douyin-validation/frame-10799.png",
+      "result": "passed"
+    }
+  ],
+  "findings": [
+    "Both opening layouts clearly show 9 selected items and the 10.26-10.30 as-of-now period; editorial samples are labelled as illustrative rather than product screenshots.",
+    "Long Chinese/English text at frames 1320, 3480, 6720 and 9900 remains within the authored body area in both aspect ratios; no visible clipping or collision with the artwork or main statistic.",
+    "Core values 105万token, 最大输出12.8万token, 350亿/30亿 and GO-3 Preview remain legible and complete.",
+    "Source lines and active subtitles at frames 1320 and 3480 remain separated; portrait two-line subtitles preserve the intended right and bottom interface allowance.",
+    "Opening artwork annotation/date/body and both closing title/count/notes remain distinct with visible spacing."
+  ],
+  "hardIssues": [],
+  "sourceFilesChanged": false,
+  "scopeLimits": [
+    "12 sampled stills only, not exhaustive visual review of 10800 frames",
+    "No claim about final MP4 decoding, listening, frame pacing, or platform-transcoded/device playback"
+  ]
+}

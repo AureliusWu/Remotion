@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "composition": "DailyTen20261030",
+  "url": "http://localhost:3000/DailyTen20261030",
+  "checkedAt": "2026-10-30T17:45:23.3133845+08:00",
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "durationInFrames": 10800,
+  "playbackRate": 1,
+  "muted": false,
+  "looping": true,
+  "observedFrames": [
+    2,
+    5245,
+    10261,
+    1267
+  ],
+  "loopCrossingVerified": true,
+  "explanation": "Observed frame 10261 followed by frame 1267 after the end of the 10800-frame timeline; actual Play button activated media playback.",
+  "studioError": null,
+  "consoleWarningsAndErrors": [],
+  "leftPausedAtFrame": 210,
+  "mp4Exported": false,
+  "scope": "Continuous Studio playback, sampled visual inspection and source audio decoding; no exported MP4 or complete manual listening claim."
+}

@@ -1,0 +1,159 @@
+{
+  "edition": "ai-weekly",
+  "status": "passed",
+  "checkedAt": "2026-10-30T10:45:32.623897+00:00",
+  "measurement": "full decoded 48kHz mono PCM16; dBFS, not LUFS",
+  "scenes": [
+    {
+      "id": "intro",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 338619,
+      "durationSeconds": 7.054563,
+      "peakDbfs": -8.4609,
+      "rmsDbfs": -23.4459,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 2.294694
+    },
+    {
+      "id": "terra",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 641517,
+      "durationSeconds": 13.364937,
+      "peakDbfs": -8.7871,
+      "rmsDbfs": -23.4472,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 3.999184
+    },
+    {
+      "id": "nvidia-meta",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 609125,
+      "durationSeconds": 12.690104,
+      "peakDbfs": -8.5825,
+      "rmsDbfs": -23.4465,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 4.678367
+    },
+    {
+      "id": "baidu-ocr",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 696709,
+      "durationSeconds": 14.514771,
+      "peakDbfs": -6.8191,
+      "rmsDbfs": -23.4473,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 2.849796
+    },
+    {
+      "id": "claude-research",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 591775,
+      "durationSeconds": 12.328646,
+      "peakDbfs": -8.2906,
+      "rmsDbfs": -23.4464,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 5.044082
+    },
+    {
+      "id": "microsoft-literacy",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 622989,
+      "durationSeconds": 12.978938,
+      "peakDbfs": -8.1682,
+      "rmsDbfs": -23.4463,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 4.39102
+    },
+    {
+      "id": "clover",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 512217,
+      "durationSeconds": 10.671188,
+      "peakDbfs": -7.507,
+      "rmsDbfs": -23.4467,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 6.689796
+    },
+    {
+      "id": "apex",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 584003,
+      "durationSeconds": 12.166729,
+      "peakDbfs": -8.9952,
+      "rmsDbfs": -23.4471,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 5.200816
+    },
+    {
+      "id": "carbon",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 632081,
+      "durationSeconds": 13.168354,
+      "peakDbfs": -8.4686,
+      "rmsDbfs": -23.4468,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 3.182041
+    },
+    {
+      "id": "go3",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 530687,
+      "durationSeconds": 11.055979,
+      "peakDbfs": -8.3071,
+      "rmsDbfs": -23.4461,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 5.297959
+    },
+    {
+      "id": "outro",
+      "fullDecodePassed": true,
+      "sampleRate": 48000,
+      "sampleCount": 379667,
+      "durationSeconds": 7.909729,
+      "peakDbfs": -7.6446,
+      "rmsDbfs": -23.4473,
+      "clippedSampleCount": 0,
+      "captionCount": 2,
+      "tailRoomSeconds": 1.458776
+    }
+  ],
+  "captionCount": 22,
+  "music": {
+    "fullDecodePassed": true,
+    "sampleRate": 48000,
+    "sampleCount": 8640000,
+    "durationSeconds": 180.0,
+    "peakDbfs": -30.8464,
+    "rmsDbfs": -41.4456,
+    "clippedSampleCount": 0
+  },
+  "timelineSeconds": 180,
+  "sceneCount": 11,
+  "captionSourceAndTimingPassed": true,
+  "totalClippedSampleCount": 0,
+  "highestPeakDbfs": -6.8191,
+  "rmsDbfsRange": [
+    -23.4473,
+    -23.4459
+  ]
+}

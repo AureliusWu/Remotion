@@ -1,0 +1,86 @@
+{
+  "edition": "weekly-ten",
+  "status": "passed",
+  "checkedAt": "2026-10-30T10:19:59.363Z",
+  "period": [
+    "2026-10-26",
+    "2026-10-30"
+  ],
+  "retrievedOn": "2026-10-30",
+  "scenes": [
+    {
+      "id": "intro",
+      "startFrame": 0,
+      "endFrame": 599,
+      "source": null
+    },
+    {
+      "id": "tourism",
+      "startFrame": 600,
+      "endFrame": 1559,
+      "source": "https://zwgk.mct.gov.cn/zfxxgkml/tjxx/202610/t20261026_967476.html"
+    },
+    {
+      "id": "shopping",
+      "startFrame": 1560,
+      "endFrame": 2519,
+      "source": "https://www.chinanews.com/cj/2026/10-26/10721097.shtml"
+    },
+    {
+      "id": "swimming",
+      "startFrame": 2520,
+      "endFrame": 3479,
+      "source": "https://paper.people.com.cn/rmrb/pc/content/202610/27/content_30187847.html"
+    },
+    {
+      "id": "mars-dust",
+      "startFrame": 3480,
+      "endFrame": 4439,
+      "source": "https://www.jpl.nasa.gov/news/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/"
+    },
+    {
+      "id": "archive",
+      "startFrame": 4440,
+      "endFrame": 5399,
+      "source": "https://www.unesco.org/en/days/audiovisual-heritage"
+    },
+    {
+      "id": "rates",
+      "startFrame": 5400,
+      "endFrame": 6359,
+      "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+    },
+    {
+      "id": "vote",
+      "startFrame": 6360,
+      "endFrame": 7319,
+      "source": "https://news.pts.org.tw/article/833527"
+    },
+    {
+      "id": "baseball",
+      "startFrame": 7320,
+      "endFrame": 8279,
+      "source": "https://apnews.com/article/971f9fb8cad75042fc7f9919dd91c159"
+    },
+    {
+      "id": "robot",
+      "startFrame": 8280,
+      "endFrame": 9239,
+      "source": "https://companies.caixin.com/2026-10-29/102498623.html"
+    },
+    {
+      "id": "football",
+      "startFrame": 9240,
+      "endFrame": 10199,
+      "source": "https://ent.people.com.cn/n1/2026/1030/c1012-40824538.html"
+    },
+    {
+      "id": "outro",
+      "startFrame": 10200,
+      "endFrame": 10799,
+      "source": null
+    }
+  ],
+  "captionCount": 24,
+  "newsCount": 10
+}
