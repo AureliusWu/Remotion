@@ -4,53 +4,26 @@
 [![Version](https://img.shields.io/github/v/tag/AureliusWu/Remotion?sort=semver&style=flat-square&label=version)](https://github.com/AureliusWu/Remotion/tags) [![Last commit](https://img.shields.io/github/last-commit/AureliusWu/Remotion?style=flat-square)](https://github.com/AureliusWu/Remotion/commits/main)
 <!-- project-badges:end -->
 
-本仓库用于联合调试 Remotion，开展基于 Remotion 的视频生成、效果预览与渲染验证。
+用于 Remotion 视频生成、Studio 预览、动画开发和本地渲染验证。`video/` 是唯一 npm 工程根。
 
-## 协作范围
+## 当前作品
 
-- 视频生成：开发和调试视频代码、场景、动画及素材组织。
-- 效果预览：检查画面、时间轴、字幕和音频效果。
-- 视频渲染：验证视频导出流程，排查渲染失败、性能和输出问题。
-- 联合调试：记录可复现的问题、调试过程及验证结果。
+- `AiHistory30m`：30 分钟 AI 发展史长片，见 `docs/AI-HISTORY-PRODUCTION.md`。
+- `PoissonEncounters`：泊松过程科普短片，见 `docs/POISSON-FILM.md`。
+- `ChinaGenAiTimeline`：中国生成式 AI 用户规模数据视频，见 `docs/CHINA-GENAI-SOURCES.md`。
+- `PelicanRide`：鹈鹕海岸骑行插画动画，见 `docs/PELICAN-RIDE.md`。
+- `SmokeTest`：基础渲染与环境联调样例。
 
-## 工程结构
-
-```text
-video/                  Remotion + React + TypeScript 工程
-  effects/<name>/       新动画独立模块，共享 video 根依赖
-  AGENTS.md             工程结构、版本管理与环境排查约定
-  src/Composition.tsx   SmokeTest 测试视频与合成注册
-  src/pelican-ride/     鹈鹕海岸骑行：插画、踩踏运动与背景视差
-  src/china-genai/     中国生成式 AI 用户规模：数据、分镜与旁白时间轴
-  src/poisson-process/ 泊松过程科普：数学、人文、逐句字幕与原创音乐
-  scripts/              规格/静帧/音频验证与本地旁白生成工具
-  out/                  本地渲染输出（不纳入 Git）
-examples/               已验证的小型测试成片、封面和媒体信息
-docs/VALIDATION.md      预览、构建与渲染验证记录
-docs/DEPENDENCIES.md    依赖版本、安全公告状态与检查命令
-docs/ENVIRONMENT.md     系统环境、诊断与新增动画方法
-docs/VIDEO-ENGINEERING-LOG.md  制作中的问题、修复、验证与经验
-```
-
-## 安装与预览
-
-已有本地工程先检查环境，无需重复安装：
+## 开发与验证
 
 ```powershell
 cd video
+npm ci
 npm run check:environment
-npm run dev
+npm run dev -- --no-open
 ```
 
-仅首次克隆且尚未安装依赖时执行 `npm ci`，使用锁文件版本，不主动升级。
-
-打开终端打印的 Studio 地址，选择 `SmokeTest` 或 `Effects/EnvironmentTest`。本次使用
-`http://localhost:3000/SmokeTest`。在 Codex 中启动且不弹出系统浏览器时，可使用
-`npm run dev -- --no-open`。
-
-## 检查与渲染
-
-以下命令在 `video` 目录中执行：
+常用检查：
 
 ```powershell
 npm run check:versions
@@ -60,101 +33,17 @@ npm run render:test
 npm run still:test
 ```
 
-- `check:versions`：核对 Remotion 配套包和 Zod 等辅助依赖的版本。
-- `render:test`：导出 `video/out/smoke-test.mp4`，H.264、1920×1080、30 fps、6 秒。
-- `still:test`：导出第 90 帧到 `video/out/smoke-test.png`。
-- 首次渲染会自动下载 Chrome Headless Shell，需要网络连接。
-- `node_modules`、构建缓存和日常渲染输出均被 Git 忽略。
+日常输出位于 `video/out/`，不进入 Git。
 
-环境检查与新增动画方法见 [ENVIRONMENT.md](docs/ENVIRONMENT.md)。新动画统一放入
-`video/effects/<name>/`，在 `video/effects/index.tsx` 注册；已有作品保持原目录。
+## AI / 维护者入口
 
-## 测试视频
+修改前先读 [AGENTS.md](AGENTS.md) 与 [video/AGENTS.md](video/AGENTS.md)。
 
-### 从提问到共创：人工智能发展历程
+- 新动画放在 `video/effects/<name>/` 并由 `video/effects/index.tsx` 注册；已有作品保持原目录。
+- Remotion / `@remotion/*` 包保持相同精确版本，不为消除告警随意升级或修改上游代码。
+- 信息类视频先核原始来源，区分统计期、发布日期与检索日期，不把推算写成事实。
+- 工程问题、修复和可复用经验写入 `docs/VIDEO-ENGINEERING-LOG.md`。
+- 环境与依赖说明分别见 `docs/ENVIRONMENT.md`、`docs/DEPENDENCIES.md`。
+- 预览、静帧、局部导出和完整成片是不同验收层级，未实际导出的成片不能写成已完成。
 
-`AiHistory30m` 为 1920×1080、60 fps、108000 帧（30 分钟）的科普长片，15 章、60 个独立镜头。
-使用本地 Kokoro 中文神经语音、逐句字幕与原创轻音乐，免付费语音 API。
-源码在 `video/effects/ai-history/`；Studio 的 `AiHistoryChapters` / `AiHistoryShots` 可独立查看章节与镜头。
-完整稿件、61 条来源、免费语音选择和复现步骤见
-[讲稿与来源](docs/AI-HISTORY-SCRIPT.md) · [制作说明](docs/AI-HISTORY-PRODUCTION.md)。
-
-在 `video/` 首次执行 `npm run audio:ai-history` 构建旁白母带，再执行
-`npm run render:ai-history` 导出 `out/ai-history-1080p60.mp4`。
-它复用通过指纹和实际媒体规格检查的完整章节，不复用未完成片段。
-`npm run verify:ai-history-export` 检查整片规格并完整解码；`npm run verify:ai-history-audio`
-检查成片实际 AAC 的逐场音量。完成状态以 `examples/ai-history/` 的实际报告为准。
-
-### 等待与偶遇：泊松过程
-
-`PoissonEncounters` 为 1920×1080、60 fps、10800 帧（3 分钟）的科普短片。用书店里的
-等待与偶遇串起泊松计数、指数等待、无记忆性、1837 年历史书目和模型的适用边界。
-包含中文旁白、36 条逐句字幕、原创轻音乐，数学依据为 MIT 课程讲义，历史依据为 BnF 书目。
-
-![等待与偶遇：泊松过程](examples/poisson-process/cover.png)
-
-启动 Studio 后打开 `http://localhost:3000/PoissonEncounters`。
-`npm run verify:poisson` 验证合成、关键帧、旁白和字幕；`npm run render:poisson` 导出本地
-`video/out/poisson-process-1080p60.mp4`。导出后可运行：
-
-```powershell
-node scripts/verify-export.mjs out/poisson-process-1080p60.mp4 180 60
-```
-
-以上命令在 `video/` 中执行。完整数学口径、时间轴与复现方式见
-[作品说明](docs/POISSON-FILM.md)，实际检查结果见[工程日志](docs/VIDEO-ENGINEERING-LOG.md)。
-
-### 中国生成式 AI 用户规模
-
-`ChinaGenAiTimeline` 为 1920×1080、60 fps、3600 帧（1 分钟）的数据视频，包含六个独立
-分镜及本地合成中文旁白。记录 2024 年 6 月至 2026 年上半年的五个公开人数节点。
-资料检索截至 2026-10-29；最新公开统计为 2026 年上半年突破 7 亿人，不推算今天的实时人数。
-
-启动 Studio 后打开 `http://localhost:3000/ChinaGenAiTimeline`，点击播放。
-
-![中国生成式 AI 用户规模](examples/china-genai/cover.png)
-
-在 `video/` 执行 `npm run verify:genai`，可检查实际合成规格、七个关键帧和六段旁白。
-本次交付为可播放预览和静帧，未导出整段 MP4。
-[数据来源与口径](docs/CHINA-GENAI-SOURCES.md) ·
-[工程问题与经验](docs/VIDEO-ENGINEERING-LOG.md) ·
-[自动验证报告](examples/china-genai/validation.json)
-
-### 鹈鹕海岸骑行
-
-`PelicanRide` 是一段暖色海岸插画动画，1920×1080、60 fps、900 帧（15 秒）。
-鹈鹕交替踩踏，蹼足保持贴合踏板，车轮旋转，围巾与身体轻微摆动，背景分层滚动。
-全部画面由本地 SVG 与逐帧计算生成，无外部素材、无音轨。
-
-启动 Studio 后选择 `PelicanRide`，或打开 `http://localhost:3000/PelicanRide`。
-自行车和围巾颜色可通过合成的 `defaultProps` 调整；源文件位于
-[`video/src/pelican-ride/`](video/src/pelican-ride/)。
-
-![鹈鹕海岸骑行封面](examples/pelican-ride.png)
-
-制作与预览验证见[骑行视频说明](docs/PELICAN-RIDE.md)。
-
-### 基础联调示例
-
-`SmokeTest` 包含英文标题、中文副标题、旋转图形、逐帧计数和进度条；动画由
-Remotion 帧数驱动。共 180 帧，没有外部素材或音轨。
-
-![SmokeTest 第 90 帧](examples/smoke-test.png)
-
-[下载测试 MP4](examples/smoke-test.mp4) ·
-[查看验证记录](docs/VALIDATION.md) ·
-[媒体信息](examples/media-info.json)
-
-## 依赖说明
-
-- Remotion 及其配套包固定为 `4.0.539`，通过 `package-lock.json` 锁定依赖。
-- Zod 直接固定为 Remotion 当前推荐的 `4.5.4`，已移除此前强制使用 `4.6.6` 的
-  `overrides`。保留 Remotion 版本检查，不修改上游检查代码。
-- 此前用于覆盖 Zod 的安全公告来源 `CVE-2023-54404` 已被 CNA 拒绝；GitHub 公告与
-  npm 审计尚未同步。本轮审计仍为 `10 high`，唯一公告对象为该 CVE 对应的 GHSA。
-  本工程保留实际审计结果，不宣称漏洞数量为 0。原始证据、时间和
-  [审计摘要](docs/dependency-audit.json)见[依赖说明](docs/DEPENDENCIES.md)。
-- 恢复官方依赖后的干净安装、原生版本检查、代码检查、构建、Studio 预览、MP4 与静帧
-  渲染均已重新验证通过，渲染日志不再输出 Zod 版本差异提示。本轮结果见
-  [验证记录](docs/VALIDATION.md)。
-- 中文使用系统字体回退；本轮在 Windows 微软雅黑环境验证。跨平台字体外观可能不同。
+README 只保留工程入口和当前作品索引；详细脚本、来源、验证报告和制作日志放在 `docs/`。
