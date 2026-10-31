@@ -1,5 +1,9 @@
 # Remotion 视频生成与渲染联调
 
+<!-- project-badges:start -->
+[![Version](https://img.shields.io/github/v/tag/AureliusWu/Remotion?sort=semver&style=flat-square&label=version)](https://github.com/AureliusWu/Remotion/tags) [![Last commit](https://img.shields.io/github/last-commit/AureliusWu/Remotion?style=flat-square)](https://github.com/AureliusWu/Remotion/commits/main)
+<!-- project-badges:end -->
+
 本仓库用于联合调试 Remotion，开展基于 Remotion 的视频生成、效果预览与渲染验证。
 
 ## 协作范围
