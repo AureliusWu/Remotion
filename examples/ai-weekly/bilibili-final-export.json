@@ -1,0 +1,24 @@
+{
+  "file": "ai-weekly-20261030-bilibili-1080p60.mp4",
+  "checkedAt": "2026-10-30T10:52:46.243Z",
+  "status": "passed",
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": 60,
+    "frames": 10800,
+    "durationSeconds": 180,
+    "pixelFormat": "yuvj420p",
+    "colorRange": "pc"
+  },
+  "audio": {
+    "codec": "aac",
+    "durationSeconds": 180.011,
+    "sampleRate": 48000,
+    "channels": 2
+  },
+  "sizeBytes": 111061998,
+  "sha256": "5ec64376cab3816737213698458b9ca10ebb356f1044a19e0e14b5686fbe103c",
+  "fullDecode": "passed"
+}

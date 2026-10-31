@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T18:30:23.5258170+08:00",
+  "periodStart": "2026-10-26",
+  "periodEnd": "2026-10-30",
+  "periodNote": "截至目前，本周尚未结束",
+  "uploaded": false,
+  "platforms": [
+    {
+      "platform": "bilibili",
+      "file": "weekly-ten-20261030-bilibili-1080p60.mp4",
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 60,
+        "frames": 10800,
+        "durationSeconds": 180,
+        "pixelFormat": "yuvj420p",
+        "colorRange": "pc"
+      },
+      "audio": {
+        "codec": "aac",
+        "durationSeconds": 180.011,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "sizeBytes": 125955655,
+      "sha256": "10fed5d57eb83be9b0791a389060d97ac60cc76626785e3a546e67a24cd6a07a",
+      "fullDecode": "passed",
+      "narrationWindows": 12,
+      "rmsDbfsMin": -24.548022356821452,
+      "rmsDbfsMax": -24.493487410562054,
+      "peakDbfs": -8.340970253792815,
+      "clippedSamples": 0.0
+    },
+    {
+      "platform": "douyin",
+      "file": "weekly-ten-20261030-douyin-1080p60.mp4",
+      "video": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "h264",
+        "fps": 60,
+        "frames": 10800,
+        "durationSeconds": 180,
+        "pixelFormat": "yuvj420p",
+        "colorRange": "pc"
+      },
+      "audio": {
+        "codec": "aac",
+        "durationSeconds": 180.011,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "sizeBytes": 89200428,
+      "sha256": "885fa12a14cd265d57986508a8d69c42f990edc71f3af48a147849c72223b7c8",
+      "fullDecode": "passed",
+      "narrationWindows": 12,
+      "rmsDbfsMin": -24.548022356821452,
+      "rmsDbfsMax": -24.493487410562054,
+      "peakDbfs": -8.340970253792815,
+      "clippedSamples": 0.0
+    }
+  ]
+}

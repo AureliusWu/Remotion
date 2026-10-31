@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T18:26:22.9714622+08:00",
+  "bilibili": {
+    "observedFrames": [
+      8,
+      566
+    ],
+    "id": "WeeklyTen-Bilibili",
+    "muted": false,
+    "playing": true,
+    "naturalLoopObserved": true,
+    "playbackRate": 1,
+    "error": null
+  },
+  "douyin": {
+    "observedFrames": [
+      4,
+      7224,
+      3781
+    ],
+    "id": "WeeklyTen-Douyin",
+    "muted": false,
+    "playing": true,
+    "naturalLoopObserved": true,
+    "playbackRate": 1,
+    "error": null
+  },
+  "consoleWarningsAndErrors": [],
+  "leftPausedAt": {
+    "frame": 210,
+    "composition": "WeeklyTen-Bilibili"
+  },
+  "scope": "Continuous Studio playback crossed the timeline end; objective checks and sampled visual review, not complete manual listening or platform acceptance"
+}

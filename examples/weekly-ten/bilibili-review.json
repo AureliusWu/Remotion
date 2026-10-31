@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "statement": "Bilibili MP4 verified: complete decode, twelve narration windows, sampled start/middle/end frames.",
+  "file": "weekly-ten-20261030-bilibili-1080p60.mp4",
+  "bytes": 125955655,
+  "sha256": "10fed5d57eb83be9b0791a389060d97ac60cc76626785e3a546e67a24cd6a07a",
+  "video": "1920x1080 / 60fps / 10800 frames / 180s",
+  "audio": "AAC / 48000Hz / 2 channels / 180.011s",
+  "fullDecode": "passed",
+  "narrationWindows": 12,
+  "clippedSamples": 0,
+  "sampledFramesFromMp4Seconds": [
+    3.5,
+    69,
+    179
+  ]
+}

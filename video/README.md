@@ -1,5 +1,32 @@
 # Remotion Video Lab
 
+统一流程入口：`npm run workflow -- help`；完整操作、本地与GitHub分工、PCM24母带和外部Atmos接口见 [工作流说明](../docs/WORKFLOW.md)。
+
+AI一周热点观察（10.26—10.30截至目前）：`AiWeekly-Bilibili` / `AiWeekly-Douyin`，9条AI进展，180秒/60fps，横1920×1080、竖1080×1920。
+`npm run verify:ai-weekly-content` 校验文稿与声音；`npm run verify:ai-weekly-bilibili` / `verify:ai-weekly-douyin` 检查画面与音频；
+`npm run render:ai-weekly` 导出并验收两版MP4。来源、开放状态与复现见[本期AI周报](../docs/AI-WEEKLY-20261030.md)。
+
+Studio：<http://localhost:3000/AiWeekly-Bilibili> / <http://localhost:3000/AiWeekly-Douyin>。
+
+本周汇总《这一周，世界留下什么》（10.26—10.30截至目前）：
+`WeeklyTen-Bilibili` / `WeeklyTen-Douyin`，180秒/60fps，横1920×1080、竖1080×1920。
+`npm run verify:weekly-ten-content` 核对稿件与旁白，`npm run verify:weekly-ten-bilibili` / `verify:weekly-ten-douyin` 检查两版画面与音频，
+`npm run render:weekly-ten` 正式导出并检查完整MP4和实际混音。见[本期说明](../docs/WEEKLY-TEN-20261030.md)。
+前期日报及其双平台版本继续保留。
+
+近期热点短片《此刻，世界在发生什么》（2026-10-30）：`DailyTen20261030`，3分钟、1080p/60fps，
+十则已核验新闻、本地中文神经旁白、逐句字幕、原创配乐与SVG动效。预览：
+<http://localhost:3000/DailyTen20261030>；全部场景可在 `Effects/DailyTen-Scenes` 单独编辑。
+来源、制作及验证范围见[本期说明](../docs/DAILY-TEN-20261030.md)。
+`npm run verify:daily-ten-content` 核对原稿、24条字幕与音频哈希，`npm run verify:daily-ten` 检查23帧和12段音频。
+此片当前交付本地Studio预览，未导出完整MP4。
+
+双平台适配入口：B站横版 `DailyTen-Bilibili`（1920×1080），抖音竖版 `DailyTen-Douyin`（1080×1920），
+均为60fps/180秒。分别打开 <http://localhost:3000/DailyTen-Bilibili> 与
+<http://localhost:3000/DailyTen-Douyin>；竖版全部12场可在 `DailyTen-Portrait-Scenes` 单独编辑。
+`npm run verify:daily-ten-bilibili` / `npm run verify:daily-ten-douyin` 检查各自规格和音频。
+竖版为纵向重新排版，正文完整保留，并为右侧按钮与底部信息留出设计余量。
+
 本目录是视频工程，完整介绍见[仓库 README](../README.md)。
 
 AI 历史长片：`AiHistory30m`，30 分钟、1080p/60 fps。源码位于 `effects/ai-history/`，

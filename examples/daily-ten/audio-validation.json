@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "timelineSeconds": 180,
+  "sceneCount": 12,
+  "captionCount": 24,
+  "fullDecodeAndPublishedHashesPassed": true,
+  "highestPeakDbfs": -6.3073,
+  "rmsDbfsRange": [
+    -23.4477,
+    -23.446
+  ],
+  "minimumTailRoomSeconds": 1.406531,
+  "narrationFiles": [
+    {
+      "id": "intro",
+      "file": "intro.mp3",
+      "durationSeconds": 7.993469,
+      "sha256": "410f727da618db78212d03bccb8ed6e6b1ca6e54f68151fc31c31ae7ffcf0a97"
+    },
+    {
+      "id": "football",
+      "file": "football.mp3",
+      "durationSeconds": 11.441633,
+      "sha256": "9fac7ae9e4e3e2feab8c92071b859eda995691c599c4002558686f26cec7f5ed"
+    },
+    {
+      "id": "calendar",
+      "file": "calendar.mp3",
+      "durationSeconds": 10.997551,
+      "sha256": "ec47c4aa9210a9c7dfe08b490d258f0d85d4d469e033cf6fafc7bf51f5aafebd"
+    },
+    {
+      "id": "trade",
+      "file": "trade.mp3",
+      "durationSeconds": 11.859592,
+      "sha256": "0d9d1fac6a1aa756d8da4ebe0af253897a8b0d52a11d4838906431c450a41c70"
+    },
+    {
+      "id": "robot",
+      "file": "robot.mp3",
+      "durationSeconds": 11.284898,
+      "sha256": "b1f6a9942489cb01ebae822993f837522b0462cbfc6a10ebdddf541a7c1a30e3"
+    },
+    {
+      "id": "loans",
+      "file": "loans.mp3",
+      "durationSeconds": 11.493878,
+      "sha256": "51fa0379b6b8a3113d6e50bfe1e2ca7e13a002e7b36d348a7cdee9ca83c1e655"
+    },
+    {
+      "id": "rates",
+      "file": "rates.mp3",
+      "durationSeconds": 10.762449,
+      "sha256": "44e0b1abbb6ae172950a1197f9537abf8ad22fab9c5c3fd535319b6465206100"
+    },
+    {
+      "id": "vote",
+      "file": "vote.mp3",
+      "durationSeconds": 11.964082,
+      "sha256": "44fe51dddac84d4a081676870b86f519dcddba66562d85bd1cbc7e90fdb231bf"
+    },
+    {
+      "id": "mars",
+      "file": "mars.mp3",
+      "durationSeconds": 11.62449,
+      "sha256": "6ded5e433c0e167f362bced36edbce5fd4dd94ca0b084ea4c6afcf0f5036134a"
+    },
+    {
+      "id": "voyager",
+      "file": "voyager.mp3",
+      "durationSeconds": 11.154286,
+      "sha256": "6c97a893bc77ffd1901df0a53724b2ff718bdf81156b97208096163db19e1710"
+    },
+    {
+      "id": "baseball",
+      "file": "baseball.mp3",
+      "durationSeconds": 11.389388,
+      "sha256": "ccd880311ef4a408aecdef51b8e24bcbb7ff1c55c434fadd3114db3cccbab871"
+    },
+    {
+      "id": "outro",
+      "file": "outro.mp3",
+      "durationSeconds": 7.497143,
+      "sha256": "2a3d516a20b9f9ef743d356e5ae9ec7ddcc56190af147f1c5df71e49e21984ff"
+    }
+  ]
+}

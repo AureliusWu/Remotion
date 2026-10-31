@@ -95,3 +95,36 @@ npx --no-install remotion ffmpeg -f lavfi -i sine=frequency=440:sample_rate=1600
 官方依据：[系统要求](https://www.remotion.dev/docs#system-requirements)、
 [浏览器检查](https://www.remotion.dev/docs/renderer/ensure-browser)、
 [配套二进制目录](https://www.remotion.dev/docs/options/binaries-directory)。
+
+## 2026-10-30：D盘新闻短片环境修复
+
+当前 checkout 位于 D:\AI项目\Remotion，初始 node_modules 与浏览器缓存均不存在。
+按锁文件执行 npm ci（348包），再用 npm run browser:ensure 安装匹配的Chrome Headless Shell 157.0.8080.0。
+实测 Node 24.14.0、npm 11.9.0，Remotion配套包全为4.0.539；check:environment和check:versions通过。
+未升级或改动package-lock.json。
+
+本地语音隔离环境本轮为Python3.14.4，固定sherpa-onnx2.0.1可安装Windows cp314 wheel。
+Kokoro模型校验成功后，kaldifst仍无法从含中文的工程路径读FST。新generate-hotspot-audio.py使用
+C:\Users\84046\.codex\runtimes\remotion-kokoro-05d79370联接至唯一原模型缓存，为底层库提供ASCII路径。
+不改旧AI历史片的生成脚本或音频资产。下次遇到同类问题，先检查路径编码而非重装模型。
+
+Studio的WebMCP播放命令可能返回playing=true而首帧不动；必须再核对帧号实际增加。
+本轮实际点击Play按钮激活媒体后恢复推进。详细来源与验证范围见DAILY-TEN-20261030.md。
+
+## 周报正式导出验收补充（2026-10-30）
+
+当前实际GPU为GTX1660 SUPER、CPU为Ryzen5 3600，不能将其他机器的历史记录视为本机现状。
+先用现有H.264 NVENC生成120帧样片，再完整解码核对；没有安装驱动或升级Remotion。
+verify-export.mjs原先固定1920×1080，现支持FILE SECONDS FPS [WIDTH HEIGHT]，默认行为保留，允许竖版准确验收。
+新增verify-weekly-ten-media.mjs读取最终MP4的AAC并完整解码到out下PCM WAV，测量真实混音的12个语音窗口；
+源MP3成功不能替代成片音轨成功。音量为RMS/peak dBFS，不标成LUFS或自然度评分。
+
+## 2026-10-31：跨平台联调与PCM24分支
+
+媒体二进制经scripts/lib/media-tools.mjs按renderer支持的系统/架构包定位，不写死Windows目录。
+GitHub CI用Ubuntu24.04与Windows、Node24，显式安装匹配Chromium及Linux字体/运行库。
+本地实际Remotion仍4.0.539，依赖锁未升级；Python本地3.14.4，fixture CI3.12，NumPy2.3.4、SoundFile0.13.1。
+Remotion公开音频编码只含pcm-16/aac/mp3/opus，内部有PCM16混音；24bit母带直接读原始FLOAT句缓存，
+独立生成PCM24 WAV，再用现有FFmpeg复制H.264画面封装MOV，避免把16bit/AAC转码冒称原生高解析。
+FLAC/ALAC与Atmos编码器未配置；Atmos仅接外部已编码JOC及真实QC，负例测试不等于真实Atmos验收。
+源JSON字节哈希受Windows CRLF检出影响，现以.gitattributes固定LF并保留严格字节校验。

@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T17:52:52.8719120+08:00",
+  "versions": [
+    {
+      "fps": 60,
+      "height": 1080,
+      "studioError": null,
+      "originalFrameHashesMatch": true,
+      "stills": 5,
+      "width": 1920,
+      "id": "DailyTen-Bilibili",
+      "frames": 10800
+    },
+    {
+      "playbackRate": 1,
+      "frames": 10800,
+      "height": 1920,
+      "width": 1080,
+      "id": "DailyTen-Douyin",
+      "muted": false,
+      "observedSequentialFrames": [
+        0,
+        2967,
+        6447
+      ],
+      "endSample": {
+        "subsequentFrame": 1480,
+        "seekTo": 10410,
+        "loopCrossing": true
+      },
+      "fps": 60,
+      "studioError": null,
+      "stills": 23
+    }
+  ],
+  "consoleWarningsAndErrors": [],
+  "sharedAudio": {
+    "captions": 24,
+    "clips": 12,
+    "fullSourceDecode": "passed"
+  },
+  "scope": "Studio playback samples and stills; no MP4 export, platform upload or platform transcode acceptance"
+}

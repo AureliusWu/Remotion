@@ -1,0 +1,590 @@
+{
+  "generatedAt": "2026-10-30T10:45:31.785914+00:00",
+  "storyboard": "D:\\AI项目\\Remotion\\video\\effects\\ai-weekly\\storyboard.json",
+  "storyboardSha256": "3f1c4e0140d5f483f4dd48cfa27cf52ac5de75d55b01beb317396ec025d8c127",
+  "engine": {
+    "engine": "sherpa-onnx",
+    "version": "2.0.1",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "speakerId": 3,
+    "speed": 1.03
+  },
+  "pythonVersion": "3.14.4",
+  "model": {
+    "name": "hexgrad/Kokoro-82M-v1.1-zh",
+    "conversion": "official sherpa INT8",
+    "license": "Apache-2.0",
+    "archiveSha256": "259c9c8bc906d6078e4e0570421885dabb68b539c2f970fcbb890a58eeaf3e9c",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "source": "https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh",
+    "download": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-int8-multi-lang-v1_1.tar.bz2"
+  },
+  "encoding": "MP3 128kbps 44.1kHz mono",
+  "workers": 2,
+  "threadsPerWorker": 2,
+  "captionsRelativeTo": "scene start; includes the 0.6-second narration delay",
+  "status": "passed",
+  "scenes": [
+    {
+      "id": "intro",
+      "file": "intro.mp3",
+      "text": "三分钟，回看本周九条人工智能进展。从模型更新，到工具、研究和机器人。",
+      "hash": "4f16f337e2772a6a396a72dc80d0361f92f0368d3e8de54494e39e38af413904",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 7.105306,
+      "pcmDurationSeconds": 7.054541666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "三分钟，回看本周九条人工智能进展。",
+          "startSeconds": 0.6,
+          "endSeconds": 3.976792
+        },
+        {
+          "text": "从模型更新，到工具、研究和机器人。",
+          "startSeconds": 4.026792,
+          "endSeconds": 7.804542
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 12.231264399997599,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0607504693921799
+      },
+      "fullDecodePassed": true,
+      "sha256": "5f7da93ee8461df72be7b851a9e285b31c2a0ccffbd6cea9c5f780eeac2b1d31",
+      "bytes": 114145,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.4378,
+        "rmsDbfs": -23.4459,
+        "sampleCount": 311106
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 10.0
+    },
+    {
+      "id": "terra",
+      "file": "terra.mp3",
+      "text": "周一上线的新模型，重点放在看图、操作电脑和文字写作。开发接口已经提供调用，约一百零五万词元的上下文，为处理大量资料留下空间。",
+      "hash": "450ca633166f88d1294538023342648246ba464ac384f4026e8236afe0493cc8",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 13.400816,
+      "pcmDurationSeconds": 13.364916666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "周一上线的新模型，重点放在看图、操作电脑和文字写作。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.496667
+        },
+        {
+          "text": "开发接口已经提供调用，约一百零五万词元的上下文，为处理大量资料留下空间。",
+          "startSeconds": 6.546667,
+          "endSeconds": 14.114917
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 22.621286300000065,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0645235896858016
+      },
+      "fullDecodePassed": true,
+      "sha256": "c751021facaaed7f27bd3e822c4c32ed9ed513662dd4e7002d873a758457eec8",
+      "bytes": 214874,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.7871,
+        "rmsDbfs": -23.4471,
+        "sampleCount": 589393
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 18.0
+    },
+    {
+      "id": "nvidia-meta",
+      "file": "nvidia-meta.mp3",
+      "text": "英伟达与Meta宣布扩展智能体合作，重点优化模型训练和推理。双方还计划探索安全部署与行为监控；三十亿美元股权投资仍是拟议安排。",
+      "hash": "05951cec14538bc01f1a07d19695280d64d2a36df9a839187089731084835269",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 12.721633,
+      "pcmDurationSeconds": 12.690083333333334,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "英伟达与Meta宣布扩展智能体合作，重点优化模型训练和推理。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.515583
+        },
+        {
+          "text": "双方还计划探索安全部署与行为监控；三十亿美元股权投资仍是拟议安排。",
+          "startSeconds": 6.565583,
+          "endSeconds": 13.440083
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 21.000881399999344,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1314704548241068
+      },
+      "fullDecodePassed": true,
+      "sha256": "b93cb23741b0bf2185ca5573b81585f0df105e17126853ca40b663db38bd2caf",
+      "bytes": 204007,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.5825,
+        "rmsDbfs": -23.4464,
+        "sampleCount": 559633
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 18.0
+    },
+    {
+      "id": "baidu-ocr",
+      "file": "baidu-ocr.mp3",
+      "text": "百度周二发布新一代长文档识别模型，把跨页阅读接起来。它通过稀疏参考注意力控制计算开销，代码和模型权重已经提供，实际效果还要结合文档检验。",
+      "hash": "be7a21962c1ff97f1cec8924c3c9018b1fea21b76a00f296f195ec348d42d811",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 14.550204,
+      "pcmDurationSeconds": 14.51475,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "百度周二发布新一代长文档识别模型，把跨页阅读接起来。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.128917
+        },
+        {
+          "text": "它通过稀疏参考注意力控制计算开销，代码和模型权重已经提供，实际效果还要结合文档检验。",
+          "startSeconds": 6.178917,
+          "endSeconds": 15.26475
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 23.862359200000355,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1178966847328
+      },
+      "fullDecodePassed": true,
+      "sha256": "560fa0d3846521aaf6718261a4a9a73a53cf5540d004b342f0ce4a961e73b74b",
+      "bytes": 233264,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -6.822,
+        "rmsDbfs": -23.4472,
+        "sampleCount": 640101
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 18.0
+    },
+    {
+      "id": "claude-research",
+      "file": "claude-research.mp3",
+      "text": "克劳德的药物研发合作，本周公布六家机构的早期案例。多数仍在临床前，分子设计和材料审查的进步，还要继续接受实验检验。",
+      "hash": "607ad4517d74e598b242387caec5b3b9a1c77ec78ef5d1352c934fabf1406034",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 12.355918,
+      "pcmDurationSeconds": 12.328625,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "克劳德的药物研发合作，本周公布六家机构的早期案例。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.926875
+        },
+        {
+          "text": "多数仍在临床前，分子设计和材料审查的进步，还要继续接受实验检验。",
+          "startSeconds": 5.976875,
+          "endSeconds": 13.078625
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 20.4917260000002,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0657260644996518
+      },
+      "fullDecodePassed": true,
+      "sha256": "3b594dd7017c0bda27433a563d6a179dbb9683cd9215dc242f36477227c46238",
+      "bytes": 198155,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.2734,
+        "rmsDbfs": -23.4463,
+        "sampleCount": 543693
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 18.0
+    },
+    {
+      "id": "microsoft-literacy",
+      "file": "microsoft-literacy.mp3",
+      "text": "微软本周扩展人工智能课堂工具包，教学生核对信息、追溯来源。课程从虚构帖子和聊天机器人出发，让判断力跟上生成内容的速度。",
+      "hash": "b4f78f5baf8fd07648e88137070a23a00ddd5d3bcc54ff26aa46e9d53da30402",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 13.00898,
+      "pcmDurationSeconds": 12.978916666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "微软本周扩展人工智能课堂工具包，教学生核对信息、追溯来源。",
+          "startSeconds": 0.6,
+          "endSeconds": 7.067833
+        },
+        {
+          "text": "课程从虚构帖子和聊天机器人出发，让判断力跟上生成内容的速度。",
+          "startSeconds": 7.117833,
+          "endSeconds": 13.728917
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 21.91150740000012,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0722695282536432
+      },
+      "fullDecodePassed": true,
+      "sha256": "a82817fb892e89237f762c89b496ed4d5b48d0c82f58170e1cf0a2ca79f47ce7",
+      "bytes": 208604,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.1675,
+        "rmsDbfs": -23.4463,
+        "sampleCount": 572371
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 18.0
+    },
+    {
+      "id": "clover",
+      "file": "clover.mp3",
+      "text": "扩散模型也在学写代码、用工具。本周发布的Clover预览版采用分块并行生成，尝试加快智能体的一轮轮执行与反馈。",
+      "hash": "e3cc2b6533213bad003d054882d3596a3125fd37528f1eb4de47e6ac3c9cfa09",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 10.710204,
+      "pcmDurationSeconds": 10.671166666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "扩散模型也在学写代码、用工具。",
+          "startSeconds": 0.6,
+          "endSeconds": 4.058958
+        },
+        {
+          "text": "本周发布的Clover预览版采用分块并行生成，尝试加快智能体的一轮轮执行与反馈。",
+          "startSeconds": 4.108958,
+          "endSeconds": 11.421167
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 18.49428280000211,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0781779122364954
+      },
+      "fullDecodePassed": true,
+      "sha256": "6a7f6df93780475805a8be1ff7804f8bcf587039d9b7a79c0b609721142facf2",
+      "bytes": 171824,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.4957,
+        "rmsDbfs": -23.4467,
+        "sampleCount": 470599
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 18.0
+    },
+    {
+      "id": "apex",
+      "file": "apex.mp3",
+      "text": "另一款开放模型，尝试让人工智能参与研究本身。Apex称AI参与数据构造、实验设计和结果分析，相关能力仍需要外部复验。",
+      "hash": "727e1ade307d8648e692bcece8bc44eb4033ac495c2ebfb6f566ed7c79d2bcb5",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 12.199184,
+      "pcmDurationSeconds": 12.166708333333334,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "另一款开放模型，尝试让人工智能参与研究本身。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.549458
+        },
+        {
+          "text": "Apex称AI参与数据构造、实验设计和结果分析，相关能力仍需要外部复验。",
+          "startSeconds": 5.599458,
+          "endSeconds": 12.916708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 20.475783399997454,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0712675596173205
+      },
+      "fullDecodePassed": true,
+      "sha256": "e1bf98fa42c8c32165a520d104957aa561418d2c8a5dca93ffbae40779b06e05",
+      "bytes": 195647,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -9.0064,
+        "rmsDbfs": -23.4471,
+        "sampleCount": 536552
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 18.0
+    },
+    {
+      "id": "carbon",
+      "file": "carbon.mp3",
+      "text": "谷歌周三公布新模型，面向网络防御和长时间工程任务。本周计划先向部分防御人员开放，开发者与普通用户何时能用，还要等后续安排。",
+      "hash": "417dfd22679763a8b59089ed856a05cd521d293dfb119ad8fda55ae09054e50c",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 13.217959,
+      "pcmDurationSeconds": 13.168333333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "谷歌周三公布新模型，面向网络防御和长时间工程任务。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.124875
+        },
+        {
+          "text": "本周计划先向部分防御人员开放，开发者与普通用户何时能用，还要等后续安排。",
+          "startSeconds": 6.174875,
+          "endSeconds": 13.918333
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 22.300854699999036,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0736319137165555
+      },
+      "fullDecodePassed": true,
+      "sha256": "9ed17cd609ccacd25b99e1040297bb2f0b6ec9b5ee0cd12bcd4dac3b17c52e82",
+      "bytes": 211948,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.4686,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 580724
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 17.0
+    },
+    {
+      "id": "go3",
+      "file": "go3.mp3",
+      "text": "机器人也在补上行动前的预测。智元周四展示GO三预览版，把推理、预测和动作连接起来，并探索部署后的持续改进。",
+      "hash": "21e87e6bf9c428ec3d95fb77791ffd99d41cd6f59749f8a518fcb9e6af6276db",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.102041,
+      "pcmDurationSeconds": 11.055958333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "机器人也在补上行动前的预测。",
+          "startSeconds": 0.6,
+          "endSeconds": 3.607292
+        },
+        {
+          "text": "智元周四展示GO三预览版，把推理、预测和动作连接起来，并探索部署后的持续改进。",
+          "startSeconds": 3.657292,
+          "endSeconds": 11.805958
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 18.500293400000373,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.081606526332722
+      },
+      "fullDecodePassed": true,
+      "sha256": "407d0eae06b937346a14c95c570e842efa5d6568d1b4728c4f8678b84849aef4",
+      "bytes": 178093,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.3147,
+        "rmsDbfs": -23.4461,
+        "sampleCount": 487568
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 17.0
+    },
+    {
+      "id": "outro",
+      "file": "outro.mp3",
+      "text": "看见新能力，也看清它们走到了哪一步。这是十月二十六日至三十日的人工智能周记。",
+      "hash": "6cdcba1ccbe368279e9e3e3725c9bc0d00b992a449b3e7069bd80f5a5a84f667",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 7.941224,
+      "pcmDurationSeconds": 7.909708333333334,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+      "captions": [
+        {
+          "text": "看见新能力，也看清它们走到了哪一步。",
+          "startSeconds": 0.6,
+          "endSeconds": 4.437958
+        },
+        {
+          "text": "这是十月二十六日至三十日的人工智能周记。",
+          "startSeconds": 4.487958,
+          "endSeconds": 8.659708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 13.679907899997488,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1114236386064444
+      },
+      "fullDecodePassed": true,
+      "sha256": "d70ec736ec5638be7ac96bfa2c1445d7922d507e20ce4360576c65709088db6e",
+      "bytes": 127520,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.6753,
+        "rmsDbfs": -23.4472,
+        "sampleCount": 348819
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 10.0
+    }
+  ],
+  "spokenTextNormalization": {
+    "version": "zh-year-zero-and-ai-terms-v2:ai-weekly-letter-acronyms-v1",
+    "characterReplacements": {
+      "〇": "零",
+      "《": "",
+      "》": ""
+    },
+    "terms": {
+      "ImageNet": "Image Net",
+      "AlexNet": "Alex Net",
+      "AlphaGo": "Alpha Go",
+      "AlphaFold": "Alpha Fold",
+      "OpenAI": "Open A I",
+      "ChatGPT": "Chat G P T",
+      "GPT-3": "G P T 三",
+      "GPT": "G P T",
+      "AI": "A I",
+      "OCR": "O C R",
+      "API": "A P I"
+    },
+    "captionsPreserveOriginalText": true,
+    "rationale": "sherpa-onnx 2.0.1 skips unknown English words rather than spelling them; every expanded English token is verified against the installed English and Chinese lexicons.",
+    "editionOverride": {
+      "edition": "ai-weekly",
+      "source": "effects\\ai-weekly\\pronunciations.json",
+      "sha256": "1d9425fd6d3c3588db02743d69ecd24e687e7a3a36bf0d056810de4cd2f3d4bb"
+    }
+  },
+  "spokenAsciiLexiconCheck": {
+    "status": "passed",
+    "tokens": [
+      "A",
+      "Apex",
+      "Clover",
+      "GO",
+      "I",
+      "Meta"
+    ],
+    "lexicons": [
+      "lexicon-us-en.txt",
+      "lexicon-zh.txt"
+    ]
+  },
+  "totalAudioSeconds": 128.313469,
+  "elapsedSeconds": 0.0011180000001331791,
+  "film": "ai-weekly",
+  "totalSceneDurationSeconds": 180,
+  "fps": 60,
+  "modelPathWorkaround": "C:\\Users\\84046\\.codex\\runtimes\\remotion-kokoro-05d79370",
+  "music": {
+    "file": "daily-ten/music.mp3",
+    "sha256": "035e8a0484f0e7ddb88865b0cf65f6898c1d307883e258c30b6e1fb0cf67ad16",
+    "durationSeconds": 180,
+    "original": true,
+    "regenerated": false
+  },
+  "pronunciationOverride": {
+    "edition": "ai-weekly",
+    "source": "effects\\ai-weekly\\pronunciations.json",
+    "sha256": "1d9425fd6d3c3588db02743d69ecd24e687e7a3a36bf0d056810de4cd2f3d4bb",
+    "terms": {
+      "OCR": "O C R",
+      "API": "A P I"
+    }
+  },
+  "failures": []
+}

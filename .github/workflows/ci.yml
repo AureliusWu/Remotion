@@ -5,6 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -15,23 +16,134 @@ concurrency:
 
 jobs:
   verify:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
+    name: ${{ matrix.os }} / Node 24
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
     defaults:
       run:
         working-directory: video
+        shell: bash
+    env:
+      CI: "true"
+      NO_COLOR: "1"
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
         with:
-          node-version: '24'
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
           cache: npm
           cache-dependency-path: video/package-lock.json
+      - name: Prepare diagnostic logs
+        run: mkdir -p out/workflow-ci/logs
+      - name: Install Linux Chromium dependencies and Chinese fonts
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update 2>&1 | tee out/workflow-ci/logs/apt-update.log
+          sudo apt-get install -y --no-install-recommends \
+            libnss3 libdbus-1-3 libatk1.0-0 libasound2t64 libxrandr2 \
+            libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libgbm-dev \
+            libcups2 libcairo2 libpango-1.0-0 libatk-bridge2.0-0 \
+            fonts-noto-cjk fonts-liberation \
+            2>&1 | tee out/workflow-ci/logs/linux-dependencies.log
       - name: Install dependencies
-        run: npm ci
-      - name: Verify Remotion versions
-        run: npm run check:versions
-      - name: Lint and typecheck
-        run: npm run lint
-      - name: Bundle project
-        run: npm run build
+        id: install
+        run: npm ci 2>&1 | tee out/workflow-ci/logs/npm-ci.log
+      - name: Ensure the pinned Remotion browser
+        id: browser
+        run: npm run browser:ensure 2>&1 | tee out/workflow-ci/logs/browser-ensure.log
+      - name: Check versions, lint, build and all news editions
+        id: check
+        run: npm run workflow -- check --edition all 2>&1 | tee out/workflow-ci/logs/check.log
+      - name: Render three real 1080p QA frames per AI platform
+        id: qa
+        run: npm run workflow -- qa --edition ai-weekly --platform all --quick 2>&1 | tee out/workflow-ci/logs/qa.log
+      - name: Render and fully decode the four-second CPU smoke MP4
+        id: smoke
+        run: npm run workflow -- smoke 2>&1 | tee out/workflow-ci/logs/smoke.log
+      - name: Set up Python for synthetic lossless audio fixtures
+        id: python_setup
+        if: ${{ !cancelled() }}
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: video/scripts/lossless-master-requirements.txt
+      - name: Install pinned lossless fixture dependencies
+        id: lossless_deps
+        if: ${{ !cancelled() && steps.python_setup.outcome == 'success' }}
+        run: python -m pip install --disable-pip-version-check --no-input -r scripts/lossless-master-requirements.txt 2>&1 | tee out/workflow-ci/logs/lossless-dependencies.log
+      - name: Test synthetic lossless master fixtures only
+        id: lossless_fixtures
+        if: ${{ !cancelled() && steps.lossless_deps.outcome == 'success' }}
+        run: python scripts/test-lossless-master.py 2>&1 | tee out/workflow-ci/logs/lossless-fixtures.log
+      - name: Upload small validation evidence and failure logs
+        id: evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: remotion-ci-${{ matrix.os }}-${{ github.run_attempt }}
+          retention-days: 7
+          if-no-files-found: warn
+          compression-level: 6
+          path: |
+            video/out/workflow-ci/*.json
+            video/out/workflow-ci/logs/*.log
+            video/out/workflow-ci/smoke.mp4
+            video/out/workflow/*/report.json
+            video/out/workflow/*/*.log
+            video/out/daily-ten-audio/content-validation.json
+            video/out/weekly-ten-audio/content-validation.json
+            video/out/ai-weekly-audio/content-validation.json
+            video/out/AiWeekly-Bilibili-validation/report.json
+            video/out/AiWeekly-Bilibili-validation/frame-*.png
+            video/out/AiWeekly-Douyin-validation/report.json
+            video/out/AiWeekly-Douyin-validation/frame-*.png
+      - name: Write job summary
+        if: always()
+        env:
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+          BROWSER_OUTCOME: ${{ steps.browser.outcome }}
+          CHECK_OUTCOME: ${{ steps.check.outcome }}
+          QA_OUTCOME: ${{ steps.qa.outcome }}
+          SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
+          PYTHON_OUTCOME: ${{ steps.python_setup.outcome }}
+          LOSSLESS_DEPS_OUTCOME: ${{ steps.lossless_deps.outcome }}
+          LOSSLESS_FIXTURES_OUTCOME: ${{ steps.lossless_fixtures.outcome }}
+          EVIDENCE_URL: ${{ steps.evidence.outputs.artifact-url }}
+        run: |
+          node --input-type=module <<'NODE'
+          import {appendFileSync, readFileSync} from 'node:fs';
+          const stages = [
+            ['npm ci', process.env.INSTALL_OUTCOME],
+            ['Pinned browser', process.env.BROWSER_OUTCOME],
+            ['Node fixtures / versions / lint / build / 3 edition checks', process.env.CHECK_OUTCOME],
+            ['AI quick QA / 2 platforms / 6 frames', process.env.QA_OUTCOME],
+            ['4s CPU H.264 + AAC / full decode', process.env.SMOKE_OUTCOME],
+            ['Python 3.12 for synthetic fixtures', process.env.PYTHON_OUTCOME],
+            ['Pinned NumPy / SoundFile fixture dependencies', process.env.LOSSLESS_DEPS_OUTCOME],
+            ['Lossless audio synthetic fixtures only', process.env.LOSSLESS_FIXTURES_OUTCOME],
+          ];
+          const lines = [
+            `## Remotion CI — ${process.env.RUNNER_OS} / Node ${process.version}`,
+            '', '| Check | Result |', '| --- | --- |',
+            ...stages.map(([label, result]) => `| ${label} | ${result || 'not run'} |`), '',
+          ];
+          try {
+            const smoke = JSON.parse(readFileSync('out/workflow-ci/report.json', 'utf8'));
+            lines.push(`Smoke report: **${smoke.status}**; full decode: **${smoke.fullDecode?.status || 'not run'}**.`);
+            if (smoke.video) lines.push(`Video: ${smoke.video.width}×${smoke.video.height}, ${smoke.video.fps}fps, ${smoke.video.frames} frames.`);
+            if (smoke.error) lines.push('Smoke failure details are retained in report.json and smoke.log.');
+          } catch {
+            lines.push('No smoke report was produced; inspect the failed step and retained logs.');
+          }
+          lines.push('', 'Artifacts include reports, small QA PNGs and the 4-second MP4. Bundles, PCM files and full-length films are excluded.');
+          lines.push('', 'The lossless audio tests create temporary synthetic fixtures only. They do not synthesize real narration or produce an edition master, and require no model or original narration cache.');
+          if (process.env.EVIDENCE_URL) lines.push('', `[Download validation evidence](${process.env.EVIDENCE_URL})`);
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');
+          NODE

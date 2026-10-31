@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T10:59:00.189368+00:00",
+  "title": "AI一周热点观察",
+  "period": [
+    "2026-10-26",
+    "2026-10-30"
+  ],
+  "qualifier": "截至目前",
+  "newsCount": 9,
+  "sceneCount": 11,
+  "captionCount": 22,
+  "inputHash": "8f1dfde1e26950335453d2d4fe9ba9b1701e768f6d2ea5cef1f3c0f7544254b6",
+  "checks": {
+    "remotionVersions": "4.0.539 consistent",
+    "eslintTypescript": "passed",
+    "build": "passed",
+    "sourceContentAudioHashes": "passed",
+    "previewFramesPerPlatform": 21,
+    "previewVisualReviewFrames": 12,
+    "previousEditionExactPngHashMatches": 4,
+    "studioNaturalLoopBothPlatforms": "passed",
+    "actualMp4SampleFramesPerPlatform": 4
+  },
+  "films": [
+    {
+      "platform": "bilibili",
+      "file": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-20261030-bilibili-1080p60.mp4",
+      "sizeBytes": 111061998,
+      "sha256": "5ec64376cab3816737213698458b9ca10ebb356f1044a19e0e14b5686fbe103c",
+      "video": {
+        "width": 1920,
+        "height": 1080,
+        "codec": "h264",
+        "fps": 60,
+        "frames": 10800,
+        "durationSeconds": 180,
+        "pixelFormat": "yuvj420p",
+        "colorRange": "pc"
+      },
+      "audio": {
+        "codec": "aac",
+        "durationSeconds": 180.011,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "fullDecode": "passed",
+      "narrationWindows": 11,
+      "rmsDbfsRange": [
+        -24.546020818053655,
+        -24.499492764944453
+      ],
+      "highestMonoSamplePeakDbfs": -7.838499080339718,
+      "clippedSamples": 0
+    },
+    {
+      "platform": "douyin",
+      "file": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-20261030-douyin-1080p60.mp4",
+      "sizeBytes": 79454451,
+      "sha256": "0fe3ebabbcb347a5e629e3982bd8cc2a5acc0f866f864dce6cf3ef49f571c95e",
+      "video": {
+        "width": 1080,
+        "height": 1920,
+        "codec": "h264",
+        "fps": 60,
+        "frames": 10800,
+        "durationSeconds": 180,
+        "pixelFormat": "yuvj420p",
+        "colorRange": "pc"
+      },
+      "audio": {
+        "codec": "aac",
+        "durationSeconds": 180.011,
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "fullDecode": "passed",
+      "narrationWindows": 11,
+      "rmsDbfsRange": [
+        -24.546020818053655,
+        -24.499492764944453
+      ],
+      "highestMonoSamplePeakDbfs": -7.838499080339718,
+      "clippedSamples": 0
+    }
+  ],
+  "uploaded": false,
+  "limitations": [
+    "Objective full decoding and sampled visual review; no claim of human frame-by-frame viewing or complete subjective listening.",
+    "Mono RMS/sample peaks are not LUFS or true peak.",
+    "Platform upload and transcoding have not been performed."
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "edition": "2026.10.26—10.30",
+  "periodStart": "2026-10-26",
+  "periodEnd": "2026-10-30",
+  "retrievedOn": "2026-10-30",
+  "title": "这一周，世界留下什么",
+  "selectionNote": "周内十则新闻精选，10月26日至30日截至目前；本周尚未结束，非热搜排名。",
+  "shots": [
+    {
+      "id": "intro",
+      "durationSeconds": 10,
+      "title": "这一周，\n世界留下什么",
+      "narration": [
+        "回看本周，十件事，三分钟。",
+        "十月二十六日至三十日，看变化，也看事情的来处。"
+      ]
+    },
+    {
+      "id": "tourism",
+      "kind": "travel",
+      "durationSeconds": 16,
+      "category": "周一 / 文旅数据",
+      "title": "人们走得更远，\n花费怎样变化",
+      "stat": "53.07亿人次",
+      "statLabel": "前三季度国内出游 · 同比增长6.2%",
+      "details": [
+        "文旅部10月26日公布抽样调查结果：前三季度国内居民出游53.07亿人次，同比增长6.2%。这是累计人次，并非本周的出游人数。",
+        "同期国内居民出游总花费4.95万亿元，同比增长2.2%。出游与花费都在增长，但增速不同，观察市场需要结合两项数据。"
+      ],
+      "narration": [
+        "周一公布的文旅数据，为今年的出游热度补上一张成绩单。",
+        "前三季度国内出游五十三点零七亿人次，增长百分之六点二，花费增速更温和。"
+      ],
+      "sourceLabel": "文旅部 · 10月26日发布 / 前三季度统计",
+      "sourceUrl": "https://zwgk.mct.gov.cn/zfxxgkml/tjxx/202610/t20261026_967476.html",
+      "publishedOn": "2026-10-26",
+      "eventOn": "2026年前三季度 / 10月26日发布",
+      "accent": "#B85640"
+    },
+    {
+      "id": "shopping",
+      "kind": "shopping",
+      "durationSeconds": 16,
+      "category": "周一 / 双十一消费提示",
+      "title": "优惠很多，\n先算清到手价",
+      "stat": "6类提醒",
+      "statLabel": "价格、预售、卡券、测评、交易与凭证",
+      "details": [
+        "中消协等三家机构10月26日联合发布消费提示，涉及价格、预售、卡券、直播测评、私下交易和凭证留存六类风险。",
+        "比较实际成交价格，核对优惠券门槛与有效期，保留订单和宣传承诺。预售价未必低于现货价，付款前也要看清尾款时间。"
+      ],
+      "narration": [
+        "双十一进入促销季，中消协周一提醒，先算清到手价。",
+        "预售价未必低于现货价，优惠券能否叠加、尾款何时支付，都值得提前核对。"
+      ],
+      "sourceLabel": "中消协等联合提示 / 中新网 · 10月26日",
+      "sourceUrl": "https://www.chinanews.com/cj/2026/10-26/10721097.shtml",
+      "publishedOn": "2026-10-26",
+      "eventOn": "2026-10-26 联合提示",
+      "accent": "#416E83",
+      "secondarySourceUrl": "https://www.shanghai.gov.cn/nw17239/20261027/35adab5c3eb24bd59db95bd71ffa7b17.html"
+    },
+    {
+      "id": "swimming",
+      "kind": "swimming",
+      "durationSeconds": 16,
+      "category": "周一 / 短池游泳突破",
+      "title": "一池水，\n游出新的刻度",
+      "stat": "15:34.09",
+      "statLabel": "李冰洁 · 女子1500米自由泳短池亚洲纪录",
+      "details": [
+        "10月26日全国游泳锦标赛，李冰洁以15分34秒09夺得女子1500米自由泳金牌，并刷新该项目短池亚洲纪录。",
+        "同晚江苏队以1分30秒14刷新男女4×50米自由泳接力全国纪录。两项突破均在25米短池赛事中取得，不能与长池纪录混用。"
+      ],
+      "narration": [
+        "周一的水立方，李冰洁刷新女子一千五百米自由泳短池亚洲纪录。",
+        "十五分三十四秒零九，是她在二十五米短池里留下的新刻度。"
+      ],
+      "sourceLabel": "人民日报 · 10月27日报道 / 比赛10月26日",
+      "sourceUrl": "https://paper.people.com.cn/rmrb/pc/content/202610/27/content_30187847.html",
+      "publishedOn": "2026-10-27",
+      "eventOn": "2026-10-26 / 25米短池赛事",
+      "accent": "#D3B373"
+    },
+    {
+      "id": "mars-dust",
+      "kind": "mars-dust",
+      "durationSeconds": 16,
+      "category": "周一 / 火星尘埃研究",
+      "title": "走向火星之前，\n先读懂尘埃",
+      "stat": "约100—300纳米",
+      "statLabel": "部分样本的超细尘粒 · 非全部粒径范围",
+      "details": [
+        "NASA于10月26日公布，毅力号测量了附着于随车宇航服材料样本的火星尘埃。研究覆盖1645个火星日，观察的是材料表面。",
+        "部分样本测得的细小颗粒约100至300纳米，可长期附着。结果将为宇航服、居住舱与除尘流程提供依据，尚非人体健康试验结论。"
+      ],
+      "narration": [
+        "毅力号在火星测到能附着于宇航服材料的超细尘埃。",
+        "这些颗粒能长期停留，研究将为未来宇航服、居住舱与除尘设计提供依据。"
+      ],
+      "sourceLabel": "NASA / JPL · 10月26日研究报道",
+      "sourceUrl": "https://www.jpl.nasa.gov/news/nasas-perseverance-offers-clues-to-protect-crews-from-mars-dust/",
+      "publishedOn": "2026-10-26",
+      "eventOn": "10月26日报道 / 1645个火星日观察",
+      "accent": "#B8775C"
+    },
+    {
+      "id": "archive",
+      "kind": "archive",
+      "durationSeconds": 16,
+      "category": "周二 / 世界音像遗产日",
+      "title": "让过去的声音，\n还有下一次播放",
+      "stat": "10.27",
+      "statLabel": "世界音像遗产日 · 你通向世界的窗口",
+      "details": [
+        "10月27日是世界音像遗产日。联合国教科文组织以“你通向世界的窗口”为今年主题，关注影像与声音留下的共同记忆。",
+        "胶片和磁带会老化，播放设备也在淘汰。保存不止是完成数字化，还包括长期维护数字文件，让下一代能够读取这些记录。"
+      ],
+      "narration": [
+        "十月二十七日是世界音像遗产日，主题是你通向世界的窗口。",
+        "旧胶片与磁带正在老化，数字化和长期保存，让过去的声音与影像继续被看见。"
+      ],
+      "sourceLabel": "UNESCO / 南澳州立图书馆 · 10月27日活动",
+      "sourceUrl": "https://www.unesco.org/en/days/audiovisual-heritage",
+      "publishedOn": "2026-10-27 当日活动报道",
+      "eventOn": "2026-10-27 世界音像遗产日",
+      "accent": "#466E89",
+      "secondarySourceUrl": "https://www.slsa.sa.gov.au/news/story/2026/10/every-audiovisual-recording-a-window-your-window-to-world"
+    },
+    {
+      "id": "rates",
+      "kind": "rates",
+      "durationSeconds": 16,
+      "category": "周三 / 美联储利率决议",
+      "title": "利率停住，\n分歧还在继续",
+      "stat": "3.75—4.00%",
+      "statLabel": "联邦基金利率目标区间 · 维持不变",
+      "details": [
+        "美联储10月28日以10票赞成、2票反对，维持利率目标区间。声明认为经济活动强劲，但通胀仍然偏高。",
+        "两名反对者倾向加息25个基点。维持利率是本次会议的决定，未来如何调整，仍需要观察更多经济信息。"
+      ],
+      "narration": [
+        "美联储十月二十八日维持利率不变，目标区间是百分之三点七五到四。",
+        "十票赞成，两票反对；通胀仍高，下一步仍需观察数据。"
+      ],
+      "sourceLabel": "美联储 · 10月28日声明（美国东部）",
+      "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "publishedOn": "2026-10-28 美国东部",
+      "eventOn": "2026-10-28 美国东部 / 北京10月29日",
+      "accent": "#C78B59"
+    },
+    {
+      "id": "vote",
+      "kind": "vote",
+      "durationSeconds": 16,
+      "category": "周三 / 联合国大会",
+      "title": "表态再次汇聚，\n禁运仍未解除",
+      "stat": "130票",
+      "statLabel": "赞成 · 17票反对 / 25票弃权",
+      "details": [
+        "联大10月28日再次通过决议，要求结束美国对古巴的经济、商业和金融禁运。130票赞成、17票反对、25票弃权。",
+        "这是自1992年以来第34次同类表态。决议本身不具法律约束力，不能将此次投票理解为美国已经取消禁运措施。"
+      ],
+      "narration": [
+        "联合国大会以一百三十票赞成，再次要求结束美国对古巴的禁运。",
+        "这是第三十四次同类表态，但决议没有法律约束力，禁运并未因此解除。"
+      ],
+      "sourceLabel": "联合国 / 公视 · 10月28日投票",
+      "sourceUrl": "https://news.pts.org.tw/article/833527",
+      "publishedOn": "2026-10-29",
+      "eventOn": "2026-10-28 联大投票",
+      "accent": "#447C90",
+      "secondarySourceUrl": "https://www.un.org/es/la-onu-vuelve-rechazar-el-embargo-de-estados-unidos-cuba"
+    },
+    {
+      "id": "baseball",
+      "kind": "baseball",
+      "durationSeconds": 16,
+      "category": "周三 / 世界大赛首冠",
+      "title": "漫长等待之后，\n奖杯终于到来",
+      "stat": "第1冠",
+      "statLabel": "酿酒人队史首次 · 单场与总比分均4:1",
+      "details": [
+        "美国当地10月28日晚，密尔沃基酿酒人在第五场以4比1击败光芒，以总比分4比1夺冠，拿下队史首个世界大赛冠军。",
+        "密尔沃基上一次拥有世界大赛冠军是1957年的勇士队。本次夺冠属于酿酒人，不应将城市的旧冠军记作这支球队的荣誉。"
+      ],
+      "narration": [
+        "密尔沃基酿酒人拿下队史首个世界大赛冠军，第五场四比一战胜光芒。",
+        "系列赛总比分也为四比一，这座城市迎来等待许久的庆祝。"
+      ],
+      "sourceLabel": "AP / MLB · 10月29日报道",
+      "sourceUrl": "https://apnews.com/article/971f9fb8cad75042fc7f9919dd91c159",
+      "publishedOn": "2026-10-29",
+      "eventOn": "2026-10-28 美国当地 / 北京10月29日",
+      "accent": "#D1A767",
+      "secondarySourceUrl": "https://www.mlb.com/brewers/news/brewers-beat-rays-game-5-win-2026-world-series"
+    },
+    {
+      "id": "robot",
+      "kind": "robot",
+      "durationSeconds": 16,
+      "category": "周四 / 机器人交付",
+      "title": "走出展台，\n再看交付的分量",
+      "stat": "9,700台",
+      "statLabel": "2026年上半年出货 · 智元公司披露",
+      "details": [
+        "智元10月29日披露，上半年机器人出货9700台、收入接近20亿元；截至9月累计下线2万台。数据来自公司创新日。",
+        "这些数字为观察产业规模提供线索。上半年出货与累计下线属于不同口径；收入也不是利润，不能据此推断整个行业的盈利。"
+      ],
+      "narration": [
+        "机器人产业本周的新数字，来自周四的智元创新日。",
+        "公司披露上半年出货九千七百台，收入近二十亿元；截至九月累计下线两万台。"
+      ],
+      "sourceLabel": "财新 · 10月29日（公司披露）",
+      "sourceUrl": "https://companies.caixin.com/2026-10-29/102498623.html",
+      "publishedOn": "2026-10-29",
+      "eventOn": "上半年出货营收 / 截至9月累计下线",
+      "accent": "#A9CBD8"
+    },
+    {
+      "id": "football",
+      "kind": "football",
+      "durationSeconds": 16,
+      "category": "周五 / 中国U17女足",
+      "title": "年轻的球队，\n跨过新的一关",
+      "stat": "点球4 : 3",
+      "statLabel": "常规时间0:0 · 队史首次世界杯八强",
+      "details": [
+        "北京时间10月30日凌晨，中国U17女足点球4比3淘汰法国，常规时间0比0。门将牛子琪两次扑点，帮助球队首次跻身八强。",
+        "中国队此前队史最佳成绩为2025年的16强。本届小组赛三战全胜后，又闯过淘汰赛首关；下一场将面对巴西队。"
+      ],
+      "narration": [
+        "本周的绿茵突破，来自中国十七岁以下女足。",
+        "北京时间周五凌晨，中国队点球四比三淘汰法国，首次闯入世界杯八强，刷新队史最佳。"
+      ],
+      "sourceLabel": "新华社 / 人民网 · 10月30日",
+      "sourceUrl": "https://ent.people.com.cn/n1/2026/1030/c1012-40824538.html",
+      "publishedOn": "2026-10-30",
+      "eventOn": "当地10月29日 / 北京时间10月30日",
+      "accent": "#B85640"
+    },
+    {
+      "id": "outro",
+      "durationSeconds": 10,
+      "title": "带着背景，\n看见新闻的来处",
+      "narration": [
+        "这一周仍在继续，新闻也会有后续。",
+        "带着背景看消息，让每个判断都有来处。"
+      ]
+    }
+  ]
+}

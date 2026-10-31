@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-31T05:26:55.872Z",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "node": "v24.14.0",
+    "ci": false
+  },
+  "expected": {
+    "composition": "EnvironmentTest",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "frames": 240,
+    "durationSeconds": 4
+  },
+  "options": {
+    "codec": "h264",
+    "audioCodec": "aac",
+    "hardwareAcceleration": "disable",
+    "concurrency": 2,
+    "crf": 23,
+    "x264Preset": "veryfast",
+    "pixelFormat": "yuv420p",
+    "audioBitrate": "128k",
+    "sampleRate": 48000,
+    "imageFormat": "jpeg",
+    "jpegQuality": 90
+  },
+  "file": "out\\workflow-ci\\smoke.mp4",
+  "browserErrors": [],
+  "render": {
+    "status": "passed",
+    "completedAt": "2026-10-31T05:27:10.783Z"
+  },
+  "fullDecode": {
+    "status": "passed",
+    "completedAt": "2026-10-31T05:27:11.272Z"
+  },
+  "mediaTools": {
+    "ffmpeg": "D:\\AI项目\\Remotion\\video\\node_modules\\@remotion\\compositor-win32-x64-msvc\\ffmpeg.exe",
+    "ffprobe": "D:\\AI项目\\Remotion\\video\\node_modules\\@remotion\\compositor-win32-x64-msvc\\ffprobe.exe"
+  },
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": 60,
+    "frames": 240,
+    "durationSeconds": 4,
+    "pixelFormat": "yuvj420p"
+  },
+  "audio": {
+    "codec": "aac",
+    "durationSeconds": 4.011,
+    "sampleRate": 48000,
+    "channels": 2
+  },
+  "sizeBytes": 185353,
+  "sha256": "f92f5c3237026183210b2a35373a5d1c1a46b7cfe5ffb669a97a68c32b83fae5",
+  "completedAt": "2026-10-31T05:27:11.275Z"
+}

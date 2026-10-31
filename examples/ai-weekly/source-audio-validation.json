@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "edition": "ai-weekly",
+  "checkedAt": "2026-10-30T10:45:32.144833+00:00",
+  "storyboardSha256": "3f1c4e0140d5f483f4dd48cfa27cf52ac5de75d55b01beb317396ec025d8c127",
+  "timelineSeconds": 180,
+  "sceneCount": 11,
+  "newsCount": 9,
+  "captionCount": 22,
+  "fullDecodeAndPublishedHashesPassed": true,
+  "existingAssetsPreserved": true,
+  "protectedFileCount": 118,
+  "highestPeakDbfs": -6.822,
+  "rmsDbfsRange": [
+    -23.4472,
+    -23.4459
+  ],
+  "minimumTailRoomSeconds": 1.458776,
+  "narrationFiles": [
+    {
+      "id": "intro",
+      "file": "intro.mp3",
+      "durationSeconds": 7.105306,
+      "sha256": "5f7da93ee8461df72be7b851a9e285b31c2a0ccffbd6cea9c5f780eeac2b1d31"
+    },
+    {
+      "id": "terra",
+      "file": "terra.mp3",
+      "durationSeconds": 13.400816,
+      "sha256": "c751021facaaed7f27bd3e822c4c32ed9ed513662dd4e7002d873a758457eec8"
+    },
+    {
+      "id": "nvidia-meta",
+      "file": "nvidia-meta.mp3",
+      "durationSeconds": 12.721633,
+      "sha256": "b93cb23741b0bf2185ca5573b81585f0df105e17126853ca40b663db38bd2caf"
+    },
+    {
+      "id": "baidu-ocr",
+      "file": "baidu-ocr.mp3",
+      "durationSeconds": 14.550204,
+      "sha256": "560fa0d3846521aaf6718261a4a9a73a53cf5540d004b342f0ce4a961e73b74b"
+    },
+    {
+      "id": "claude-research",
+      "file": "claude-research.mp3",
+      "durationSeconds": 12.355918,
+      "sha256": "3b594dd7017c0bda27433a563d6a179dbb9683cd9215dc242f36477227c46238"
+    },
+    {
+      "id": "microsoft-literacy",
+      "file": "microsoft-literacy.mp3",
+      "durationSeconds": 13.00898,
+      "sha256": "a82817fb892e89237f762c89b496ed4d5b48d0c82f58170e1cf0a2ca79f47ce7"
+    },
+    {
+      "id": "clover",
+      "file": "clover.mp3",
+      "durationSeconds": 10.710204,
+      "sha256": "6a7f6df93780475805a8be1ff7804f8bcf587039d9b7a79c0b609721142facf2"
+    },
+    {
+      "id": "apex",
+      "file": "apex.mp3",
+      "durationSeconds": 12.199184,
+      "sha256": "e1bf98fa42c8c32165a520d104957aa561418d2c8a5dca93ffbae40779b06e05"
+    },
+    {
+      "id": "carbon",
+      "file": "carbon.mp3",
+      "durationSeconds": 13.217959,
+      "sha256": "9ed17cd609ccacd25b99e1040297bb2f0b6ec9b5ee0cd12bcd4dac3b17c52e82"
+    },
+    {
+      "id": "go3",
+      "file": "go3.mp3",
+      "durationSeconds": 11.102041,
+      "sha256": "407d0eae06b937346a14c95c570e842efa5d6568d1b4728c4f8678b84849aef4"
+    },
+    {
+      "id": "outro",
+      "file": "outro.mp3",
+      "durationSeconds": 7.941224,
+      "sha256": "d70ec736ec5638be7ac96bfa2c1445d7922d507e20ce4360576c65709088db6e"
+    }
+  ],
+  "music": {
+    "file": "daily-ten/music.mp3",
+    "sha256": "035e8a0484f0e7ddb88865b0cf65f6898c1d307883e258c30b6e1fb0cf67ad16",
+    "durationSeconds": 180,
+    "original": true,
+    "regenerated": false
+  },
+  "failures": [],
+  "pronunciationOverride": {
+    "edition": "ai-weekly",
+    "source": "effects\\ai-weekly\\pronunciations.json",
+    "sha256": "1d9425fd6d3c3588db02743d69ecd24e687e7a3a36bf0d056810de4cd2f3d4bb",
+    "terms": {
+      "OCR": "O C R",
+      "API": "A P I"
+    }
+  }
+}

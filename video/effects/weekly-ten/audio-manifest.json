@@ -1,0 +1,612 @@
+{
+  "generatedAt": "2026-10-30T10:14:17.637394+00:00",
+  "storyboard": "D:\\AI项目\\Remotion\\video\\effects\\weekly-ten\\storyboard.json",
+  "storyboardSha256": "f2e1f902d0ba05d6d3e16a32a24829962a154a1bdc6933009408e060ed479bc4",
+  "engine": {
+    "engine": "sherpa-onnx",
+    "version": "2.0.1",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "speakerId": 3,
+    "speed": 1.03
+  },
+  "pythonVersion": "3.14.4",
+  "model": {
+    "name": "hexgrad/Kokoro-82M-v1.1-zh",
+    "conversion": "official sherpa INT8",
+    "license": "Apache-2.0",
+    "archiveSha256": "259c9c8bc906d6078e4e0570421885dabb68b539c2f970fcbb890a58eeaf3e9c",
+    "modelSha256": "05d793700b0b507f760c183c0e39bdd6a97b43d32fdc7bf7b54a5179f1b11222",
+    "source": "https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh",
+    "download": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-int8-multi-lang-v1_1.tar.bz2"
+  },
+  "encoding": "MP3 128kbps 44.1kHz mono",
+  "workers": 2,
+  "threadsPerWorker": 2,
+  "captionsRelativeTo": "scene start; includes the 0.6-second narration delay",
+  "status": "passed",
+  "scenes": [
+    {
+      "id": "intro",
+      "file": "intro.mp3",
+      "text": "回看本周，十件事，三分钟。十月二十六日至三十日，看变化，也看事情的来处。",
+      "hash": "5c47cebe3e340298ebd192b2d477978e1637a7219b94096abf5d0d5f3cf3a098",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 7.549388,
+      "pcmDurationSeconds": 7.516041666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "回看本周，十件事，三分钟。",
+          "startSeconds": 0.6,
+          "endSeconds": 3.433958
+        },
+        {
+          "text": "十月二十六日至三十日，看变化，也看事情的来处。",
+          "startSeconds": 3.483958,
+          "endSeconds": 8.266042
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 14.266979300002276,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.015071157918127
+      },
+      "fullDecodePassed": true,
+      "sha256": "40c283fb7d2aeab9b9669cf0781e0b9630a0702d9536830b17ca9fc3bffb59b1",
+      "bytes": 121251,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.8726,
+        "rmsDbfs": -23.4475,
+        "sampleCount": 331458
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 10.0
+    },
+    {
+      "id": "tourism",
+      "file": "tourism.mp3",
+      "text": "周一公布的文旅数据，为今年的出游热度补上一张成绩单。前三季度国内出游五十三点零七亿人次，增长百分之六点二，花费增速更温和。",
+      "hash": "a286beab42e5c254613c77c32a56e7f38c13f2455cf64c2d55a32f4f43e95420",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 12.564898,
+      "pcmDurationSeconds": 12.517625,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "周一公布的文旅数据，为今年的出游热度补上一张成绩单。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.910667
+        },
+        {
+          "text": "前三季度国内出游五十三点零七亿人次，增长百分之六点二，花费增速更温和。",
+          "startSeconds": 5.960667,
+          "endSeconds": 13.267625
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 23.135494899997866,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0672863543075315
+      },
+      "fullDecodePassed": true,
+      "sha256": "68a04e1da3adb92eea05c80a476c65ee0a66f4682e124374aa0dff557b5c7c03",
+      "bytes": 201499,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -9.1504,
+        "rmsDbfs": -23.4469,
+        "sampleCount": 552028
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "shopping",
+      "file": "shopping.mp3",
+      "text": "双十一进入促销季，中消协周一提醒，先算清到手价。预售价未必低于现货价，优惠券能否叠加、尾款何时支付，都值得提前核对。",
+      "hash": "971a2e9c88fea8509f98ec2e45f556fd00009e0d1fbb85f1d95f84b9f72e3b50",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 13.087347,
+      "pcmDurationSeconds": 13.052416666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "双十一进入促销季，中消协周一提醒，先算清到手价。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.159375
+        },
+        {
+          "text": "预售价未必低于现货价，优惠券能否叠加、尾款何时支付，都值得提前核对。",
+          "startSeconds": 6.209375,
+          "endSeconds": 13.802417
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 27.16914430000179,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 0.996679293900689
+      },
+      "fullDecodePassed": true,
+      "sha256": "0897fd1c524ec587d214ed7eb684cd396152b4a1f3a5e92b798ca0633fd6dd2a",
+      "bytes": 209858,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.5385,
+        "rmsDbfs": -23.4446,
+        "sampleCount": 575612
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "swimming",
+      "file": "swimming.mp3",
+      "text": "周一的水立方，李冰洁刷新女子一千五百米自由泳短池亚洲纪录。十五分三十四秒零九，是她在二十五米短池里留下的新刻度。",
+      "hash": "f716060d2ef48556830e684e2417a9bcbacbf2b768e3ca3962be2728c91f85e6",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.650612,
+      "pcmDurationSeconds": 11.618083333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "周一的水立方，李冰洁刷新女子一千五百米自由泳短池亚洲纪录。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.635333
+        },
+        {
+          "text": "十五分三十四秒零九，是她在二十五米短池里留下的新刻度。",
+          "startSeconds": 6.685333,
+          "endSeconds": 12.368083
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 22.829955499997595,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1055029569189332
+      },
+      "fullDecodePassed": true,
+      "sha256": "df4c1cf089c883b47471f25af1d9130402bbff74a88aa82aff12a14ac3f3bfa8",
+      "bytes": 186870,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.0114,
+        "rmsDbfs": -23.4464,
+        "sampleCount": 512358
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "mars-dust",
+      "file": "mars-dust.mp3",
+      "text": "毅力号在火星测到能附着于宇航服材料的超细尘埃。这些颗粒能长期停留，研究将为未来宇航服、居住舱与除尘设计提供依据。",
+      "hash": "0e03e83b2bea640b0bb2989c7344d0f059a31d8ea4c5f647fa5f4afe8b51043b",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 12.068571,
+      "pcmDurationSeconds": 12.034916666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "毅力号在火星测到能附着于宇航服材料的超细尘埃。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.485167
+        },
+        {
+          "text": "这些颗粒能长期停留，研究将为未来宇航服、居住舱与除尘设计提供依据。",
+          "startSeconds": 5.535167,
+          "endSeconds": 12.784917
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 22.463291000000027,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.062766958198157
+      },
+      "fullDecodePassed": true,
+      "sha256": "c260a528ed61604117216f263f9c03927253cf5991810bac6279ce293d4176ca",
+      "bytes": 193558,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.7268,
+        "rmsDbfs": -23.4473,
+        "sampleCount": 530740
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "archive",
+      "file": "archive.mp3",
+      "text": "十月二十七日是世界音像遗产日，主题是你通向世界的窗口。旧胶片与磁带正在老化，数字化和长期保存，让过去的声音与影像继续被看见。",
+      "hash": "c2713feb7a343d0d41045bdc7ee1f3617d51ea7773c0c2aec0d59d6b1e228eee",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 13.296327,
+      "pcmDurationSeconds": 13.264708333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "十月二十七日是世界音像遗产日，主题是你通向世界的窗口。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.318542
+        },
+        {
+          "text": "旧胶片与磁带正在老化，数字化和长期保存，让过去的声音与影像继续被看见。",
+          "startSeconds": 6.368542,
+          "endSeconds": 14.014708
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 24.506422999998904,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0691161442482848
+      },
+      "fullDecodePassed": true,
+      "sha256": "4520970d3d920f22bc2ad8e9cadb821219006a0b1e24f4cfdab3e8a15b8f9ac1",
+      "bytes": 213202,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.9483,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 584974
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "rates",
+      "file": "rates.mp3",
+      "text": "美联储十月二十八日维持利率不变，目标区间是百分之三点七五到四。十票赞成，两票反对；通胀仍高，下一步仍需观察数据。",
+      "hash": "c1e3da7ca3ddd4305c3a8d9d5d17a182eca615bba508c749fdbd7bfdd5460336",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.807347,
+      "pcmDurationSeconds": 11.76625,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "美联储十月二十八日维持利率不变，目标区间是百分之三点七五到四。",
+          "startSeconds": 0.6,
+          "endSeconds": 7.15275
+        },
+        {
+          "text": "十票赞成，两票反对；通胀仍高，下一步仍需观察数据。",
+          "startSeconds": 7.20275,
+          "endSeconds": 12.51625
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 20.954160299999785,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.1179172409476177
+      },
+      "fullDecodePassed": true,
+      "sha256": "3a28f40dd6da1ce918aea4daeb023c7ffafb3e6daf29b7286321bc58895b283f",
+      "bytes": 189378,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.6734,
+        "rmsDbfs": -23.4472,
+        "sampleCount": 518892
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "vote",
+      "file": "vote.mp3",
+      "text": "联合国大会以一百三十票赞成，再次要求结束美国对古巴的禁运。这是第三十四次同类表态，但决议没有法律约束力，禁运并未因此解除。",
+      "hash": "cdc92779a8b2a976b30ef1cf046115f08832c3bebbe8960793e33568388192f5",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 13.217959,
+      "pcmDurationSeconds": 13.172958333333334,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "联合国大会以一百三十票赞成，再次要求结束美国对古巴的禁运。",
+          "startSeconds": 0.6,
+          "endSeconds": 6.889958
+        },
+        {
+          "text": "这是第三十四次同类表态，但决议没有法律约束力，禁运并未因此解除。",
+          "startSeconds": 6.939958,
+          "endSeconds": 13.922958
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 28.482236399999238,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.065194304044416
+      },
+      "fullDecodePassed": true,
+      "sha256": "b7ceaeec3067bfc3954330d60509db47638948af857d85627082efd727868957",
+      "bytes": 211948,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.7812,
+        "rmsDbfs": -23.4471,
+        "sampleCount": 580928
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "baseball",
+      "file": "baseball.mp3",
+      "text": "密尔沃基酿酒人拿下队史首个世界大赛冠军，第五场四比一战胜光芒。系列赛总比分也为四比一，这座城市迎来等待许久的庆祝。",
+      "hash": "c357c2f37788ca62c6a2051405b2f7c6c67d70a4368b0a8776c97c7fa141b4df",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 11.937959,
+      "pcmDurationSeconds": 11.88975,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "密尔沃基酿酒人拿下队史首个世界大赛冠军，第五场四比一战胜光芒。",
+          "startSeconds": 0.6,
+          "endSeconds": 7.060583
+        },
+        {
+          "text": "系列赛总比分也为四比一，这座城市迎来等待许久的庆祝。",
+          "startSeconds": 7.110583,
+          "endSeconds": 12.63975
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 28.380409000001237,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.105125170734938
+      },
+      "fullDecodePassed": true,
+      "sha256": "7f70af30cdb45fd337f4ea44a6cf5a1a3a7301f58bc99a759091de823c2210b8",
+      "bytes": 191468,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.7102,
+        "rmsDbfs": -23.447,
+        "sampleCount": 524338
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "robot",
+      "file": "robot.mp3",
+      "text": "机器人产业本周的新数字，来自周四的智元创新日。公司披露上半年出货九千七百台，收入近二十亿元；截至九月累计下线两万台。",
+      "hash": "22078d055f0d321ec3b9df5b047062d5ad38a6f592405404642b6a0b42f7e5f9",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 12.643265,
+      "pcmDurationSeconds": 12.597166666666666,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "机器人产业本周的新数字，来自周四的智元创新日。",
+          "startSeconds": 0.6,
+          "endSeconds": 5.693333
+        },
+        {
+          "text": "公司披露上半年出货九千七百台，收入近二十亿元；截至九月累计下线两万台。",
+          "startSeconds": 5.743333,
+          "endSeconds": 13.347167
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 28.327191199998197,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0784269062805192
+      },
+      "fullDecodePassed": true,
+      "sha256": "93b7a473cd486a80a305c4c8094834246058766e068936cc0b3e66d98a7bfe48",
+      "bytes": 202753,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.5505,
+        "rmsDbfs": -23.4468,
+        "sampleCount": 555536
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "football",
+      "file": "football.mp3",
+      "text": "本周的绿茵突破，来自中国十七岁以下女足。北京时间周五凌晨，中国队点球四比三淘汰法国，首次闯入世界杯八强，刷新队史最佳。",
+      "hash": "b6666a77d7069fb48d77e9837c762d09fc885863acd4281e6883fcd7e5d9b1bb",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 13.191837,
+      "pcmDurationSeconds": 13.156458333333333,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "本周的绿茵突破，来自中国十七岁以下女足。",
+          "startSeconds": 0.6,
+          "endSeconds": 4.9885
+        },
+        {
+          "text": "北京时间周五凌晨，中国队点球四比三淘汰法国，首次闯入世界杯八强，刷新队史最佳。",
+          "startSeconds": 5.0385,
+          "endSeconds": 13.906458
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 33.91843490000247,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.021196613993135
+      },
+      "fullDecodePassed": true,
+      "sha256": "46908a0a87ad1335c2c76cd0e48468465b8a47d583e59f9a8e479c94db08f618",
+      "bytes": 211530,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -7.1853,
+        "rmsDbfs": -23.4459,
+        "sampleCount": 580200
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 16.0
+    },
+    {
+      "id": "outro",
+      "file": "outro.mp3",
+      "text": "这一周仍在继续，新闻也会有后续。带着背景看消息，让每个判断都有来处。",
+      "hash": "64d2b2cd1e2bf7a2de54f8c4aeef7ba83197d57cf2c066ec37f414c681bd5040",
+      "speakerId": 3,
+      "speakerName": "zf_001",
+      "speed": 1.03,
+      "durationSeconds": 7.601633,
+      "pcmDurationSeconds": 7.552041666666667,
+      "spokenTextNormalizationVersion": "zh-year-zero-and-ai-terms-v2",
+      "captions": [
+        {
+          "text": "这一周仍在继续，新闻也会有后续。",
+          "startSeconds": 0.6,
+          "endSeconds": 4.228917
+        },
+        {
+          "text": "带着背景看消息，让每个判断都有来处。",
+          "startSeconds": 4.278917,
+          "endSeconds": 8.302042
+        }
+      ],
+      "pauseBetweenLinesSeconds": 0.2,
+      "sampleRate": 24000,
+      "synthesisSeconds": 20.700156199996854,
+      "generatedLines": 2,
+      "normalization": {
+        "targetRmsDbfs": -23,
+        "peakCeilingDbfs": -1,
+        "gain": 1.0171935869828976
+      },
+      "fullDecodePassed": true,
+      "sha256": "0e62f5c54bb034164897309f547396bd84d4242234ecd4d2745d13f059f28b9c",
+      "bytes": 122087,
+      "audioMeasurement": {
+        "fullDecodePassed": true,
+        "measurement": "full decoded 44.1kHz mono 16-bit PCM WAV",
+        "peakDbfs": -8.4147,
+        "rmsDbfs": -23.4466,
+        "sampleCount": 333046
+      },
+      "fromSeconds": 0.6,
+      "sceneDurationSeconds": 10.0
+    }
+  ],
+  "spokenTextNormalization": {
+    "version": "zh-year-zero-and-ai-terms-v2",
+    "characterReplacements": {
+      "〇": "零",
+      "《": "",
+      "》": ""
+    },
+    "terms": {
+      "ImageNet": "Image Net",
+      "AlexNet": "Alex Net",
+      "AlphaGo": "Alpha Go",
+      "AlphaFold": "Alpha Fold",
+      "OpenAI": "Open A I",
+      "ChatGPT": "Chat G P T",
+      "GPT-3": "G P T 三",
+      "GPT": "G P T",
+      "AI": "A I"
+    },
+    "captionsPreserveOriginalText": true,
+    "rationale": "sherpa-onnx 2.0.1 skips unknown English words rather than spelling them; every expanded English token is verified against the installed English and Chinese lexicons."
+  },
+  "spokenAsciiLexiconCheck": {
+    "status": "passed",
+    "tokens": [],
+    "lexicons": [
+      "lexicon-us-en.txt",
+      "lexicon-zh.txt"
+    ]
+  },
+  "totalAudioSeconds": 140.617143,
+  "elapsedSeconds": 0.0019016999976884108,
+  "film": "weekly-ten",
+  "totalSceneDurationSeconds": 180,
+  "fps": 60,
+  "modelPathWorkaround": "C:\\Users\\84046\\.codex\\runtimes\\remotion-kokoro-05d79370",
+  "music": {
+    "file": "daily-ten/music.mp3",
+    "sha256": "035e8a0484f0e7ddb88865b0cf65f6898c1d307883e258c30b6e1fb0cf67ad16",
+    "durationSeconds": 180,
+    "original": true,
+    "regenerated": false
+  },
+  "failures": []
+}

@@ -8,6 +8,9 @@
 
 ## 当前作品
 
+- `AiWeekly-Bilibili` / `AiWeekly-Douyin`：AI周报横竖双版，见 [本期说明](docs/AI-WEEKLY-20261030.md)。
+- `WeeklyTen-Bilibili` / `WeeklyTen-Douyin`：综合新闻周报，见 [本期说明](docs/WEEKLY-TEN-20261030.md)。
+- `DailyTen-Bilibili` / `DailyTen-Douyin`：近期新闻精选，见 [本期说明](docs/DAILY-TEN-20261030.md)。
 - `AiHistory30m`：30 分钟 AI 发展史长片，见 `docs/AI-HISTORY-PRODUCTION.md`。
 - `PoissonEncounters`：泊松过程科普短片，见 `docs/POISSON-FILM.md`。
 - `ChinaGenAiTimeline`：中国生成式 AI 用户规模数据视频，见 `docs/CHINA-GENAI-SOURCES.md`。
@@ -26,14 +29,14 @@ npm run dev -- --no-open
 常用检查：
 
 ```powershell
-npm run check:versions
-npm run lint
-npm run build
-npm run render:test
-npm run still:test
+npm run workflow -- check --edition all
+npm run workflow -- qa --edition ai-weekly --platform all --quick
+npm run workflow -- smoke
 ```
 
 日常输出位于 `video/out/`，不进入 Git。
+
+统一命令、标准AAC／无损母带／外部Atmos分支及本地与GitHub的验收边界见 [工作流说明](docs/WORKFLOW.md)。
 
 ## AI / 维护者入口
 

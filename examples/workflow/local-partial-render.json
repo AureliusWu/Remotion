@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "edition": "ai-weekly",
+  "scope": "partial",
+  "frameRange": [
+    0,
+    119
+  ],
+  "seconds": 2,
+  "startedAt": "2026-10-31T05:24:11.903Z",
+  "inputHash": "5cb05422f25331046fe31e67b37a13c80bb894bf3e74e5ef0c1b7f29cd626834",
+  "options": {
+    "codec": "h264",
+    "videoBitrate": "10M",
+    "audioCodec": "aac",
+    "audioBitrate": "192k",
+    "sampleRate": 48000,
+    "pixelFormat": "yuv420p",
+    "imageFormat": "jpeg",
+    "jpegQuality": 95,
+    "hardwareAcceleration": "disable",
+    "concurrency": 2
+  },
+  "platforms": [
+    {
+      "platform": "bilibili",
+      "composition": "AiWeekly-Bilibili",
+      "file": "out\\workflow-renders\\ai-weekly\\partial-0-119\\ai-weekly-20261030-bilibili-partial-0-119-1080p60.mp4",
+      "status": "passed",
+      "bytes": 2479731
+    },
+    {
+      "platform": "douyin",
+      "composition": "AiWeekly-Douyin",
+      "file": "out\\workflow-renders\\ai-weekly\\partial-0-119\\ai-weekly-20261030-douyin-partial-0-119-1080p60.mp4",
+      "status": "passed",
+      "bytes": 2514533
+    }
+  ],
+  "completedAt": "2026-10-31T05:24:42.983Z"
+}

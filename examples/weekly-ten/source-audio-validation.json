@@ -1,0 +1,99 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-10-30T10:14:17.916630+00:00",
+  "storyboardSha256": "f2e1f902d0ba05d6d3e16a32a24829962a154a1bdc6933009408e060ed479bc4",
+  "timelineSeconds": 180,
+  "sceneCount": 12,
+  "captionCount": 24,
+  "fullDecodeAndPublishedHashesPassed": true,
+  "existingAssetsPreserved": true,
+  "protectedFileCount": 89,
+  "highestPeakDbfs": -7.1853,
+  "rmsDbfsRange": [
+    -23.4475,
+    -23.4446
+  ],
+  "minimumTailRoomSeconds": 1.798367,
+  "narrationFiles": [
+    {
+      "id": "intro",
+      "file": "intro.mp3",
+      "durationSeconds": 7.549388,
+      "sha256": "40c283fb7d2aeab9b9669cf0781e0b9630a0702d9536830b17ca9fc3bffb59b1"
+    },
+    {
+      "id": "tourism",
+      "file": "tourism.mp3",
+      "durationSeconds": 12.564898,
+      "sha256": "68a04e1da3adb92eea05c80a476c65ee0a66f4682e124374aa0dff557b5c7c03"
+    },
+    {
+      "id": "shopping",
+      "file": "shopping.mp3",
+      "durationSeconds": 13.087347,
+      "sha256": "0897fd1c524ec587d214ed7eb684cd396152b4a1f3a5e92b798ca0633fd6dd2a"
+    },
+    {
+      "id": "swimming",
+      "file": "swimming.mp3",
+      "durationSeconds": 11.650612,
+      "sha256": "df4c1cf089c883b47471f25af1d9130402bbff74a88aa82aff12a14ac3f3bfa8"
+    },
+    {
+      "id": "mars-dust",
+      "file": "mars-dust.mp3",
+      "durationSeconds": 12.068571,
+      "sha256": "c260a528ed61604117216f263f9c03927253cf5991810bac6279ce293d4176ca"
+    },
+    {
+      "id": "archive",
+      "file": "archive.mp3",
+      "durationSeconds": 13.296327,
+      "sha256": "4520970d3d920f22bc2ad8e9cadb821219006a0b1e24f4cfdab3e8a15b8f9ac1"
+    },
+    {
+      "id": "rates",
+      "file": "rates.mp3",
+      "durationSeconds": 11.807347,
+      "sha256": "3a28f40dd6da1ce918aea4daeb023c7ffafb3e6daf29b7286321bc58895b283f"
+    },
+    {
+      "id": "vote",
+      "file": "vote.mp3",
+      "durationSeconds": 13.217959,
+      "sha256": "b7ceaeec3067bfc3954330d60509db47638948af857d85627082efd727868957"
+    },
+    {
+      "id": "baseball",
+      "file": "baseball.mp3",
+      "durationSeconds": 11.937959,
+      "sha256": "7f70af30cdb45fd337f4ea44a6cf5a1a3a7301f58bc99a759091de823c2210b8"
+    },
+    {
+      "id": "robot",
+      "file": "robot.mp3",
+      "durationSeconds": 12.643265,
+      "sha256": "93b7a473cd486a80a305c4c8094834246058766e068936cc0b3e66d98a7bfe48"
+    },
+    {
+      "id": "football",
+      "file": "football.mp3",
+      "durationSeconds": 13.191837,
+      "sha256": "46908a0a87ad1335c2c76cd0e48468465b8a47d583e59f9a8e479c94db08f618"
+    },
+    {
+      "id": "outro",
+      "file": "outro.mp3",
+      "durationSeconds": 7.601633,
+      "sha256": "0e62f5c54bb034164897309f547396bd84d4242234ecd4d2745d13f059f28b9c"
+    }
+  ],
+  "music": {
+    "file": "daily-ten/music.mp3",
+    "sha256": "035e8a0484f0e7ddb88865b0cf65f6898c1d307883e258c30b6e1fb0cf67ad16",
+    "durationSeconds": 180,
+    "original": true,
+    "regenerated": false
+  },
+  "failures": []
+}

@@ -1,0 +1,244 @@
+{
+  "composition": "WeeklyTen-Bilibili",
+  "checkedAt": "2026-10-30T10:15:30.505Z",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  },
+  "frames": [
+    {
+      "frame": 210,
+      "file": "frame-0210.png",
+      "bytes": 167270,
+      "sha256": "1b2928a05d37cd95faf227d1f8adb06811b0b90323fa84b1c261b365230013d5"
+    },
+    {
+      "frame": 840,
+      "file": "frame-0840.png",
+      "bytes": 295086,
+      "sha256": "95934b0d7ea35dfa577cdd47a208bbf77448921f712dd97af0259a453768f0e6"
+    },
+    {
+      "frame": 1260,
+      "file": "frame-1260.png",
+      "bytes": 299028,
+      "sha256": "963b81a06f6fce55dcbe3bac0f128b5237c7d3fed6ff9e07d68e9727a2b9c837"
+    },
+    {
+      "frame": 1800,
+      "file": "frame-1800.png",
+      "bytes": 301042,
+      "sha256": "0e40cca999ba34ec90abb8a677a89a95863046635db2b77e3aa907e316734bdb"
+    },
+    {
+      "frame": 2220,
+      "file": "frame-2220.png",
+      "bytes": 320544,
+      "sha256": "057c869f13bb91fbbf99186a11da93a31aa8e1946b7658f36150b4032a39ccd9"
+    },
+    {
+      "frame": 2760,
+      "file": "frame-2760.png",
+      "bytes": 341691,
+      "sha256": "fafaaaac11546cc0240a62ba068a5e558c4f457b31dcea5ec011686a3e0f0350"
+    },
+    {
+      "frame": 3180,
+      "file": "frame-3180.png",
+      "bytes": 350713,
+      "sha256": "ffaa4a14c0bb79f6a69211ea2abac547704665946177a5623b474a7fcfc86488"
+    },
+    {
+      "frame": 3720,
+      "file": "frame-3720.png",
+      "bytes": 335853,
+      "sha256": "290b33134b4113e09e6c21182dca45bdab686fac6d158fb11f5c6bc56ebfe450"
+    },
+    {
+      "frame": 4140,
+      "file": "frame-4140.png",
+      "bytes": 358827,
+      "sha256": "6918e26d5d0aad54a39cad9a58f814952814f0e81bb585628bfea7a95093dad9"
+    },
+    {
+      "frame": 4680,
+      "file": "frame-4680.png",
+      "bytes": 257493,
+      "sha256": "25dfb38432a5b9120f3c866c17ae42097bf0cc3173d2caf46329fd1bbc1e45d0"
+    },
+    {
+      "frame": 5100,
+      "file": "frame-5100.png",
+      "bytes": 278801,
+      "sha256": "94d152a8f4f5ac7c53fa1ae08ff8c0ea9a2d6d5f080bfa665a628dead860eb37"
+    },
+    {
+      "frame": 5640,
+      "file": "frame-5640.png",
+      "bytes": 245133,
+      "sha256": "bf33bc40806e0006f5a70d8d546e3bb61bc235c5c125ec8bb1cb0e91cf8d34d6"
+    },
+    {
+      "frame": 6060,
+      "file": "frame-6060.png",
+      "bytes": 246967,
+      "sha256": "794929e74f7d21b632631ddd00fa155c76aca870a328740f9f1d442361ed9a11"
+    },
+    {
+      "frame": 6600,
+      "file": "frame-6600.png",
+      "bytes": 244747,
+      "sha256": "3d0e3ccc51458ad6352f27540918844e4503522d0605970c44996acb7927dd3d"
+    },
+    {
+      "frame": 7020,
+      "file": "frame-7020.png",
+      "bytes": 255981,
+      "sha256": "9e59a8814aa83250f4ef0d5242fefc7c509598d16c950b5c0d0215c219dc0917"
+    },
+    {
+      "frame": 7560,
+      "file": "frame-7560.png",
+      "bytes": 315876,
+      "sha256": "21237d3a3896d03c7ee4f217594382212214f4807042b65ff9fd03e7fd3ddeb8"
+    },
+    {
+      "frame": 7980,
+      "file": "frame-7980.png",
+      "bytes": 323268,
+      "sha256": "5b87b6f76e1af68a53b19bdf6d4fea1519dfc7a0b062731926601edb8228b89d"
+    },
+    {
+      "frame": 8520,
+      "file": "frame-8520.png",
+      "bytes": 232879,
+      "sha256": "5f116e166576a4be5e14144c4a29540bd5754755c65f3b37085ec0217f7bc727"
+    },
+    {
+      "frame": 8940,
+      "file": "frame-8940.png",
+      "bytes": 245677,
+      "sha256": "7e84c36fad04e33e531127c670b3d1e943419a6ff3bc88d6da8481cd5e5ff3e7"
+    },
+    {
+      "frame": 9480,
+      "file": "frame-9480.png",
+      "bytes": 357681,
+      "sha256": "d7edb30cf0f80d6cbe2f9633dac4ab55c001c864ab8b22a796b83b3697c3bd67"
+    },
+    {
+      "frame": 9900,
+      "file": "frame-9900.png",
+      "bytes": 375912,
+      "sha256": "92842391c9b01e53521a80ae3b6d7d30496477a38b093ee945ebb53ff7682d04"
+    },
+    {
+      "frame": 10410,
+      "file": "frame-10410.png",
+      "bytes": 139514,
+      "sha256": "bb523e1d0127f3aad57bf1d1f778da7f7724e9a0ff9c8d8b8e2dcca1d0efebc2"
+    },
+    {
+      "frame": 10799,
+      "file": "frame-10799.png",
+      "bytes": 128409,
+      "sha256": "4e055827d7708d24edd5ff6e05d3314cdb49a5f90fe381751b0a174e5cb3c195"
+    }
+  ],
+  "audio": [
+    {
+      "file": "intro.mp3",
+      "durationSeconds": 7.549388,
+      "tailRoomSeconds": 1.851,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "tourism.mp3",
+      "durationSeconds": 12.564898,
+      "tailRoomSeconds": 2.835,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "shopping.mp3",
+      "durationSeconds": 13.087347,
+      "tailRoomSeconds": 2.313,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "swimming.mp3",
+      "durationSeconds": 11.650612,
+      "tailRoomSeconds": 3.749,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "mars-dust.mp3",
+      "durationSeconds": 12.068571,
+      "tailRoomSeconds": 3.331,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "archive.mp3",
+      "durationSeconds": 13.296327,
+      "tailRoomSeconds": 2.104,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "rates.mp3",
+      "durationSeconds": 11.807347,
+      "tailRoomSeconds": 3.593,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "vote.mp3",
+      "durationSeconds": 13.217959,
+      "tailRoomSeconds": 2.182,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "baseball.mp3",
+      "durationSeconds": 11.937959,
+      "tailRoomSeconds": 3.462,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "robot.mp3",
+      "durationSeconds": 12.643265,
+      "tailRoomSeconds": 2.757,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "football.mp3",
+      "durationSeconds": 13.191837,
+      "tailRoomSeconds": 2.208,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "outro.mp3",
+      "durationSeconds": 7.601633,
+      "tailRoomSeconds": 1.798,
+      "fullDecode": "passed",
+      "captionCount": 2
+    }
+  ],
+  "browserErrors": [],
+  "status": "passed",
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  }
+}

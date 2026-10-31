@@ -1,0 +1,117 @@
+{
+  "composition": "AiWeekly-Bilibili",
+  "checkedAt": "2026-10-31T05:22:04.421Z",
+  "expected": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  },
+  "frames": [
+    {
+      "frame": 210,
+      "file": "frame-0210.png",
+      "bytes": 232812,
+      "sha256": "4b7a85465e321daf1a404d6d4322d38cffb24a22a2f2acb4331fb33b1b6a908a"
+    },
+    {
+      "frame": 840,
+      "file": "frame-0840.png",
+      "bytes": 269673,
+      "sha256": "95796e5ca1b38b99661cad42a277574b9ea0d0ac04d6eed8718f932b5a8f039f"
+    },
+    {
+      "frame": 10799,
+      "file": "frame-10799.png",
+      "bytes": 134931,
+      "sha256": "627f6c553e2d122bb08b2a6950eb5495d71487af2570e82bf850490fa5715cbe"
+    }
+  ],
+  "audio": [
+    {
+      "file": "intro.mp3",
+      "durationSeconds": 7.105306,
+      "tailRoomSeconds": 2.295,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "terra.mp3",
+      "durationSeconds": 13.400816,
+      "tailRoomSeconds": 3.999,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "nvidia-meta.mp3",
+      "durationSeconds": 12.721633,
+      "tailRoomSeconds": 4.678,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "baidu-ocr.mp3",
+      "durationSeconds": 14.550204,
+      "tailRoomSeconds": 2.85,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "claude-research.mp3",
+      "durationSeconds": 12.355918,
+      "tailRoomSeconds": 5.044,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "microsoft-literacy.mp3",
+      "durationSeconds": 13.00898,
+      "tailRoomSeconds": 4.391,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "clover.mp3",
+      "durationSeconds": 10.710204,
+      "tailRoomSeconds": 6.69,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "apex.mp3",
+      "durationSeconds": 12.199184,
+      "tailRoomSeconds": 5.201,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "carbon.mp3",
+      "durationSeconds": 13.217959,
+      "tailRoomSeconds": 3.182,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "go3.mp3",
+      "durationSeconds": 11.102041,
+      "tailRoomSeconds": 5.298,
+      "fullDecode": "passed",
+      "captionCount": 2
+    },
+    {
+      "file": "outro.mp3",
+      "durationSeconds": 7.941224,
+      "tailRoomSeconds": 1.459,
+      "fullDecode": "passed",
+      "captionCount": 2
+    }
+  ],
+  "browserErrors": [],
+  "status": "passed",
+  "actual": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 60,
+    "durationInFrames": 10800
+  }
+}

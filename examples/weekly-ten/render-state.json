@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "startedAt": "2026-10-30T10:16:49.069Z",
+  "inputHash": "3c6f2e7c271188510ea75f35481fbfadf4f19d34314df6c67b2fadd824a09f3a",
+  "options": {
+    "codec": "h264",
+    "videoBitrate": "10M",
+    "audioCodec": "aac",
+    "audioBitrate": "192k",
+    "sampleRate": 48000,
+    "pixelFormat": "yuv420p",
+    "imageFormat": "jpeg",
+    "jpegQuality": 95,
+    "hardwareAcceleration": "required",
+    "concurrency": 4
+  },
+  "platforms": [
+    {
+      "id": "WeeklyTen-Bilibili",
+      "platform": "bilibili",
+      "width": 1920,
+      "height": 1080,
+      "file": "out\\weekly-ten-20261030-bilibili-1080p60.mp4",
+      "status": "passed",
+      "startedAt": "2026-10-30T10:16:52.226Z",
+      "completedAt": "2026-10-30T10:23:08.177Z",
+      "sizeBytes": 125955655
+    },
+    {
+      "id": "WeeklyTen-Douyin",
+      "platform": "douyin",
+      "width": 1080,
+      "height": 1920,
+      "file": "out\\weekly-ten-20261030-douyin-1080p60.mp4",
+      "status": "passed",
+      "startedAt": "2026-10-30T10:23:08.179Z",
+      "completedAt": "2026-10-30T10:28:48.449Z",
+      "sizeBytes": 89200428
+    }
+  ],
+  "completedAt": "2026-10-30T10:28:48.450Z"
+}

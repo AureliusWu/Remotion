@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "profile": "hires-pcm",
+  "edition": "ai-weekly",
+  "platform": "bilibili",
+  "source": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-20261030-bilibili-1080p60.mp4",
+  "audio": "D:\\AI项目\\Remotion\\video\\out\\ai-weekly-master\\master-48k24.wav",
+  "output": "D:\\AI项目\\Remotion\\video\\out\\workflow-packages\\ai-weekly\\hires-pcm\\ai-weekly-20261030-bilibili-hires-pcm.mov",
+  "startedAt": "2026-10-31T05:22:52.849Z",
+  "originalVideoPackets": {
+    "packets": 10800,
+    "sha256": "30baaa7aee041892f8a656bc53fa02830c7405f0821dcb0c19293b7a5cd6c3c8"
+  },
+  "packagedVideoPackets": {
+    "packets": 10800,
+    "sha256": "30baaa7aee041892f8a656bc53fa02830c7405f0821dcb0c19293b7a5cd6c3c8"
+  },
+  "audioOrigin": {
+    "sourceNativeSampleRate": 24000,
+    "resampled": true,
+    "note": "48kHz/24bit delivery from native 24kHz narration; no new source detail is claimed"
+  },
+  "completedAt": "2026-10-31T05:23:09.513Z"
+}
