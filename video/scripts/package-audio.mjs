@@ -5,6 +5,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { parseArgs } from "node:util";
 import { getMediaTools } from "./lib/media-tools.mjs";
+import { assertCurrentMaster } from "./lib/master-integrity.mjs";
 import {
   dimensions,
   loadEdition,
@@ -84,6 +85,13 @@ if (profile === "hires-pcm") {
   );
   master = readJson(path.join(path.dirname(audio), "master-manifest.json"));
   assert.equal(master.status, "passed", "Build a passed lossless master first");
+  assertCurrentMaster({
+    master,
+    root: videoRoot,
+    edition: edition.name,
+    seconds: edition.seconds,
+    file: audio,
+  });
   const currentStoryboard = createHash("sha256")
     .update(
       readFileSync(
@@ -228,6 +236,14 @@ try {
     report.originalVideoPackets,
     "Video packets changed during remux",
   );
+  if (master)
+    assertCurrentMaster({
+      master,
+      root: videoRoot,
+      edition: edition.name,
+      seconds: edition.seconds,
+      file: audio,
+    });
   report.audioOrigin = master
     ? {
         sourceNativeSampleRate: master.sourceNativeSampleRate ?? 24000,

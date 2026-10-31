@@ -3,7 +3,7 @@
   "checkedAt": "2026-10-31T05:27:44.983853+00:00",
   "scope": "Local workflow integration; GitHub results must be verified separately at the PR head SHA",
   "checks": {
-    "nodeFixtures": 13,
+    "nodeFixtures": 17,
     "pythonFixtures": 18,
     "editionContentChecks": 3,
     "quickQaFramesPerPlatform": 3,
@@ -13,7 +13,8 @@
     "pcm24SampleRate": 48000,
     "pcm24Bits": 24,
     "pcm24Channels": 2,
-    "originalVideoPacketMatchesPerPlatform": 10800
+    "originalVideoPacketMatchesPerPlatform": 10800,
+    "currentMasterInputProvenance": "passed"
   },
   "originalMp4HashesUnchanged": {
     "ai-weekly-20261030-bilibili-1080p60.mp4": "5ec64376cab3816737213698458b9ca10ebb356f1044a19e0e14b5686fbe103c",

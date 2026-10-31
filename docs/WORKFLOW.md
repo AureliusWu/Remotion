@@ -136,6 +136,7 @@ GitHub结果必须绑定具体head SHA；push成功、静帧成功、局部渲�
 字体随系统不同可产生差异，CI不以Windows PNG哈希要求Linux排版逐像素一致。
 
 本地命令执行记录：`out/workflow/<time-action-pid>/report.json` 和各阶段原始日志。
+Node负向fixture会故意产生 `failed` 的拒绝报告；其是否符合预期由测试断言和统一check的退出状态确认，原始报告仍保留。
 CI小片：`out/workflow-ci/smoke.mp4` / `report.json`。失败报告写 `failed`，避免遗留PASS被误用。
 大文件和运行环境继续留在被忽略的 `out/`，必要验收摘要保存在 `examples/workflow/`。
 

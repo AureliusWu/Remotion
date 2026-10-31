@@ -292,3 +292,8 @@ GitHub工作流扩为Ubuntu24.04/Windows与Node24矩阵，统一入口检查、�
 CI始终保留失败日志和小体积Artifacts/Job Summary，不上传整片、PCM或bundle。远程成功须绑定
 本轮PR实际head SHA，以GitHub检查与Artifacts为准，不能用本地PASS或push成功代替。
 必要本地证据examples/workflow/local-validation.json；详细使用与边界docs/WORKFLOW.md。
+
+最终只读复审发现，同一分镜原稿换声线重做配音后，旧母带可能通过仅检查storyboard/WAV的封装。
+已增加封装前及通过前的全部sourceInputs当前SHA验证，强制包含原稿和配音清单，并限制来源路径留在工程内；
+四项回归覆盖未变通过、配音改变拒绝、原句样本改变拒绝、路径越界拒绝。Node测试共17项通过，真实AI母带输入校验通过。
+首轮GitHub双系统在e891b46通过（run41172922416）；最终修复提交须另以其head SHA的CI结果验收。
