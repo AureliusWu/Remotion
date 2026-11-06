@@ -1,17 +1,17 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdtempSync, realpathSync, rmSync } from "node:fs";
+import { mkdtemp, realpath, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 import { videoRoot } from "../lib/workflow-config.mjs";
 import { preparedStatus, submitPrepared } from "../publish/command.mjs";
 
-function fixture(t) {
-  const stateRoot = mkdtempSync(
-    path.join(realpathSync(os.tmpdir()), "publish-command-"),
+async function fixture(t) {
+  const stateRoot = await mkdtemp(
+    path.join(await realpath(os.tmpdir()), "publish-command-"),
   );
-  t.after(() => rmSync(stateRoot, { recursive: true, force: true }));
+  t.after(() => rm(stateRoot, { recursive: true, force: true }));
   const manifest = {
     platform: "bilibili",
     edition: "weekly-ten",
@@ -68,7 +68,7 @@ function fixture(t) {
 }
 
 test("reviewed fixture submits once, verifies pending review and reports local status", async (t) => {
-  const f = fixture(t);
+  const f = await fixture(t);
   assert.equal((await f.status()).status, "ready_for_review");
   let reviews = 0;
   const result = await f.submit(async (manifest, fingerprint, account) => {
@@ -87,7 +87,7 @@ test("reviewed fixture submits once, verifies pending review and reports local s
 });
 
 test("declined review and package change each block upload", async (t) => {
-  const f = fixture(t);
+  const f = await fixture(t);
   await assert.rejects(
     f.submit(async () => false),
     /declined/,
@@ -103,7 +103,7 @@ test("declined review and package change each block upload", async (t) => {
 });
 
 test("timeout reconciles first and an uncertain result stays blocked until independently found", async (t) => {
-  const f = fixture(t);
+  const f = await fixture(t);
   let lookups = 0;
   f.adapter.submit = async () => {
     throw Object.assign(new Error("Cookie: fixture-secret"), {
@@ -148,7 +148,7 @@ test("workflow CLI refuses piped confirmation before reading media or contacting
 });
 
 test("a platform verification challenge pauses further network calls and blocks resubmission", async (t) => {
-  const f = fixture(t);
+  const f = await fixture(t);
   f.adapter.submit = async () => ({ code: "verification_required" });
   f.adapter.status = async () =>
     assert.fail("The operator must handle the challenge first");
