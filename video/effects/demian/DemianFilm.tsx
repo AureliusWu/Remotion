@@ -6,6 +6,7 @@ import {
   Easing,
   Sequence,
   Still,
+  getStaticFiles,
   interpolate,
   staticFile,
   useCurrentFrame,
@@ -883,6 +884,13 @@ const DemianCover = () => (
 const calculateMetadata: CalculateMetadataFunction<FilmProps> = async ({
   abortSignal,
 }) => {
+  const files = getStaticFiles();
+  if (
+    !files.some((file) => file.name === "demian/timeline.json") ||
+    !files.some((file) => file.name === "demian/narration.wav")
+  ) {
+    return {};
+  }
   const response = await globalThis.fetch(staticFile("demian/timeline.json"), {
     signal: abortSignal,
   });
