@@ -352,6 +352,25 @@ test("configured draft revisions retain older reviewed files and become ready in
   );
 });
 
+test("a release uploaded manually remains read-only after preparation", async (t) => {
+  const setup = await fixture(t);
+  const metadata = "out/posting.json";
+  const request = { ...setup.request, options: { metadata } };
+  await setup.json(`video/${metadata}`, {
+    ...configured,
+    existingUpload: true,
+  });
+  const previous = await preparePackage(request, stubMedia);
+  await setup.json(`video/${metadata}`, { existingUpload: false });
+  await assert.rejects(
+    preparePackage(request, stubMedia),
+    /uploaded manually remains read-only/,
+  );
+  const current = await readPreparedPackage({ ...request, verifyFiles: false });
+  assert.equal(current.manifest.existingUpload, true);
+  assert.equal(current.fingerprint, previous.fingerprint);
+});
+
 test("missing, partial, failed media QA and mismatched cover never activate a package", async (t) => {
   const setup = await fixture(t);
   await assert.rejects(

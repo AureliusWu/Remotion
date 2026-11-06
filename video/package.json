@@ -32,6 +32,7 @@
   },
   "scripts": {
     "workflow": "node scripts/workflow.mjs",
+    "book": "node scripts/book-video/cli.mjs",
     "test:workflow": "node --test scripts/tests/*.test.mjs",
     "audio:ai-weekly": "out/ai-history-tts/venv/Scripts/python.exe scripts/generate-ai-weekly-audio.py",
     "verify:ai-weekly-content": "node scripts/verify-news-edition.mjs ai-weekly",

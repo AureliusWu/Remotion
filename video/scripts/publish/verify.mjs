@@ -12,6 +12,15 @@ import {
   rational,
 } from "../lib/media-profiles.mjs";
 import { resolveNewsCount } from "../lib/news-contract.mjs";
+import {
+  parseStandaloneEvidence,
+  releaseDate,
+  validDate,
+  validSha,
+  validStandaloneEdition,
+} from "./source-evidence.mjs";
+
+export { validDate, validSha };
 
 const exec = promisify(execFile);
 const archives = {
@@ -26,13 +35,10 @@ const archives = {
     "bilibili-preview-validation.json",
   ],
 };
-const shaPattern = /^[a-f0-9]{64}$/;
 const record = (value) =>
   value !== null && typeof value === "object" && !Array.isArray(value);
 export const sha256 = (bytes) =>
   createHash("sha256").update(bytes).digest("hex");
-export const validSha = (value) =>
-  typeof value === "string" && shaPattern.test(value);
 export const jsonBytes = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const canonical = (value) =>
   Array.isArray(value)
@@ -118,16 +124,6 @@ export async function readJson(file, label, limit = 2 * 1024 * 1024) {
   throw new Error(`${label} is not a valid JSON object`);
 }
 
-export function validDate(value) {
-  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value))
-    return false;
-  const parsed = Date.parse(`${value}T00:00:00Z`);
-  return (
-    Number.isFinite(parsed) &&
-    new Date(parsed).toISOString().slice(0, 10) === value
-  );
-}
-
 function httpsUrl(value) {
   if (typeof value !== "string" || value.length > 2048 || /\s/.test(value))
     return false;
@@ -159,8 +155,20 @@ const metadataFields = [
   "copyrightType",
   "sourceUrl",
 ];
+const optionalMetadataFields = [
+  "aiDeclaration",
+  "visibility",
+  "existingUpload",
+];
 export const metadataFrom = (manifest) =>
-  Object.fromEntries(metadataFields.map((key) => [key, manifest[key]]));
+  Object.fromEntries(
+    [
+      ...metadataFields,
+      ...optionalMetadataFields.filter(
+        (key) => Object.hasOwn(manifest, key) && manifest[key] !== undefined,
+      ),
+    ].map((key) => [key, manifest[key]]),
+  );
 const secretText =
   /(?:SESSDATA|bili_jct|access[_-]?token|authorization|cookie)\s*[:=]/i;
 function textField(value, label, limit, multiline = false) {
@@ -181,7 +189,10 @@ function textField(value, label, limit, multiline = false) {
 export function validateMetadata(value, { partial = false } = {}) {
   assert(
     record(value) &&
-      Object.keys(value).every((key) => metadataFields.includes(key)),
+      Object.keys(value).every(
+        (key) =>
+          metadataFields.includes(key) || optionalMetadataFields.includes(key),
+      ),
     "Upload metadata contains unsupported fields",
   );
   if (!partial || Object.hasOwn(value, "title"))
@@ -244,6 +255,18 @@ export function validateMetadata(value, { partial = false } = {}) {
       value.accountAlias !== null,
       "Account UID requires a local account alias",
     );
+  for (const key of ["aiDeclaration", "existingUpload"])
+    if (Object.hasOwn(value, key))
+      assert(typeof value[key] === "boolean", `${key} must be a boolean`);
+  if (Object.hasOwn(value, "visibility"))
+    assert(
+      ["private", "public"].includes(value.visibility),
+      "Visibility must be private or public",
+    );
+  assert(
+    value.aiDeclaration !== true || value.copyrightType !== "repost",
+    "AI declaration requires self-made copyright",
+  );
   return value;
 }
 
@@ -251,9 +274,11 @@ export async function releaseContext(
   { edition, options = {}, videoRoot, outputRoot },
   { verifyFiles = true } = {},
 ) {
+  assert(validStandaloneEdition(edition), "Invalid publication edition");
+  const archived = Object.hasOwn(archives, edition);
   assert(
-    Object.hasOwn(archives, edition),
-    "No archived Bilibili delivery evidence for this edition",
+    !archived || options["source-evidence"] == null,
+    "Archived editions must use archived Bilibili delivery evidence",
   );
   assert(
     options.platform == null || options.platform === "bilibili",
@@ -264,8 +289,27 @@ export async function releaseContext(
   const out = path.join(root, "out");
   const output = path.resolve(outputRoot ?? path.join(out, "publish"));
   assert(inside(out, output), "Publish output must stay inside video/out");
-  let storyboard, storyboardFile, date;
-  if (verifyFiles || options["release-id"] == null) {
+  const context = { edition, options, root, repo, out, output };
+  let storyboard, storyboardFile, date, sourceEvidence;
+  if (!archived) {
+    if (
+      options["source-evidence"] != null &&
+      (verifyFiles || options["release-id"] == null)
+    ) {
+      sourceEvidence = await loadSourceEvidence(
+        context,
+        options["source-evidence"],
+      );
+      storyboard = sourceEvidence.value;
+      date = releaseDate(edition, storyboard.releaseId);
+    } else {
+      assert(
+        options["release-id"] != null,
+        "Standalone edition requires --source-evidence for prepare or --release-id for readback",
+      );
+      date = releaseDate(edition, options["release-id"]);
+    }
+  } else if (verifyFiles || options["release-id"] == null) {
     storyboardFile = await scopedFile(
       path.join(root, "effects", edition),
       "storyboard.json",
@@ -284,17 +328,7 @@ export async function releaseContext(
     );
     date = storyboard.periodEnd.replaceAll("-", "");
   } else {
-    assert(
-      typeof options["release-id"] === "string" &&
-        options["release-id"].startsWith(`${edition}-`),
-      "Invalid edition release ID",
-    );
-    date = options["release-id"].slice(edition.length + 1);
-    assert(
-      /^\d{8}$/.test(date) &&
-        validDate(`${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}`),
-      "Invalid release date",
-    );
+    date = releaseDate(edition, options["release-id"]);
   }
   const releaseId = `${edition}-${date}`;
   assert(
@@ -303,25 +337,136 @@ export async function releaseContext(
   );
   const directory = path.join(output, edition, releaseId);
   return {
-    edition,
-    options,
-    root,
-    repo,
-    out,
-    output,
+    ...context,
     directory,
     date,
     releaseId,
     storyboard,
     storyboardFile,
+    ...(archived ? {} : { sourceKind: "standalone", sourceEvidence }),
   };
 }
 
 async function bind(file, context) {
   return {
-    path: path.relative(context.repo, file).split(path.sep).join("/"),
+    path: repoRelative(file, context),
     sha256: await fileHash(file),
     bytes: (await stat(file)).size,
+  };
+}
+
+const repoRelative = (file, context) =>
+  path.relative(context.repo, file).split(path.sep).join("/");
+
+async function loadSourceEvidence(context, input) {
+  const limit = 64 * 1024;
+  const file = await scopedFile(
+    context.out,
+    path.resolve(context.root, input),
+    ".json",
+    "standalone source evidence",
+    limit,
+  );
+  const bytes = await readFile(file);
+  assert(bytes.length <= limit, "Standalone source evidence is too large");
+  return {
+    file,
+    bytes,
+    ref: {
+      path: repoRelative(file, context),
+      sha256: sha256(bytes),
+      bytes: bytes.length,
+    },
+    value: parseStandaloneEvidence(bytes, context.edition),
+  };
+}
+
+async function verifyStandaloneInputs(
+  context,
+  { video, cover, sourceEvidence },
+) {
+  const evidence =
+    sourceEvidence == null
+      ? context.sourceEvidence
+      : await loadSourceEvidence(context, sourceEvidence);
+  assert(evidence, "Standalone prepare requires explicit --source-evidence");
+  assert(
+    evidence.value.releaseId === context.releaseId &&
+      (!context.sourceEvidence ||
+        isDeepStrictEqual(evidence.ref, context.sourceEvidence.ref)) &&
+      (await fileHash(evidence.file)) === evidence.ref.sha256,
+    "Standalone source evidence or its selected release changed",
+  );
+  const { value } = evidence;
+  const defaults = validateMetadata({
+    ...value.metadata,
+    accountAlias: null,
+    accountUid: null,
+    categoryId: null,
+    copyrightType: null,
+    sourceUrl: null,
+  });
+  for (const { label, url } of value.sources) {
+    textField(label, "source label", 160);
+    assert(httpsUrl(url), "Invalid standalone source URL");
+  }
+  const resolveMedia = async (reference, override, extension, label, limit) => {
+    const file = await scopedFile(
+      context.out,
+      path.resolve(context.root, reference.path),
+      extension,
+      label,
+      limit,
+    );
+    if (override != null)
+      assert.equal(
+        await scopedFile(
+          context.out,
+          path.resolve(context.root, override),
+          extension,
+          label,
+          limit,
+        ),
+        file,
+        `${label} path differs from standalone source evidence`,
+      );
+    const ref = await bind(file, context);
+    assert.equal(
+      ref.sha256,
+      reference.sha256,
+      `${label} SHA256 differs from standalone source evidence`,
+    );
+    return { file, ref };
+  };
+  const [videoInput, coverInput] = await Promise.all([
+    resolveMedia(value.video, video, ".mp4", "Standalone video"),
+    resolveMedia(
+      value.cover,
+      cover,
+      ".png",
+      "Standalone cover",
+      16 * 1024 * 1024,
+    ),
+  ]);
+  const expected = {
+    ...value.profile,
+    seconds: value.profile.frames / value.profile.fps,
+  };
+  return {
+    compositionId: value.compositionId,
+    expected,
+    videoFile: videoInput.file,
+    videoRef: videoInput.ref,
+    coverFile: coverInput.file,
+    coverRef: coverInput.ref,
+    coverBytes: await readCover(coverInput.file, coverInput.ref, expected),
+    coverFrame: null,
+    defaults,
+    provenance: {
+      kind: "standalone",
+      sourceEvidence: evidence.ref,
+      sources: value.sources,
+    },
   };
 }
 
@@ -359,8 +504,31 @@ function episodeDraft(context, guide, sources) {
   });
 }
 
-/** Bind exact media to trusted archived checks and recheck the current source inputs. */
-export async function verifyInputs(context, { video, cover } = {}) {
+async function readCover(file, ref, expected) {
+  const bytes = await readFile(file);
+  assert(
+    bytes.length >= 33 &&
+      bytes.subarray(0, 8).equals(Buffer.from("89504e470d0a1a0a", "hex")) &&
+      bytes.toString("ascii", 12, 16) === "IHDR" &&
+      bytes.readUInt32BE(16) === expected.width &&
+      bytes.readUInt32BE(20) === expected.height &&
+      sha256(bytes) === ref.sha256,
+    "Cover must be a complete PNG with the expected landscape dimensions",
+  );
+  return bytes;
+}
+
+/** Bind exact media and recheck the current source inputs. */
+export async function verifyInputs(
+  context,
+  { video, cover, sourceEvidence } = {},
+) {
+  if (context.sourceKind === "standalone")
+    return verifyStandaloneInputs(context, { video, cover, sourceEvidence });
+  assert(
+    sourceEvidence == null,
+    "Archived editions must use archived Bilibili delivery evidence",
+  );
   const { edition, root, repo, out, storyboard, storyboardFile, date } =
     context;
   const refs = {};
@@ -619,18 +787,7 @@ export async function verifyInputs(context, { video, cover } = {}) {
     16 * 1024 * 1024,
   );
   const coverRef = await bind(coverFile, context);
-  const coverBytes = await readFile(coverFile);
-  assert(
-    coverBytes.length >= 33 &&
-      coverBytes
-        .subarray(0, 8)
-        .equals(Buffer.from("89504e470d0a1a0a", "hex")) &&
-      coverBytes.toString("ascii", 12, 16) === "IHDR" &&
-      coverBytes.readUInt32BE(16) === expected.width &&
-      coverBytes.readUInt32BE(20) === expected.height &&
-      sha256(coverBytes) === coverRef.sha256,
-    "Cover must be a complete PNG with the expected landscape dimensions",
-  );
+  const coverBytes = await readCover(coverFile, coverRef, expected);
   const frame = coverQa.frames?.find(
     (item) => item.sha256 === coverRef.sha256 && item.bytes === coverRef.bytes,
   );

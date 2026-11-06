@@ -25,7 +25,7 @@ const help = {
   "--version": "biliup-cli 1.3.4",
   "--help": "--user-cookie --rust-log",
   "upload --help":
-    "--submit web --cover --title --desc --tag --tid --copyright --source",
+    "--submit web --cover --title --desc --tag --tid --copyright --source --extra-fields --is-only-self",
   "list --help": "--from-page --max-pages --is-pubing --not-pubed",
   "show --help": "Usage: biliup.exe show <VID>",
 };
@@ -84,12 +84,16 @@ async function fixture(t, options = {}) {
     configPath,
     executable,
     expectedBinarySha256: options.binarySha256 ?? digest(exeBytes),
+    ownerFetch: options.ownerFetch,
     execute: async (file, args, spawnOptions) => {
       assert.equal(file, executable);
       calls.push({ args, spawnOptions });
       const helpKey = args.join(" ");
       if (Object.hasOwn(help, helpKey))
-        return { exitCode: 0, stdout: help[helpKey] };
+        return {
+          exitCode: 0,
+          stdout: options.help?.[helpKey] ?? help[helpKey],
+        };
       assert.deepEqual(args.slice(0, 3), [
         "--user-cookie",
         cookieFile,
@@ -143,10 +147,23 @@ test("doctor invokes only offline help for a verified pin and requires no creden
   assert.equal(report.adapterStatus, "available");
   assert.equal(report.toolVersion, "1.3.4");
   assert.equal(report.accountCheck, "requires_manual_setup");
+  assert.equal(report.aiDeclarationInput, "web_creation_statement");
+  assert.equal(report.aiDeclarationReadback, "authenticated_creator_archive");
+  assert.equal(report.privateVisibilityInput, "is_only_self");
   assert.deepEqual(
     calls.map(({ args }) => args.join(" ")),
     Object.keys(help),
   );
+});
+
+test("doctor refuses a binary without both pinned upload capabilities", async (t) => {
+  for (const flag of ["--extra-fields", "--is-only-self"]) {
+    const { adapter } = await fixture(t, {
+      noConfig: true,
+      help: { "upload --help": help["upload --help"].replace(flag, "") },
+    });
+    assert.equal((await adapter.doctor()).adapterStatus, "unavailable");
+  }
 });
 
 test("an unexpected executable digest blocks even the offline probes", async (t) => {
@@ -194,6 +211,38 @@ test("preflight blocks a potential duplicate without accepting a title-only matc
     (await adapter.status(manifest, account, {})).status,
     "uncertain",
   );
+  assert.equal(
+    calls.some(({ args }) => ["show", "upload"].includes(args[4])),
+    false,
+  );
+});
+
+test("preflight catches default filenames and normalized titles without changing manual lookup", async (t) => {
+  let listedTitle = "";
+  const { adapter, manifest, calls } = await fixture(t, {
+    execute: (command) =>
+      command === "list" && {
+        exitCode: 0,
+        stdout: success + `${bvid}\t${listedTitle}\t状态\n`,
+      },
+  });
+  const account = await adapter.account(manifest);
+  for (const possibleDuplicate of [
+    "video name.mp4",
+    "　ｖｉｄｅｏ　ｎａｍｅ　",
+    `　${title.replace("--title", "－－ｔｉｔｌｅ")}　`,
+  ]) {
+    listedTitle = possibleDuplicate;
+    await assert.rejects(adapter.preflight(manifest, account), {
+      code: "duplicate_candidate",
+    });
+    assert.equal(
+      (await adapter.findExisting(manifest, account)).status,
+      "uncertain",
+    );
+  }
+  listedTitle = "video name edit.mp4";
+  await adapter.preflight(manifest, account);
   assert.equal(
     calls.some(({ args }) => ["show", "upload"].includes(args[4])),
     false,
@@ -413,4 +462,510 @@ test("a matching rejection requires both a reason and the not-passed listing", a
   );
   assert.equal(result.status, "rejected");
   assert.equal(JSON.stringify(result).includes("internal reason"), false);
+});
+
+test("explicit AI and private settings become allowlisted arguments and an unconfirmed receipt", async (t) => {
+  const { adapter, manifest, calls } = await fixture(t, {
+    execute: (command) =>
+      command === "upload" && {
+        exitCode: 0,
+        stdout: success + receiptLog,
+      },
+  });
+  const requested = { ...manifest, aiDeclaration: true, visibility: "private" };
+  const account = await adapter.account(requested);
+  const receipt = await adapter.submit(requested, account);
+  assert.deepEqual(receipt, {
+    bvid,
+    aid,
+    coverUrl,
+    coverStatus: "cover_pending",
+    aiDeclarationStatus: "pending",
+    visibilityStatus: "pending",
+  });
+  const { args } = calls.find(({ args }) => args[4] === "upload");
+  assert.deepEqual(args.slice(-4), [
+    '--extra-fields={"creation_statement":{"id":1}}',
+    "--is-only-self=1",
+    "--",
+    manifest.videoPath,
+  ]);
+
+  const explicitPublic = {
+    ...manifest,
+    aiDeclaration: false,
+    visibility: "public",
+  };
+  const publicReceipt = await adapter.submit(explicitPublic, account);
+  assert.equal(Object.hasOwn(publicReceipt, "aiDeclarationStatus"), false);
+  assert.equal(Object.hasOwn(publicReceipt, "visibilityStatus"), false);
+  assert.equal(
+    calls
+      .at(-1)
+      .args.some((arg) => /^--(?:extra-fields|is-only-self)=/.test(arg)),
+    false,
+  );
+});
+
+test("invalid settings, unsupported repost declarations and reconciliation-only packages cannot upload", async (t) => {
+  const { adapter, manifest, calls } = await fixture(t);
+  const account = await adapter.account(manifest);
+  for (const overrides of [
+    { aiDeclaration: "true" },
+    { visibility: "unlisted" },
+    { existingUpload: true },
+    {
+      aiDeclaration: true,
+      copyrightType: "repost",
+      sourceUrl: "https://example.com/work",
+    },
+  ]) {
+    await assert.rejects(
+      adapter.submit({ ...manifest, ...overrides }, account),
+      { code: "invalid_package" },
+    );
+  }
+  assert.equal(
+    calls.some(({ args }) => args[4] === "upload"),
+    false,
+  );
+});
+
+test("authenticated archive and envelope confirm only exact settings, and explicit contradictions win", async (t) => {
+  for (const [shown, expected] of [
+    [
+      archive({ creation_statement: { id: 1 }, is_only_self: 1 }),
+      ["confirmed", "confirmed"],
+    ],
+    [
+      {
+        ...archive(),
+        aid: Number(aid),
+        creation_statement: { id: 1 },
+        is_only_self: 1,
+      },
+      ["confirmed", "confirmed"],
+    ],
+    [
+      {
+        ...archive({ creation_statement: { id: 1 }, is_only_self: 1 }),
+        creation_statement: { id: 2 },
+        is_only_self: 0,
+      },
+      ["mismatch", "mismatch"],
+    ],
+    [
+      archive({ creation_statement: { id: -1 }, is_only_self: 0 }),
+      ["mismatch", "mismatch"],
+    ],
+    [
+      archive({
+        creation_statement: { id: "1" },
+        is_only_self: true,
+        neutral_mark: "含AI生成内容",
+        no_public: 1,
+      }),
+      ["pending", "pending"],
+    ],
+    [archive(), ["pending", "pending"]],
+  ]) {
+    const { adapter, manifest } = await fixture(t, {
+      execute: (command, args) =>
+        command === "show"
+          ? { exitCode: 0, stdout: success + JSON.stringify(shown, null, 2) }
+          : {
+              exitCode: 0,
+              stdout: success + (args.includes("--is-pubing") ? "" : row),
+            },
+    });
+    const requested = {
+      ...manifest,
+      aiDeclaration: true,
+      visibility: "private",
+    };
+    const result = await adapter.status(
+      requested,
+      await adapter.account(requested),
+      { receipt: { bvid, aid } },
+    );
+    assert.equal(result.status, "submitted");
+    assert.equal(Object.hasOwn(result, "url"), false);
+    assert.deepEqual(
+      [result.aiDeclarationStatus, result.visibilityStatus],
+      expected,
+    );
+  }
+});
+
+test("a previous review status keeps matched IDs and newer settings when the review listing omits the archive", async (t) => {
+  const { adapter, manifest } = await fixture(t, {
+    execute: (command, args) =>
+      command === "show"
+        ? {
+            exitCode: 0,
+            stdout:
+              success +
+              JSON.stringify(
+                archive({ creation_statement: { id: 1 }, is_only_self: 1 }),
+                null,
+                2,
+              ),
+          }
+        : {
+            exitCode: 0,
+            stdout: success + (args.includes("--is-pubing") ? "" : row),
+          },
+  });
+  const requested = { ...manifest, aiDeclaration: true, visibility: "private" };
+  const result = await adapter.status(
+    requested,
+    await adapter.account(requested),
+    {
+      status: "pending_review",
+      receipt: { bvid, aid },
+    },
+  );
+  assert.deepEqual(result, {
+    status: "pending_review",
+    bvid,
+    aid,
+    coverStatus: "cover_pending",
+    aiDeclarationStatus: "confirmed",
+    visibilityStatus: "confirmed",
+  });
+});
+
+test("an envelope for a different archive and a candidate receipt do not prove either setting", async (t) => {
+  const { adapter, manifest } = await fixture(t, {
+    execute: (command) =>
+      command === "show"
+        ? {
+            exitCode: 0,
+            stdout:
+              success +
+              JSON.stringify(
+                {
+                  ...archive(),
+                  aid: 170002,
+                  creation_statement: { id: 1 },
+                  is_only_self: 1,
+                },
+                null,
+                2,
+              ),
+          }
+        : { exitCode: 0, stdout: success + row },
+  });
+  const requested = { ...manifest, aiDeclaration: true, visibility: "private" };
+  const receipt = {
+    bvid,
+    aid,
+    aiDeclarationStatus: "confirmed",
+    visibilityStatus: "confirmed",
+  };
+  const result = await adapter.status(
+    requested,
+    await adapter.account(requested),
+    { receipt },
+  );
+  assert.equal(result.status, "uncertain");
+  assert.equal(result.aiDeclarationStatus, "pending");
+  assert.equal(result.visibilityStatus, "pending");
+});
+
+test("pending CLI declaration uses a single scoped owner GET with exact identity binding", async (t) => {
+  const requests = [];
+  const { adapter, manifest } = await fixture(t, {
+    execute: (command, args) =>
+      command === "show"
+        ? {
+            exitCode: 0,
+            stdout:
+              success + JSON.stringify(archive({ is_only_self: 1 }), null, 2),
+          }
+        : {
+            exitCode: 0,
+            stdout: success + (args.includes("--is-pubing") ? "" : row),
+          },
+    ownerFetch: async (url, options) => {
+      requests.push({ url, options });
+      return Response.json({
+        code: 0,
+        data: {
+          archive: {
+            bvid,
+            aid: Number(aid),
+            mid: Number(uid),
+            creation_statement: { id: 1 },
+            is_only_self: 1,
+          },
+        },
+      });
+    },
+  });
+  const requested = { ...manifest, aiDeclaration: true, visibility: "private" };
+  const result = await adapter.status(
+    requested,
+    await adapter.account(requested),
+    { receipt: { bvid, aid } },
+  );
+  assert.equal(result.status, "submitted");
+  assert.equal(result.aiDeclarationStatus, "confirmed");
+  assert.equal(result.visibilityStatus, "confirmed");
+  assert.equal(requests.length, 1);
+  const [{ url, options }] = requests;
+  assert.equal(
+    url.href,
+    `https://member.bilibili.com/x/vupre/web/archive/view?bvid=${bvid}`,
+  );
+  assert.equal(options.method, "GET");
+  assert.equal(options.redirect, "error");
+  assert.ok(options.signal instanceof AbortSignal);
+  assert.equal(
+    options.headers.referer,
+    "https://member.bilibili.com/platform/upload-manager/article",
+  );
+  assert.equal(
+    options.headers.cookie,
+    `SESSDATA=fixture-secret-auth-cookie; DedeUserID=${uid}`,
+  );
+  assert.equal(JSON.stringify(result).includes("fixture-secret"), false);
+});
+
+test("owner fallback only accepts exact typed identity, success status and recognized settings", async (t) => {
+  const ownerArchive = {
+    bvid,
+    aid: Number(aid),
+    mid: Number(uid),
+    creation_statement: { id: 1 },
+    is_only_self: 1,
+  };
+  const responseFor = (overrides = {}, code = 0) =>
+    Response.json({
+      code,
+      data: { archive: { ...ownerArchive, ...overrides } },
+    });
+  let response;
+  const { adapter, manifest } = await fixture(t, {
+    execute: (command, args) =>
+      command === "show"
+        ? {
+            exitCode: 0,
+            stdout:
+              success + JSON.stringify(archive({ is_only_self: 1 }), null, 2),
+          }
+        : {
+            exitCode: 0,
+            stdout: success + (args.includes("--is-pubing") ? "" : row),
+          },
+    ownerFetch: async () => {
+      if (response instanceof Error) throw response;
+      return response;
+    },
+  });
+  const requested = { ...manifest, aiDeclaration: true, visibility: "private" };
+  const account = await adapter.account(requested);
+  for (const candidate of [
+    responseFor({ mid: Number(uid) + 1 }),
+    responseFor({ mid: uid }),
+    responseFor({ aid }),
+    responseFor({ aid: Number(aid) + 1 }),
+    responseFor({ bvid: "BV1Xx4y1x7Gi" }),
+    responseFor({ creation_statement: { id: "1" } }),
+    responseFor({}, -101),
+    Response.redirect("https://example.com/"),
+    new Error("unavailable fixture-secret-auth-cookie"),
+  ]) {
+    response = candidate;
+    const result = await adapter.status(requested, account, {
+      receipt: { bvid, aid },
+    });
+    assert.equal(result.status, "submitted");
+    assert.equal(result.aiDeclarationStatus, "pending");
+    assert.equal(result.visibilityStatus, "confirmed");
+    assert.equal(JSON.stringify(result).includes("fixture-secret"), false);
+  }
+  response = responseFor({ creation_statement: { id: -1 }, is_only_self: 0 });
+  const mismatch = await adapter.status(requested, account, {
+    receipt: { bvid, aid },
+  });
+  assert.equal(mismatch.aiDeclarationStatus, "mismatch");
+  assert.equal(mismatch.visibilityStatus, "mismatch");
+});
+
+test("owner fallback skips uncorrelated CLI archives and explicit declaration results", async (t) => {
+  let shown;
+  let requests = 0;
+  const { adapter, manifest } = await fixture(t, {
+    execute: (command) =>
+      command === "show"
+        ? { exitCode: 0, stdout: success + JSON.stringify(shown, null, 2) }
+        : { exitCode: 0, stdout: success + row },
+    ownerFetch: async () => {
+      requests += 1;
+      return Response.json({ code: 0 });
+    },
+  });
+  const requested = { ...manifest, aiDeclaration: true };
+  const account = await adapter.account(requested);
+  for (const [value, expected] of [
+    [archive({ aid: Number(aid) + 1 }), "pending"],
+    [archive({ creation_statement: { id: 1 } }), "confirmed"],
+    [archive({ creation_statement: { id: -1 } }), "mismatch"],
+  ]) {
+    shown = value;
+    const result = await adapter.status(requested, account, {
+      receipt: { bvid, aid },
+    });
+    assert.equal(result.aiDeclarationStatus, expected);
+  }
+  assert.equal(requests, 0);
+});
+
+test("a 250-character CLI prefix is accepted only with the owner's full metadata", async (t) => {
+  const prefix = `${"甲".repeat(249)}🧪`;
+  const fullDescription = `${prefix}\n完整简介尾部和资料来源。`;
+  const matched = {
+    bvid,
+    aid: Number(aid),
+    mid: Number(uid),
+    title,
+    desc: fullDescription,
+    creation_statement: { id: 1 },
+    is_only_self: 1,
+  };
+  let owner = matched;
+  let requests = 0;
+  const { adapter, manifest } = await fixture(t, {
+    execute: (command) =>
+      command === "show"
+        ? {
+            exitCode: 0,
+            stdout:
+              success + JSON.stringify(archive({ desc: prefix }), null, 2),
+          }
+        : { exitCode: 0, stdout: success + row },
+    ownerFetch: async () => {
+      requests += 1;
+      return Response.json({ code: 0, data: { archive: owner } });
+    },
+  });
+  const requested = {
+    ...manifest,
+    description: fullDescription,
+    aiDeclaration: true,
+    visibility: "private",
+  };
+  const account = await adapter.account(requested);
+  const state = { receipt: { bvid, aid } };
+  const accepted = await adapter.status(requested, account, state);
+  assert.equal(accepted.status, "pending_review");
+  assert.equal(accepted.bvid, bvid);
+  assert.equal(accepted.aid, aid);
+  assert.equal(accepted.aiDeclarationStatus, "confirmed");
+  assert.equal(accepted.visibilityStatus, "confirmed");
+  assert.equal(requests, 1);
+
+  for (const overrides of [
+    { title: "另一稿件" },
+    { desc: prefix },
+    { desc: `${prefix}不同尾部` },
+    { aid: Number(aid) + 1 },
+    { bvid: "BV1Xx4y1x7Gi" },
+    { mid: Number(uid) + 1 },
+    { desc: undefined },
+  ]) {
+    owner = { ...matched, ...overrides };
+    const result = await adapter.status(requested, account, state);
+    assert.equal(result.status, "uncertain");
+    assert.equal(result.aiDeclarationStatus, "pending");
+    assert.equal(Object.hasOwn(result, "bvid"), false);
+  }
+  assert.equal(requests, 8);
+});
+
+test("other descriptions never trigger the owner fallback", async (t) => {
+  const prefix = "甲".repeat(250);
+  let shownDescription;
+  let requests = 0;
+  const { adapter, manifest } = await fixture(t, {
+    execute: (command) =>
+      command === "show"
+        ? {
+            exitCode: 0,
+            stdout:
+              success +
+              JSON.stringify(archive({ desc: shownDescription }), null, 2),
+          }
+        : { exitCode: 0, stdout: success + row },
+    ownerFetch: async () => {
+      requests += 1;
+      return Response.json({ code: 0 });
+    },
+  });
+  const requested = {
+    ...manifest,
+    description: `${prefix}完整简介`,
+    aiDeclaration: true,
+  };
+  const account = await adapter.account(requested);
+  for (const candidate of [
+    prefix.slice(0, 249),
+    `${prefix}…`,
+    `乙${prefix.slice(1)}`,
+    undefined,
+  ]) {
+    shownDescription = candidate;
+    const result = await adapter.status(requested, account, {
+      receipt: { bvid, aid },
+    });
+    assert.equal(result.status, "uncertain");
+  }
+  assert.equal(requests, 0);
+});
+
+test("manual lookup is read-only and requires one exact candidate with matching archive metadata", async (t) => {
+  const duplicateRow = `BV1Xx4y1x7Gi\t${title}\t状态\n`;
+  for (const [listed, shown, expectedStatus, expectsShow] of [
+    [
+      row,
+      archive({ creation_statement: { id: 1 }, is_only_self: 1 }),
+      "pending_review",
+      true,
+    ],
+    [row, archive({ desc: "another upload" }), "uncertain", true],
+    [row + duplicateRow, archive(), "uncertain", false],
+    ["", archive(), "uncertain", false],
+  ]) {
+    const { adapter, manifest, calls } = await fixture(t, {
+      execute: (command) =>
+        command === "show"
+          ? { exitCode: 0, stdout: success + JSON.stringify(shown, null, 2) }
+          : command === "list" && { exitCode: 0, stdout: success + listed },
+    });
+    const requested = {
+      ...manifest,
+      aiDeclaration: true,
+      visibility: "private",
+    };
+    const result = await adapter.findExisting(
+      requested,
+      await adapter.account(requested),
+    );
+    assert.equal(result.status, expectedStatus);
+    assert.equal(
+      calls.some(({ args }) => args[4] === "show"),
+      expectsShow,
+    );
+    assert.equal(
+      calls.some(({ args }) => args[4] === "upload"),
+      false,
+    );
+    if (expectedStatus === "pending_review") {
+      assert.equal(result.bvid, bvid);
+      assert.equal(result.aiDeclarationStatus, "confirmed");
+      assert.equal(result.visibilityStatus, "confirmed");
+      assert.equal(result.coverStatus, "cover_pending");
+    }
+  }
 });
