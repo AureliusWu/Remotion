@@ -6,9 +6,11 @@ import { AiHistoryCompositions } from "./ai-history/AiHistoryFilm";
 import { DailyTenCompositions } from "./daily-ten/DailyTen";
 import {WeeklyCompositions} from './weekly-ten/WeeklyFilm';
 import { AiWeeklyCompositions } from "./ai-weekly/AiFilm";
+import { FrequencyIllusionCompositions } from "./frequency-illusion/FrequencyIllusionFilm";
 
 export const EffectsCompositions = () => (
   <Folder name="Effects">
+    <FrequencyIllusionCompositions />
     <AiWeeklyCompositions />
     <WeeklyCompositions/>
     <DailyTenCompositions />
