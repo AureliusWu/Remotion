@@ -63,6 +63,9 @@ jobs:
       - name: Render three real 1080p QA frames per AI platform
         id: qa
         run: npm run workflow -- qa --edition ai-weekly --platform all --quick 2>&1 | tee out/workflow-ci/logs/qa.log
+      - name: Verify Frequency Illusion composition and render three QA frames
+        id: frequency_illusion
+        run: node scripts/verify-composition.mjs FrequencyIllusion-Bilibili --seconds=180 --fps=60 --frames=420,8520,10320 2>&1 | tee out/workflow-ci/logs/frequency-illusion.log
       - name: Render and fully decode the four-second CPU smoke MP4
         id: smoke
         run: npm run workflow -- smoke 2>&1 | tee out/workflow-ci/logs/smoke.log
@@ -104,6 +107,8 @@ jobs:
             video/out/AiWeekly-Bilibili-validation/frame-*.png
             video/out/AiWeekly-Douyin-validation/report.json
             video/out/AiWeekly-Douyin-validation/frame-*.png
+            video/out/FrequencyIllusion-Bilibili-validation/report.json
+            video/out/FrequencyIllusion-Bilibili-validation/frame-*.png
       - name: Write job summary
         if: always()
         env:
@@ -111,6 +116,7 @@ jobs:
           BROWSER_OUTCOME: ${{ steps.browser.outcome }}
           CHECK_OUTCOME: ${{ steps.check.outcome }}
           QA_OUTCOME: ${{ steps.qa.outcome }}
+          FREQUENCY_ILLUSION_OUTCOME: ${{ steps.frequency_illusion.outcome }}
           SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
           PYTHON_OUTCOME: ${{ steps.python_setup.outcome }}
           LOSSLESS_DEPS_OUTCOME: ${{ steps.lossless_deps.outcome }}
@@ -124,6 +130,7 @@ jobs:
             ['Pinned browser', process.env.BROWSER_OUTCOME],
             ['Node fixtures / versions / lint / build / 3 edition checks', process.env.CHECK_OUTCOME],
             ['AI quick QA / 2 platforms / 6 frames', process.env.QA_OUTCOME],
+            ['Frequency Illusion / composition and 3 frames', process.env.FREQUENCY_ILLUSION_OUTCOME],
             ['4s CPU H.264 + AAC / full decode', process.env.SMOKE_OUTCOME],
             ['Python 3.12 for synthetic fixtures', process.env.PYTHON_OUTCOME],
             ['Pinned NumPy / SoundFile fixture dependencies', process.env.LOSSLESS_DEPS_OUTCOME],
