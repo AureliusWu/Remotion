@@ -297,6 +297,14 @@ const safeApproval = (value) => {
     shaPattern.test(value.phraseSha256)
   )
     approval.phraseSha256 = value.phraseSha256.toLowerCase();
+  if (value.approvalEvidenceSha256 !== undefined) {
+    if (approval.phraseSha256 !== undefined)
+      fail("INVALID_APPROVAL", "Approval must use one evidence method.");
+    approval.approvalEvidenceSha256 = requiredSha(
+      value.approvalEvidenceSha256,
+      "approval evidence SHA-256",
+    );
+  }
   return approval;
 };
 
@@ -348,6 +356,12 @@ const safeReceipt = (value) => {
   )
     receipt.coverStatus = value.coverStatus;
   if (coverUrl) receipt.coverUrl = coverUrl;
+  if (receipt.verified) {
+    for (const field of ["aiDeclarationStatus", "visibilityStatus"]) {
+      if (["confirmed", "pending", "mismatch"].includes(value[field]))
+        receipt[field] = value[field];
+    }
+  }
   if (receipt.verified && receipt.remoteStatus === "published")
     receipt.url = `https://www.bilibili.com/video/${bvid ?? `av${aid}`}/`;
   return receipt;
@@ -378,6 +392,9 @@ const mergeReceipt = (previous, candidate) => {
     aid: next.aid ?? previous.aid,
     coverUrl: next.coverUrl ?? previous.coverUrl,
     coverStatus: next.coverStatus ?? previous.coverStatus,
+    aiDeclarationStatus:
+      next.aiDeclarationStatus ?? previous.aiDeclarationStatus,
+    visibilityStatus: next.visibilityStatus ?? previous.visibilityStatus,
   });
 };
 

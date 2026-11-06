@@ -14,6 +14,25 @@
 5. 选择标准AAC、PCM24无损封装或外部Atmos分支，再验收实际输出。
 6. 分支推送与PR触发GitHub矩阵CI，核对实际提交SHA、两个系统的结果和小体积证据。
 
+## 读书视频
+
+在 `video/effects/<book>/script.json` 一起维护书名、作者、原著来源、逐句口播、分镜和投稿文案。先定稿，再根据每句旁白的实测时长排分场和字幕。日期是期次标识，同一期重跑沿用原日期。
+
+在 `video/` 中运行：
+
+```powershell
+npm run book -- demian 2026-11-06 script
+npm run book -- demian 2026-11-06 audio
+npm run book -- demian 2026-11-06 render
+npm run book -- demian 2026-11-06 status
+```
+
+`script` 导出 `out/<期次>/script.md`。`audio` 复用本机 Kokoro，生成 48 kHz 双声道 PCM24 旁白、逐句时间轴和验收清单。可用 `REMOTION_KOKORO_PYTHON` 和 `REMOTION_KOKORO_MODEL` 指定现有环境及模型目录。Windows 上模型目录须能通过 ASCII 路径访问。`render` 检查稿件与音轨哈希、分场及字幕时序，生成 1920×1080、60 FPS 成片和独立封面，并完整解码。
+
+制作下一本时，以 [《德米安》源稿](../video/effects/demian/script.json) 为结构样例，将脚本和分镜放在独立的 `effects/<book>/`。由目录名按连字符分段生成 PascalCase 的 `<Book>`，合成源码为 `<Book>Film.tsx`，注册 `<Book>-Bilibili` 和 `<Book>-Cover`。分镜读取本机 `public/<book>/timeline.json` 和 `narration.wav`。将这些生成文件及语音清单加入该目录的 Git 忽略规则。
+
+取得本期的明确授权后，`submit` 提交已渲染作品，`release` 则从脚本一路运行到投稿。两者均要求 `--category` 和本期授权对应的 `--approval-ref`。程序提交后回查创作中心，已有投稿尝试的期次重跑只回查。 [账号与独立成片投稿](BILIBILI-PUBLISHING.md#独立成片与读书视频) · [《德米安》创作说明](DEMIAN-SCRIPT.md)
+
 ## 本地命令
 
 ```mermaid

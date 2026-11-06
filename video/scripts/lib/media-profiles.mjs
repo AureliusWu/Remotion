@@ -11,14 +11,17 @@ export const rational = (value) => {
   const [a, b = 1] = value.split("/").map(Number);
   return a / b;
 };
-export const assertVideoProfile = (video, { width, height, seconds, fps }) => {
+export const assertVideoProfile = (
+  video,
+  { width, height, seconds, fps, frames = seconds * fps },
+) => {
   assert(
     video &&
       video.width === width &&
       video.height === height &&
       video.codec_name === "h264" &&
       rational(video.avg_frame_rate) === fps &&
-      Number(video.nb_frames) === seconds * fps &&
+      Number(video.nb_frames) === frames &&
       Number.isFinite(Number(video.duration)) &&
       Math.abs(Number(video.duration) - seconds) <= 1 / fps,
     `Exported video does not match the requested ${width}x${height} H.264 frame rate, frame count or duration`,

@@ -18,6 +18,12 @@ const binarySha256 =
 const logFilter =
   "off,biliup_cli::uploader=info,biliup::uploader::bilibili=info";
 const listWindow = ["--from-page=1", "--max-pages=3"];
+const creatorArchiveUrl =
+  "https://member.bilibili.com/x/vupre/web/archive/view";
+const creatorReferer =
+  "https://member.bilibili.com/platform/upload-manager/article";
+const creatorUserAgent =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36";
 const bvidPattern = /^BV[0-9A-Za-z]{10}$/;
 const numericId = /^[1-9][0-9]{0,18}$/;
 const aliasPattern = /^[0-9A-Za-z][0-9A-Za-z._-]{0,63}$/;
@@ -53,7 +59,7 @@ const errors = {
   invalid_package:
     "The media or submission metadata differs from the approved package.",
   duplicate_candidate:
-    "An existing draft has the same title. Check Creator Center for a duplicate.",
+    "An existing submission matches the title or upload filename. Check Creator Center for a duplicate.",
 };
 
 function failure(code) {
@@ -203,6 +209,8 @@ function rows(stdout) {
   });
 }
 
+const normalizeDuplicateTitle = (value) => value.normalize("NFKC").trim();
+
 function responseReceipt(stdout) {
   const messages = lines(stdout)
     .map((line) => submitLog.exec(line)?.[1])
@@ -239,16 +247,51 @@ function responseReceipt(stdout) {
   };
 }
 
-function archiveFrom(stdout) {
+function showResult(stdout) {
   // The pinned show command emits tracing followed by one pretty-printed JSON object.
   const output = lines(stdout);
   const start = output.indexOf("{");
   if (start < 0) return undefined;
   try {
-    return JSON.parse(output.slice(start).join("\n"))?.archive;
+    return JSON.parse(output.slice(start).join("\n"));
   } catch {
     return undefined;
   }
+}
+
+function settingStatus(values, expected, alternatives) {
+  if (values.some((value) => alternatives.includes(value))) return "mismatch";
+  return values.includes(expected) ? "confirmed" : "pending";
+}
+
+function remoteSettings(manifest, candidates = []) {
+  const settings = {};
+  if (manifest.aiDeclaration === true) {
+    // The modern declaration has a numeric ID. Legacy text/neutral_mark can
+    // also describe a platform-applied label and cannot attest to this choice.
+    settings.aiDeclarationStatus = settingStatus(
+      candidates.map((candidate) => candidate.creation_statement?.id),
+      1,
+      [-1, 2, 3, 4],
+    );
+  }
+  if (manifest.visibility === "private") {
+    settings.visibilityStatus = settingStatus(
+      candidates.map((candidate) => candidate.is_only_self),
+      1,
+      [0],
+    );
+  }
+  return settings;
+}
+
+function uncertainStatus(manifest) {
+  return {
+    status: "uncertain",
+    coverStatus: "cover_pending",
+    code: "adapter_unconfirmed",
+    ...remoteSettings(manifest),
+  };
 }
 
 async function reviewedUploadArgs(manifest) {
@@ -268,12 +311,18 @@ async function reviewedUploadArgs(manifest) {
     categoryId,
     copyrightType,
     sourceUrl,
+    aiDeclaration,
+    visibility,
   } = manifest;
   if (
     manifest.platform !== "bilibili" ||
     manifest.mediaQa !== "passed" ||
+    manifest.existingUpload === true ||
     categoryId === null ||
-    copyrightType === null
+    copyrightType === null ||
+    (aiDeclaration !== undefined && typeof aiDeclaration !== "boolean") ||
+    (aiDeclaration === true && copyrightType !== "self-made") ||
+    (visibility !== undefined && !["public", "private"].includes(visibility))
   )
     throw failure("invalid_package");
   if (
@@ -321,6 +370,10 @@ async function reviewedUploadArgs(manifest) {
     `--title=${title}`,
     `--desc=${description}`,
     `--tag=${tags.join(",")}`,
+    ...(aiDeclaration === true
+      ? [`--extra-fields=${JSON.stringify({ creation_statement: { id: 1 } })}`]
+      : []),
+    ...(visibility === "private" ? ["--is-only-self=1"] : []),
     "--",
     videoPath,
   ];
@@ -338,6 +391,7 @@ export function createBilibiliAdapter({
     path.join(privateRoot, version, "biliup.exe"),
   execute = executeBiliup,
   expectedBinarySha256 = binarySha256,
+  ownerFetch = execute === executeBiliup ? globalThis.fetch : undefined,
 } = {}) {
   const accounts = new WeakMap();
   let probe;
@@ -394,6 +448,8 @@ export function createBilibiliAdapter({
             "--tid",
             "--copyright",
             "--source",
+            "--extra-fields",
+            "--is-only-self",
           ],
         ],
         [
@@ -502,7 +558,166 @@ export function createBilibiliAdapter({
     return context;
   }
 
+  async function readOwnerArchive(context, bvid, aid) {
+    if (!ownerFetch) return undefined;
+    try {
+      const { data } = await privateJson(
+        context.cookieFile,
+        context.root,
+        context.workspace,
+      );
+      checkCookie(data, context.uid);
+      const session = data.cookie_info.cookies.find(
+        (cookie) => cookie?.name === "SESSDATA",
+      ).value;
+      if (/[\u0000-\u0020\u007f;]/u.test(session)) return undefined;
+      const url = new URL(creatorArchiveUrl);
+      url.searchParams.set("bvid", bvid);
+      const response = await ownerFetch(url, {
+        method: "GET",
+        redirect: "error",
+        cache: "no-store",
+        signal: AbortSignal.timeout(10_000),
+        headers: {
+          accept: "application/json",
+          referer: creatorReferer,
+          "user-agent": creatorUserAgent,
+          cookie: `SESSDATA=${session}; DedeUserID=${context.uid}`,
+        },
+      });
+      if (response.status !== 200 || response.redirected) return undefined;
+      const payload = await response.json();
+      const archive = payload?.data?.archive;
+      if (
+        payload?.code === 0 &&
+        archive?.bvid === bvid &&
+        typeof archive.aid === "number" &&
+        id(archive.aid) &&
+        (aid === undefined || id(archive.aid) === aid) &&
+        typeof archive.mid === "number" &&
+        id(archive.mid) === context.uid
+      )
+        return payload.data;
+    } catch {
+      // Network, auth and schema failures leave the already matched CLI
+      // observation intact. The credential, response and error stay local.
+    }
+    return undefined;
+  }
+
+  async function inspectStatus(manifest, context, state, all) {
+    const receipt = state?.receipt;
+    const expectedBvid = bvidPattern.test(receipt?.bvid ?? "")
+      ? receipt.bvid
+      : undefined;
+    const expectedAid = id(receipt?.aid);
+    const uncertain = uncertainStatus(manifest);
+    if (!expectedBvid && !expectedAid) return uncertain;
+    if (
+      expectedBvid &&
+      !all.some(
+        (row) => row.bvid === expectedBvid && row.title === manifest.title,
+      )
+    )
+      return uncertain;
+
+    const result = await call(context, [
+      "show",
+      expectedBvid ?? `av${expectedAid}`,
+    ]);
+    if (result.exitCode !== 0) return { ...uncertain, code: classify(result) };
+    authenticated(result.stdout, context.nickname);
+    const shown = showResult(result.stdout);
+    const archive = shown?.archive;
+    const bvid = archive?.bvid ?? expectedBvid;
+    const aid = id(archive?.aid);
+    if (
+      !archive ||
+      !bvidPattern.test(bvid ?? "") ||
+      !aid ||
+      (expectedBvid && bvid !== expectedBvid) ||
+      (expectedAid ? aid !== expectedAid : !archive.bvid) ||
+      (Object.hasOwn(shown, "bvid") && shown.bvid !== bvid) ||
+      (Object.hasOwn(shown, "aid") && id(shown.aid) !== aid) ||
+      archive.title !== manifest.title ||
+      !all.some((row) => row.bvid === bvid && row.title === manifest.title)
+    )
+      return uncertain;
+
+    const needsFullDescription = archive.desc !== manifest.description;
+    if (
+      needsFullDescription &&
+      (typeof manifest.description !== "string" ||
+        archive.desc !== [...manifest.description].slice(0, 250).join(""))
+    )
+      return uncertain;
+
+    const candidates = [archive, shown];
+    let settings = remoteSettings(manifest, candidates);
+    if (needsFullDescription || settings.aiDeclarationStatus === "pending") {
+      const ownerArchive = (await readOwnerArchive(context, bvid, aid))
+        ?.archive;
+      // The CLI can return the first 250 characters. Only the matching
+      // owner's full metadata can corroborate that truncated description.
+      if (
+        needsFullDescription &&
+        (ownerArchive?.title !== manifest.title ||
+          ownerArchive?.desc !== manifest.description)
+      )
+        return uncertain;
+      if (ownerArchive)
+        settings = remoteSettings(manifest, [...candidates, ownerArchive]);
+    }
+
+    const requestedCover = coverUrl(receipt.coverUrl);
+    const remoteCover = coverUrl(archive.cover);
+    const coverStatus =
+      requestedCover && remoteCover === requestedCover
+        ? "confirmed"
+        : "cover_pending";
+    const matches = (row) => row.bvid === bvid && row.title === manifest.title;
+    let status = "submitted";
+    if (
+      typeof archive.reject_reason === "string" &&
+      archive.reject_reason.trim() &&
+      (await list(context, ["--not-pubed"])).some(matches)
+    ) {
+      status = "rejected";
+    } else if ((await list(context, ["--is-pubing"])).some(matches)) {
+      status = "pending_review";
+    }
+    // Preserve a stronger previous workflow observation. The settings above
+    // still came from the matching archive, independently of review state.
+    if (
+      state.status === "published" ||
+      (state.status === "rejected" && status !== "rejected")
+    )
+      return { ...uncertain, ...settings };
+    if (state.status === "pending_review" && status === "submitted")
+      status = "pending_review";
+    return {
+      status,
+      bvid,
+      aid,
+      ...(manifest.visibility !== "private"
+        ? { url: `https://www.bilibili.com/video/${bvid}/` }
+        : {}),
+      coverStatus,
+      ...(requestedCover ? { coverUrl: requestedCover } : {}),
+      ...settings,
+    };
+  }
+
   return {
+    async readCreatorArchive(manifest, bvid) {
+      if (typeof bvid !== "string" || !bvidPattern.test(bvid))
+        throw new Error("Invalid Bilibili BV number.");
+      const context = await accountContext(manifest);
+      const result = await readOwnerArchive(context, bvid);
+      if (!result) throw failure("adapter_unconfirmed");
+      return result;
+    },
+
     async doctor() {
       try {
         await capabilities();
@@ -513,6 +728,9 @@ export function createBilibiliAdapter({
           toolVersion: version,
           accountCheck: "requires_manual_setup",
           coverInput: "approved_local_jpeg",
+          aiDeclarationInput: "web_creation_statement",
+          aiDeclarationReadback: "authenticated_creator_archive",
+          privateVisibilityInput: "is_only_self",
           publicPlaybackCheck: "manual",
         };
       } catch {
@@ -543,7 +761,19 @@ export function createBilibiliAdapter({
     async preflight(manifest, account) {
       const context = await currentContext(manifest, account);
       await reviewedUploadArgs(manifest);
-      if ((await list(context)).some((row) => row.title === manifest.title))
+      const filename = path.basename(manifest.videoPath);
+      const candidateTitles = new Set(
+        [
+          manifest.title,
+          filename,
+          path.basename(filename, path.extname(filename)),
+        ].map(normalizeDuplicateTitle),
+      );
+      if (
+        (await list(context)).some(({ title }) =>
+          candidateTitles.has(normalizeDuplicateTitle(title)),
+        )
+      )
         throw failure("duplicate_candidate");
     },
 
@@ -564,6 +794,7 @@ export function createBilibiliAdapter({
       return {
         ...receipt,
         coverStatus: "cover_pending",
+        ...remoteSettings(manifest),
         ...(receipt.bvid || receipt.aid
           ? result.exitCode === 0
             ? {}
@@ -580,80 +811,20 @@ export function createBilibiliAdapter({
     async status(manifest, account, state) {
       const context = await currentContext(manifest, account);
       const all = await list(context);
-      const receipt = state?.receipt;
-      const expectedBvid = bvidPattern.test(receipt?.bvid ?? "")
-        ? receipt.bvid
-        : undefined;
-      const expectedAid = id(receipt?.aid);
-      const uncertain = {
-        status: "uncertain",
-        coverStatus: "cover_pending",
-        code: "adapter_unconfirmed",
-      };
-      if (!expectedBvid && !expectedAid) return uncertain;
-      if (
-        expectedBvid &&
-        !all.some(
-          (row) => row.bvid === expectedBvid && row.title === manifest.title,
-        )
-      )
-        return uncertain;
+      return inspectStatus(manifest, context, state, all);
+    },
 
-      const result = await call(context, [
-        "show",
-        expectedBvid ?? `av${expectedAid}`,
-      ]);
-      if (result.exitCode !== 0)
-        return { ...uncertain, code: classify(result) };
-      authenticated(result.stdout, context.nickname);
-      const archive = archiveFrom(result.stdout);
-      const bvid = archive?.bvid ?? expectedBvid;
-      const aid = id(archive?.aid);
-      if (
-        !archive ||
-        !bvidPattern.test(bvid ?? "") ||
-        !aid ||
-        (expectedBvid && bvid !== expectedBvid) ||
-        (expectedAid ? aid !== expectedAid : !archive.bvid) ||
-        archive.title !== manifest.title ||
-        archive.desc !== manifest.description ||
-        !all.some((row) => row.bvid === bvid && row.title === manifest.title)
-      )
-        return uncertain;
-
-      const requestedCover = coverUrl(receipt.coverUrl);
-      const remoteCover = coverUrl(archive.cover);
-      const coverStatus =
-        requestedCover && remoteCover === requestedCover
-          ? "confirmed"
-          : "cover_pending";
-      const matches = (row) =>
-        row.bvid === bvid && row.title === manifest.title;
-      let status = "submitted";
-      if (
-        typeof archive.reject_reason === "string" &&
-        archive.reject_reason.trim() &&
-        (await list(context, ["--not-pubed"])).some(matches)
-      ) {
-        status = "rejected";
-      } else if ((await list(context, ["--is-pubing"])).some(matches)) {
-        status = "pending_review";
-      }
-      // Approved-in-Creator-Center does not establish anonymous playback.
-      if (
-        state.status === "published" ||
-        (state.status === "rejected" && status !== "rejected") ||
-        (state.status === "pending_review" && status === "submitted")
-      )
-        return uncertain;
-      return {
-        status,
-        bvid,
-        aid,
-        url: `https://www.bilibili.com/video/${bvid}/`,
-        coverStatus,
-        ...(requestedCover ? { coverUrl: requestedCover } : {}),
-      };
+    async findExisting(manifest, account) {
+      const context = await currentContext(manifest, account);
+      const all = await list(context);
+      const bvids = new Set(
+        all
+          .filter((row) => row.title === manifest.title)
+          .map((row) => row.bvid),
+      );
+      if (bvids.size !== 1) return uncertainStatus(manifest);
+      const [bvid] = bvids;
+      return inspectStatus(manifest, context, { receipt: { bvid } }, all);
     },
   };
 }

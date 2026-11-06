@@ -98,6 +98,8 @@ function pathsFor(context, revisionId) {
 }
 
 function validateManifest(manifest, context) {
+  const standalone = context.sourceKind === "standalone";
+  const evidence = manifest.provenance?.sourceEvidence;
   assert(
     manifest.schemaVersion === 1 &&
       manifest.edition === context.edition &&
@@ -126,7 +128,10 @@ function validateManifest(manifest, context) {
       inside(context.out, manifest.videoPath) &&
       typeof manifest.coverSourcePath === "string" &&
       path.isAbsolute(manifest.coverSourcePath) &&
-      inside(context.repo, manifest.coverSourcePath) &&
+      inside(
+        standalone ? context.out : context.repo,
+        manifest.coverSourcePath,
+      ) &&
       [
         manifest.videoSha256,
         manifest.coverSha256,
@@ -135,9 +140,17 @@ function validateManifest(manifest, context) {
       ].every(validSha) &&
       manifest.mediaVerification?.status === "passed" &&
       manifest.mediaVerification.fullDecode === "passed" &&
-      validSha(manifest.provenance?.storyboardSha256) &&
-      validSha(manifest.provenance?.renderedVoiceoverSha256) &&
-      validSha(manifest.provenance?.renderInputHash),
+      (standalone
+        ? manifest.provenance?.kind === "standalone" &&
+          typeof evidence?.path === "string" &&
+          inside(context.out, path.resolve(context.repo, evidence.path)) &&
+          validSha(evidence.sha256) &&
+          Number.isSafeInteger(evidence.bytes) &&
+          evidence.bytes > 0 &&
+          manifest.coverFrame === null
+        : validSha(manifest.provenance?.storyboardSha256) &&
+          validSha(manifest.provenance?.renderedVoiceoverSha256) &&
+          validSha(manifest.provenance?.renderInputHash)),
     "Prepared media or provenance evidence is incomplete",
   );
   validateMetadata(metadataFrom(manifest));
@@ -251,6 +264,14 @@ export async function readPreparedPackage(request) {
       cover: samePath(manifest.coverSourcePath, defaultCover)
         ? undefined
         : manifest.coverSourcePath,
+      ...(context.sourceKind === "standalone"
+        ? {
+            sourceEvidence: path.resolve(
+              context.repo,
+              manifest.provenance.sourceEvidence.path,
+            ),
+          }
+        : {}),
     });
     assert(
       inputs.videoRef.sha256 === manifest.videoSha256 &&
@@ -351,6 +372,10 @@ export async function preparePackage(
   return withPackageLock(request, async (context) => {
     const { options, root, out, directory, edition, releaseId, storyboard } =
       context;
+    assert(
+      context.sourceKind !== "standalone" || context.sourceEvidence,
+      "Preparing standalone media requires --source-evidence",
+    );
     await plainDirectory(directory, { create: true });
     const previous = await readActive(context, { optional: true });
     const inputs = await verifyInputs(context, {
@@ -376,6 +401,10 @@ export async function preparePackage(
       ...(previous ? metadataFrom(previous) : {}),
       ...override,
     });
+    assert(
+      previous?.existingUpload !== true || metadata.existingUpload === true,
+      "A release uploaded manually remains read-only. Use status --remote.",
+    );
     const metadataBytes = jsonBytes(metadata);
     const mediaVerification = await mediaVerifier(
       inputs.videoFile,
@@ -391,8 +420,11 @@ export async function preparePackage(
     );
     assert(
       (await fileHash(inputs.videoFile)) === inputs.videoRef.sha256 &&
-        (await fileHash(inputs.coverFile)) === inputs.coverRef.sha256,
-      "Original video or cover changed during preparation",
+        (await fileHash(inputs.coverFile)) === inputs.coverRef.sha256 &&
+        (!context.sourceEvidence ||
+          (await fileHash(context.sourceEvidence.file)) ===
+            context.sourceEvidence.ref.sha256),
+      "Original video, cover or source evidence changed during preparation",
     );
     const base = {
       schemaVersion: 1,

@@ -26,7 +26,9 @@ const help = `Remotion workflow (run from video/)
   npm run workflow -- smoke
   npm run workflow -- publish --doctor
   npm run workflow -- publish --edition ai-weekly --mode prepare [--metadata out/PUBLISH.json]
+  npm run workflow -- publish --edition my-film --release-id my-film-YYYYMMDD --mode prepare --source-evidence out/evidence.json
   npm run workflow -- publish --edition ai-weekly --mode submit
+  npm run workflow -- publish --edition my-film --release-id my-film-YYYYMMDD --mode submit --approval-file out/publish/APPROVAL.json
   npm run workflow -- publish --edition ai-weekly --mode status [--remote]
 
 check/qa do not export a complete film. master requires local original WAV caches.
@@ -54,6 +56,8 @@ try {
       video: { type: "string" },
       cover: { type: "string" },
       metadata: { type: "string" },
+      "source-evidence": { type: "string" },
+      "approval-file": { type: "string" },
       remote: { type: "boolean" },
       unlock: { type: "string" },
       help: { type: "boolean" },
@@ -87,6 +91,8 @@ const allowed = {
     "video",
     "cover",
     "metadata",
+    "source-evidence",
+    "approval-file",
     "remote",
     "unlock",
   ],
