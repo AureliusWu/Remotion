@@ -38,6 +38,8 @@ npm run workflow -- smoke
 
 统一命令、标准AAC／无损母带／外部Atmos分支及本地与GitHub的验收边界见 [工作流说明](docs/WORKFLOW.md)。
 
+B 站待审核包、人工确认与投稿状态回查见 [B 站投稿工作流](docs/BILIBILI-PUBLISHING.md)。
+
 ## AI / 维护者入口
 
 修改前先读 [AGENTS.md](AGENTS.md) 与 [video/AGENTS.md](video/AGENTS.md)。

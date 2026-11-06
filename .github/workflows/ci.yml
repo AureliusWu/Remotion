@@ -57,7 +57,7 @@ jobs:
       - name: Ensure the pinned Remotion browser
         id: browser
         run: npm run browser:ensure 2>&1 | tee out/workflow-ci/logs/browser-ensure.log
-      - name: Check versions, lint, build and all news editions
+      - name: Check versions, lint, build, news editions and offline publishing fixtures
         id: check
         run: npm run workflow -- check --edition all 2>&1 | tee out/workflow-ci/logs/check.log
       - name: Render three real 1080p QA frames per AI platform
@@ -143,6 +143,7 @@ jobs:
             lines.push('No smoke report was produced; inspect the failed step and retained logs.');
           }
           lines.push('', 'Artifacts include reports, small QA PNGs and the 4-second MP4. Bundles, PCM files and full-length films are excluded.');
+          lines.push('', 'Publishing tests use local synthetic fixtures and a mocked adapter. No Bilibili credentials, login or upload are used.');
           lines.push('', 'The lossless audio tests create temporary synthetic fixtures only. They do not synthesize real narration or produce an edition master, and require no model or original narration cache.');
           if (process.env.EVIDENCE_URL) lines.push('', `[Download validation evidence](${process.env.EVIDENCE_URL})`);
           appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n') + '\n');

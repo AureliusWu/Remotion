@@ -67,6 +67,8 @@ npm run workflow -- render --edition ai-weekly --platform all --frames 0-119 --h
 旧 `render:ai-weekly` / `render:weekly-ten` 命令作为兼容入口调用同一渲染器，输出也进入新目录。
 此前直接位于 `out/` 的成片保留。硬件参数只接受 `disable`、`if-possible`、`required`；CI采用软件编码。
 
+通过全片验证后，可以用 `npm run workflow -- publish --edition ai-weekly --mode prepare` 生成本地待审核包。账号设置、人工批准和结果回查见 [B 站投稿工作流](BILIBILI-PUBLISHING.md)。
+
 ## PCM24无损分支
 
 ```powershell
