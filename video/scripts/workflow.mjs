@@ -24,6 +24,10 @@ const help = `Remotion workflow (run from video/)
   npm run workflow -- package --edition ai-weekly --platform bilibili --profile hires-pcm --source out/FILE.mp4
   npm run workflow -- package --edition ai-weekly --platform bilibili --profile atmos --source out/FILE.mp4 --audio out/atmos.eac3 --atmos-evidence out/qc.json
   npm run workflow -- smoke
+  npm run workflow -- publish --doctor
+  npm run workflow -- publish --edition ai-weekly --mode prepare [--metadata out/PUBLISH.json]
+  npm run workflow -- publish --edition ai-weekly --mode submit
+  npm run workflow -- publish --edition ai-weekly --mode status [--remote]
 
 check/qa do not export a complete film. master requires local original WAV caches.
 Atmos packaging requires externally authored/encoded Atmos audio and matching QC evidence.
@@ -44,6 +48,14 @@ try {
       frames: { type: "string" },
       quick: { type: "boolean" },
       check: { type: "boolean" },
+      doctor: { type: "boolean" },
+      mode: { type: "string" },
+      "release-id": { type: "string" },
+      video: { type: "string" },
+      cover: { type: "string" },
+      metadata: { type: "string" },
+      remote: { type: "boolean" },
+      unlock: { type: "string" },
       help: { type: "boolean" },
     },
   });
@@ -66,6 +78,18 @@ const allowed = {
   preview: ["edition", "platform"],
   audio: ["edition", "check"],
   master: ["edition", "check"],
+  publish: [
+    "doctor",
+    "mode",
+    "edition",
+    "platform",
+    "release-id",
+    "video",
+    "cover",
+    "metadata",
+    "remote",
+    "unlock",
+  ],
   render: ["edition", "platform", "hardware", "concurrency", "frames"],
   package: [
     "edition",
@@ -86,6 +110,17 @@ for (const key of Object.keys(values))
     process.exit(1);
   }
 process.chdir(videoRoot);
+if (action === "publish") {
+  try {
+    const { runPublish } = await import("./publish/command.mjs");
+    console.log(JSON.stringify(await runPublish(values), null, 2));
+  } catch (error) {
+    console.error(`Publish blocked: ${error.message}`);
+    process.exitCode = 1;
+  }
+  // Publish maintains its own allowlisted audit state. Never tee adapter output.
+  process.exit(process.exitCode ?? 0);
+}
 const runDir = path.join(
   videoRoot,
   "out/workflow",
