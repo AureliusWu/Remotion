@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, realpath, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { test } from "node:test";
@@ -31,7 +31,9 @@ const help = {
 };
 
 async function fixture(t, options = {}) {
-  const root = await mkdtemp(path.join(tmpdir(), "remotion-biliup-test-"));
+  const root = await mkdtemp(
+    path.join(await realpath(tmpdir()), "remotion-biliup-test-"),
+  );
   t.after(() => rm(root, { recursive: true, force: true }));
   const videoRoot = path.join(root, "workspace", "video");
   const privateRoot = path.join(root, "private");

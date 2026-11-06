@@ -5,6 +5,7 @@ import {
   mkdtemp,
   readFile,
   readdir,
+  realpath,
   rm,
   symlink,
   writeFile,
@@ -40,7 +41,7 @@ const identity = publishIdentity(manifest);
 
 async function testDirectory(t) {
   const directory = await mkdtemp(
-    path.join(tmpdir(), "remotion-publish-state-"),
+    path.join(await realpath(tmpdir()), "remotion-publish-state-"),
   );
   t.after(() => rm(directory, { recursive: true, force: true }));
   return directory;

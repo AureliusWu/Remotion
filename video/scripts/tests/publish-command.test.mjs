@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
-import { mkdtempSync, rmSync } from "node:fs";
+import { mkdtempSync, realpathSync, rmSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -8,7 +8,9 @@ import { videoRoot } from "../lib/workflow-config.mjs";
 import { preparedStatus, submitPrepared } from "../publish/command.mjs";
 
 function fixture(t) {
-  const stateRoot = mkdtempSync(path.join(os.tmpdir(), "publish-command-"));
+  const stateRoot = mkdtempSync(
+    path.join(realpathSync(os.tmpdir()), "publish-command-"),
+  );
   t.after(() => rmSync(stateRoot, { recursive: true, force: true }));
   const manifest = {
     platform: "bilibili",
