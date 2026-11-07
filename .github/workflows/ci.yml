@@ -67,6 +67,13 @@ jobs:
           test -s out/demian-20261106/script.md
           npm exec --no -- remotion still Demian-Cover out/demian-20261106/ci-cover.png --log=warn 2>&1 | tee out/workflow-ci/logs/book-cover.log
           test -s out/demian-20261106/ci-cover.png
+      - name: Export the SuperAgent manuscript and render its cover offline
+        id: superagent
+        run: |
+          npm run --silent book -- superagent 2026-11-07 script 2>&1 | tee out/workflow-ci/logs/superagent-script.log
+          test -s out/superagent-20261107/script.md
+          npm exec --no -- remotion still Superagent-Cover out/superagent-20261107/ci-cover.png --log=warn 2>&1 | tee out/workflow-ci/logs/superagent-cover.log
+          test -s out/superagent-20261107/ci-cover.png
       - name: Render three real 1080p QA frames per AI platform
         id: qa
         run: npm run workflow -- qa --edition ai-weekly --platform all --quick 2>&1 | tee out/workflow-ci/logs/qa.log
@@ -118,6 +125,7 @@ jobs:
           BROWSER_OUTCOME: ${{ steps.browser.outcome }}
           CHECK_OUTCOME: ${{ steps.check.outcome }}
           BOOK_OUTCOME: ${{ steps.book.outcome }}
+          SUPERAGENT_OUTCOME: ${{ steps.superagent.outcome }}
           QA_OUTCOME: ${{ steps.qa.outcome }}
           SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
           PYTHON_OUTCOME: ${{ steps.python_setup.outcome }}
@@ -132,6 +140,7 @@ jobs:
             ['Pinned browser', process.env.BROWSER_OUTCOME],
             ['Node fixtures / versions / lint / build / 3 edition checks', process.env.CHECK_OUTCOME],
             ['Demian manuscript and cover / offline', process.env.BOOK_OUTCOME],
+            ['SuperAgent manuscript and cover / offline', process.env.SUPERAGENT_OUTCOME],
             ['AI quick QA / 2 platforms / 6 frames', process.env.QA_OUTCOME],
             ['4s CPU H.264 + AAC / full decode', process.env.SMOKE_OUTCOME],
             ['Python 3.12 for synthetic fixtures', process.env.PYTHON_OUTCOME],
