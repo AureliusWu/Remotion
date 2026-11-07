@@ -1,0 +1,258 @@
+{
+  "periodStart": "2026-11-06",
+  "periodEnd": "2026-11-06",
+  "retrievedOn": "2026-11-06",
+  "title": "为什么刚认识一样东西，就到处遇见它？",
+  "scenes": [
+    {
+      "id": "street",
+      "section": "01",
+      "type": "雨天街角",
+      "title": "红伞怎么突然多了？",
+      "deck": "昨天才买了一把红伞。\n今天一路上已经看见第三把。",
+      "sticker": "第三把",
+      "note": "生活情境示意",
+      "color": "#e85645",
+      "source": "原创情境",
+      "links": [],
+      "lines": [
+        "昨天，你刚买了一把红伞。",
+        "今天下班，雨刚落下来，你已经瞥见了第三把。",
+        "以前走这条路，怎么就没留意过？",
+        "你忍不住想，红伞最近是不是变多了？"
+      ]
+    },
+    {
+      "id": "replay",
+      "section": "02",
+      "type": "同一条街",
+      "title": "再看一遍这条街",
+      "deck": "两遍用的是同一幅街景。\n第二遍，请留意红伞。",
+      "sticker": "再看",
+      "note": "画面示意",
+      "color": "#f0af66",
+      "source": "原创画面对照",
+      "links": [],
+      "lines": [
+        "我们把同一张街景放两遍。",
+        "第一遍，你只管往前看，像平时下班一样。",
+        "第二遍，特意找找画面里的红伞。",
+        "街上连一把伞都没添，你留意到的细节却多了。"
+      ]
+    },
+    {
+      "id": "origin",
+      "section": "03",
+      "type": "一个名字",
+      "title": "频率错觉",
+      "deck": "刚注意到某个现象，\n就觉得它似乎比以前常见。",
+      "sticker": "2005",
+      "note": "语言学博客提出的说法",
+      "color": "#eed09a",
+      "source": "Arnold Zwicky · Language Log · 2005-08-07",
+      "links": [
+        {
+          "label": "Zwicky 2005 年原文",
+          "url": "https://languagelog.ldc.upenn.edu/myl/languagelog/archives/002386.html"
+        }
+      ],
+      "lines": [
+        "二零零五年，语言学家兹威基写到一种现象。",
+        "刚留意到某种用法，就觉得它好像到处都有。",
+        "他把这种感受叫作频率错觉。",
+        "熟悉的事物，也可能是我们最近才注意到。"
+      ]
+    },
+    {
+      "id": "attention",
+      "section": "04",
+      "type": "注意",
+      "title": "眼睛先去找红伞",
+      "deck": "有了目标，相关线索更容易被发现。\n这叫选择性注意。",
+      "sticker": "留意",
+      "note": "注意的目标变了",
+      "color": "#9dccbd",
+      "source": "Zwicky · Language Log · 2005",
+      "links": [
+        {
+          "label": "频率错觉与选择性注意",
+          "url": "https://languagelog.ldc.upenn.edu/myl/languagelog/archives/002386.html"
+        }
+      ],
+      "lines": [
+        "当你在找红伞，眼睛扫过街面，会先留意红色。",
+        "蓝伞和黑伞还在，只是没那么引人注意。",
+        "这就是选择性注意。",
+        "每个人走过同一个路口，也可能看到不同细节。"
+      ]
+    },
+    {
+      "id": "gorilla",
+      "section": "05",
+      "type": "相关实验",
+      "title": "数传球时，谁走过了？",
+      "deck": "观众专心数一队传球。\n部分人漏看了走过画面的猩猩扮演者。",
+      "sticker": "数球",
+      "note": "观察注意分配的实验",
+      "color": "#a9bee6",
+      "source": "Simons 与 Chabris · Perception · 1999",
+      "links": [
+        {
+          "label": "Simons 与 Chabris 的实验原论文",
+          "url": "https://www.chabris.com/Simons1999.pdf"
+        }
+      ],
+      "lines": [
+        "一九九九年，有个实验请观众数一队传球。",
+        "一个穿猩猩服的人从画面里走过。",
+        "有些观众专心数球，没注意到他。",
+        "这个实验说明，注意的去向会影响我们看见什么。"
+      ]
+    },
+    {
+      "id": "confirmation",
+      "section": "06",
+      "type": "判断",
+      "title": "一次撞见，一次佐证",
+      "deck": "“果然又碰见一把。”\n已有的猜测会影响你怎么看证据。",
+      "sticker": "果然",
+      "note": "确认偏误",
+      "color": "#e59e98",
+      "source": "Zwicky · 2018 回顾；Nickerson · 1998 综述",
+      "links": [
+        {
+          "label": "Zwicky 回顾选择性注意与确认偏误",
+          "url": "https://arnoldzwicky.org/2018/04/22/the-shadow-knows/"
+        },
+        {
+          "label": "Nickerson 确认偏误综述",
+          "url": "https://psy.ucsd.edu/~mckenzie/nickersonConfirmationBias.pdf"
+        }
+      ],
+      "lines": [
+        "等你开始相信红伞变多，每撞见一把，就会想，果然。",
+        "走完一条街都没看见的时候，却很少特意记下。",
+        "我们可能更在意支持自己猜测的证据。",
+        "这叫确认偏误。"
+      ]
+    },
+    {
+      "id": "numbers",
+      "section": "07",
+      "type": "相关实验",
+      "title": "两个猜法，都能答对吗？",
+      "deck": "2，4，6 符合规则。\n换成 1，3，8，你的猜法还成立吗？",
+      "sticker": "2·4·6",
+      "note": "后两组数字为演示",
+      "color": "#e4be7c",
+      "source": "P. C. Wason · Quarterly Journal of Experimental Psychology · 1960",
+      "links": [
+        {
+          "label": "Wason 的数字规则原论文",
+          "url": "https://journals.sagepub.com/doi/10.1080/17470216008416717"
+        }
+      ],
+      "lines": [
+        "一项猜规则的实验，从二、四、六开始。",
+        "你也许会猜，每次加二。",
+        "试八、十、十二，确实能过。可一、三、八也能过。",
+        "真正的规则简单得多，三个数从小到大。"
+      ]
+    },
+    {
+      "id": "feed",
+      "section": "08",
+      "type": "屏幕里的频率",
+      "title": "有时是推送变了",
+      "deck": "观看和互动可能改变后续推荐。\n同类内容在你的信息流里可以真的变多。",
+      "sticker": "推荐",
+      "note": "个人所见和全站频率分开看",
+      "color": "#a7b0df",
+      "source": "TikTok · 推荐机制公开说明",
+      "links": [
+        {
+          "label": "TikTok 官方推荐机制说明",
+          "url": "https://support.tiktok.com/en/using-tiktok/exploring-videos/how-tiktok-recommends-content"
+        }
+      ],
+      "lines": [
+        "刷视频时，情况还多一层。",
+        "你多看了几条雨伞测评，平台可能接着推荐类似视频。",
+        "这时，你屏幕上的雨伞内容可能真的多了。",
+        "至于全站有没有变，还得找另外的证据。"
+      ]
+    },
+    {
+      "id": "real-change",
+      "section": "09",
+      "type": "生活对照",
+      "title": "街上也可能真的变了",
+      "deck": "雨势加大，有更多路人打开伞。\n现实变化与注意变化可以同时发生。",
+      "sticker": "真变化",
+      "note": "生活情境示意",
+      "color": "#8dbcb8",
+      "source": "原创情境",
+      "links": [],
+      "lines": [
+        "回到街上，雨要是下大了，撑伞的人可能真的多起来。",
+        "也可能有更多红伞出现在这个路口。",
+        "你的注意变了，街上的情况也可能在变。",
+        "那就看看，数出来的结果是什么。"
+      ]
+    },
+    {
+      "id": "denominator",
+      "section": "10",
+      "type": "数量与比例",
+      "title": "先看分母",
+      "deck": "2 / 20 = 4 / 40 = 10%\n红伞的数量翻倍，占比一样。",
+      "sticker": "10%",
+      "note": "示意数字",
+      "color": "#f1c276",
+      "source": "原创算例",
+      "links": [],
+      "lines": [
+        "举个例子，昨天二十把伞里有两把红伞。",
+        "今天四十把里有四把。",
+        "红伞的数量翻倍了，占比却都是百分之十。",
+        "你说的变多，指的是把数，还是比例？"
+      ]
+    },
+    {
+      "id": "observe",
+      "section": "11",
+      "type": "动手核对",
+      "title": "先定规则，再数",
+      "deck": "固定路口、时段和计数口径。\n记下红伞，也记下全部伞。",
+      "sticker": "记一笔",
+      "note": "比较的是这个路口的样本",
+      "color": "#bad2ad",
+      "source": "原创观察示意",
+      "links": [],
+      "lines": [
+        "想弄清楚，可以先选定同一个路口。",
+        "几天都挑同一个时段，站十分钟。",
+        "记下经过的红伞，也记下经过的所有伞。",
+        "遇上没红伞的一天，照样在表上写个零。"
+      ]
+    },
+    {
+      "id": "outro",
+      "section": "12",
+      "type": "雨后路口",
+      "title": "再看一眼",
+      "deck": "有人把伞往同伴那边挪了挪。\n第一眼，也会看漏一些事。",
+      "sticker": "再看",
+      "note": "原创科普",
+      "color": "#e5a58e",
+      "source": "原创旁白",
+      "links": [],
+      "lines": [
+        "刚才光顾着数伞，漏看了一件事。",
+        "红灯下，有人把伞往同伴那边挪了挪。",
+        "看人也一样，第一眼会漏看。",
+        "再看一眼，或许能看见印象之外的人。"
+      ]
+    }
+  ]
+}
