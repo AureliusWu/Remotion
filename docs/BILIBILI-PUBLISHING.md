@@ -92,7 +92,15 @@ npm run workflow -- publish --edition weekly-ten --mode status --remote
 | `rejected` / `needs_attention` | 按原因处理平台拒绝或人工事项 |
 | `cover_pending` | 远端封面尚未得到匹配确认 |
 
-`status` 默认只读本地，`--remote` 才联系 B 站。`list` 与 `show` 结合回查确定稿件，程序将 BV 号当作待核候选直到读回对应记录。列表按最近三页核查，超出范围或回包无可关联标识时，需要在创作中心核对。已过审仍需在未登录窗口打开链接核实实际可观看，当前 biliup 适配器不自行写 `published`。封面须以 `show` 读回匹配或创作中心目视为准。[封面上传实现](https://github.com/biliup/biliup/blob/v1.3.4/crates/biliup-cli/src/uploader.rs#L419-L432) · [Web 提交回包实现](https://github.com/biliup/biliup/blob/v1.3.4/crates/biliup/src/uploader/bilibili.rs#L587-L621)
+`status` 默认只读本地，`--remote` 才联系 B 站。`list` 与 `show` 结合回查确定稿件，程序将 BV 号当作待核候选直到读回对应记录。列表按最近三页核查，超出范围或回包无可关联标识时，需要在创作中心核对。[封面上传实现](https://github.com/biliup/biliup/blob/v1.3.4/crates/biliup-cli/src/uploader.rs#L419-L432) · [Web 提交回包实现](https://github.com/biliup/biliup/blob/v1.3.4/crates/biliup/src/uploader/bilibili.rs#L587-L621)
+
+### 公开稿件的分层回查
+
+1. **稿件身份。** 保留首次提交回执和原期次，在创作中心核对同一账号、BV、稿件 ID、标题和完整简介。遇到超时或只有候选 BV 时，继续回查原尝试。
+2. **声明、可见性和封面。** 在创作中心核对作者的 AI 合成声明及公开设置。封面可通过 `show` 或创作中心目视核对，也可对可信 HTTPS 封面地址返回的字节计算 SHA-256，与投稿包的 `uploadCoverSha256` 比对。
+3. **公开媒体。** 创作中心显示「开放浏览」后，用未登录会话核对同一 BV 的公开详情和播放。使用独立接口验证时，播放地址的 Range 请求返回 HTTP 206 且读到媒体字节，可记录为「未登录媒体可访问」。浏览器连续实播单独记录。本地适配器可能仍保留 `pending_review` 或 `cover_pending`，公开结论以独立回查为准。
+
+检查结果与原始回执留在本机。账号凭据仅用于同一账号的创作中心查询，公开详情、封面和媒体请求使用未登录会话。GitHub CI 使用离线测试夹具验证投稿逻辑。
 
 ## 4. 故障恢复
 

@@ -13,6 +13,7 @@
 - `DailyTen-Bilibili` / `DailyTen-Douyin`：近期新闻精选，见 [本期说明](docs/DAILY-TEN-20261030.md)。
 - `AiHistory30m`：30 分钟 AI 发展史长片，见 `docs/AI-HISTORY-PRODUCTION.md`。
 - `PoissonEncounters`：泊松过程科普短片，见 `docs/POISSON-FILM.md`。
+- 频率错觉科普短片使用 `FrequencyIllusion-Bilibili` 合成。 [分镜、来源与封面](docs/FREQUENCY-ILLUSION-20261106.md) · [独立科普片工作流](docs/WORKFLOW.md#独立科普片)
 - `ChinaGenAiTimeline`：中国生成式 AI 用户规模数据视频，见 `docs/CHINA-GENAI-SOURCES.md`。
 - `PelicanRide`：鹈鹕海岸骑行插画动画，见 `docs/PELICAN-RIDE.md`。
 - `SmokeTest`：基础渲染与环境联调样例。
