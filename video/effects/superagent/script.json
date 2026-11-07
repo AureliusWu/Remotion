@@ -1,0 +1,92 @@
+{
+  "title": "SuperAgent",
+  "author": "DeepSeek 研究原型",
+  "publish": {
+    "title": "DeepSeek 的 SuperAgent｜改一个错字，为什么要开一张工单？",
+    "description": "从一次网站首页的错字修改出发，看 DeepSeek 公开的 SuperAgent 研究原型怎样接单、执行、回报，以及为什么消息送达和任务完成需要分开核对。画面为流程示意。\n\n项目与文档：https://github.com/deepseek-ai/dsh-superagent-prototype/tree/8c32a9dc5d72c033816c6a8110b37f40cf94fba4",
+    "tags": ["DeepSeek", "SuperAgent", "智能体", "AI科普", "开源", "软件工程"]
+  },
+  "sources": [
+    {
+      "label": "DeepSeek 研究原型 · 项目说明",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/README.md"
+    },
+    {
+      "label": "DeepSeek 研究原型 · 授权",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/docs/002-authorization.md"
+    },
+    {
+      "label": "DeepSeek 研究原型 · 执行与恢复",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/8c32a9dc5d72c033816c6a8110b37f40cf94fba4/docs/003-execution.md"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "task",
+      "kicker": "01 · 接单",
+      "heading": "先开一张工单",
+      "subheading": "从首页的一个错字说起。",
+      "visual": "项目讨论里的错字反馈收拢成一张编号工单。",
+      "lines": [
+        "你在项目里留了一句话，帮我改一下首页的错字。",
+        "一个会聊天的助手，可以告诉你去哪儿改。",
+        "深度求索公开了一个研究原型，试着把这句话变成一件能跟踪的工作。",
+        "它围绕一个代码仓库运转。",
+        "收到有权提出的请求，系统会为这件事开一张工单。"
+      ]
+    },
+    {
+      "id": "crew",
+      "kicker": "02 · 执行",
+      "heading": "这件事有自己的工作台",
+      "subheading": "查位置、改错字、跑检查。",
+      "visual": "工单展开为工作目录和三项检查，逐项点亮。",
+      "lines": [
+        "负责接单的会话把工作交给执行会话。",
+        "执行会话有自己的工作目录，可以在里面查代码、改错字、跑检查。",
+        "如果你在原讨论里补一句，只改首页，",
+        "这条消息能继续送到手头那张工单。",
+        "工作完成后，它可以在原讨论里回一个代码改动链接。"
+      ]
+    },
+    {
+      "id": "receipt",
+      "kicker": "03 · 回查",
+      "heading": "消息送达，工作做到哪？",
+      "subheading": "指令的回执和改动的结果，要分开看。",
+      "visual": "投递回执已亮起，远端改动卡仍等待证据。",
+      "lines": [
+        "可要是执行到一半，连接断了呢？",
+        "系统可以恢复工单，也会记录消息有没有送到执行会话。",
+        "消息送到了，代码改动有没有真的提交，仍要去仓库里核对。",
+        "看不到结果时，先查远端，再决定要不要重试。"
+      ]
+    },
+    {
+      "id": "boundary",
+      "kicker": "04 · 授权",
+      "heading": "谁能让它做什么？",
+      "subheading": "收到一条消息，并不会扩大任务权限。",
+      "visual": "授权名单和任务范围组成入口，工作目录旁单列系统权限。",
+      "lines": [
+        "那谁有权让它接活，接了又能做多大？",
+        "系统按来源、人员和规则判断，给每张工单限定范围。",
+        "原型里的命令仍以运行者的系统账号执行。",
+        "工作目录分开，文件访问权限还要靠运行环境限制。"
+      ]
+    },
+    {
+      "id": "finish",
+      "kicker": "05 · 交还结果",
+      "heading": "少追问一次，多一个结果",
+      "subheading": "有证据的地方交结果，有疑问的地方交给人。",
+      "visual": "原讨论出现改动链接和待复核项，工单收回侧栏。",
+      "lines": [
+        "最后，你在原讨论里看到改动和检查结果。",
+        "有地方拿不准，它可以把问题留给你。",
+        "你不用挨个追问它做到哪了，也知道该点开哪里核对。",
+        "这就是这套原型最实在的地方。"
+      ]
+    }
+  ]
+}

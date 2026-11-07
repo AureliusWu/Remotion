@@ -7,9 +7,11 @@ import { DailyTenCompositions } from "./daily-ten/DailyTen";
 import {WeeklyCompositions} from './weekly-ten/WeeklyFilm';
 import { AiWeeklyCompositions } from "./ai-weekly/AiFilm";
 import { DemianCompositions } from "./demian/DemianFilm";
+import { SuperagentCompositions } from "./superagent/SuperagentFilm";
 
 export const EffectsCompositions = () => (
   <Folder name="Effects">
+    <SuperagentCompositions />
     <DemianCompositions />
     <AiWeeklyCompositions />
     <WeeklyCompositions/>
