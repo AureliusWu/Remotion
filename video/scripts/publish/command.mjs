@@ -1,8 +1,10 @@
 import { execFileSync } from "node:child_process";
 import { createHash, randomBytes } from "node:crypto";
+import { constants } from "node:fs";
+import { lstat, open, realpath } from "node:fs/promises";
 import path from "node:path";
 import { createInterface } from "node:readline/promises";
-import { editionNames, videoRoot } from "../lib/workflow-config.mjs";
+import { videoRoot } from "../lib/workflow-config.mjs";
 import { createBilibiliAdapter } from "./bilibili-adapter.mjs";
 import {
   preparePackage,
@@ -17,6 +19,7 @@ import {
   recoverStalePublishLock,
   withPublishLock,
 } from "./state.mjs";
+import { scopedFile, validSha } from "./verify.mjs";
 
 const observed = new Set([
   "submitted",
@@ -30,6 +33,112 @@ const operatorRequired = new Set([
   "verification_required",
   "cover_pending",
 ]);
+const approvalLifetime = 30 * 60_000;
+const approvalFields = [
+  "schemaVersion",
+  "authorization",
+  "approvedAt",
+  "approvalReference",
+  "platform",
+  "edition",
+  "releaseId",
+  "accountUid",
+  "accountAlias",
+  "fingerprint",
+];
+
+function freshApproval(value) {
+  if (typeof value !== "string") return false;
+  const timestamp = Date.parse(value);
+  if (
+    !Number.isFinite(timestamp) ||
+    new Date(timestamp).toISOString() !== value
+  )
+    return false;
+  const age = Date.now() - timestamp;
+  return age >= 0 && age <= approvalLifetime;
+}
+
+export async function approvalFileConfirmer(root, input) {
+  let bytes;
+  let record;
+  try {
+    const file = path.resolve(input);
+    const resolved = await scopedFile(
+      await realpath(root),
+      file,
+      ".json",
+      "Approval file",
+      4096,
+    );
+    const expected = await lstat(file, { bigint: true });
+    if (
+      path.relative(file, resolved) !== "" ||
+      !expected.isFile() ||
+      expected.nlink !== 1n
+    )
+      throw new Error("Unsafe approval file");
+    const handle = await open(
+      file,
+      constants.O_RDONLY |
+        (process.platform === "win32" ? 0 : (constants.O_NOFOLLOW ?? 0)),
+    );
+    try {
+      const actual = await handle.stat({ bigint: true });
+      if (
+        !actual.isFile() ||
+        actual.nlink !== 1n ||
+        actual.dev !== expected.dev ||
+        actual.ino !== expected.ino ||
+        actual.size > 4096n
+      )
+        throw new Error("Approval file changed");
+      bytes = await handle.readFile();
+    } finally {
+      await handle.close();
+    }
+    if (bytes.length > 4096) throw new Error("Oversize approval file");
+    record = JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, ""));
+  } catch {
+    throw new Error(
+      "Approval file must be a regular JSON file in the publish output directory.",
+    );
+  }
+  if (
+    !record ||
+    Object.keys(record).length !== approvalFields.length ||
+    !approvalFields.every((key) => Object.hasOwn(record, key)) ||
+    record.schemaVersion !== 1 ||
+    record.authorization !== "explicit-user-request" ||
+    typeof record.approvalReference !== "string" ||
+    !/^[A-Za-z0-9._:-]{1,96}$/.test(record.approvalReference) ||
+    !validSha(record.fingerprint) ||
+    !freshApproval(record.approvedAt)
+  )
+    throw new Error(
+      "Approval file must contain an unexpired, exact submission authorization.",
+    );
+
+  const approvalEvidenceSha256 = createHash("sha256")
+    .update(bytes)
+    .digest("hex");
+  return (manifest, fingerprint, account) => {
+    if (
+      !freshApproval(record.approvedAt) ||
+      record.platform !== "bilibili" ||
+      record.platform !== manifest.platform ||
+      record.edition !== manifest.edition ||
+      record.releaseId !== manifest.releaseId ||
+      record.accountAlias !== account.alias ||
+      record.accountUid !== String(account.uid) ||
+      record.fingerprint !== fingerprint
+    )
+      throw new Error(
+        "Approval file does not match the current package and authenticated account.",
+      );
+    return { approvedAt: record.approvedAt, approvalEvidenceSha256 };
+  };
+}
 
 function requireTarget(manifest) {
   if (
@@ -40,6 +149,14 @@ function requireTarget(manifest) {
   )
     throw new Error(
       "Set accountAlias, accountUid, categoryId and copyrightType in the local prepare metadata first.",
+    );
+  if (
+    manifest.provenance?.kind === "standalone" &&
+    (typeof manifest.aiDeclaration !== "boolean" ||
+      !["private", "public"].includes(manifest.visibility))
+  )
+    throw new Error(
+      "Set the AI declaration and visibility for standalone media before submitting.",
     );
 }
 
@@ -69,7 +186,15 @@ function reason(error) {
 
 async function observedState(tx, observation) {
   const state = await tx.read();
-  const { status, bvid, aid, coverStatus, coverUrl } = observation ?? {};
+  const {
+    status,
+    bvid,
+    aid,
+    coverStatus,
+    coverUrl,
+    aiDeclarationStatus,
+    visibilityStatus,
+  } = observation ?? {};
   if (observed.has(status) && (bvid || aid)) {
     return tx.transition(status, {
       receipt: {
@@ -78,6 +203,8 @@ async function observedState(tx, observation) {
         verified: true,
         coverStatus,
         coverUrl,
+        aiDeclarationStatus,
+        visibilityStatus,
         remoteStatus: status,
       },
     });
@@ -101,8 +228,7 @@ async function reconcile(tx, adapter, manifest, account) {
   return observedState(tx, observation);
 }
 
-// The CLI supplies the only production confirmer. Tests inject a responder and
-// adapter directly, through this module's API, without enabling a CLI bypass.
+// Both production confirmation paths use the same release lock and attempt gate.
 export async function submitPrepared({
   stateRoot,
   read,
@@ -111,6 +237,10 @@ export async function submitPrepared({
   gitHead,
 }) {
   const initial = await read();
+  if (initial.manifest.existingUpload === true)
+    throw new Error(
+      "This release was uploaded manually. Use status --remote; no new upload is allowed.",
+    );
   requireTarget(initial.manifest);
   const identity = publishIdentity(initial.manifest);
   return withPublishLock(stateRoot, identity, async (tx) => {
@@ -140,12 +270,15 @@ export async function submitPrepared({
       throw new Error(
         "Package changed before upload. Prepare and review it again.",
       );
+    if (decision.approvalEvidenceSha256 && !freshApproval(decision.approvedAt))
+      throw new Error("Approval file expired before upload.");
 
     await tx.transition("approved", {
       approval: {
         fingerprint,
-        approvedAt: new Date().toISOString(),
+        approvedAt: decision.approvedAt ?? new Date().toISOString(),
         phraseSha256: decision.phraseSha256,
+        approvalEvidenceSha256: decision.approvalEvidenceSha256,
       },
       gitHead,
       toolVersion: account.toolVersion,
@@ -212,6 +345,27 @@ export async function preparedStatus({
   }
   if (!state?.startedAt) {
     const account = await verifyAccount(adapter, manifest);
+    if (manifest.existingUpload === true) {
+      const result = await adapter.findExisting(manifest, account);
+      const { status, bvid, aid, aiDeclarationStatus, visibilityStatus } =
+        result;
+      return {
+        status,
+        accountVerified: true,
+        existingUpload: true,
+        ...(observed.has(status) && bvid
+          ? {
+              receipt: {
+                bvid,
+                aid,
+                verified: true,
+                aiDeclarationStatus,
+                visibilityStatus,
+              },
+            }
+          : { reasonCode: reason(result) }),
+      };
+    }
     return {
       status: "ready_for_review",
       accountVerified: true,
@@ -249,6 +403,8 @@ async function confirmInTerminal(manifest, fingerprint, account) {
         categoryId: manifest.categoryId,
         copyrightType: manifest.copyrightType,
         sourceUrl: manifest.sourceUrl,
+        aiDeclaration: manifest.aiDeclaration ?? null,
+        visibility: manifest.visibility ?? "public",
         sourceReview: manifest.sourceReview,
         mediaQa: manifest.mediaQa,
         fingerprint,
@@ -299,22 +455,37 @@ export async function runPublish(options) {
   if (!options.edition) throw new Error("Select one edition.");
   if (
     mode !== "prepare" &&
-    ["video", "cover", "metadata"].some((key) => options[key] !== undefined)
+    ["video", "cover", "metadata", "source-evidence"].some(
+      (key) => options[key] !== undefined,
+    )
   )
     throw new Error(
-      "Media and metadata overrides are allowed only during prepare.",
+      "Media, metadata and source evidence are accepted only during prepare.",
     );
   if (mode !== "status" && (options.remote || options.unlock !== undefined))
     throw new Error("Use --remote or --unlock only with status.");
   if ((mode === "submit" || options.remote) && !productionAllowed())
     throw new Error("Real adapter calls are disabled in CI.");
-  if (mode === "submit" && !(process.stdin.isTTY && process.stdout.isTTY))
+  const approvalFile = options["approval-file"];
+  if (
+    approvalFile !== undefined &&
+    (mode !== "submit" || !options["release-id"])
+  )
+    throw new Error(
+      "Use --approval-file only with submit and an explicit --release-id.",
+    );
+  if (
+    mode === "submit" &&
+    approvalFile === undefined &&
+    !(process.stdin.isTTY && process.stdout.isTTY)
+  )
     throw new Error(
       "Submit requires a person at an interactive terminal. Piped confirmation is refused.",
     );
 
-  const [edition, otherEdition] = editionNames(options.edition);
-  if (otherEdition) throw new Error("Select one edition.");
+  const { edition } = options;
+  if (!/^[a-z0-9][a-z0-9-]{0,63}$/.test(edition) || edition === "all")
+    throw new Error("Select one valid edition.");
   const outputRoot = path.join(videoRoot, "out", "publish");
   const stateRoot = path.join(outputRoot, ".state");
   const request = { edition, options, videoRoot, outputRoot };
@@ -328,6 +499,13 @@ export async function runPublish(options) {
       directory,
       mediaQa: manifest.mediaQa,
       sourceReview: manifest.sourceReview,
+      ...(manifest.aiDeclaration !== undefined
+        ? { aiDeclaration: manifest.aiDeclaration }
+        : {}),
+      ...(manifest.visibility !== undefined
+        ? { visibility: manifest.visibility }
+        : {}),
+      ...(manifest.existingUpload === true ? { existingUpload: true } : {}),
     };
   }
   if (mode === "status") {
@@ -385,6 +563,13 @@ export async function runPublish(options) {
     };
   }
   const read = () => readPreparedPackage(request);
+  const confirm =
+    approvalFile === undefined
+      ? confirmInTerminal
+      : await approvalFileConfirmer(
+          outputRoot,
+          path.resolve(videoRoot, approvalFile),
+        );
   const gitHead = execFileSync("git", ["rev-parse", "HEAD"], {
     cwd: videoRoot,
     encoding: "utf8",
@@ -396,23 +581,40 @@ export async function runPublish(options) {
       stateRoot,
       read,
       adapter: createBilibiliAdapter({ videoRoot }),
-      confirm: confirmInTerminal,
+      confirm,
       gitHead,
     }),
   );
   const result = summary(state);
-  if (["uncertain", "needs_attention", "rejected"].includes(state.status))
+  if (
+    ["uncertain", "needs_attention", "rejected"].includes(state.status) ||
+    Object.values(result.checks ?? {}).some((value) => value !== "confirmed")
+  )
     process.exitCode = 1;
   return result;
 }
 
 function summary(state, manifest, fingerprint) {
   const bvid = state.receipt?.verified ? state.receipt.bvid : undefined;
+  const privateVisibility =
+    manifest?.visibility === "private" ||
+    state.receipt?.visibilityStatus !== undefined;
+  const checks = Object.fromEntries(
+    ["aiDeclarationStatus", "visibilityStatus"]
+      .map((key) => [key, state.receipt?.[key]])
+      .filter(([, value]) => value !== undefined),
+  );
   return {
     ...state,
     edition: manifest?.edition ?? state.identity?.edition,
     releaseId: manifest?.releaseId ?? state.identity?.releaseId,
     fingerprint: fingerprint ?? state.approval?.fingerprint,
-    ...(bvid ? { url: `https://www.bilibili.com/video/${bvid}/` } : {}),
+    ...(bvid
+      ? {
+          [privateVisibility ? "ownerUrl" : "url"]:
+            `https://www.bilibili.com/video/${bvid}/`,
+        }
+      : {}),
+    ...(Object.keys(checks).length ? { checks } : {}),
   };
 }

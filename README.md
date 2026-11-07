@@ -41,6 +41,8 @@ npm run workflow -- smoke
 
 B 站待审核包、人工确认与投稿状态回查见 [B 站投稿工作流](docs/BILIBILI-PUBLISHING.md)。
 
+读书视频用 `npm run book -- 书目 日期 script` 导出口播、分镜和文案，再从实测旁白生成时间轴。 [读书视频工作流](docs/WORKFLOW.md#读书视频)
+
 ## AI / 维护者入口
 
 修改前先读 [AGENTS.md](AGENTS.md) 与 [video/AGENTS.md](video/AGENTS.md)。

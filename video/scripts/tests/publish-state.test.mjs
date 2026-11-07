@@ -120,6 +120,36 @@ test("preparation accepts a new package fingerprint and revokes the earlier appr
   });
 });
 
+test("file approval evidence is validated and cannot be mixed with a terminal phrase", async (t) => {
+  const root = await testDirectory(t);
+  const approvalEvidenceSha256 = "e".repeat(64);
+  await withPublishLock(root, identity, async (tx) => {
+    await tx.transition("ready_for_review", { fingerprint: firstFingerprint });
+    await assert.rejects(
+      tx.transition("approved", {
+        approval: {
+          ...approval(),
+          phrase: "fixture-phrase",
+          approvalEvidenceSha256,
+        },
+      }),
+      { code: "INVALID_APPROVAL" },
+    );
+    await assert.rejects(
+      tx.transition("approved", {
+        approval: { ...approval(), approvalEvidenceSha256: "invalid hash" },
+      }),
+    );
+    await tx.transition("approved", {
+      approval: { ...approval(), approvalEvidenceSha256 },
+    });
+  });
+  assert.equal(
+    (await readPublishState(root, identity)).approval.approvalEvidenceSha256,
+    approvalEvidenceSha256,
+  );
+});
+
 test("candidate receipts and interrupted attempts cannot authorize a duplicate or prove publication", async (t) => {
   const root = await testDirectory(t);
   const first = await withPublishLock(root, identity, async (tx) => {

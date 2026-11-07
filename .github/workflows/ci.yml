@@ -60,6 +60,20 @@ jobs:
       - name: Check versions, lint, build, news editions and offline publishing fixtures
         id: check
         run: npm run workflow -- check --edition all 2>&1 | tee out/workflow-ci/logs/check.log
+      - name: Export the Demian manuscript and render its cover offline
+        id: book
+        run: |
+          npm run --silent book -- demian 2026-11-06 script 2>&1 | tee out/workflow-ci/logs/book-script.log
+          test -s out/demian-20261106/script.md
+          npm exec --no -- remotion still Demian-Cover out/demian-20261106/ci-cover.png --log=warn 2>&1 | tee out/workflow-ci/logs/book-cover.log
+          test -s out/demian-20261106/ci-cover.png
+      - name: Export the SuperAgent manuscript and render its cover offline
+        id: superagent
+        run: |
+          npm run --silent book -- superagent 2026-11-07 script 2>&1 | tee out/workflow-ci/logs/superagent-script.log
+          test -s out/superagent-20261107/script.md
+          npm exec --no -- remotion still Superagent-Cover out/superagent-20261107/ci-cover.png --log=warn 2>&1 | tee out/workflow-ci/logs/superagent-cover.log
+          test -s out/superagent-20261107/ci-cover.png
       - name: Render three real 1080p QA frames per AI platform
         id: qa
         run: npm run workflow -- qa --edition ai-weekly --platform all --quick 2>&1 | tee out/workflow-ci/logs/qa.log
@@ -115,6 +129,8 @@ jobs:
           INSTALL_OUTCOME: ${{ steps.install.outcome }}
           BROWSER_OUTCOME: ${{ steps.browser.outcome }}
           CHECK_OUTCOME: ${{ steps.check.outcome }}
+          BOOK_OUTCOME: ${{ steps.book.outcome }}
+          SUPERAGENT_OUTCOME: ${{ steps.superagent.outcome }}
           QA_OUTCOME: ${{ steps.qa.outcome }}
           FREQUENCY_ILLUSION_OUTCOME: ${{ steps.frequency_illusion.outcome }}
           SMOKE_OUTCOME: ${{ steps.smoke.outcome }}
@@ -129,6 +145,8 @@ jobs:
             ['npm ci', process.env.INSTALL_OUTCOME],
             ['Pinned browser', process.env.BROWSER_OUTCOME],
             ['Node fixtures / versions / lint / build / 3 edition checks', process.env.CHECK_OUTCOME],
+            ['Demian manuscript and cover / offline', process.env.BOOK_OUTCOME],
+            ['SuperAgent manuscript and cover / offline', process.env.SUPERAGENT_OUTCOME],
             ['AI quick QA / 2 platforms / 6 frames', process.env.QA_OUTCOME],
             ['Frequency Illusion / composition and 3 frames', process.env.FREQUENCY_ILLUSION_OUTCOME],
             ['4s CPU H.264 + AAC / full decode', process.env.SMOKE_OUTCOME],
